@@ -26,6 +26,9 @@ li x6, 0
 li x7, 0
 li x8, 10
 
+li x30, 1 # FLAG 1
+li x29, 0 # FLAG 2
+li x28, 0 # FLAG 3
 li x11, 0
 
 Main:
@@ -44,21 +47,13 @@ for1:                       # label da cui parte il loop esterno
         addi x2, x2, 1 # porta il puntatore a v2 dalla posizione n alla posizione n+1
         bne x4, x5, for2 # se i valori sono uguali 
         sb x5, 0(x3) # store in posizione di x3 il valore
+        li x30, 0 # imposto la FLAG 1 a 0 perche adesso v3 è NOT EMPTY
         addi x3, x3, 1 # aumento la posiizone di x3
         j for2
 
 print:
 la x11, V3 
-lb x1, 0(x11)
-lb x2, 1(x11)
-lb x3, 2(x11)
-lb x4, 3(x11)
-lb x5, 4(x11)
-lb x6, 5(x11)
-lb x7, 6(x11)
-lb x8, 7(x11)
-lb x9, 8(x11)
-lb x10, 9(x11)
+
 
 lb x12, 0(x11)
 lb x13, 1(x11)
@@ -71,7 +66,12 @@ lb x19, 7(x11)
 lb x20, 8(x11)
 lb x21, 9(x11)
 
+#QUI PROCESSERO LE FLAG  NUMERO 2 E 3
+
+
 j End
+
+
 
 # HERE CODE
 End:
