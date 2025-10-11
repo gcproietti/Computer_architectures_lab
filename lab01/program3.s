@@ -40,7 +40,7 @@ li x27, 1 # VARIABILE DI APPOGGIO
 Main:
 add x6, x2, x8 # sommo all'address di x2 il massimo offset quindi trovo V2 length       
 add x7, x1, x8 # sommo all'address di x1 il massimo offset quindi trovo V1 length
-add x9, x3, x8 # sommo all'address di x3 il massimo offset quindi trovo V3 length
+add x9, x3, x8 # da cancellare
 
 for1:                       # label da cui parte il loop esterno
     beq x1, x7, print       # se x1 è arrivato al suo ultimo elemento esce dal ciclo
@@ -67,7 +67,7 @@ for1:                       # label da cui parte il loop esterno
                 j check_loop                # torno all'inizio del ciclo
 
             dupl:
-                la x3, v3                   # riporto il puntatore di v3 alla posizione 0
+                la x3, V3                   # riporto il puntatore di v3 alla posizione 0
                 li x12, 0                   # riporto l'indice a 0
                 j for2
                 
