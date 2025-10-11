@@ -30,6 +30,8 @@ li x30, 1 # FLAG 1
 li x29, 0 # FLAG 2
 li x28, 0 # FLAG 3
 li x11, 0
+li x27, 1 # VARIABILE DI APPOGGIO
+
 
 Main:
 add x6, x2, x8 # sommo all'address di x2 il massimo offset quindi trovo V2 length
@@ -66,7 +68,11 @@ lb x19, 7(x11)
 lb x20, 8(x11)
 lb x21, 9(x11)
 
+
+
+beq x30, x27, End #CONTROLLO SE DEVO CALCOLARE O MENO  FLAG 2 E 3
 #QUI PROCESSERO LE FLAG  NUMERO 2 E 3
+
 
 
 j End
