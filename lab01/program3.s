@@ -71,7 +71,7 @@ for1:                       # label da cui parte il loop esterno
                 li x12, 0                   # riporto l'indice a 0
                 j for2
                 
-            no dupl:
+            no_dupl:
                 sb x5, 0(x13)                # store in posizione di x3 il valore
                 li x30, 0                   # imposto la FLAG 1 a 0 perche adesso v3 è NOT EMPTY
                 addi x13, x13, 1            # salvo in x13 la posizione di v3
