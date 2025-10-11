@@ -22,9 +22,13 @@ la x3, V3 #carico address v3
 
 li x4, 0
 li x5, 0
-li x6, 0
-li x7, 0
-li x8, 10
+li x6, 0    # V2 length address
+li x7, 0    # V1 length address
+li x8, 10           
+
+li x12, 0                   # indice per scorrere v3
+la x13, V3                  # salvo in x13 il puntatore di v3
+li x14, 0                   # variabile di appoggio per controllo duplicati
 
 li x30, 1 # FLAG 1
 li x29, 0 # FLAG 2
@@ -34,7 +38,7 @@ li x27, 1 # VARIABILE DI APPOGGIO
 
 
 Main:
-add x6, x2, x8 # sommo all'address di x2 il massimo offset quindi trovo V2 length
+add x6, x2, x8 # sommo all'address di x2 il massimo offset quindi trovo V2 length       
 add x7, x1, x8 # sommo all'address di x1 il massimo offset quindi trovo V1 length
 
 for1:                       # label da cui parte il loop esterno
@@ -43,15 +47,35 @@ for1:                       # label da cui parte il loop esterno
     lb x4, 0(x1)            # carica il x4 il un elemento dell'array 1
     addi x1, x1, 1          # porta il puntatore a v1 dalla posizione n alla posizione n+1
     
-    for2: # label di inizio del loop interno
+    for2:                           # label di inizio del loop interno
         beq x2, x6, for1
-        lb x5, 0(x2) # preleva un elemento da V2
-        addi x2, x2, 1 # porta il puntatore a v2 dalla posizione n alla posizione n+1
-        bne x4, x5, for2 # se i valori sono uguali 
-        sb x5, 0(x3) # store in posizione di x3 il valore
-        li x30, 0 # imposto la FLAG 1 a 0 perche adesso v3 è NOT EMPTY
-        addi x3, x3, 1 # aumento la posiizone di x3
-        j for2
+        lb x5, 0(x2)                # preleva un elemento da V2
+        addi x2, x2, 1              # porta il puntatore a v2 dalla posizione n alla posizione n+1
+        bne x4, x5, for2            # se i valori non sono uguali 
+
+        check_duplicate:                # funzione che controlla se il valore è già presente in v3 
+            la x3, V3                   # riporto il puntatore di v3 alla posizione 0
+            li x12, 0                   # riporto l'indice a 0
+
+            check_loop:
+                beq x3, x13, no_dupl        # se l'indice arriva alla posizione corrente di v3 esco dal ciclo
+                lb x14, 0(x3)               # carico in x14 il valore di v3
+                beq x14, x5, dupl           # se il valore è uguale a quello che sto controllando setto la flag
+                addi x3, x3, 1              # incremento il puntatore di v3
+                addi x12, x12, 1            # incremento l'indice
+                j check_loop                # torno all'inizio del ciclo
+
+            dupl:
+                la x3, V3                   # riporto il puntatore di v3 alla posizione 0
+                li x12, 0                   # riporto l'indice a 0
+                j for2
+                
+            no_dupl:
+                sb x5, 0(x13)                # store in posizione di x3 il valore
+                li x30, 0                   # imposto la FLAG 1 a 0 perche adesso v3 è NOT EMPTY
+                addi x13, x13, 1            # salvo in x13 la posizione di v3
+                j for2
+
 
 print:
 la x11, V3 
