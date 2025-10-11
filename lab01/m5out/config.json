@@ -1215,7 +1215,7 @@
                         "name": "workload",
                         "path": "system.cpu.workload",
                         "cmd": [
-                            "program1"
+                            "program2"
                         ],
                         "cwd": "/home/vboxuser/Desktop/Computer_architectures_lab/lab01",
                         "drivers": [],
@@ -1224,7 +1224,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "program1",
+                        "executable": "program2",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
