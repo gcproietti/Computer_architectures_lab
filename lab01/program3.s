@@ -59,6 +59,18 @@ lb x7, 6(x11)
 lb x8, 7(x11)
 lb x9, 8(x11)
 lb x10, 9(x11)
+
+lb x12, 0(x11)
+lb x13, 1(x11)
+lb x14, 2(x11)
+lb x15, 3(x11)
+lb x16, 4(x11)
+lb x17, 5(x11)
+lb x18, 6(x11)
+lb x19, 7(x11)
+lb x20, 8(x11)
+lb x21, 9(x11)
+
 j End
 
 # HERE CODE
