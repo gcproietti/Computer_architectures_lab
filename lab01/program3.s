@@ -25,6 +25,7 @@ li x5, 0
 li x6, 0
 li x7, 0
 li x8, 10
+li x9, 0 
 
 li x30, 1 # FLAG 1
 li x29, 0 # FLAG 2
@@ -48,10 +49,33 @@ for1:                       # label da cui parte il loop esterno
         lb x5, 0(x2) # preleva un elemento da V2
         addi x2, x2, 1 # porta il puntatore a v2 dalla posizione n alla posizione n+1
         bne x4, x5, for2 # se i valori sono uguali 
+        jal check_duplicate # chiamo la funzione che controlla i duplicati
         sb x5, 0(x3) # store in posizione di x3 il valore
         li x30, 0 # imposto la FLAG 1 a 0 perche adesso v3 è NOT EMPTY
         addi x3, x3, 1 # aumento la posiizone di x3
         j for2
+
+
+
+
+        check_duplicate: # funzione che controlla se il valore è già presente in v3 
+            li x12, 0 # indice per scorrere v3
+            li x13, 0 # flag per controllo duplicati
+
+            check_loop:
+                beq x12, x8, end_check # se l'indice arriva a 10 esco dal ciclo
+                lb x14, 0(x3) # carico in x14 il valore di v3
+                beq x14, x5, set_flag # se il valore è uguale a quello che sto controllando setto la flag
+                addi x11, x11, 1 # incremento il puntatore di v3
+                addi x12, x12, 1 # incremento l'indice
+                j check_loop # torno all'inizio del ciclo
+
+            set_flag:
+                li x13, 1 # setto la flag a 1 se trovo un duplicato
+
+
+            end_function:
+                ret
 
 print:
 la x11, V3 
