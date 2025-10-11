@@ -1,13 +1,58 @@
+############################################################
+# RISC-V PROGRAM — ARRAY COMPARISON & FLAG CHECKING
+# ----------------------------------------------------------
+# Author: Gabriele Mincigrucci, Giacomo Proietti, Vincenzo Cenzo 
+#
+# Description:
+#   The program compares two arrays (V1 and V2).
+#   Every time an element from V1 is found in V2,
+#   it is stored into a result array V3.
+#
+#   Once the comparison is done, the program sets:
+#     - FLAG 1 (x30): =1 if V3 is empty, =0 if V3 has data
+#     - FLAG 2 (x29): =1 if V3 is increasing
+#     - FLAG 3 (x28): =1 if V3 is decreasing
+#
+#   Finally, it exits cleanly with ecall 93.
+############################################################
+# REGISTER USAGE REFERENCE (UPDATED)
+# ----------------------------------------------------------
+# x1   → pointer to current element in V1
+# x2   → pointer to current element in V2
+# x3   → pointer used for traversing V3 (duplicate check / store)
+# x4   → current element of V1
+# x5   → current element of V2 / element to store in V3
+# x6   → end address of V2 (V2 + length)
+# x7   → end address of V1 (V1 + length)
+# x8   → array length constant (10)
+# x11  → general-purpose temporary
+# x12  → index for traversing V3 (duplicate checking)
+# x13  → pointer to current write position in V3
+# x14  → temporary value loaded from V3 (duplicate checking)
+# x24  → sentinel value / last valid element in V3
+# x25  → temporary value for flag comparison
+# x26  → temporary value for flag comparison
+# x27  → pointer used during flag checking
+# x28  → FLAG 3 (1 = decreasing, 0 = not decreasing)
+# x29  → FLAG 2 (1 = increasing, 0 = not increasing)
+# x30  → FLAG 1 (1 = V3 empty, 0 = V3 not empty)
 
-# Data section
+############################################################
+
+
+###############################
+# DATA SECTION
+###############################
 .section .data
-# Place here your program data.
+# Array definitions
+V1: .byte 2,6,-3,11,9,18,-13,16,5,1    # First array
+V2: .byte 4,2,-13,3,9,9,7,16,4,7       # Second array
+V3: .byte 0,0,0,0,0,0,0,0,0,0          # Result array (initialized to 0)
 
-V1: .byte 2,6,-3,11,9,18,-13,16,5,1    # PRIMO ARRAY
-V2: .byte 4,2,-13,3,9,9,7,16,4,7       # SECONDO ARRAY
-V3: .byte 0,0,0,0,0,0,0,0,0,0          # ARRAY RISULTATO
 
-# Code section
+###############################
+# CODE SECTION
+###############################
 .section .text
 .globl _start 
 _start:
@@ -105,8 +150,6 @@ j End
 
 # HERE CODE
 End:
-# exit() syscall. This is needed to end the simulation
-# gracefully
-li a0, 0
-li a7, 93
-ecall
+li a0, 0                      # Exit code = 0
+li a7, 93                     # Syscall number for exit
+ecall                         # Exit program gracefully
