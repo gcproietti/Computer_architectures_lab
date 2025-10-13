@@ -83,6 +83,15 @@ li x25, 0                  # Helper for flag checking
 li x24, 0                  # Placeholder for last valid value in V3
 li x11, 0                  # General-purpose helper
 
+# Initialize print register
+li x17, 0
+li x18, 0
+li x19, 0
+li x20, 0
+li x21, 0
+li x22, 0
+li x23, 0
+
 ###############################
 # MAIN LOOP — ARRAY COMPARISON
 ###############################
@@ -135,7 +144,7 @@ for1:                      # Outer loop: iterate through V1
 #   Checks whether V3 is increasing or decreasing
 ############################################################
 inizioflag:
-    beq x30, x27, End          # If FLAG1 == 1 (V3 empty), skip flag checks
+    beq x30, x27, print          # If FLAG1 == 1 (V3 empty), skip flag checks
 
 ############################################################
 # FLAG 2 CHECK (INCREASING ORDER)
@@ -161,10 +170,27 @@ forfl3:
 forfl3a:
     lb x26, 0(x27)             # Load current element
     addi x27, x27, 1           # Move pointer
-    beq x26, x24, End          # If current == sentinel, done
+    beq x26, x24, print          # If current == sentinel, done
     lb x25, 0(x27)             # Load next element
     blt x25, x26, forfl3a      # If next < current, continue
     li x28, 0                  # Otherwise, not decreasing → FLAG3 = 0
+
+############################################################
+# PRINT V3 IN THE REGISTER x18 TO x27
+############################################################
+print:
+la x17, V3
+lb x18, 0(x17)
+lb x19, 1(x17)
+lb x20, 2(x17)
+lb x21, 3(x17)
+lb x22, 4(x17)
+lb x23, 5(x17)
+lb x24, 6(x17)
+lb x25, 7(x17)
+lb x26, 8(x17)
+lb x27, 9(x17)
+j End
 
 ############################################################
 # END OF PROGRAM
