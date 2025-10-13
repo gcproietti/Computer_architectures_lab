@@ -1,7 +1,22 @@
 ############################################################
+############################################################
+#
+#   Solution developed in a collaboration between:
+#
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#
+#         Authors         |       Mat.
+#   Gabriele Mincigrucci  |     s358987
+#   Giacomo Proietti      |     f642298
+#   Vincenzo Pio Altieri  |     s353170
+#
+############################################################
+############################################################
+
+
+############################################################
 # RISC-V PROGRAM — ARRAY COMPARISON & FLAG CHECKING
 # ----------------------------------------------------------
-# Author: Gabriele Mincigrucci, Giacomo Proietti, Vincenzo Cenzo 
 #
 # PROGRAM DESCRIPTION:
 #   This program performs element-wise comparison between two arrays V1 and V2.
@@ -30,7 +45,7 @@
 #   7. Exit program
 ############################################################
 
-# REGISTER USAGE REFERENCE (COMPREHENSIVE)
+# REGISTER USAGE REFERENCE
 # ----------------------------------------------------------
 # x1   → Pointer to current element in V1 (outer loop iterator)
 # x2   → Pointer to current element in V2 (inner loop iterator)  
@@ -221,9 +236,8 @@ lb x21, 9(x11)                # Load V3[9] into x21
 
 ############################################################
 # PROGRAM TERMINATION
-# Exit cleanly using RISC-V system call
 ############################################################
 End:
-li a0, 0                      # Set exit code to 0 (success)
-li a7, 93                     # Set system call number for exit (93)
-ecall                         # Execute system call to terminate program
+li a0, 0
+li a7, 93
+ecall
