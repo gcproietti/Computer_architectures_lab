@@ -10,10 +10,10 @@
     lab01/cartella_di_compilazione/
    
 #   Pattern (tutti i file .log)
-   *.log
-   *.exe
-   *.saved
+   **/*.log
+   **/*.exe
+   **/*.saved
    
 #   Tutti i file in una cartella con estensione specifica
-    lab01/*.log
-    lab02/*.log
+#   lab01/*.log
+#    lab02/*.log
