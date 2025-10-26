@@ -79,9 +79,9 @@ from common.cpu2000 import *
 INTEGER_ALU_LATENCY = 1
 INTEGER_MUL_LATENCY = 1
 INTEGER_DIV_LATENCY = 1
-FLOAT_ALU_LATENCY = 3
-FLOAT_MUL_LATENCY = 5
-FLOAT_DIV_LATENCY = 5
+FLOAT_ALU_LATENCY = 4
+FLOAT_MUL_LATENCY = 6
+FLOAT_DIV_LATENCY = 12
 
 # The issue latency is the number of cycles until another instruction can be issued 
 # to the functional unit after an instruction has already been issued.
