@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ignora le sotto-cartelle e tutto il suo contenuto
 programs/calculate_pi/
 programs/fibonacci_asm/
@@ -16,11 +15,10 @@ utils/
 
 # exclude specific files from being ignored
 g5v_pipeline.txt
-setup_dfault
+setup_dfault.*
 setup_default.labinf
 setup_default.vm
 simulate.sh
-=======
 # File specifici
 #   lab01/esegui.sh
 #   lab01/gem5_config.py
@@ -40,4 +38,4 @@ simulate.sh
 #   Tutti i file in una cartella con estensione specifica
 #   lab01/*.log
 #   lab02/*.log
->>>>>>> origin/giacomo
+setup_default
