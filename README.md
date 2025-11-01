@@ -24,11 +24,20 @@ Additional files for the visualizer and analyzing the pipeline behavior.
 Helper scripts for compilation and simulation using gem5, along with logs and output files for test verification.
 
 ---
-
 # Repository Structure
-- README.MD
-- LAB01.ZIP
-  - program01.s ...
-  - ...
-- LAB02.ZIP
-- ...
+
+- **README.md** - Project documentation
+- **programs/** - Laboratory programs
+  - **LAB01/** - Laboratory 01 files
+    - Source files (*.pdf, *.s)
+    - Makefile
+  - **LAB02/** - Laboratory 02 files  
+    - Source files (*.pdf, *.s)
+    - Makefile
+  - **.../** - Additional laboratories
+    - Source files (*.pdf, *.s)
+    - Makefile
+
+
+
+   
