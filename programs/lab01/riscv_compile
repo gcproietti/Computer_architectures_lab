@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+RISCV=/opt/riscv/bin
+
+filename=$(basename $1)
+prog_name="${filename%.*}"
+log_name="${filename%.*}.log"
+
+$RISCV/riscv32-unknown-elf-gcc -I/home/vboxuser/gem5/include -I/home/vboxuser/gem5/include/gem5/asm/generic -march=rv32imf -mabi=ilp32 -mno-relax -nostartfiles $1 -o $prog_name
