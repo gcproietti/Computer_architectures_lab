@@ -1,3 +1,25 @@
+# Ignora le sotto-cartelle e tutto il suo contenuto
+programs/calculate_pi/
+programs/fibonacci_asm/
+programs/fibonacci_c/
+programs/insertion_sort/
+gem5/
+results/calculate_pi/
+utils/
+
+# Ignora tutti i file con estensione .elf in qualsiasi sotto cartella
+**/*.elf
+**/*.dump
+*.badlog
+*.reg_log
+
+# exclude specific files from being ignored
+g5v_pipeline.txt
+setup_dfault
+setup_default.labinf
+setup_default.vm
+simulate.sh
+
 # Prerequisites
 *.d
 
