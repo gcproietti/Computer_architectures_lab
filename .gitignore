@@ -17,7 +17,6 @@ utils/
 g5v_pipeline.txt
 setup_dfault.*
 setup_default.labinf
-setup_default.vm
 simulate.sh
 # File specifici
 #   lab01/esegui.sh
