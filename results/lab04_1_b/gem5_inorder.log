@@ -1,3 +1,29 @@
+Global frequency set at 1000000000000 ticks per second
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 22.1.0.0
+gem5 compiled Aug 27 2025 16:10:28
+gem5 started Nov  2 2025 23:30:32
+gem5 executing on vboxuser-VirtualBox, pid 35257
+command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI --outdir=/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04_1_b/ --verbose ./gem5/riscv_in_order_hen_patt.py --caches --cpu-type MinorCPU --l1d_size 8388608 --l1i_size 8388608 --cacheline_size 512 --cpu-clock 1MHz --sys-clock 10GHz -c ./programs/lab04_1_b/lab04_1_b.elf
+
+**** REAL SIMULATION ****
+1000000: system.cpu.fetch1: Log4GUI: fetch1: 1000000: 0: 10094: <assembly>
+2000000: system.cpu.fetch1: Log4GUI: fetch1: 2000000: 1: 10094: <assembly>
+3000000: system.cpu.fetch1: Log4GUI: fetch1: 3000000: 1: 10094: <assembly>
+4000000: system.cpu.fetch1: Log4GUI: fetch1: 4000000: 1: 10094: <assembly>
+5000000: system.cpu.decode: Log4GUI: decode: 5000000: 0: 10094: addi x1, x0, 15
+5000000: system.cpu.fetch1: Log4GUI: fetch1: 5000000: 0: 10098: <assembly>
+6000000: system.cpu.execute: Log4GUI: execute: 6000000: 0: 10094: addi x1, x0, 15: 0
+6000000: system.cpu.decode: Log4GUI: decode: 6000000: 0: 10098: addi x8, x0, 9
+6000000: system.cpu.fetch1: Log4GUI: fetch1: 6000000: 0: 1009c: <assembly>
+7000000: system.cpu.memory: Log4GUI: memory: 7000000: 0: 10094: addi x1, x0, 15
+7000000: system.cpu.execute: Log4GUI: execute: 7000000: 0: 10098: addi x8, x0, 9: 0
+7000000: system.cpu.decode: Log4GUI: decode: 7000000: 0: 1009c: auipc x2, 1
+7000000: system.cpu.fetch1: Log4GUI: fetch1: 7000000: 0: 100a0: <assembly>
+8000000: system.cpu.writeback: Log4GUI: writeback: 8000000: 0: 10094: addi x1, x0, 15
+8000000: system.cpu.writeback: REGISTERS
 8000000: global: x0=0x00000000
 8000000: global: x1=0x0000000f
 8000000: global: x2=0x7fffff78
@@ -62,6 +88,12 @@
 8000000: global: f29=0x00000000
 8000000: global: f30=0x00000000
 8000000: global: f31=0x00000000
+8000000: system.cpu.memory: Log4GUI: memory: 8000000: 0: 10098: addi x8, x0, 9
+8000000: system.cpu.execute: Log4GUI: execute: 8000000: 0: 1009c: auipc x2, 1: 0
+8000000: system.cpu.decode: Log4GUI: decode: 8000000: 0: 100a0: addi x2, x2, 164
+8000000: system.cpu.fetch1: Log4GUI: fetch1: 8000000: 0: 100a4: <assembly>
+9000000: system.cpu.writeback: Log4GUI: writeback: 9000000: 0: 10098: addi x8, x0, 9
+9000000: system.cpu.writeback: REGISTERS
 9000000: global: x0=0x00000000
 9000000: global: x1=0x0000000f
 9000000: global: x2=0x7fffff78
@@ -126,6 +158,12 @@
 9000000: global: f29=0x00000000
 9000000: global: f30=0x00000000
 9000000: global: f31=0x00000000
+9000000: system.cpu.memory: Log4GUI: memory: 9000000: 0: 1009c: auipc x2, 1
+9000000: system.cpu.execute: Log4GUI: execute: 9000000: 0: 100a0: addi x2, x2, 164: 0
+9000000: system.cpu.decode: Log4GUI: decode: 9000000: 0: 100a4: auipc x3, 1
+9000000: system.cpu.fetch1: Log4GUI: fetch1: 9000000: 0: 100a8: <assembly>
+10000000: system.cpu.writeback: Log4GUI: writeback: 10000000: 0: 1009c: auipc x2, 1
+10000000: system.cpu.writeback: REGISTERS
 10000000: global: x0=0x00000000
 10000000: global: x1=0x0000000f
 10000000: global: x2=0x0001109c
@@ -190,6 +228,12 @@
 10000000: global: f29=0x00000000
 10000000: global: f30=0x00000000
 10000000: global: f31=0x00000000
+10000000: system.cpu.memory: Log4GUI: memory: 10000000: 0: 100a0: addi x2, x2, 164
+10000000: system.cpu.execute: Log4GUI: execute: 10000000: 0: 100a4: auipc x3, 1: 0
+10000000: system.cpu.decode: Log4GUI: decode: 10000000: 0: 100a8: addi x3, x3, 220
+10000000: system.cpu.fetch1: Log4GUI: fetch1: 10000000: 0: 100ac: <assembly>
+11000000: system.cpu.writeback: Log4GUI: writeback: 11000000: 0: 100a0: addi x2, x2, 164
+11000000: system.cpu.writeback: REGISTERS
 11000000: global: x0=0x00000000
 11000000: global: x1=0x0000000f
 11000000: global: x2=0x00011140
@@ -254,6 +298,12 @@
 11000000: global: f29=0x00000000
 11000000: global: f30=0x00000000
 11000000: global: f31=0x00000000
+11000000: system.cpu.memory: Log4GUI: memory: 11000000: 0: 100a4: auipc x3, 1
+11000000: system.cpu.execute: Log4GUI: execute: 11000000: 0: 100a8: addi x3, x3, 220: 0
+11000000: system.cpu.decode: Log4GUI: decode: 11000000: 0: 100ac: auipc x4, 1
+11000000: system.cpu.fetch1: Log4GUI: fetch1: 11000000: 0: 100b0: <assembly>
+12000000: system.cpu.writeback: Log4GUI: writeback: 12000000: 0: 100a4: auipc x3, 1
+12000000: system.cpu.writeback: REGISTERS
 12000000: global: x0=0x00000000
 12000000: global: x1=0x0000000f
 12000000: global: x2=0x00011140
@@ -318,6 +368,12 @@
 12000000: global: f29=0x00000000
 12000000: global: f30=0x00000000
 12000000: global: f31=0x00000000
+12000000: system.cpu.memory: Log4GUI: memory: 12000000: 0: 100a8: addi x3, x3, 220
+12000000: system.cpu.execute: Log4GUI: execute: 12000000: 0: 100ac: auipc x4, 1: 0
+12000000: system.cpu.decode: Log4GUI: decode: 12000000: 0: 100b0: addi x4, x4, 276
+12000000: system.cpu.fetch1: Log4GUI: fetch1: 12000000: 0: 100b4: <assembly>
+13000000: system.cpu.writeback: Log4GUI: writeback: 13000000: 0: 100a8: addi x3, x3, 220
+13000000: system.cpu.writeback: REGISTERS
 13000000: global: x0=0x00000000
 13000000: global: x1=0x0000000f
 13000000: global: x2=0x00011140
@@ -382,6 +438,12 @@
 13000000: global: f29=0x00000000
 13000000: global: f30=0x00000000
 13000000: global: f31=0x00000000
+13000000: system.cpu.memory: Log4GUI: memory: 13000000: 0: 100ac: auipc x4, 1
+13000000: system.cpu.execute: Log4GUI: execute: 13000000: 0: 100b0: addi x4, x4, 276: 0
+13000000: system.cpu.decode: Log4GUI: decode: 13000000: 0: 100b4: auipc x5, 1
+13000000: system.cpu.fetch1: Log4GUI: fetch1: 13000000: 0: 100b8: <assembly>
+14000000: system.cpu.writeback: Log4GUI: writeback: 14000000: 0: 100ac: auipc x4, 1
+14000000: system.cpu.writeback: REGISTERS
 14000000: global: x0=0x00000000
 14000000: global: x1=0x0000000f
 14000000: global: x2=0x00011140
@@ -446,6 +508,12 @@
 14000000: global: f29=0x00000000
 14000000: global: f30=0x00000000
 14000000: global: f31=0x00000000
+14000000: system.cpu.memory: Log4GUI: memory: 14000000: 0: 100b0: addi x4, x4, 276
+14000000: system.cpu.execute: Log4GUI: execute: 14000000: 0: 100b4: auipc x5, 1: 0
+14000000: system.cpu.decode: Log4GUI: decode: 14000000: 0: 100b8: addi x5, x5, 272
+14000000: system.cpu.fetch1: Log4GUI: fetch1: 14000000: 0: 100bc: <assembly>
+15000000: system.cpu.writeback: Log4GUI: writeback: 15000000: 0: 100b0: addi x4, x4, 276
+15000000: system.cpu.writeback: REGISTERS
 15000000: global: x0=0x00000000
 15000000: global: x1=0x0000000f
 15000000: global: x2=0x00011140
@@ -510,6 +578,12 @@
 15000000: global: f29=0x00000000
 15000000: global: f30=0x00000000
 15000000: global: f31=0x00000000
+15000000: system.cpu.memory: Log4GUI: memory: 15000000: 0: 100b4: auipc x5, 1
+15000000: system.cpu.execute: Log4GUI: execute: 15000000: 0: 100b8: addi x5, x5, 272: 0
+15000000: system.cpu.decode: Log4GUI: decode: 15000000: 0: 100bc: addi x6, x0, 0
+15000000: system.cpu.fetch1: Log4GUI: fetch1: 15000000: 0: 100c0: <assembly>
+16000000: system.cpu.writeback: Log4GUI: writeback: 16000000: 0: 100b4: auipc x5, 1
+16000000: system.cpu.writeback: REGISTERS
 16000000: global: x0=0x00000000
 16000000: global: x1=0x0000000f
 16000000: global: x2=0x00011140
@@ -574,6 +648,12 @@
 16000000: global: f29=0x00000000
 16000000: global: f30=0x00000000
 16000000: global: f31=0x00000000
+16000000: system.cpu.memory: Log4GUI: memory: 16000000: 0: 100b8: addi x5, x5, 272
+16000000: system.cpu.execute: Log4GUI: execute: 16000000: 0: 100bc: addi x6, x0, 0: 0
+16000000: system.cpu.decode: Log4GUI: decode: 16000000: 0: 100c0: addi x7, x0, 255
+16000000: system.cpu.fetch1: Log4GUI: fetch1: 16000000: 0: 100c4: <assembly>
+17000000: system.cpu.writeback: Log4GUI: writeback: 17000000: 0: 100b8: addi x5, x5, 272
+17000000: system.cpu.writeback: REGISTERS
 17000000: global: x0=0x00000000
 17000000: global: x1=0x0000000f
 17000000: global: x2=0x00011140
@@ -638,6 +718,12 @@
 17000000: global: f29=0x00000000
 17000000: global: f30=0x00000000
 17000000: global: f31=0x00000000
+17000000: system.cpu.memory: Log4GUI: memory: 17000000: 0: 100bc: addi x6, x0, 0
+17000000: system.cpu.execute: Log4GUI: execute: 17000000: 0: 100c0: addi x7, x0, 255: 0
+17000000: system.cpu.decode: Log4GUI: decode: 17000000: 0: 100c4: fmv_w_x f0, x0
+17000000: system.cpu.fetch1: Log4GUI: fetch1: 17000000: 0: 100c8: <assembly>
+18000000: system.cpu.writeback: Log4GUI: writeback: 18000000: 0: 100bc: addi x6, x0, 0
+18000000: system.cpu.writeback: REGISTERS
 18000000: global: x0=0x00000000
 18000000: global: x1=0x0000000f
 18000000: global: x2=0x00011140
@@ -702,6 +788,12 @@
 18000000: global: f29=0x00000000
 18000000: global: f30=0x00000000
 18000000: global: f31=0x00000000
+18000000: system.cpu.memory: Log4GUI: memory: 18000000: 0: 100c0: addi x7, x0, 255
+18000000: system.cpu.execute: Log4GUI: execute: 18000000: 0: 100c4: fmv_w_x f0, x0: 3
+18000000: system.cpu.decode: Log4GUI: decode: 18000000: 0: 100c8: addi x2, x2, 60
+18000000: system.cpu.fetch1: Log4GUI: fetch1: 18000000: 0: 100cc: <assembly>
+19000000: system.cpu.writeback: Log4GUI: writeback: 19000000: 0: 100c0: addi x7, x0, 255
+19000000: system.cpu.writeback: REGISTERS
 19000000: global: x0=0x00000000
 19000000: global: x1=0x0000000f
 19000000: global: x2=0x00011140
@@ -766,6 +858,17 @@
 19000000: global: f29=0x00000000
 19000000: global: f30=0x00000000
 19000000: global: f31=0x00000000
+19000000: system.cpu.execute: Log4GUI: execute: 19000000: 0: 100c8: addi x2, x2, 60: 0
+19000000: system.cpu.execute: Log4GUI: execute: 19000000: 0: 100c4: fmv_w_x f0, x0: 3
+19000000: system.cpu.decode: Log4GUI: decode: 19000000: 0: 100cc: addi x3, x3, 60
+19000000: system.cpu.fetch1: Log4GUI: fetch1: 19000000: 0: 100d0: <assembly>
+20000000: system.cpu.memory: Log4GUI: memory: 20000000: 0: 100c8: addi x2, x2, 60
+20000000: system.cpu.execute: Log4GUI: execute: 20000000: 0: 100cc: addi x3, x3, 60: 0
+20000000: system.cpu.execute: Log4GUI: execute: 20000000: 0: 100c4: fmv_w_x f0, x0: 3
+20000000: system.cpu.decode: Log4GUI: decode: 20000000: 0: 100d0: blt x1, x8, 36
+20000000: system.cpu.fetch1: Log4GUI: fetch1: 20000000: 0: 100d4: <assembly>
+21000000: system.cpu.writeback: Log4GUI: writeback: 21000000: 0: 100c8: addi x2, x2, 60
+21000000: system.cpu.writeback: REGISTERS
 21000000: global: x0=0x00000000
 21000000: global: x1=0x0000000f
 21000000: global: x2=0x0001117c
@@ -830,6 +933,13 @@
 21000000: global: f29=0x00000000
 21000000: global: f30=0x00000000
 21000000: global: f31=0x00000000
+21000000: system.cpu.memory: Log4GUI: memory: 21000000: 0: 100cc: addi x3, x3, 60
+21000000: system.cpu.execute: Log4GUI: execute: 21000000: 0: 100d0: blt x1, x8, 36: 0
+21000000: system.cpu.execute: Log4GUI: execute: 21000000: 0: 100c4: fmv_w_x f0, x0: 3
+21000000: system.cpu.decode: Log4GUI: decode: 21000000: 0: 100d4: flw f1, 0(x2)
+21000000: system.cpu.fetch1: Log4GUI: fetch1: 21000000: 0: 100d8: <assembly>
+22000000: system.cpu.writeback: Log4GUI: writeback: 22000000: 0: 100cc: addi x3, x3, 60
+22000000: system.cpu.writeback: REGISTERS
 22000000: global: x0=0x00000000
 22000000: global: x1=0x0000000f
 22000000: global: x2=0x0001117c
@@ -894,6 +1004,11 @@
 22000000: global: f29=0x00000000
 22000000: global: f30=0x00000000
 22000000: global: f31=0x00000000
+22000000: system.cpu.memory: Log4GUI: memory: 22000000: 0: 100c4: fmv_w_x f0, x0
+22000000: system.cpu.decode: Log4GUI: decode: 22000000: 1: 100d4: flw f1, 0(x2)
+22000000: system.cpu.fetch1: Log4GUI: fetch1: 22000000: 1: 100d8: <assembly>
+23000000: system.cpu.writeback: Log4GUI: writeback: 23000000: 0: 100c4: fmv_w_x f0, x0
+23000000: system.cpu.writeback: REGISTERS
 23000000: global: x0=0x00000000
 23000000: global: x1=0x0000000f
 23000000: global: x2=0x0001117c
@@ -958,6 +1073,12 @@
 23000000: global: f29=0x00000000
 23000000: global: f30=0x00000000
 23000000: global: f31=0x00000000
+23000000: system.cpu.memory: Log4GUI: memory: 23000000: 0: 100d0: blt x1, x8, 36
+23000000: system.cpu.execute: Log4GUI: execute: 23000000: 0: 100d4: flw f1, 0(x2): 0
+23000000: system.cpu.decode: Log4GUI: decode: 23000000: 0: 100d8: flw f2, 0(x3)
+23000000: system.cpu.fetch1: Log4GUI: fetch1: 23000000: 0: 100dc: <assembly>
+24000000: system.cpu.writeback: Log4GUI: writeback: 24000000: 0: 100d0: blt x1, x8, 36
+24000000: system.cpu.writeback: REGISTERS
 24000000: global: x0=0x00000000
 24000000: global: x1=0x0000000f
 24000000: global: x2=0x0001117c
@@ -1022,6 +1143,18 @@
 24000000: global: f29=0x00000000
 24000000: global: f30=0x00000000
 24000000: global: f31=0x00000000
+24000000: system.cpu.memory: Log4GUI: memory: 24000000: 0: 100d4: flw f1, 0(x2)
+24000000: system.cpu.execute: Log4GUI: execute: 24000000: 0: 100d8: flw f2, 0(x3): 0
+24000000: system.cpu.decode: Log4GUI: decode: 24000000: 0: 100dc: fmul_s f3, f1, f2
+24000000: system.cpu.fetch1: Log4GUI: fetch1: 24000000: 0: 100e0: <assembly>
+25000000: system.cpu.memory: Log4GUI: memory: 25000000: 1: 100d4: flw f1, 0(x2)
+25000000: system.cpu.execute: Log4GUI: execute: 25000000: 1: 100d8: flw f2, 0(x3): 0
+25000000: system.cpu.decode: Log4GUI: decode: 25000000: 1: 100dc: fmul_s f3, f1, f2
+25000000: system.cpu.fetch1: Log4GUI: fetch1: 25000000: 1: 100e0: <assembly>
+26000000: system.cpu.decode: Log4GUI: decode: 26000000: 1: 100dc: fmul_s f3, f1, f2
+26000000: system.cpu.fetch1: Log4GUI: fetch1: 26000000: 1: 100e0: <assembly>
+27000000: system.cpu.writeback: Log4GUI: writeback: 27000000: 0: 100d4: flw f1, 0(x2)
+27000000: system.cpu.writeback: REGISTERS
 27000000: global: x0=0x00000000
 27000000: global: x1=0x0000000f
 27000000: global: x2=0x0001117c
@@ -1086,6 +1219,11 @@
 27000000: global: f29=0x00000000
 27000000: global: f30=0x00000000
 27000000: global: f31=0x00000000
+27000000: system.cpu.memory: Log4GUI: memory: 27000000: 0: 100d8: flw f2, 0(x3)
+27000000: system.cpu.decode: Log4GUI: decode: 27000000: 1: 100dc: fmul_s f3, f1, f2
+27000000: system.cpu.fetch1: Log4GUI: fetch1: 27000000: 1: 100e0: <assembly>
+28000000: system.cpu.writeback: Log4GUI: writeback: 28000000: 0: 100d8: flw f2, 0(x3)
+28000000: system.cpu.writeback: REGISTERS
 28000000: global: x0=0x00000000
 28000000: global: x1=0x0000000f
 28000000: global: x2=0x0001117c
@@ -1150,6 +1288,20 @@
 28000000: global: f29=0x00000000
 28000000: global: f30=0x00000000
 28000000: global: f31=0x00000000
+28000000: system.cpu.execute: Log4GUI: execute: 28000000: 0: 100dc: fmul_s f3, f1, f2: 4
+28000000: system.cpu.decode: Log4GUI: decode: 28000000: 0: 100e0: addi x1, x1, -1
+28000000: system.cpu.fetch1: Log4GUI: fetch1: 28000000: 0: 100e4: <assembly>
+29000000: system.cpu.execute: Log4GUI: execute: 29000000: 0: 100e0: addi x1, x1, -1: 0
+29000000: system.cpu.execute: Log4GUI: execute: 29000000: 0: 100dc: fmul_s f3, f1, f2: 4
+29000000: system.cpu.decode: Log4GUI: decode: 29000000: 0: 100e4: addi x2, x2, -4
+29000000: system.cpu.fetch1: Log4GUI: fetch1: 29000000: 0: 100e8: <assembly>
+30000000: system.cpu.memory: Log4GUI: memory: 30000000: 0: 100e0: addi x1, x1, -1
+30000000: system.cpu.execute: Log4GUI: execute: 30000000: 0: 100e4: addi x2, x2, -4: 0
+30000000: system.cpu.execute: Log4GUI: execute: 30000000: 0: 100dc: fmul_s f3, f1, f2: 4
+30000000: system.cpu.decode: Log4GUI: decode: 30000000: 0: 100e8: addi x3, x3, -4
+30000000: system.cpu.fetch1: Log4GUI: fetch1: 30000000: 0: 100ec: <assembly>
+31000000: system.cpu.writeback: Log4GUI: writeback: 31000000: 0: 100e0: addi x1, x1, -1
+31000000: system.cpu.writeback: REGISTERS
 31000000: global: x0=0x00000000
 31000000: global: x1=0x0000000e
 31000000: global: x2=0x0001117c
@@ -1214,6 +1366,13 @@
 31000000: global: f29=0x00000000
 31000000: global: f30=0x00000000
 31000000: global: f31=0x00000000
+31000000: system.cpu.memory: Log4GUI: memory: 31000000: 0: 100e4: addi x2, x2, -4
+31000000: system.cpu.execute: Log4GUI: execute: 31000000: 0: 100e8: addi x3, x3, -4: 0
+31000000: system.cpu.execute: Log4GUI: execute: 31000000: 0: 100dc: fmul_s f3, f1, f2: 4
+31000000: system.cpu.decode: Log4GUI: decode: 31000000: 0: 100ec: fadd_s f0, f0, f3
+31000000: system.cpu.fetch1: Log4GUI: fetch1: 31000000: 0: 100f0: <assembly>
+32000000: system.cpu.writeback: Log4GUI: writeback: 32000000: 0: 100e4: addi x2, x2, -4
+32000000: system.cpu.writeback: REGISTERS
 32000000: global: x0=0x00000000
 32000000: global: x1=0x0000000e
 32000000: global: x2=0x00011178
@@ -1278,6 +1437,12 @@
 32000000: global: f29=0x00000000
 32000000: global: f30=0x00000000
 32000000: global: f31=0x00000000
+32000000: system.cpu.memory: Log4GUI: memory: 32000000: 0: 100e8: addi x3, x3, -4
+32000000: system.cpu.execute: Log4GUI: execute: 32000000: 0: 100dc: fmul_s f3, f1, f2: 4
+32000000: system.cpu.decode: Log4GUI: decode: 32000000: 1: 100ec: fadd_s f0, f0, f3
+32000000: system.cpu.fetch1: Log4GUI: fetch1: 32000000: 1: 100f0: <assembly>
+33000000: system.cpu.writeback: Log4GUI: writeback: 33000000: 0: 100e8: addi x3, x3, -4
+33000000: system.cpu.writeback: REGISTERS
 33000000: global: x0=0x00000000
 33000000: global: x1=0x0000000e
 33000000: global: x2=0x00011178
@@ -1342,6 +1507,21 @@
 33000000: global: f29=0x00000000
 33000000: global: f30=0x00000000
 33000000: global: f31=0x00000000
+33000000: system.cpu.execute: Log4GUI: execute: 33000000: 0: 100dc: fmul_s f3, f1, f2: 4
+33000000: system.cpu.decode: Log4GUI: decode: 33000000: 1: 100ec: fadd_s f0, f0, f3
+33000000: system.cpu.fetch1: Log4GUI: fetch1: 33000000: 1: 100f0: <assembly>
+34000000: system.cpu.execute: Log4GUI: execute: 34000000: 0: 100dc: fmul_s f3, f1, f2: 4
+34000000: system.cpu.decode: Log4GUI: decode: 34000000: 1: 100ec: fadd_s f0, f0, f3
+34000000: system.cpu.fetch1: Log4GUI: fetch1: 34000000: 1: 100f0: <assembly>
+35000000: system.cpu.execute: Log4GUI: execute: 35000000: 0: 100dc: fmul_s f3, f1, f2: 4
+35000000: system.cpu.decode: Log4GUI: decode: 35000000: 1: 100ec: fadd_s f0, f0, f3
+35000000: system.cpu.fetch1: Log4GUI: fetch1: 35000000: 1: 100f0: <assembly>
+36000000: system.cpu.memory: Log4GUI: memory: 36000000: 0: 100dc: fmul_s f3, f1, f2
+36000000: system.cpu.execute: Log4GUI: execute: 36000000: 0: 100ec: fadd_s f0, f0, f3: 3
+36000000: system.cpu.decode: Log4GUI: decode: 36000000: 0: 100f0: jal x0, -32
+36000000: system.cpu.fetch1: Log4GUI: fetch1: 36000000: 0: 100f4: <assembly>
+37000000: system.cpu.writeback: Log4GUI: writeback: 37000000: 0: 100dc: fmul_s f3, f1, f2
+37000000: system.cpu.writeback: REGISTERS
 37000000: global: x0=0x00000000
 37000000: global: x1=0x0000000e
 37000000: global: x2=0x00011178
@@ -1406,6 +1586,15 @@
 37000000: global: f29=0x00000000
 37000000: global: f30=0x00000000
 37000000: global: f31=0x00000000
+37000000: system.cpu.execute: Log4GUI: execute: 37000000: 0: 100f0: jal x0, -32: 0
+37000000: system.cpu.execute: Log4GUI: execute: 37000000: 0: 100ec: fadd_s f0, f0, f3: 3
+37000000: system.cpu.fetch1: Log4GUI: fetch1: 37000000: 0: 100d0: <assembly>
+38000000: system.cpu.memory: Log4GUI: memory: 38000000: 0: 100f0: jal x0, -32
+38000000: system.cpu.execute: Log4GUI: execute: 38000000: 0: 100ec: fadd_s f0, f0, f3: 3
+38000000: system.cpu.decode: Log4GUI: decode: 38000000: 0: 100d0: blt x1, x8, 36
+38000000: system.cpu.fetch1: Log4GUI: fetch1: 38000000: 0: 100d4: <assembly>
+39000000: system.cpu.writeback: Log4GUI: writeback: 39000000: 0: 100f0: jal x0, -32
+39000000: system.cpu.writeback: REGISTERS
 39000000: global: x0=0x00000000
 39000000: global: x1=0x0000000e
 39000000: global: x2=0x00011178
@@ -1470,6 +1659,15 @@
 39000000: global: f29=0x00000000
 39000000: global: f30=0x00000000
 39000000: global: f31=0x00000000
+39000000: system.cpu.execute: Log4GUI: execute: 39000000: 0: 100d0: blt x1, x8, 36: 0
+39000000: system.cpu.execute: Log4GUI: execute: 39000000: 0: 100ec: fadd_s f0, f0, f3: 3
+39000000: system.cpu.decode: Log4GUI: decode: 39000000: 0: 100d4: flw f1, 0(x2)
+39000000: system.cpu.fetch1: Log4GUI: fetch1: 39000000: 0: 100d8: <assembly>
+40000000: system.cpu.memory: Log4GUI: memory: 40000000: 0: 100ec: fadd_s f0, f0, f3
+40000000: system.cpu.decode: Log4GUI: decode: 40000000: 1: 100d4: flw f1, 0(x2)
+40000000: system.cpu.fetch1: Log4GUI: fetch1: 40000000: 1: 100d8: <assembly>
+41000000: system.cpu.writeback: Log4GUI: writeback: 41000000: 0: 100ec: fadd_s f0, f0, f3
+41000000: system.cpu.writeback: REGISTERS
 41000000: global: x0=0x00000000
 41000000: global: x1=0x0000000e
 41000000: global: x2=0x00011178
@@ -1534,6 +1732,12 @@
 41000000: global: f29=0x00000000
 41000000: global: f30=0x00000000
 41000000: global: f31=0x00000000
+41000000: system.cpu.memory: Log4GUI: memory: 41000000: 0: 100d0: blt x1, x8, 36
+41000000: system.cpu.execute: Log4GUI: execute: 41000000: 0: 100d4: flw f1, 0(x2): 0
+41000000: system.cpu.decode: Log4GUI: decode: 41000000: 0: 100d8: flw f2, 0(x3)
+41000000: system.cpu.fetch1: Log4GUI: fetch1: 41000000: 0: 100dc: <assembly>
+42000000: system.cpu.writeback: Log4GUI: writeback: 42000000: 0: 100d0: blt x1, x8, 36
+42000000: system.cpu.writeback: REGISTERS
 42000000: global: x0=0x00000000
 42000000: global: x1=0x0000000e
 42000000: global: x2=0x00011178
@@ -1598,6 +1802,12 @@
 42000000: global: f29=0x00000000
 42000000: global: f30=0x00000000
 42000000: global: f31=0x00000000
+42000000: system.cpu.memory: Log4GUI: memory: 42000000: 0: 100d4: flw f1, 0(x2)
+42000000: system.cpu.execute: Log4GUI: execute: 42000000: 0: 100d8: flw f2, 0(x3): 0
+42000000: system.cpu.decode: Log4GUI: decode: 42000000: 0: 100dc: fmul_s f3, f1, f2
+42000000: system.cpu.fetch1: Log4GUI: fetch1: 42000000: 0: 100e0: <assembly>
+43000000: system.cpu.writeback: Log4GUI: writeback: 43000000: 0: 100d4: flw f1, 0(x2)
+43000000: system.cpu.writeback: REGISTERS
 43000000: global: x0=0x00000000
 43000000: global: x1=0x0000000e
 43000000: global: x2=0x00011178
@@ -1662,6 +1872,11 @@
 43000000: global: f29=0x00000000
 43000000: global: f30=0x00000000
 43000000: global: f31=0x00000000
+43000000: system.cpu.memory: Log4GUI: memory: 43000000: 0: 100d8: flw f2, 0(x3)
+43000000: system.cpu.decode: Log4GUI: decode: 43000000: 1: 100dc: fmul_s f3, f1, f2
+43000000: system.cpu.fetch1: Log4GUI: fetch1: 43000000: 1: 100e0: <assembly>
+44000000: system.cpu.writeback: Log4GUI: writeback: 44000000: 0: 100d8: flw f2, 0(x3)
+44000000: system.cpu.writeback: REGISTERS
 44000000: global: x0=0x00000000
 44000000: global: x1=0x0000000e
 44000000: global: x2=0x00011178
@@ -1726,6 +1941,20 @@
 44000000: global: f29=0x00000000
 44000000: global: f30=0x00000000
 44000000: global: f31=0x00000000
+44000000: system.cpu.execute: Log4GUI: execute: 44000000: 0: 100dc: fmul_s f3, f1, f2: 4
+44000000: system.cpu.decode: Log4GUI: decode: 44000000: 0: 100e0: addi x1, x1, -1
+44000000: system.cpu.fetch1: Log4GUI: fetch1: 44000000: 0: 100e4: <assembly>
+45000000: system.cpu.execute: Log4GUI: execute: 45000000: 0: 100e0: addi x1, x1, -1: 0
+45000000: system.cpu.execute: Log4GUI: execute: 45000000: 0: 100dc: fmul_s f3, f1, f2: 4
+45000000: system.cpu.decode: Log4GUI: decode: 45000000: 0: 100e4: addi x2, x2, -4
+45000000: system.cpu.fetch1: Log4GUI: fetch1: 45000000: 0: 100e8: <assembly>
+46000000: system.cpu.memory: Log4GUI: memory: 46000000: 0: 100e0: addi x1, x1, -1
+46000000: system.cpu.execute: Log4GUI: execute: 46000000: 0: 100e4: addi x2, x2, -4: 0
+46000000: system.cpu.execute: Log4GUI: execute: 46000000: 0: 100dc: fmul_s f3, f1, f2: 4
+46000000: system.cpu.decode: Log4GUI: decode: 46000000: 0: 100e8: addi x3, x3, -4
+46000000: system.cpu.fetch1: Log4GUI: fetch1: 46000000: 0: 100ec: <assembly>
+47000000: system.cpu.writeback: Log4GUI: writeback: 47000000: 0: 100e0: addi x1, x1, -1
+47000000: system.cpu.writeback: REGISTERS
 47000000: global: x0=0x00000000
 47000000: global: x1=0x0000000d
 47000000: global: x2=0x00011178
@@ -1790,6 +2019,13 @@
 47000000: global: f29=0x00000000
 47000000: global: f30=0x00000000
 47000000: global: f31=0x00000000
+47000000: system.cpu.memory: Log4GUI: memory: 47000000: 0: 100e4: addi x2, x2, -4
+47000000: system.cpu.execute: Log4GUI: execute: 47000000: 0: 100e8: addi x3, x3, -4: 0
+47000000: system.cpu.execute: Log4GUI: execute: 47000000: 0: 100dc: fmul_s f3, f1, f2: 4
+47000000: system.cpu.decode: Log4GUI: decode: 47000000: 0: 100ec: fadd_s f0, f0, f3
+47000000: system.cpu.fetch1: Log4GUI: fetch1: 47000000: 0: 100f0: <assembly>
+48000000: system.cpu.writeback: Log4GUI: writeback: 48000000: 0: 100e4: addi x2, x2, -4
+48000000: system.cpu.writeback: REGISTERS
 48000000: global: x0=0x00000000
 48000000: global: x1=0x0000000d
 48000000: global: x2=0x00011174
@@ -1854,6 +2090,12 @@
 48000000: global: f29=0x00000000
 48000000: global: f30=0x00000000
 48000000: global: f31=0x00000000
+48000000: system.cpu.memory: Log4GUI: memory: 48000000: 0: 100e8: addi x3, x3, -4
+48000000: system.cpu.execute: Log4GUI: execute: 48000000: 0: 100dc: fmul_s f3, f1, f2: 4
+48000000: system.cpu.decode: Log4GUI: decode: 48000000: 1: 100ec: fadd_s f0, f0, f3
+48000000: system.cpu.fetch1: Log4GUI: fetch1: 48000000: 1: 100f0: <assembly>
+49000000: system.cpu.writeback: Log4GUI: writeback: 49000000: 0: 100e8: addi x3, x3, -4
+49000000: system.cpu.writeback: REGISTERS
 49000000: global: x0=0x00000000
 49000000: global: x1=0x0000000d
 49000000: global: x2=0x00011174
@@ -1918,6 +2160,21 @@
 49000000: global: f29=0x00000000
 49000000: global: f30=0x00000000
 49000000: global: f31=0x00000000
+49000000: system.cpu.execute: Log4GUI: execute: 49000000: 0: 100dc: fmul_s f3, f1, f2: 4
+49000000: system.cpu.decode: Log4GUI: decode: 49000000: 1: 100ec: fadd_s f0, f0, f3
+49000000: system.cpu.fetch1: Log4GUI: fetch1: 49000000: 1: 100f0: <assembly>
+50000000: system.cpu.execute: Log4GUI: execute: 50000000: 0: 100dc: fmul_s f3, f1, f2: 4
+50000000: system.cpu.decode: Log4GUI: decode: 50000000: 1: 100ec: fadd_s f0, f0, f3
+50000000: system.cpu.fetch1: Log4GUI: fetch1: 50000000: 1: 100f0: <assembly>
+51000000: system.cpu.execute: Log4GUI: execute: 51000000: 0: 100dc: fmul_s f3, f1, f2: 4
+51000000: system.cpu.decode: Log4GUI: decode: 51000000: 1: 100ec: fadd_s f0, f0, f3
+51000000: system.cpu.fetch1: Log4GUI: fetch1: 51000000: 1: 100f0: <assembly>
+52000000: system.cpu.memory: Log4GUI: memory: 52000000: 0: 100dc: fmul_s f3, f1, f2
+52000000: system.cpu.execute: Log4GUI: execute: 52000000: 0: 100ec: fadd_s f0, f0, f3: 3
+52000000: system.cpu.decode: Log4GUI: decode: 52000000: 0: 100f0: jal x0, -32
+52000000: system.cpu.fetch1: Log4GUI: fetch1: 52000000: 0: 100f4: <assembly>
+53000000: system.cpu.writeback: Log4GUI: writeback: 53000000: 0: 100dc: fmul_s f3, f1, f2
+53000000: system.cpu.writeback: REGISTERS
 53000000: global: x0=0x00000000
 53000000: global: x1=0x0000000d
 53000000: global: x2=0x00011174
@@ -1982,6 +2239,15 @@
 53000000: global: f29=0x00000000
 53000000: global: f30=0x00000000
 53000000: global: f31=0x00000000
+53000000: system.cpu.execute: Log4GUI: execute: 53000000: 0: 100f0: jal x0, -32: 0
+53000000: system.cpu.execute: Log4GUI: execute: 53000000: 0: 100ec: fadd_s f0, f0, f3: 3
+53000000: system.cpu.fetch1: Log4GUI: fetch1: 53000000: 0: 100d0: <assembly>
+54000000: system.cpu.memory: Log4GUI: memory: 54000000: 0: 100f0: jal x0, -32
+54000000: system.cpu.execute: Log4GUI: execute: 54000000: 0: 100ec: fadd_s f0, f0, f3: 3
+54000000: system.cpu.decode: Log4GUI: decode: 54000000: 0: 100d0: blt x1, x8, 36
+54000000: system.cpu.fetch1: Log4GUI: fetch1: 54000000: 0: 100d4: <assembly>
+55000000: system.cpu.writeback: Log4GUI: writeback: 55000000: 0: 100f0: jal x0, -32
+55000000: system.cpu.writeback: REGISTERS
 55000000: global: x0=0x00000000
 55000000: global: x1=0x0000000d
 55000000: global: x2=0x00011174
@@ -2046,6 +2312,15 @@
 55000000: global: f29=0x00000000
 55000000: global: f30=0x00000000
 55000000: global: f31=0x00000000
+55000000: system.cpu.execute: Log4GUI: execute: 55000000: 0: 100d0: blt x1, x8, 36: 0
+55000000: system.cpu.execute: Log4GUI: execute: 55000000: 0: 100ec: fadd_s f0, f0, f3: 3
+55000000: system.cpu.decode: Log4GUI: decode: 55000000: 0: 100d4: flw f1, 0(x2)
+55000000: system.cpu.fetch1: Log4GUI: fetch1: 55000000: 0: 100d8: <assembly>
+56000000: system.cpu.memory: Log4GUI: memory: 56000000: 0: 100ec: fadd_s f0, f0, f3
+56000000: system.cpu.decode: Log4GUI: decode: 56000000: 1: 100d4: flw f1, 0(x2)
+56000000: system.cpu.fetch1: Log4GUI: fetch1: 56000000: 1: 100d8: <assembly>
+57000000: system.cpu.writeback: Log4GUI: writeback: 57000000: 0: 100ec: fadd_s f0, f0, f3
+57000000: system.cpu.writeback: REGISTERS
 57000000: global: x0=0x00000000
 57000000: global: x1=0x0000000d
 57000000: global: x2=0x00011174
@@ -2110,6 +2385,12 @@
 57000000: global: f29=0x00000000
 57000000: global: f30=0x00000000
 57000000: global: f31=0x00000000
+57000000: system.cpu.memory: Log4GUI: memory: 57000000: 0: 100d0: blt x1, x8, 36
+57000000: system.cpu.execute: Log4GUI: execute: 57000000: 0: 100d4: flw f1, 0(x2): 0
+57000000: system.cpu.decode: Log4GUI: decode: 57000000: 0: 100d8: flw f2, 0(x3)
+57000000: system.cpu.fetch1: Log4GUI: fetch1: 57000000: 0: 100dc: <assembly>
+58000000: system.cpu.writeback: Log4GUI: writeback: 58000000: 0: 100d0: blt x1, x8, 36
+58000000: system.cpu.writeback: REGISTERS
 58000000: global: x0=0x00000000
 58000000: global: x1=0x0000000d
 58000000: global: x2=0x00011174
@@ -2174,6 +2455,12 @@
 58000000: global: f29=0x00000000
 58000000: global: f30=0x00000000
 58000000: global: f31=0x00000000
+58000000: system.cpu.memory: Log4GUI: memory: 58000000: 0: 100d4: flw f1, 0(x2)
+58000000: system.cpu.execute: Log4GUI: execute: 58000000: 0: 100d8: flw f2, 0(x3): 0
+58000000: system.cpu.decode: Log4GUI: decode: 58000000: 0: 100dc: fmul_s f3, f1, f2
+58000000: system.cpu.fetch1: Log4GUI: fetch1: 58000000: 0: 100e0: <assembly>
+59000000: system.cpu.writeback: Log4GUI: writeback: 59000000: 0: 100d4: flw f1, 0(x2)
+59000000: system.cpu.writeback: REGISTERS
 59000000: global: x0=0x00000000
 59000000: global: x1=0x0000000d
 59000000: global: x2=0x00011174
@@ -2238,6 +2525,11 @@
 59000000: global: f29=0x00000000
 59000000: global: f30=0x00000000
 59000000: global: f31=0x00000000
+59000000: system.cpu.memory: Log4GUI: memory: 59000000: 0: 100d8: flw f2, 0(x3)
+59000000: system.cpu.decode: Log4GUI: decode: 59000000: 1: 100dc: fmul_s f3, f1, f2
+59000000: system.cpu.fetch1: Log4GUI: fetch1: 59000000: 1: 100e0: <assembly>
+60000000: system.cpu.writeback: Log4GUI: writeback: 60000000: 0: 100d8: flw f2, 0(x3)
+60000000: system.cpu.writeback: REGISTERS
 60000000: global: x0=0x00000000
 60000000: global: x1=0x0000000d
 60000000: global: x2=0x00011174
@@ -2302,6 +2594,20 @@
 60000000: global: f29=0x00000000
 60000000: global: f30=0x00000000
 60000000: global: f31=0x00000000
+60000000: system.cpu.execute: Log4GUI: execute: 60000000: 0: 100dc: fmul_s f3, f1, f2: 4
+60000000: system.cpu.decode: Log4GUI: decode: 60000000: 0: 100e0: addi x1, x1, -1
+60000000: system.cpu.fetch1: Log4GUI: fetch1: 60000000: 0: 100e4: <assembly>
+61000000: system.cpu.execute: Log4GUI: execute: 61000000: 0: 100e0: addi x1, x1, -1: 0
+61000000: system.cpu.execute: Log4GUI: execute: 61000000: 0: 100dc: fmul_s f3, f1, f2: 4
+61000000: system.cpu.decode: Log4GUI: decode: 61000000: 0: 100e4: addi x2, x2, -4
+61000000: system.cpu.fetch1: Log4GUI: fetch1: 61000000: 0: 100e8: <assembly>
+62000000: system.cpu.memory: Log4GUI: memory: 62000000: 0: 100e0: addi x1, x1, -1
+62000000: system.cpu.execute: Log4GUI: execute: 62000000: 0: 100e4: addi x2, x2, -4: 0
+62000000: system.cpu.execute: Log4GUI: execute: 62000000: 0: 100dc: fmul_s f3, f1, f2: 4
+62000000: system.cpu.decode: Log4GUI: decode: 62000000: 0: 100e8: addi x3, x3, -4
+62000000: system.cpu.fetch1: Log4GUI: fetch1: 62000000: 0: 100ec: <assembly>
+63000000: system.cpu.writeback: Log4GUI: writeback: 63000000: 0: 100e0: addi x1, x1, -1
+63000000: system.cpu.writeback: REGISTERS
 63000000: global: x0=0x00000000
 63000000: global: x1=0x0000000c
 63000000: global: x2=0x00011174
@@ -2366,6 +2672,13 @@
 63000000: global: f29=0x00000000
 63000000: global: f30=0x00000000
 63000000: global: f31=0x00000000
+63000000: system.cpu.memory: Log4GUI: memory: 63000000: 0: 100e4: addi x2, x2, -4
+63000000: system.cpu.execute: Log4GUI: execute: 63000000: 0: 100e8: addi x3, x3, -4: 0
+63000000: system.cpu.execute: Log4GUI: execute: 63000000: 0: 100dc: fmul_s f3, f1, f2: 4
+63000000: system.cpu.decode: Log4GUI: decode: 63000000: 0: 100ec: fadd_s f0, f0, f3
+63000000: system.cpu.fetch1: Log4GUI: fetch1: 63000000: 0: 100f0: <assembly>
+64000000: system.cpu.writeback: Log4GUI: writeback: 64000000: 0: 100e4: addi x2, x2, -4
+64000000: system.cpu.writeback: REGISTERS
 64000000: global: x0=0x00000000
 64000000: global: x1=0x0000000c
 64000000: global: x2=0x00011170
@@ -2430,6 +2743,12 @@
 64000000: global: f29=0x00000000
 64000000: global: f30=0x00000000
 64000000: global: f31=0x00000000
+64000000: system.cpu.memory: Log4GUI: memory: 64000000: 0: 100e8: addi x3, x3, -4
+64000000: system.cpu.execute: Log4GUI: execute: 64000000: 0: 100dc: fmul_s f3, f1, f2: 4
+64000000: system.cpu.decode: Log4GUI: decode: 64000000: 1: 100ec: fadd_s f0, f0, f3
+64000000: system.cpu.fetch1: Log4GUI: fetch1: 64000000: 1: 100f0: <assembly>
+65000000: system.cpu.writeback: Log4GUI: writeback: 65000000: 0: 100e8: addi x3, x3, -4
+65000000: system.cpu.writeback: REGISTERS
 65000000: global: x0=0x00000000
 65000000: global: x1=0x0000000c
 65000000: global: x2=0x00011170
@@ -2494,6 +2813,21 @@
 65000000: global: f29=0x00000000
 65000000: global: f30=0x00000000
 65000000: global: f31=0x00000000
+65000000: system.cpu.execute: Log4GUI: execute: 65000000: 0: 100dc: fmul_s f3, f1, f2: 4
+65000000: system.cpu.decode: Log4GUI: decode: 65000000: 1: 100ec: fadd_s f0, f0, f3
+65000000: system.cpu.fetch1: Log4GUI: fetch1: 65000000: 1: 100f0: <assembly>
+66000000: system.cpu.execute: Log4GUI: execute: 66000000: 0: 100dc: fmul_s f3, f1, f2: 4
+66000000: system.cpu.decode: Log4GUI: decode: 66000000: 1: 100ec: fadd_s f0, f0, f3
+66000000: system.cpu.fetch1: Log4GUI: fetch1: 66000000: 1: 100f0: <assembly>
+67000000: system.cpu.execute: Log4GUI: execute: 67000000: 0: 100dc: fmul_s f3, f1, f2: 4
+67000000: system.cpu.decode: Log4GUI: decode: 67000000: 1: 100ec: fadd_s f0, f0, f3
+67000000: system.cpu.fetch1: Log4GUI: fetch1: 67000000: 1: 100f0: <assembly>
+68000000: system.cpu.memory: Log4GUI: memory: 68000000: 0: 100dc: fmul_s f3, f1, f2
+68000000: system.cpu.execute: Log4GUI: execute: 68000000: 0: 100ec: fadd_s f0, f0, f3: 3
+68000000: system.cpu.decode: Log4GUI: decode: 68000000: 0: 100f0: jal x0, -32
+68000000: system.cpu.fetch1: Log4GUI: fetch1: 68000000: 0: 100f4: <assembly>
+69000000: system.cpu.writeback: Log4GUI: writeback: 69000000: 0: 100dc: fmul_s f3, f1, f2
+69000000: system.cpu.writeback: REGISTERS
 69000000: global: x0=0x00000000
 69000000: global: x1=0x0000000c
 69000000: global: x2=0x00011170
@@ -2558,6 +2892,15 @@
 69000000: global: f29=0x00000000
 69000000: global: f30=0x00000000
 69000000: global: f31=0x00000000
+69000000: system.cpu.execute: Log4GUI: execute: 69000000: 0: 100f0: jal x0, -32: 0
+69000000: system.cpu.execute: Log4GUI: execute: 69000000: 0: 100ec: fadd_s f0, f0, f3: 3
+69000000: system.cpu.fetch1: Log4GUI: fetch1: 69000000: 0: 100d0: <assembly>
+70000000: system.cpu.memory: Log4GUI: memory: 70000000: 0: 100f0: jal x0, -32
+70000000: system.cpu.execute: Log4GUI: execute: 70000000: 0: 100ec: fadd_s f0, f0, f3: 3
+70000000: system.cpu.decode: Log4GUI: decode: 70000000: 0: 100d0: blt x1, x8, 36
+70000000: system.cpu.fetch1: Log4GUI: fetch1: 70000000: 0: 100d4: <assembly>
+71000000: system.cpu.writeback: Log4GUI: writeback: 71000000: 0: 100f0: jal x0, -32
+71000000: system.cpu.writeback: REGISTERS
 71000000: global: x0=0x00000000
 71000000: global: x1=0x0000000c
 71000000: global: x2=0x00011170
@@ -2622,6 +2965,15 @@
 71000000: global: f29=0x00000000
 71000000: global: f30=0x00000000
 71000000: global: f31=0x00000000
+71000000: system.cpu.execute: Log4GUI: execute: 71000000: 0: 100d0: blt x1, x8, 36: 0
+71000000: system.cpu.execute: Log4GUI: execute: 71000000: 0: 100ec: fadd_s f0, f0, f3: 3
+71000000: system.cpu.decode: Log4GUI: decode: 71000000: 0: 100d4: flw f1, 0(x2)
+71000000: system.cpu.fetch1: Log4GUI: fetch1: 71000000: 0: 100d8: <assembly>
+72000000: system.cpu.memory: Log4GUI: memory: 72000000: 0: 100ec: fadd_s f0, f0, f3
+72000000: system.cpu.decode: Log4GUI: decode: 72000000: 1: 100d4: flw f1, 0(x2)
+72000000: system.cpu.fetch1: Log4GUI: fetch1: 72000000: 1: 100d8: <assembly>
+73000000: system.cpu.writeback: Log4GUI: writeback: 73000000: 0: 100ec: fadd_s f0, f0, f3
+73000000: system.cpu.writeback: REGISTERS
 73000000: global: x0=0x00000000
 73000000: global: x1=0x0000000c
 73000000: global: x2=0x00011170
@@ -2686,6 +3038,12 @@
 73000000: global: f29=0x00000000
 73000000: global: f30=0x00000000
 73000000: global: f31=0x00000000
+73000000: system.cpu.memory: Log4GUI: memory: 73000000: 0: 100d0: blt x1, x8, 36
+73000000: system.cpu.execute: Log4GUI: execute: 73000000: 0: 100d4: flw f1, 0(x2): 0
+73000000: system.cpu.decode: Log4GUI: decode: 73000000: 0: 100d8: flw f2, 0(x3)
+73000000: system.cpu.fetch1: Log4GUI: fetch1: 73000000: 0: 100dc: <assembly>
+74000000: system.cpu.writeback: Log4GUI: writeback: 74000000: 0: 100d0: blt x1, x8, 36
+74000000: system.cpu.writeback: REGISTERS
 74000000: global: x0=0x00000000
 74000000: global: x1=0x0000000c
 74000000: global: x2=0x00011170
@@ -2750,6 +3108,12 @@
 74000000: global: f29=0x00000000
 74000000: global: f30=0x00000000
 74000000: global: f31=0x00000000
+74000000: system.cpu.memory: Log4GUI: memory: 74000000: 0: 100d4: flw f1, 0(x2)
+74000000: system.cpu.execute: Log4GUI: execute: 74000000: 0: 100d8: flw f2, 0(x3): 0
+74000000: system.cpu.decode: Log4GUI: decode: 74000000: 0: 100dc: fmul_s f3, f1, f2
+74000000: system.cpu.fetch1: Log4GUI: fetch1: 74000000: 0: 100e0: <assembly>
+75000000: system.cpu.writeback: Log4GUI: writeback: 75000000: 0: 100d4: flw f1, 0(x2)
+75000000: system.cpu.writeback: REGISTERS
 75000000: global: x0=0x00000000
 75000000: global: x1=0x0000000c
 75000000: global: x2=0x00011170
@@ -2814,6 +3178,11 @@
 75000000: global: f29=0x00000000
 75000000: global: f30=0x00000000
 75000000: global: f31=0x00000000
+75000000: system.cpu.memory: Log4GUI: memory: 75000000: 0: 100d8: flw f2, 0(x3)
+75000000: system.cpu.decode: Log4GUI: decode: 75000000: 1: 100dc: fmul_s f3, f1, f2
+75000000: system.cpu.fetch1: Log4GUI: fetch1: 75000000: 1: 100e0: <assembly>
+76000000: system.cpu.writeback: Log4GUI: writeback: 76000000: 0: 100d8: flw f2, 0(x3)
+76000000: system.cpu.writeback: REGISTERS
 76000000: global: x0=0x00000000
 76000000: global: x1=0x0000000c
 76000000: global: x2=0x00011170
@@ -2878,6 +3247,20 @@
 76000000: global: f29=0x00000000
 76000000: global: f30=0x00000000
 76000000: global: f31=0x00000000
+76000000: system.cpu.execute: Log4GUI: execute: 76000000: 0: 100dc: fmul_s f3, f1, f2: 4
+76000000: system.cpu.decode: Log4GUI: decode: 76000000: 0: 100e0: addi x1, x1, -1
+76000000: system.cpu.fetch1: Log4GUI: fetch1: 76000000: 0: 100e4: <assembly>
+77000000: system.cpu.execute: Log4GUI: execute: 77000000: 0: 100e0: addi x1, x1, -1: 0
+77000000: system.cpu.execute: Log4GUI: execute: 77000000: 0: 100dc: fmul_s f3, f1, f2: 4
+77000000: system.cpu.decode: Log4GUI: decode: 77000000: 0: 100e4: addi x2, x2, -4
+77000000: system.cpu.fetch1: Log4GUI: fetch1: 77000000: 0: 100e8: <assembly>
+78000000: system.cpu.memory: Log4GUI: memory: 78000000: 0: 100e0: addi x1, x1, -1
+78000000: system.cpu.execute: Log4GUI: execute: 78000000: 0: 100e4: addi x2, x2, -4: 0
+78000000: system.cpu.execute: Log4GUI: execute: 78000000: 0: 100dc: fmul_s f3, f1, f2: 4
+78000000: system.cpu.decode: Log4GUI: decode: 78000000: 0: 100e8: addi x3, x3, -4
+78000000: system.cpu.fetch1: Log4GUI: fetch1: 78000000: 0: 100ec: <assembly>
+79000000: system.cpu.writeback: Log4GUI: writeback: 79000000: 0: 100e0: addi x1, x1, -1
+79000000: system.cpu.writeback: REGISTERS
 79000000: global: x0=0x00000000
 79000000: global: x1=0x0000000b
 79000000: global: x2=0x00011170
@@ -2942,6 +3325,13 @@
 79000000: global: f29=0x00000000
 79000000: global: f30=0x00000000
 79000000: global: f31=0x00000000
+79000000: system.cpu.memory: Log4GUI: memory: 79000000: 0: 100e4: addi x2, x2, -4
+79000000: system.cpu.execute: Log4GUI: execute: 79000000: 0: 100e8: addi x3, x3, -4: 0
+79000000: system.cpu.execute: Log4GUI: execute: 79000000: 0: 100dc: fmul_s f3, f1, f2: 4
+79000000: system.cpu.decode: Log4GUI: decode: 79000000: 0: 100ec: fadd_s f0, f0, f3
+79000000: system.cpu.fetch1: Log4GUI: fetch1: 79000000: 0: 100f0: <assembly>
+80000000: system.cpu.writeback: Log4GUI: writeback: 80000000: 0: 100e4: addi x2, x2, -4
+80000000: system.cpu.writeback: REGISTERS
 80000000: global: x0=0x00000000
 80000000: global: x1=0x0000000b
 80000000: global: x2=0x0001116c
@@ -3006,6 +3396,12 @@
 80000000: global: f29=0x00000000
 80000000: global: f30=0x00000000
 80000000: global: f31=0x00000000
+80000000: system.cpu.memory: Log4GUI: memory: 80000000: 0: 100e8: addi x3, x3, -4
+80000000: system.cpu.execute: Log4GUI: execute: 80000000: 0: 100dc: fmul_s f3, f1, f2: 4
+80000000: system.cpu.decode: Log4GUI: decode: 80000000: 1: 100ec: fadd_s f0, f0, f3
+80000000: system.cpu.fetch1: Log4GUI: fetch1: 80000000: 1: 100f0: <assembly>
+81000000: system.cpu.writeback: Log4GUI: writeback: 81000000: 0: 100e8: addi x3, x3, -4
+81000000: system.cpu.writeback: REGISTERS
 81000000: global: x0=0x00000000
 81000000: global: x1=0x0000000b
 81000000: global: x2=0x0001116c
@@ -3070,6 +3466,21 @@
 81000000: global: f29=0x00000000
 81000000: global: f30=0x00000000
 81000000: global: f31=0x00000000
+81000000: system.cpu.execute: Log4GUI: execute: 81000000: 0: 100dc: fmul_s f3, f1, f2: 4
+81000000: system.cpu.decode: Log4GUI: decode: 81000000: 1: 100ec: fadd_s f0, f0, f3
+81000000: system.cpu.fetch1: Log4GUI: fetch1: 81000000: 1: 100f0: <assembly>
+82000000: system.cpu.execute: Log4GUI: execute: 82000000: 0: 100dc: fmul_s f3, f1, f2: 4
+82000000: system.cpu.decode: Log4GUI: decode: 82000000: 1: 100ec: fadd_s f0, f0, f3
+82000000: system.cpu.fetch1: Log4GUI: fetch1: 82000000: 1: 100f0: <assembly>
+83000000: system.cpu.execute: Log4GUI: execute: 83000000: 0: 100dc: fmul_s f3, f1, f2: 4
+83000000: system.cpu.decode: Log4GUI: decode: 83000000: 1: 100ec: fadd_s f0, f0, f3
+83000000: system.cpu.fetch1: Log4GUI: fetch1: 83000000: 1: 100f0: <assembly>
+84000000: system.cpu.memory: Log4GUI: memory: 84000000: 0: 100dc: fmul_s f3, f1, f2
+84000000: system.cpu.execute: Log4GUI: execute: 84000000: 0: 100ec: fadd_s f0, f0, f3: 3
+84000000: system.cpu.decode: Log4GUI: decode: 84000000: 0: 100f0: jal x0, -32
+84000000: system.cpu.fetch1: Log4GUI: fetch1: 84000000: 0: 100f4: <assembly>
+85000000: system.cpu.writeback: Log4GUI: writeback: 85000000: 0: 100dc: fmul_s f3, f1, f2
+85000000: system.cpu.writeback: REGISTERS
 85000000: global: x0=0x00000000
 85000000: global: x1=0x0000000b
 85000000: global: x2=0x0001116c
@@ -3134,6 +3545,15 @@
 85000000: global: f29=0x00000000
 85000000: global: f30=0x00000000
 85000000: global: f31=0x00000000
+85000000: system.cpu.execute: Log4GUI: execute: 85000000: 0: 100f0: jal x0, -32: 0
+85000000: system.cpu.execute: Log4GUI: execute: 85000000: 0: 100ec: fadd_s f0, f0, f3: 3
+85000000: system.cpu.fetch1: Log4GUI: fetch1: 85000000: 0: 100d0: <assembly>
+86000000: system.cpu.memory: Log4GUI: memory: 86000000: 0: 100f0: jal x0, -32
+86000000: system.cpu.execute: Log4GUI: execute: 86000000: 0: 100ec: fadd_s f0, f0, f3: 3
+86000000: system.cpu.decode: Log4GUI: decode: 86000000: 0: 100d0: blt x1, x8, 36
+86000000: system.cpu.fetch1: Log4GUI: fetch1: 86000000: 0: 100d4: <assembly>
+87000000: system.cpu.writeback: Log4GUI: writeback: 87000000: 0: 100f0: jal x0, -32
+87000000: system.cpu.writeback: REGISTERS
 87000000: global: x0=0x00000000
 87000000: global: x1=0x0000000b
 87000000: global: x2=0x0001116c
@@ -3198,6 +3618,15 @@
 87000000: global: f29=0x00000000
 87000000: global: f30=0x00000000
 87000000: global: f31=0x00000000
+87000000: system.cpu.execute: Log4GUI: execute: 87000000: 0: 100d0: blt x1, x8, 36: 0
+87000000: system.cpu.execute: Log4GUI: execute: 87000000: 0: 100ec: fadd_s f0, f0, f3: 3
+87000000: system.cpu.decode: Log4GUI: decode: 87000000: 0: 100d4: flw f1, 0(x2)
+87000000: system.cpu.fetch1: Log4GUI: fetch1: 87000000: 0: 100d8: <assembly>
+88000000: system.cpu.memory: Log4GUI: memory: 88000000: 0: 100ec: fadd_s f0, f0, f3
+88000000: system.cpu.decode: Log4GUI: decode: 88000000: 1: 100d4: flw f1, 0(x2)
+88000000: system.cpu.fetch1: Log4GUI: fetch1: 88000000: 1: 100d8: <assembly>
+89000000: system.cpu.writeback: Log4GUI: writeback: 89000000: 0: 100ec: fadd_s f0, f0, f3
+89000000: system.cpu.writeback: REGISTERS
 89000000: global: x0=0x00000000
 89000000: global: x1=0x0000000b
 89000000: global: x2=0x0001116c
@@ -3262,6 +3691,12 @@
 89000000: global: f29=0x00000000
 89000000: global: f30=0x00000000
 89000000: global: f31=0x00000000
+89000000: system.cpu.memory: Log4GUI: memory: 89000000: 0: 100d0: blt x1, x8, 36
+89000000: system.cpu.execute: Log4GUI: execute: 89000000: 0: 100d4: flw f1, 0(x2): 0
+89000000: system.cpu.decode: Log4GUI: decode: 89000000: 0: 100d8: flw f2, 0(x3)
+89000000: system.cpu.fetch1: Log4GUI: fetch1: 89000000: 0: 100dc: <assembly>
+90000000: system.cpu.writeback: Log4GUI: writeback: 90000000: 0: 100d0: blt x1, x8, 36
+90000000: system.cpu.writeback: REGISTERS
 90000000: global: x0=0x00000000
 90000000: global: x1=0x0000000b
 90000000: global: x2=0x0001116c
@@ -3326,6 +3761,12 @@
 90000000: global: f29=0x00000000
 90000000: global: f30=0x00000000
 90000000: global: f31=0x00000000
+90000000: system.cpu.memory: Log4GUI: memory: 90000000: 0: 100d4: flw f1, 0(x2)
+90000000: system.cpu.execute: Log4GUI: execute: 90000000: 0: 100d8: flw f2, 0(x3): 0
+90000000: system.cpu.decode: Log4GUI: decode: 90000000: 0: 100dc: fmul_s f3, f1, f2
+90000000: system.cpu.fetch1: Log4GUI: fetch1: 90000000: 0: 100e0: <assembly>
+91000000: system.cpu.writeback: Log4GUI: writeback: 91000000: 0: 100d4: flw f1, 0(x2)
+91000000: system.cpu.writeback: REGISTERS
 91000000: global: x0=0x00000000
 91000000: global: x1=0x0000000b
 91000000: global: x2=0x0001116c
@@ -3390,6 +3831,11 @@
 91000000: global: f29=0x00000000
 91000000: global: f30=0x00000000
 91000000: global: f31=0x00000000
+91000000: system.cpu.memory: Log4GUI: memory: 91000000: 0: 100d8: flw f2, 0(x3)
+91000000: system.cpu.decode: Log4GUI: decode: 91000000: 1: 100dc: fmul_s f3, f1, f2
+91000000: system.cpu.fetch1: Log4GUI: fetch1: 91000000: 1: 100e0: <assembly>
+92000000: system.cpu.writeback: Log4GUI: writeback: 92000000: 0: 100d8: flw f2, 0(x3)
+92000000: system.cpu.writeback: REGISTERS
 92000000: global: x0=0x00000000
 92000000: global: x1=0x0000000b
 92000000: global: x2=0x0001116c
@@ -3454,6 +3900,20 @@
 92000000: global: f29=0x00000000
 92000000: global: f30=0x00000000
 92000000: global: f31=0x00000000
+92000000: system.cpu.execute: Log4GUI: execute: 92000000: 0: 100dc: fmul_s f3, f1, f2: 4
+92000000: system.cpu.decode: Log4GUI: decode: 92000000: 0: 100e0: addi x1, x1, -1
+92000000: system.cpu.fetch1: Log4GUI: fetch1: 92000000: 0: 100e4: <assembly>
+93000000: system.cpu.execute: Log4GUI: execute: 93000000: 0: 100e0: addi x1, x1, -1: 0
+93000000: system.cpu.execute: Log4GUI: execute: 93000000: 0: 100dc: fmul_s f3, f1, f2: 4
+93000000: system.cpu.decode: Log4GUI: decode: 93000000: 0: 100e4: addi x2, x2, -4
+93000000: system.cpu.fetch1: Log4GUI: fetch1: 93000000: 0: 100e8: <assembly>
+94000000: system.cpu.memory: Log4GUI: memory: 94000000: 0: 100e0: addi x1, x1, -1
+94000000: system.cpu.execute: Log4GUI: execute: 94000000: 0: 100e4: addi x2, x2, -4: 0
+94000000: system.cpu.execute: Log4GUI: execute: 94000000: 0: 100dc: fmul_s f3, f1, f2: 4
+94000000: system.cpu.decode: Log4GUI: decode: 94000000: 0: 100e8: addi x3, x3, -4
+94000000: system.cpu.fetch1: Log4GUI: fetch1: 94000000: 0: 100ec: <assembly>
+95000000: system.cpu.writeback: Log4GUI: writeback: 95000000: 0: 100e0: addi x1, x1, -1
+95000000: system.cpu.writeback: REGISTERS
 95000000: global: x0=0x00000000
 95000000: global: x1=0x0000000a
 95000000: global: x2=0x0001116c
@@ -3518,6 +3978,13 @@
 95000000: global: f29=0x00000000
 95000000: global: f30=0x00000000
 95000000: global: f31=0x00000000
+95000000: system.cpu.memory: Log4GUI: memory: 95000000: 0: 100e4: addi x2, x2, -4
+95000000: system.cpu.execute: Log4GUI: execute: 95000000: 0: 100e8: addi x3, x3, -4: 0
+95000000: system.cpu.execute: Log4GUI: execute: 95000000: 0: 100dc: fmul_s f3, f1, f2: 4
+95000000: system.cpu.decode: Log4GUI: decode: 95000000: 0: 100ec: fadd_s f0, f0, f3
+95000000: system.cpu.fetch1: Log4GUI: fetch1: 95000000: 0: 100f0: <assembly>
+96000000: system.cpu.writeback: Log4GUI: writeback: 96000000: 0: 100e4: addi x2, x2, -4
+96000000: system.cpu.writeback: REGISTERS
 96000000: global: x0=0x00000000
 96000000: global: x1=0x0000000a
 96000000: global: x2=0x00011168
@@ -3582,6 +4049,12 @@
 96000000: global: f29=0x00000000
 96000000: global: f30=0x00000000
 96000000: global: f31=0x00000000
+96000000: system.cpu.memory: Log4GUI: memory: 96000000: 0: 100e8: addi x3, x3, -4
+96000000: system.cpu.execute: Log4GUI: execute: 96000000: 0: 100dc: fmul_s f3, f1, f2: 4
+96000000: system.cpu.decode: Log4GUI: decode: 96000000: 1: 100ec: fadd_s f0, f0, f3
+96000000: system.cpu.fetch1: Log4GUI: fetch1: 96000000: 1: 100f0: <assembly>
+97000000: system.cpu.writeback: Log4GUI: writeback: 97000000: 0: 100e8: addi x3, x3, -4
+97000000: system.cpu.writeback: REGISTERS
 97000000: global: x0=0x00000000
 97000000: global: x1=0x0000000a
 97000000: global: x2=0x00011168
@@ -3646,6 +4119,21 @@
 97000000: global: f29=0x00000000
 97000000: global: f30=0x00000000
 97000000: global: f31=0x00000000
+97000000: system.cpu.execute: Log4GUI: execute: 97000000: 0: 100dc: fmul_s f3, f1, f2: 4
+97000000: system.cpu.decode: Log4GUI: decode: 97000000: 1: 100ec: fadd_s f0, f0, f3
+97000000: system.cpu.fetch1: Log4GUI: fetch1: 97000000: 1: 100f0: <assembly>
+98000000: system.cpu.execute: Log4GUI: execute: 98000000: 0: 100dc: fmul_s f3, f1, f2: 4
+98000000: system.cpu.decode: Log4GUI: decode: 98000000: 1: 100ec: fadd_s f0, f0, f3
+98000000: system.cpu.fetch1: Log4GUI: fetch1: 98000000: 1: 100f0: <assembly>
+99000000: system.cpu.execute: Log4GUI: execute: 99000000: 0: 100dc: fmul_s f3, f1, f2: 4
+99000000: system.cpu.decode: Log4GUI: decode: 99000000: 1: 100ec: fadd_s f0, f0, f3
+99000000: system.cpu.fetch1: Log4GUI: fetch1: 99000000: 1: 100f0: <assembly>
+100000000: system.cpu.memory: Log4GUI: memory: 100000000: 0: 100dc: fmul_s f3, f1, f2
+100000000: system.cpu.execute: Log4GUI: execute: 100000000: 0: 100ec: fadd_s f0, f0, f3: 3
+100000000: system.cpu.decode: Log4GUI: decode: 100000000: 0: 100f0: jal x0, -32
+100000000: system.cpu.fetch1: Log4GUI: fetch1: 100000000: 0: 100f4: <assembly>
+101000000: system.cpu.writeback: Log4GUI: writeback: 101000000: 0: 100dc: fmul_s f3, f1, f2
+101000000: system.cpu.writeback: REGISTERS
 101000000: global: x0=0x00000000
 101000000: global: x1=0x0000000a
 101000000: global: x2=0x00011168
@@ -3710,6 +4198,15 @@
 101000000: global: f29=0x00000000
 101000000: global: f30=0x00000000
 101000000: global: f31=0x00000000
+101000000: system.cpu.execute: Log4GUI: execute: 101000000: 0: 100f0: jal x0, -32: 0
+101000000: system.cpu.execute: Log4GUI: execute: 101000000: 0: 100ec: fadd_s f0, f0, f3: 3
+101000000: system.cpu.fetch1: Log4GUI: fetch1: 101000000: 0: 100d0: <assembly>
+102000000: system.cpu.memory: Log4GUI: memory: 102000000: 0: 100f0: jal x0, -32
+102000000: system.cpu.execute: Log4GUI: execute: 102000000: 0: 100ec: fadd_s f0, f0, f3: 3
+102000000: system.cpu.decode: Log4GUI: decode: 102000000: 0: 100d0: blt x1, x8, 36
+102000000: system.cpu.fetch1: Log4GUI: fetch1: 102000000: 0: 100d4: <assembly>
+103000000: system.cpu.writeback: Log4GUI: writeback: 103000000: 0: 100f0: jal x0, -32
+103000000: system.cpu.writeback: REGISTERS
 103000000: global: x0=0x00000000
 103000000: global: x1=0x0000000a
 103000000: global: x2=0x00011168
@@ -3774,6 +4271,15 @@
 103000000: global: f29=0x00000000
 103000000: global: f30=0x00000000
 103000000: global: f31=0x00000000
+103000000: system.cpu.execute: Log4GUI: execute: 103000000: 0: 100d0: blt x1, x8, 36: 0
+103000000: system.cpu.execute: Log4GUI: execute: 103000000: 0: 100ec: fadd_s f0, f0, f3: 3
+103000000: system.cpu.decode: Log4GUI: decode: 103000000: 0: 100d4: flw f1, 0(x2)
+103000000: system.cpu.fetch1: Log4GUI: fetch1: 103000000: 0: 100d8: <assembly>
+104000000: system.cpu.memory: Log4GUI: memory: 104000000: 0: 100ec: fadd_s f0, f0, f3
+104000000: system.cpu.decode: Log4GUI: decode: 104000000: 1: 100d4: flw f1, 0(x2)
+104000000: system.cpu.fetch1: Log4GUI: fetch1: 104000000: 1: 100d8: <assembly>
+105000000: system.cpu.writeback: Log4GUI: writeback: 105000000: 0: 100ec: fadd_s f0, f0, f3
+105000000: system.cpu.writeback: REGISTERS
 105000000: global: x0=0x00000000
 105000000: global: x1=0x0000000a
 105000000: global: x2=0x00011168
@@ -3838,6 +4344,12 @@
 105000000: global: f29=0x00000000
 105000000: global: f30=0x00000000
 105000000: global: f31=0x00000000
+105000000: system.cpu.memory: Log4GUI: memory: 105000000: 0: 100d0: blt x1, x8, 36
+105000000: system.cpu.execute: Log4GUI: execute: 105000000: 0: 100d4: flw f1, 0(x2): 0
+105000000: system.cpu.decode: Log4GUI: decode: 105000000: 0: 100d8: flw f2, 0(x3)
+105000000: system.cpu.fetch1: Log4GUI: fetch1: 105000000: 0: 100dc: <assembly>
+106000000: system.cpu.writeback: Log4GUI: writeback: 106000000: 0: 100d0: blt x1, x8, 36
+106000000: system.cpu.writeback: REGISTERS
 106000000: global: x0=0x00000000
 106000000: global: x1=0x0000000a
 106000000: global: x2=0x00011168
@@ -3902,6 +4414,12 @@
 106000000: global: f29=0x00000000
 106000000: global: f30=0x00000000
 106000000: global: f31=0x00000000
+106000000: system.cpu.memory: Log4GUI: memory: 106000000: 0: 100d4: flw f1, 0(x2)
+106000000: system.cpu.execute: Log4GUI: execute: 106000000: 0: 100d8: flw f2, 0(x3): 0
+106000000: system.cpu.decode: Log4GUI: decode: 106000000: 0: 100dc: fmul_s f3, f1, f2
+106000000: system.cpu.fetch1: Log4GUI: fetch1: 106000000: 0: 100e0: <assembly>
+107000000: system.cpu.writeback: Log4GUI: writeback: 107000000: 0: 100d4: flw f1, 0(x2)
+107000000: system.cpu.writeback: REGISTERS
 107000000: global: x0=0x00000000
 107000000: global: x1=0x0000000a
 107000000: global: x2=0x00011168
@@ -3966,6 +4484,11 @@
 107000000: global: f29=0x00000000
 107000000: global: f30=0x00000000
 107000000: global: f31=0x00000000
+107000000: system.cpu.memory: Log4GUI: memory: 107000000: 0: 100d8: flw f2, 0(x3)
+107000000: system.cpu.decode: Log4GUI: decode: 107000000: 1: 100dc: fmul_s f3, f1, f2
+107000000: system.cpu.fetch1: Log4GUI: fetch1: 107000000: 1: 100e0: <assembly>
+108000000: system.cpu.writeback: Log4GUI: writeback: 108000000: 0: 100d8: flw f2, 0(x3)
+108000000: system.cpu.writeback: REGISTERS
 108000000: global: x0=0x00000000
 108000000: global: x1=0x0000000a
 108000000: global: x2=0x00011168
@@ -4030,6 +4553,20 @@
 108000000: global: f29=0x00000000
 108000000: global: f30=0x00000000
 108000000: global: f31=0x00000000
+108000000: system.cpu.execute: Log4GUI: execute: 108000000: 0: 100dc: fmul_s f3, f1, f2: 4
+108000000: system.cpu.decode: Log4GUI: decode: 108000000: 0: 100e0: addi x1, x1, -1
+108000000: system.cpu.fetch1: Log4GUI: fetch1: 108000000: 0: 100e4: <assembly>
+109000000: system.cpu.execute: Log4GUI: execute: 109000000: 0: 100e0: addi x1, x1, -1: 0
+109000000: system.cpu.execute: Log4GUI: execute: 109000000: 0: 100dc: fmul_s f3, f1, f2: 4
+109000000: system.cpu.decode: Log4GUI: decode: 109000000: 0: 100e4: addi x2, x2, -4
+109000000: system.cpu.fetch1: Log4GUI: fetch1: 109000000: 0: 100e8: <assembly>
+110000000: system.cpu.memory: Log4GUI: memory: 110000000: 0: 100e0: addi x1, x1, -1
+110000000: system.cpu.execute: Log4GUI: execute: 110000000: 0: 100e4: addi x2, x2, -4: 0
+110000000: system.cpu.execute: Log4GUI: execute: 110000000: 0: 100dc: fmul_s f3, f1, f2: 4
+110000000: system.cpu.decode: Log4GUI: decode: 110000000: 0: 100e8: addi x3, x3, -4
+110000000: system.cpu.fetch1: Log4GUI: fetch1: 110000000: 0: 100ec: <assembly>
+111000000: system.cpu.writeback: Log4GUI: writeback: 111000000: 0: 100e0: addi x1, x1, -1
+111000000: system.cpu.writeback: REGISTERS
 111000000: global: x0=0x00000000
 111000000: global: x1=0x00000009
 111000000: global: x2=0x00011168
@@ -4094,6 +4631,13 @@
 111000000: global: f29=0x00000000
 111000000: global: f30=0x00000000
 111000000: global: f31=0x00000000
+111000000: system.cpu.memory: Log4GUI: memory: 111000000: 0: 100e4: addi x2, x2, -4
+111000000: system.cpu.execute: Log4GUI: execute: 111000000: 0: 100e8: addi x3, x3, -4: 0
+111000000: system.cpu.execute: Log4GUI: execute: 111000000: 0: 100dc: fmul_s f3, f1, f2: 4
+111000000: system.cpu.decode: Log4GUI: decode: 111000000: 0: 100ec: fadd_s f0, f0, f3
+111000000: system.cpu.fetch1: Log4GUI: fetch1: 111000000: 0: 100f0: <assembly>
+112000000: system.cpu.writeback: Log4GUI: writeback: 112000000: 0: 100e4: addi x2, x2, -4
+112000000: system.cpu.writeback: REGISTERS
 112000000: global: x0=0x00000000
 112000000: global: x1=0x00000009
 112000000: global: x2=0x00011164
@@ -4158,6 +4702,12 @@
 112000000: global: f29=0x00000000
 112000000: global: f30=0x00000000
 112000000: global: f31=0x00000000
+112000000: system.cpu.memory: Log4GUI: memory: 112000000: 0: 100e8: addi x3, x3, -4
+112000000: system.cpu.execute: Log4GUI: execute: 112000000: 0: 100dc: fmul_s f3, f1, f2: 4
+112000000: system.cpu.decode: Log4GUI: decode: 112000000: 1: 100ec: fadd_s f0, f0, f3
+112000000: system.cpu.fetch1: Log4GUI: fetch1: 112000000: 1: 100f0: <assembly>
+113000000: system.cpu.writeback: Log4GUI: writeback: 113000000: 0: 100e8: addi x3, x3, -4
+113000000: system.cpu.writeback: REGISTERS
 113000000: global: x0=0x00000000
 113000000: global: x1=0x00000009
 113000000: global: x2=0x00011164
@@ -4222,6 +4772,21 @@
 113000000: global: f29=0x00000000
 113000000: global: f30=0x00000000
 113000000: global: f31=0x00000000
+113000000: system.cpu.execute: Log4GUI: execute: 113000000: 0: 100dc: fmul_s f3, f1, f2: 4
+113000000: system.cpu.decode: Log4GUI: decode: 113000000: 1: 100ec: fadd_s f0, f0, f3
+113000000: system.cpu.fetch1: Log4GUI: fetch1: 113000000: 1: 100f0: <assembly>
+114000000: system.cpu.execute: Log4GUI: execute: 114000000: 0: 100dc: fmul_s f3, f1, f2: 4
+114000000: system.cpu.decode: Log4GUI: decode: 114000000: 1: 100ec: fadd_s f0, f0, f3
+114000000: system.cpu.fetch1: Log4GUI: fetch1: 114000000: 1: 100f0: <assembly>
+115000000: system.cpu.execute: Log4GUI: execute: 115000000: 0: 100dc: fmul_s f3, f1, f2: 4
+115000000: system.cpu.decode: Log4GUI: decode: 115000000: 1: 100ec: fadd_s f0, f0, f3
+115000000: system.cpu.fetch1: Log4GUI: fetch1: 115000000: 1: 100f0: <assembly>
+116000000: system.cpu.memory: Log4GUI: memory: 116000000: 0: 100dc: fmul_s f3, f1, f2
+116000000: system.cpu.execute: Log4GUI: execute: 116000000: 0: 100ec: fadd_s f0, f0, f3: 3
+116000000: system.cpu.decode: Log4GUI: decode: 116000000: 0: 100f0: jal x0, -32
+116000000: system.cpu.fetch1: Log4GUI: fetch1: 116000000: 0: 100f4: <assembly>
+117000000: system.cpu.writeback: Log4GUI: writeback: 117000000: 0: 100dc: fmul_s f3, f1, f2
+117000000: system.cpu.writeback: REGISTERS
 117000000: global: x0=0x00000000
 117000000: global: x1=0x00000009
 117000000: global: x2=0x00011164
@@ -4286,6 +4851,15 @@
 117000000: global: f29=0x00000000
 117000000: global: f30=0x00000000
 117000000: global: f31=0x00000000
+117000000: system.cpu.execute: Log4GUI: execute: 117000000: 0: 100f0: jal x0, -32: 0
+117000000: system.cpu.execute: Log4GUI: execute: 117000000: 0: 100ec: fadd_s f0, f0, f3: 3
+117000000: system.cpu.fetch1: Log4GUI: fetch1: 117000000: 0: 100d0: <assembly>
+118000000: system.cpu.memory: Log4GUI: memory: 118000000: 0: 100f0: jal x0, -32
+118000000: system.cpu.execute: Log4GUI: execute: 118000000: 0: 100ec: fadd_s f0, f0, f3: 3
+118000000: system.cpu.decode: Log4GUI: decode: 118000000: 0: 100d0: blt x1, x8, 36
+118000000: system.cpu.fetch1: Log4GUI: fetch1: 118000000: 0: 100d4: <assembly>
+119000000: system.cpu.writeback: Log4GUI: writeback: 119000000: 0: 100f0: jal x0, -32
+119000000: system.cpu.writeback: REGISTERS
 119000000: global: x0=0x00000000
 119000000: global: x1=0x00000009
 119000000: global: x2=0x00011164
@@ -4350,6 +4924,15 @@
 119000000: global: f29=0x00000000
 119000000: global: f30=0x00000000
 119000000: global: f31=0x00000000
+119000000: system.cpu.execute: Log4GUI: execute: 119000000: 0: 100d0: blt x1, x8, 36: 0
+119000000: system.cpu.execute: Log4GUI: execute: 119000000: 0: 100ec: fadd_s f0, f0, f3: 3
+119000000: system.cpu.decode: Log4GUI: decode: 119000000: 0: 100d4: flw f1, 0(x2)
+119000000: system.cpu.fetch1: Log4GUI: fetch1: 119000000: 0: 100d8: <assembly>
+120000000: system.cpu.memory: Log4GUI: memory: 120000000: 0: 100ec: fadd_s f0, f0, f3
+120000000: system.cpu.decode: Log4GUI: decode: 120000000: 1: 100d4: flw f1, 0(x2)
+120000000: system.cpu.fetch1: Log4GUI: fetch1: 120000000: 1: 100d8: <assembly>
+121000000: system.cpu.writeback: Log4GUI: writeback: 121000000: 0: 100ec: fadd_s f0, f0, f3
+121000000: system.cpu.writeback: REGISTERS
 121000000: global: x0=0x00000000
 121000000: global: x1=0x00000009
 121000000: global: x2=0x00011164
@@ -4414,6 +4997,12 @@
 121000000: global: f29=0x00000000
 121000000: global: f30=0x00000000
 121000000: global: f31=0x00000000
+121000000: system.cpu.memory: Log4GUI: memory: 121000000: 0: 100d0: blt x1, x8, 36
+121000000: system.cpu.execute: Log4GUI: execute: 121000000: 0: 100d4: flw f1, 0(x2): 0
+121000000: system.cpu.decode: Log4GUI: decode: 121000000: 0: 100d8: flw f2, 0(x3)
+121000000: system.cpu.fetch1: Log4GUI: fetch1: 121000000: 0: 100dc: <assembly>
+122000000: system.cpu.writeback: Log4GUI: writeback: 122000000: 0: 100d0: blt x1, x8, 36
+122000000: system.cpu.writeback: REGISTERS
 122000000: global: x0=0x00000000
 122000000: global: x1=0x00000009
 122000000: global: x2=0x00011164
@@ -4478,6 +5067,12 @@
 122000000: global: f29=0x00000000
 122000000: global: f30=0x00000000
 122000000: global: f31=0x00000000
+122000000: system.cpu.memory: Log4GUI: memory: 122000000: 0: 100d4: flw f1, 0(x2)
+122000000: system.cpu.execute: Log4GUI: execute: 122000000: 0: 100d8: flw f2, 0(x3): 0
+122000000: system.cpu.decode: Log4GUI: decode: 122000000: 0: 100dc: fmul_s f3, f1, f2
+122000000: system.cpu.fetch1: Log4GUI: fetch1: 122000000: 0: 100e0: <assembly>
+123000000: system.cpu.writeback: Log4GUI: writeback: 123000000: 0: 100d4: flw f1, 0(x2)
+123000000: system.cpu.writeback: REGISTERS
 123000000: global: x0=0x00000000
 123000000: global: x1=0x00000009
 123000000: global: x2=0x00011164
@@ -4542,6 +5137,11 @@
 123000000: global: f29=0x00000000
 123000000: global: f30=0x00000000
 123000000: global: f31=0x00000000
+123000000: system.cpu.memory: Log4GUI: memory: 123000000: 0: 100d8: flw f2, 0(x3)
+123000000: system.cpu.decode: Log4GUI: decode: 123000000: 1: 100dc: fmul_s f3, f1, f2
+123000000: system.cpu.fetch1: Log4GUI: fetch1: 123000000: 1: 100e0: <assembly>
+124000000: system.cpu.writeback: Log4GUI: writeback: 124000000: 0: 100d8: flw f2, 0(x3)
+124000000: system.cpu.writeback: REGISTERS
 124000000: global: x0=0x00000000
 124000000: global: x1=0x00000009
 124000000: global: x2=0x00011164
@@ -4606,6 +5206,20 @@
 124000000: global: f29=0x00000000
 124000000: global: f30=0x00000000
 124000000: global: f31=0x00000000
+124000000: system.cpu.execute: Log4GUI: execute: 124000000: 0: 100dc: fmul_s f3, f1, f2: 4
+124000000: system.cpu.decode: Log4GUI: decode: 124000000: 0: 100e0: addi x1, x1, -1
+124000000: system.cpu.fetch1: Log4GUI: fetch1: 124000000: 0: 100e4: <assembly>
+125000000: system.cpu.execute: Log4GUI: execute: 125000000: 0: 100e0: addi x1, x1, -1: 0
+125000000: system.cpu.execute: Log4GUI: execute: 125000000: 0: 100dc: fmul_s f3, f1, f2: 4
+125000000: system.cpu.decode: Log4GUI: decode: 125000000: 0: 100e4: addi x2, x2, -4
+125000000: system.cpu.fetch1: Log4GUI: fetch1: 125000000: 0: 100e8: <assembly>
+126000000: system.cpu.memory: Log4GUI: memory: 126000000: 0: 100e0: addi x1, x1, -1
+126000000: system.cpu.execute: Log4GUI: execute: 126000000: 0: 100e4: addi x2, x2, -4: 0
+126000000: system.cpu.execute: Log4GUI: execute: 126000000: 0: 100dc: fmul_s f3, f1, f2: 4
+126000000: system.cpu.decode: Log4GUI: decode: 126000000: 0: 100e8: addi x3, x3, -4
+126000000: system.cpu.fetch1: Log4GUI: fetch1: 126000000: 0: 100ec: <assembly>
+127000000: system.cpu.writeback: Log4GUI: writeback: 127000000: 0: 100e0: addi x1, x1, -1
+127000000: system.cpu.writeback: REGISTERS
 127000000: global: x0=0x00000000
 127000000: global: x1=0x00000008
 127000000: global: x2=0x00011164
@@ -4670,6 +5284,13 @@
 127000000: global: f29=0x00000000
 127000000: global: f30=0x00000000
 127000000: global: f31=0x00000000
+127000000: system.cpu.memory: Log4GUI: memory: 127000000: 0: 100e4: addi x2, x2, -4
+127000000: system.cpu.execute: Log4GUI: execute: 127000000: 0: 100e8: addi x3, x3, -4: 0
+127000000: system.cpu.execute: Log4GUI: execute: 127000000: 0: 100dc: fmul_s f3, f1, f2: 4
+127000000: system.cpu.decode: Log4GUI: decode: 127000000: 0: 100ec: fadd_s f0, f0, f3
+127000000: system.cpu.fetch1: Log4GUI: fetch1: 127000000: 0: 100f0: <assembly>
+128000000: system.cpu.writeback: Log4GUI: writeback: 128000000: 0: 100e4: addi x2, x2, -4
+128000000: system.cpu.writeback: REGISTERS
 128000000: global: x0=0x00000000
 128000000: global: x1=0x00000008
 128000000: global: x2=0x00011160
@@ -4734,6 +5355,12 @@
 128000000: global: f29=0x00000000
 128000000: global: f30=0x00000000
 128000000: global: f31=0x00000000
+128000000: system.cpu.memory: Log4GUI: memory: 128000000: 0: 100e8: addi x3, x3, -4
+128000000: system.cpu.execute: Log4GUI: execute: 128000000: 0: 100dc: fmul_s f3, f1, f2: 4
+128000000: system.cpu.decode: Log4GUI: decode: 128000000: 1: 100ec: fadd_s f0, f0, f3
+128000000: system.cpu.fetch1: Log4GUI: fetch1: 128000000: 1: 100f0: <assembly>
+129000000: system.cpu.writeback: Log4GUI: writeback: 129000000: 0: 100e8: addi x3, x3, -4
+129000000: system.cpu.writeback: REGISTERS
 129000000: global: x0=0x00000000
 129000000: global: x1=0x00000008
 129000000: global: x2=0x00011160
@@ -4798,6 +5425,21 @@
 129000000: global: f29=0x00000000
 129000000: global: f30=0x00000000
 129000000: global: f31=0x00000000
+129000000: system.cpu.execute: Log4GUI: execute: 129000000: 0: 100dc: fmul_s f3, f1, f2: 4
+129000000: system.cpu.decode: Log4GUI: decode: 129000000: 1: 100ec: fadd_s f0, f0, f3
+129000000: system.cpu.fetch1: Log4GUI: fetch1: 129000000: 1: 100f0: <assembly>
+130000000: system.cpu.execute: Log4GUI: execute: 130000000: 0: 100dc: fmul_s f3, f1, f2: 4
+130000000: system.cpu.decode: Log4GUI: decode: 130000000: 1: 100ec: fadd_s f0, f0, f3
+130000000: system.cpu.fetch1: Log4GUI: fetch1: 130000000: 1: 100f0: <assembly>
+131000000: system.cpu.execute: Log4GUI: execute: 131000000: 0: 100dc: fmul_s f3, f1, f2: 4
+131000000: system.cpu.decode: Log4GUI: decode: 131000000: 1: 100ec: fadd_s f0, f0, f3
+131000000: system.cpu.fetch1: Log4GUI: fetch1: 131000000: 1: 100f0: <assembly>
+132000000: system.cpu.memory: Log4GUI: memory: 132000000: 0: 100dc: fmul_s f3, f1, f2
+132000000: system.cpu.execute: Log4GUI: execute: 132000000: 0: 100ec: fadd_s f0, f0, f3: 3
+132000000: system.cpu.decode: Log4GUI: decode: 132000000: 0: 100f0: jal x0, -32
+132000000: system.cpu.fetch1: Log4GUI: fetch1: 132000000: 0: 100f4: <assembly>
+133000000: system.cpu.writeback: Log4GUI: writeback: 133000000: 0: 100dc: fmul_s f3, f1, f2
+133000000: system.cpu.writeback: REGISTERS
 133000000: global: x0=0x00000000
 133000000: global: x1=0x00000008
 133000000: global: x2=0x00011160
@@ -4862,6 +5504,15 @@
 133000000: global: f29=0x00000000
 133000000: global: f30=0x00000000
 133000000: global: f31=0x00000000
+133000000: system.cpu.execute: Log4GUI: execute: 133000000: 0: 100f0: jal x0, -32: 0
+133000000: system.cpu.execute: Log4GUI: execute: 133000000: 0: 100ec: fadd_s f0, f0, f3: 3
+133000000: system.cpu.fetch1: Log4GUI: fetch1: 133000000: 0: 100d0: <assembly>
+134000000: system.cpu.memory: Log4GUI: memory: 134000000: 0: 100f0: jal x0, -32
+134000000: system.cpu.execute: Log4GUI: execute: 134000000: 0: 100ec: fadd_s f0, f0, f3: 3
+134000000: system.cpu.decode: Log4GUI: decode: 134000000: 0: 100d0: blt x1, x8, 36
+134000000: system.cpu.fetch1: Log4GUI: fetch1: 134000000: 0: 100d4: <assembly>
+135000000: system.cpu.writeback: Log4GUI: writeback: 135000000: 0: 100f0: jal x0, -32
+135000000: system.cpu.writeback: REGISTERS
 135000000: global: x0=0x00000000
 135000000: global: x1=0x00000008
 135000000: global: x2=0x00011160
@@ -4926,6 +5577,14 @@
 135000000: global: f29=0x00000000
 135000000: global: f30=0x00000000
 135000000: global: f31=0x00000000
+135000000: system.cpu.execute: Log4GUI: execute: 135000000: 0: 100d0: blt x1, x8, 36: 0
+135000000: system.cpu.execute: Log4GUI: execute: 135000000: 0: 100ec: fadd_s f0, f0, f3: 3
+135000000: system.cpu.fetch1: Log4GUI: fetch1: 135000000: 0: 100f4: <assembly>
+136000000: system.cpu.memory: Log4GUI: memory: 136000000: 0: 100ec: fadd_s f0, f0, f3
+136000000: system.cpu.decode: Log4GUI: decode: 136000000: 0: 100f4: blt x1, x0, 36
+136000000: system.cpu.fetch1: Log4GUI: fetch1: 136000000: 0: 100f8: <assembly>
+137000000: system.cpu.writeback: Log4GUI: writeback: 137000000: 0: 100ec: fadd_s f0, f0, f3
+137000000: system.cpu.writeback: REGISTERS
 137000000: global: x0=0x00000000
 137000000: global: x1=0x00000008
 137000000: global: x2=0x00011160
@@ -4990,6 +5649,12 @@
 137000000: global: f29=0x00000000
 137000000: global: f30=0x00000000
 137000000: global: f31=0x00000000
+137000000: system.cpu.memory: Log4GUI: memory: 137000000: 0: 100d0: blt x1, x8, 36
+137000000: system.cpu.execute: Log4GUI: execute: 137000000: 0: 100f4: blt x1, x0, 36: 0
+137000000: system.cpu.decode: Log4GUI: decode: 137000000: 0: 100f8: flw f1, 0(x2)
+137000000: system.cpu.fetch1: Log4GUI: fetch1: 137000000: 0: 100fc: <assembly>
+138000000: system.cpu.writeback: Log4GUI: writeback: 138000000: 0: 100d0: blt x1, x8, 36
+138000000: system.cpu.writeback: REGISTERS
 138000000: global: x0=0x00000000
 138000000: global: x1=0x00000008
 138000000: global: x2=0x00011160
@@ -5054,6 +5719,12 @@
 138000000: global: f29=0x00000000
 138000000: global: f30=0x00000000
 138000000: global: f31=0x00000000
+138000000: system.cpu.memory: Log4GUI: memory: 138000000: 0: 100f4: blt x1, x0, 36
+138000000: system.cpu.execute: Log4GUI: execute: 138000000: 0: 100f8: flw f1, 0(x2): 0
+138000000: system.cpu.decode: Log4GUI: decode: 138000000: 0: 100fc: flw f2, 0(x3)
+138000000: system.cpu.fetch1: Log4GUI: fetch1: 138000000: 0: 10100: <assembly>
+139000000: system.cpu.writeback: Log4GUI: writeback: 139000000: 0: 100f4: blt x1, x0, 36
+139000000: system.cpu.writeback: REGISTERS
 139000000: global: x0=0x00000000
 139000000: global: x1=0x00000008
 139000000: global: x2=0x00011160
@@ -5118,6 +5789,12 @@
 139000000: global: f29=0x00000000
 139000000: global: f30=0x00000000
 139000000: global: f31=0x00000000
+139000000: system.cpu.memory: Log4GUI: memory: 139000000: 0: 100f8: flw f1, 0(x2)
+139000000: system.cpu.execute: Log4GUI: execute: 139000000: 0: 100fc: flw f2, 0(x3): 0
+139000000: system.cpu.decode: Log4GUI: decode: 139000000: 0: 10100: fmul_s f3, f1, f2
+139000000: system.cpu.fetch1: Log4GUI: fetch1: 139000000: 0: 10104: <assembly>
+140000000: system.cpu.writeback: Log4GUI: writeback: 140000000: 0: 100f8: flw f1, 0(x2)
+140000000: system.cpu.writeback: REGISTERS
 140000000: global: x0=0x00000000
 140000000: global: x1=0x00000008
 140000000: global: x2=0x00011160
@@ -5182,6 +5859,11 @@
 140000000: global: f29=0x00000000
 140000000: global: f30=0x00000000
 140000000: global: f31=0x00000000
+140000000: system.cpu.memory: Log4GUI: memory: 140000000: 0: 100fc: flw f2, 0(x3)
+140000000: system.cpu.decode: Log4GUI: decode: 140000000: 1: 10100: fmul_s f3, f1, f2
+140000000: system.cpu.fetch1: Log4GUI: fetch1: 140000000: 1: 10104: <assembly>
+141000000: system.cpu.writeback: Log4GUI: writeback: 141000000: 0: 100fc: flw f2, 0(x3)
+141000000: system.cpu.writeback: REGISTERS
 141000000: global: x0=0x00000000
 141000000: global: x1=0x00000008
 141000000: global: x2=0x00011160
@@ -5246,6 +5928,20 @@
 141000000: global: f29=0x00000000
 141000000: global: f30=0x00000000
 141000000: global: f31=0x00000000
+141000000: system.cpu.execute: Log4GUI: execute: 141000000: 0: 10100: fmul_s f3, f1, f2: 4
+141000000: system.cpu.decode: Log4GUI: decode: 141000000: 0: 10104: addi x1, x1, -1
+141000000: system.cpu.fetch1: Log4GUI: fetch1: 141000000: 0: 10108: <assembly>
+142000000: system.cpu.execute: Log4GUI: execute: 142000000: 0: 10104: addi x1, x1, -1: 0
+142000000: system.cpu.execute: Log4GUI: execute: 142000000: 0: 10100: fmul_s f3, f1, f2: 4
+142000000: system.cpu.decode: Log4GUI: decode: 142000000: 0: 10108: addi x2, x2, -4
+142000000: system.cpu.fetch1: Log4GUI: fetch1: 142000000: 0: 1010c: <assembly>
+143000000: system.cpu.memory: Log4GUI: memory: 143000000: 0: 10104: addi x1, x1, -1
+143000000: system.cpu.execute: Log4GUI: execute: 143000000: 0: 10108: addi x2, x2, -4: 0
+143000000: system.cpu.execute: Log4GUI: execute: 143000000: 0: 10100: fmul_s f3, f1, f2: 4
+143000000: system.cpu.decode: Log4GUI: decode: 143000000: 0: 1010c: addi x3, x3, -4
+143000000: system.cpu.fetch1: Log4GUI: fetch1: 143000000: 0: 10110: <assembly>
+144000000: system.cpu.writeback: Log4GUI: writeback: 144000000: 0: 10104: addi x1, x1, -1
+144000000: system.cpu.writeback: REGISTERS
 144000000: global: x0=0x00000000
 144000000: global: x1=0x00000007
 144000000: global: x2=0x00011160
@@ -5310,6 +6006,13 @@
 144000000: global: f29=0x00000000
 144000000: global: f30=0x00000000
 144000000: global: f31=0x00000000
+144000000: system.cpu.memory: Log4GUI: memory: 144000000: 0: 10108: addi x2, x2, -4
+144000000: system.cpu.execute: Log4GUI: execute: 144000000: 0: 1010c: addi x3, x3, -4: 0
+144000000: system.cpu.execute: Log4GUI: execute: 144000000: 0: 10100: fmul_s f3, f1, f2: 4
+144000000: system.cpu.decode: Log4GUI: decode: 144000000: 0: 10110: fadd_s f0, f0, f3
+144000000: system.cpu.fetch1: Log4GUI: fetch1: 144000000: 0: 10114: <assembly>
+145000000: system.cpu.writeback: Log4GUI: writeback: 145000000: 0: 10108: addi x2, x2, -4
+145000000: system.cpu.writeback: REGISTERS
 145000000: global: x0=0x00000000
 145000000: global: x1=0x00000007
 145000000: global: x2=0x0001115c
@@ -5374,6 +6077,12 @@
 145000000: global: f29=0x00000000
 145000000: global: f30=0x00000000
 145000000: global: f31=0x00000000
+145000000: system.cpu.memory: Log4GUI: memory: 145000000: 0: 1010c: addi x3, x3, -4
+145000000: system.cpu.execute: Log4GUI: execute: 145000000: 0: 10100: fmul_s f3, f1, f2: 4
+145000000: system.cpu.decode: Log4GUI: decode: 145000000: 1: 10110: fadd_s f0, f0, f3
+145000000: system.cpu.fetch1: Log4GUI: fetch1: 145000000: 1: 10114: <assembly>
+146000000: system.cpu.writeback: Log4GUI: writeback: 146000000: 0: 1010c: addi x3, x3, -4
+146000000: system.cpu.writeback: REGISTERS
 146000000: global: x0=0x00000000
 146000000: global: x1=0x00000007
 146000000: global: x2=0x0001115c
@@ -5438,6 +6147,21 @@
 146000000: global: f29=0x00000000
 146000000: global: f30=0x00000000
 146000000: global: f31=0x00000000
+146000000: system.cpu.execute: Log4GUI: execute: 146000000: 0: 10100: fmul_s f3, f1, f2: 4
+146000000: system.cpu.decode: Log4GUI: decode: 146000000: 1: 10110: fadd_s f0, f0, f3
+146000000: system.cpu.fetch1: Log4GUI: fetch1: 146000000: 1: 10114: <assembly>
+147000000: system.cpu.execute: Log4GUI: execute: 147000000: 0: 10100: fmul_s f3, f1, f2: 4
+147000000: system.cpu.decode: Log4GUI: decode: 147000000: 1: 10110: fadd_s f0, f0, f3
+147000000: system.cpu.fetch1: Log4GUI: fetch1: 147000000: 1: 10114: <assembly>
+148000000: system.cpu.execute: Log4GUI: execute: 148000000: 0: 10100: fmul_s f3, f1, f2: 4
+148000000: system.cpu.decode: Log4GUI: decode: 148000000: 1: 10110: fadd_s f0, f0, f3
+148000000: system.cpu.fetch1: Log4GUI: fetch1: 148000000: 1: 10114: <assembly>
+149000000: system.cpu.memory: Log4GUI: memory: 149000000: 0: 10100: fmul_s f3, f1, f2
+149000000: system.cpu.execute: Log4GUI: execute: 149000000: 0: 10110: fadd_s f0, f0, f3: 3
+149000000: system.cpu.decode: Log4GUI: decode: 149000000: 0: 10114: jal x0, -32
+149000000: system.cpu.fetch1: Log4GUI: fetch1: 149000000: 0: 10118: <assembly>
+150000000: system.cpu.writeback: Log4GUI: writeback: 150000000: 0: 10100: fmul_s f3, f1, f2
+150000000: system.cpu.writeback: REGISTERS
 150000000: global: x0=0x00000000
 150000000: global: x1=0x00000007
 150000000: global: x2=0x0001115c
@@ -5502,6 +6226,15 @@
 150000000: global: f29=0x00000000
 150000000: global: f30=0x00000000
 150000000: global: f31=0x00000000
+150000000: system.cpu.execute: Log4GUI: execute: 150000000: 0: 10114: jal x0, -32: 0
+150000000: system.cpu.execute: Log4GUI: execute: 150000000: 0: 10110: fadd_s f0, f0, f3: 3
+150000000: system.cpu.fetch1: Log4GUI: fetch1: 150000000: 0: 100f4: <assembly>
+151000000: system.cpu.memory: Log4GUI: memory: 151000000: 0: 10114: jal x0, -32
+151000000: system.cpu.execute: Log4GUI: execute: 151000000: 0: 10110: fadd_s f0, f0, f3: 3
+151000000: system.cpu.decode: Log4GUI: decode: 151000000: 0: 100f4: blt x1, x0, 36
+151000000: system.cpu.fetch1: Log4GUI: fetch1: 151000000: 0: 100f8: <assembly>
+152000000: system.cpu.writeback: Log4GUI: writeback: 152000000: 0: 10114: jal x0, -32
+152000000: system.cpu.writeback: REGISTERS
 152000000: global: x0=0x00000000
 152000000: global: x1=0x00000007
 152000000: global: x2=0x0001115c
@@ -5566,6 +6299,15 @@
 152000000: global: f29=0x00000000
 152000000: global: f30=0x00000000
 152000000: global: f31=0x00000000
+152000000: system.cpu.execute: Log4GUI: execute: 152000000: 0: 100f4: blt x1, x0, 36: 0
+152000000: system.cpu.execute: Log4GUI: execute: 152000000: 0: 10110: fadd_s f0, f0, f3: 3
+152000000: system.cpu.decode: Log4GUI: decode: 152000000: 0: 100f8: flw f1, 0(x2)
+152000000: system.cpu.fetch1: Log4GUI: fetch1: 152000000: 0: 100fc: <assembly>
+153000000: system.cpu.memory: Log4GUI: memory: 153000000: 0: 10110: fadd_s f0, f0, f3
+153000000: system.cpu.decode: Log4GUI: decode: 153000000: 1: 100f8: flw f1, 0(x2)
+153000000: system.cpu.fetch1: Log4GUI: fetch1: 153000000: 1: 100fc: <assembly>
+154000000: system.cpu.writeback: Log4GUI: writeback: 154000000: 0: 10110: fadd_s f0, f0, f3
+154000000: system.cpu.writeback: REGISTERS
 154000000: global: x0=0x00000000
 154000000: global: x1=0x00000007
 154000000: global: x2=0x0001115c
@@ -5630,6 +6372,12 @@
 154000000: global: f29=0x00000000
 154000000: global: f30=0x00000000
 154000000: global: f31=0x00000000
+154000000: system.cpu.memory: Log4GUI: memory: 154000000: 0: 100f4: blt x1, x0, 36
+154000000: system.cpu.execute: Log4GUI: execute: 154000000: 0: 100f8: flw f1, 0(x2): 0
+154000000: system.cpu.decode: Log4GUI: decode: 154000000: 0: 100fc: flw f2, 0(x3)
+154000000: system.cpu.fetch1: Log4GUI: fetch1: 154000000: 0: 10100: <assembly>
+155000000: system.cpu.writeback: Log4GUI: writeback: 155000000: 0: 100f4: blt x1, x0, 36
+155000000: system.cpu.writeback: REGISTERS
 155000000: global: x0=0x00000000
 155000000: global: x1=0x00000007
 155000000: global: x2=0x0001115c
@@ -5694,6 +6442,12 @@
 155000000: global: f29=0x00000000
 155000000: global: f30=0x00000000
 155000000: global: f31=0x00000000
+155000000: system.cpu.memory: Log4GUI: memory: 155000000: 0: 100f8: flw f1, 0(x2)
+155000000: system.cpu.execute: Log4GUI: execute: 155000000: 0: 100fc: flw f2, 0(x3): 0
+155000000: system.cpu.decode: Log4GUI: decode: 155000000: 0: 10100: fmul_s f3, f1, f2
+155000000: system.cpu.fetch1: Log4GUI: fetch1: 155000000: 0: 10104: <assembly>
+156000000: system.cpu.writeback: Log4GUI: writeback: 156000000: 0: 100f8: flw f1, 0(x2)
+156000000: system.cpu.writeback: REGISTERS
 156000000: global: x0=0x00000000
 156000000: global: x1=0x00000007
 156000000: global: x2=0x0001115c
@@ -5758,6 +6512,11 @@
 156000000: global: f29=0x00000000
 156000000: global: f30=0x00000000
 156000000: global: f31=0x00000000
+156000000: system.cpu.memory: Log4GUI: memory: 156000000: 0: 100fc: flw f2, 0(x3)
+156000000: system.cpu.decode: Log4GUI: decode: 156000000: 1: 10100: fmul_s f3, f1, f2
+156000000: system.cpu.fetch1: Log4GUI: fetch1: 156000000: 1: 10104: <assembly>
+157000000: system.cpu.writeback: Log4GUI: writeback: 157000000: 0: 100fc: flw f2, 0(x3)
+157000000: system.cpu.writeback: REGISTERS
 157000000: global: x0=0x00000000
 157000000: global: x1=0x00000007
 157000000: global: x2=0x0001115c
@@ -5822,6 +6581,20 @@
 157000000: global: f29=0x00000000
 157000000: global: f30=0x00000000
 157000000: global: f31=0x00000000
+157000000: system.cpu.execute: Log4GUI: execute: 157000000: 0: 10100: fmul_s f3, f1, f2: 4
+157000000: system.cpu.decode: Log4GUI: decode: 157000000: 0: 10104: addi x1, x1, -1
+157000000: system.cpu.fetch1: Log4GUI: fetch1: 157000000: 0: 10108: <assembly>
+158000000: system.cpu.execute: Log4GUI: execute: 158000000: 0: 10104: addi x1, x1, -1: 0
+158000000: system.cpu.execute: Log4GUI: execute: 158000000: 0: 10100: fmul_s f3, f1, f2: 4
+158000000: system.cpu.decode: Log4GUI: decode: 158000000: 0: 10108: addi x2, x2, -4
+158000000: system.cpu.fetch1: Log4GUI: fetch1: 158000000: 0: 1010c: <assembly>
+159000000: system.cpu.memory: Log4GUI: memory: 159000000: 0: 10104: addi x1, x1, -1
+159000000: system.cpu.execute: Log4GUI: execute: 159000000: 0: 10108: addi x2, x2, -4: 0
+159000000: system.cpu.execute: Log4GUI: execute: 159000000: 0: 10100: fmul_s f3, f1, f2: 4
+159000000: system.cpu.decode: Log4GUI: decode: 159000000: 0: 1010c: addi x3, x3, -4
+159000000: system.cpu.fetch1: Log4GUI: fetch1: 159000000: 0: 10110: <assembly>
+160000000: system.cpu.writeback: Log4GUI: writeback: 160000000: 0: 10104: addi x1, x1, -1
+160000000: system.cpu.writeback: REGISTERS
 160000000: global: x0=0x00000000
 160000000: global: x1=0x00000006
 160000000: global: x2=0x0001115c
@@ -5886,6 +6659,13 @@
 160000000: global: f29=0x00000000
 160000000: global: f30=0x00000000
 160000000: global: f31=0x00000000
+160000000: system.cpu.memory: Log4GUI: memory: 160000000: 0: 10108: addi x2, x2, -4
+160000000: system.cpu.execute: Log4GUI: execute: 160000000: 0: 1010c: addi x3, x3, -4: 0
+160000000: system.cpu.execute: Log4GUI: execute: 160000000: 0: 10100: fmul_s f3, f1, f2: 4
+160000000: system.cpu.decode: Log4GUI: decode: 160000000: 0: 10110: fadd_s f0, f0, f3
+160000000: system.cpu.fetch1: Log4GUI: fetch1: 160000000: 0: 10114: <assembly>
+161000000: system.cpu.writeback: Log4GUI: writeback: 161000000: 0: 10108: addi x2, x2, -4
+161000000: system.cpu.writeback: REGISTERS
 161000000: global: x0=0x00000000
 161000000: global: x1=0x00000006
 161000000: global: x2=0x00011158
@@ -5950,6 +6730,12 @@
 161000000: global: f29=0x00000000
 161000000: global: f30=0x00000000
 161000000: global: f31=0x00000000
+161000000: system.cpu.memory: Log4GUI: memory: 161000000: 0: 1010c: addi x3, x3, -4
+161000000: system.cpu.execute: Log4GUI: execute: 161000000: 0: 10100: fmul_s f3, f1, f2: 4
+161000000: system.cpu.decode: Log4GUI: decode: 161000000: 1: 10110: fadd_s f0, f0, f3
+161000000: system.cpu.fetch1: Log4GUI: fetch1: 161000000: 1: 10114: <assembly>
+162000000: system.cpu.writeback: Log4GUI: writeback: 162000000: 0: 1010c: addi x3, x3, -4
+162000000: system.cpu.writeback: REGISTERS
 162000000: global: x0=0x00000000
 162000000: global: x1=0x00000006
 162000000: global: x2=0x00011158
@@ -6014,6 +6800,21 @@
 162000000: global: f29=0x00000000
 162000000: global: f30=0x00000000
 162000000: global: f31=0x00000000
+162000000: system.cpu.execute: Log4GUI: execute: 162000000: 0: 10100: fmul_s f3, f1, f2: 4
+162000000: system.cpu.decode: Log4GUI: decode: 162000000: 1: 10110: fadd_s f0, f0, f3
+162000000: system.cpu.fetch1: Log4GUI: fetch1: 162000000: 1: 10114: <assembly>
+163000000: system.cpu.execute: Log4GUI: execute: 163000000: 0: 10100: fmul_s f3, f1, f2: 4
+163000000: system.cpu.decode: Log4GUI: decode: 163000000: 1: 10110: fadd_s f0, f0, f3
+163000000: system.cpu.fetch1: Log4GUI: fetch1: 163000000: 1: 10114: <assembly>
+164000000: system.cpu.execute: Log4GUI: execute: 164000000: 0: 10100: fmul_s f3, f1, f2: 4
+164000000: system.cpu.decode: Log4GUI: decode: 164000000: 1: 10110: fadd_s f0, f0, f3
+164000000: system.cpu.fetch1: Log4GUI: fetch1: 164000000: 1: 10114: <assembly>
+165000000: system.cpu.memory: Log4GUI: memory: 165000000: 0: 10100: fmul_s f3, f1, f2
+165000000: system.cpu.execute: Log4GUI: execute: 165000000: 0: 10110: fadd_s f0, f0, f3: 3
+165000000: system.cpu.decode: Log4GUI: decode: 165000000: 0: 10114: jal x0, -32
+165000000: system.cpu.fetch1: Log4GUI: fetch1: 165000000: 0: 10118: <assembly>
+166000000: system.cpu.writeback: Log4GUI: writeback: 166000000: 0: 10100: fmul_s f3, f1, f2
+166000000: system.cpu.writeback: REGISTERS
 166000000: global: x0=0x00000000
 166000000: global: x1=0x00000006
 166000000: global: x2=0x00011158
@@ -6078,6 +6879,15 @@
 166000000: global: f29=0x00000000
 166000000: global: f30=0x00000000
 166000000: global: f31=0x00000000
+166000000: system.cpu.execute: Log4GUI: execute: 166000000: 0: 10114: jal x0, -32: 0
+166000000: system.cpu.execute: Log4GUI: execute: 166000000: 0: 10110: fadd_s f0, f0, f3: 3
+166000000: system.cpu.fetch1: Log4GUI: fetch1: 166000000: 0: 100f4: <assembly>
+167000000: system.cpu.memory: Log4GUI: memory: 167000000: 0: 10114: jal x0, -32
+167000000: system.cpu.execute: Log4GUI: execute: 167000000: 0: 10110: fadd_s f0, f0, f3: 3
+167000000: system.cpu.decode: Log4GUI: decode: 167000000: 0: 100f4: blt x1, x0, 36
+167000000: system.cpu.fetch1: Log4GUI: fetch1: 167000000: 0: 100f8: <assembly>
+168000000: system.cpu.writeback: Log4GUI: writeback: 168000000: 0: 10114: jal x0, -32
+168000000: system.cpu.writeback: REGISTERS
 168000000: global: x0=0x00000000
 168000000: global: x1=0x00000006
 168000000: global: x2=0x00011158
@@ -6142,6 +6952,15 @@
 168000000: global: f29=0x00000000
 168000000: global: f30=0x00000000
 168000000: global: f31=0x00000000
+168000000: system.cpu.execute: Log4GUI: execute: 168000000: 0: 100f4: blt x1, x0, 36: 0
+168000000: system.cpu.execute: Log4GUI: execute: 168000000: 0: 10110: fadd_s f0, f0, f3: 3
+168000000: system.cpu.decode: Log4GUI: decode: 168000000: 0: 100f8: flw f1, 0(x2)
+168000000: system.cpu.fetch1: Log4GUI: fetch1: 168000000: 0: 100fc: <assembly>
+169000000: system.cpu.memory: Log4GUI: memory: 169000000: 0: 10110: fadd_s f0, f0, f3
+169000000: system.cpu.decode: Log4GUI: decode: 169000000: 1: 100f8: flw f1, 0(x2)
+169000000: system.cpu.fetch1: Log4GUI: fetch1: 169000000: 1: 100fc: <assembly>
+170000000: system.cpu.writeback: Log4GUI: writeback: 170000000: 0: 10110: fadd_s f0, f0, f3
+170000000: system.cpu.writeback: REGISTERS
 170000000: global: x0=0x00000000
 170000000: global: x1=0x00000006
 170000000: global: x2=0x00011158
@@ -6206,6 +7025,12 @@
 170000000: global: f29=0x00000000
 170000000: global: f30=0x00000000
 170000000: global: f31=0x00000000
+170000000: system.cpu.memory: Log4GUI: memory: 170000000: 0: 100f4: blt x1, x0, 36
+170000000: system.cpu.execute: Log4GUI: execute: 170000000: 0: 100f8: flw f1, 0(x2): 0
+170000000: system.cpu.decode: Log4GUI: decode: 170000000: 0: 100fc: flw f2, 0(x3)
+170000000: system.cpu.fetch1: Log4GUI: fetch1: 170000000: 0: 10100: <assembly>
+171000000: system.cpu.writeback: Log4GUI: writeback: 171000000: 0: 100f4: blt x1, x0, 36
+171000000: system.cpu.writeback: REGISTERS
 171000000: global: x0=0x00000000
 171000000: global: x1=0x00000006
 171000000: global: x2=0x00011158
@@ -6270,6 +7095,12 @@
 171000000: global: f29=0x00000000
 171000000: global: f30=0x00000000
 171000000: global: f31=0x00000000
+171000000: system.cpu.memory: Log4GUI: memory: 171000000: 0: 100f8: flw f1, 0(x2)
+171000000: system.cpu.execute: Log4GUI: execute: 171000000: 0: 100fc: flw f2, 0(x3): 0
+171000000: system.cpu.decode: Log4GUI: decode: 171000000: 0: 10100: fmul_s f3, f1, f2
+171000000: system.cpu.fetch1: Log4GUI: fetch1: 171000000: 0: 10104: <assembly>
+172000000: system.cpu.writeback: Log4GUI: writeback: 172000000: 0: 100f8: flw f1, 0(x2)
+172000000: system.cpu.writeback: REGISTERS
 172000000: global: x0=0x00000000
 172000000: global: x1=0x00000006
 172000000: global: x2=0x00011158
@@ -6334,6 +7165,11 @@
 172000000: global: f29=0x00000000
 172000000: global: f30=0x00000000
 172000000: global: f31=0x00000000
+172000000: system.cpu.memory: Log4GUI: memory: 172000000: 0: 100fc: flw f2, 0(x3)
+172000000: system.cpu.decode: Log4GUI: decode: 172000000: 1: 10100: fmul_s f3, f1, f2
+172000000: system.cpu.fetch1: Log4GUI: fetch1: 172000000: 1: 10104: <assembly>
+173000000: system.cpu.writeback: Log4GUI: writeback: 173000000: 0: 100fc: flw f2, 0(x3)
+173000000: system.cpu.writeback: REGISTERS
 173000000: global: x0=0x00000000
 173000000: global: x1=0x00000006
 173000000: global: x2=0x00011158
@@ -6398,6 +7234,20 @@
 173000000: global: f29=0x00000000
 173000000: global: f30=0x00000000
 173000000: global: f31=0x00000000
+173000000: system.cpu.execute: Log4GUI: execute: 173000000: 0: 10100: fmul_s f3, f1, f2: 4
+173000000: system.cpu.decode: Log4GUI: decode: 173000000: 0: 10104: addi x1, x1, -1
+173000000: system.cpu.fetch1: Log4GUI: fetch1: 173000000: 0: 10108: <assembly>
+174000000: system.cpu.execute: Log4GUI: execute: 174000000: 0: 10104: addi x1, x1, -1: 0
+174000000: system.cpu.execute: Log4GUI: execute: 174000000: 0: 10100: fmul_s f3, f1, f2: 4
+174000000: system.cpu.decode: Log4GUI: decode: 174000000: 0: 10108: addi x2, x2, -4
+174000000: system.cpu.fetch1: Log4GUI: fetch1: 174000000: 0: 1010c: <assembly>
+175000000: system.cpu.memory: Log4GUI: memory: 175000000: 0: 10104: addi x1, x1, -1
+175000000: system.cpu.execute: Log4GUI: execute: 175000000: 0: 10108: addi x2, x2, -4: 0
+175000000: system.cpu.execute: Log4GUI: execute: 175000000: 0: 10100: fmul_s f3, f1, f2: 4
+175000000: system.cpu.decode: Log4GUI: decode: 175000000: 0: 1010c: addi x3, x3, -4
+175000000: system.cpu.fetch1: Log4GUI: fetch1: 175000000: 0: 10110: <assembly>
+176000000: system.cpu.writeback: Log4GUI: writeback: 176000000: 0: 10104: addi x1, x1, -1
+176000000: system.cpu.writeback: REGISTERS
 176000000: global: x0=0x00000000
 176000000: global: x1=0x00000005
 176000000: global: x2=0x00011158
@@ -6462,6 +7312,13 @@
 176000000: global: f29=0x00000000
 176000000: global: f30=0x00000000
 176000000: global: f31=0x00000000
+176000000: system.cpu.memory: Log4GUI: memory: 176000000: 0: 10108: addi x2, x2, -4
+176000000: system.cpu.execute: Log4GUI: execute: 176000000: 0: 1010c: addi x3, x3, -4: 0
+176000000: system.cpu.execute: Log4GUI: execute: 176000000: 0: 10100: fmul_s f3, f1, f2: 4
+176000000: system.cpu.decode: Log4GUI: decode: 176000000: 0: 10110: fadd_s f0, f0, f3
+176000000: system.cpu.fetch1: Log4GUI: fetch1: 176000000: 0: 10114: <assembly>
+177000000: system.cpu.writeback: Log4GUI: writeback: 177000000: 0: 10108: addi x2, x2, -4
+177000000: system.cpu.writeback: REGISTERS
 177000000: global: x0=0x00000000
 177000000: global: x1=0x00000005
 177000000: global: x2=0x00011154
@@ -6526,6 +7383,12 @@
 177000000: global: f29=0x00000000
 177000000: global: f30=0x00000000
 177000000: global: f31=0x00000000
+177000000: system.cpu.memory: Log4GUI: memory: 177000000: 0: 1010c: addi x3, x3, -4
+177000000: system.cpu.execute: Log4GUI: execute: 177000000: 0: 10100: fmul_s f3, f1, f2: 4
+177000000: system.cpu.decode: Log4GUI: decode: 177000000: 1: 10110: fadd_s f0, f0, f3
+177000000: system.cpu.fetch1: Log4GUI: fetch1: 177000000: 1: 10114: <assembly>
+178000000: system.cpu.writeback: Log4GUI: writeback: 178000000: 0: 1010c: addi x3, x3, -4
+178000000: system.cpu.writeback: REGISTERS
 178000000: global: x0=0x00000000
 178000000: global: x1=0x00000005
 178000000: global: x2=0x00011154
@@ -6590,6 +7453,21 @@
 178000000: global: f29=0x00000000
 178000000: global: f30=0x00000000
 178000000: global: f31=0x00000000
+178000000: system.cpu.execute: Log4GUI: execute: 178000000: 0: 10100: fmul_s f3, f1, f2: 4
+178000000: system.cpu.decode: Log4GUI: decode: 178000000: 1: 10110: fadd_s f0, f0, f3
+178000000: system.cpu.fetch1: Log4GUI: fetch1: 178000000: 1: 10114: <assembly>
+179000000: system.cpu.execute: Log4GUI: execute: 179000000: 0: 10100: fmul_s f3, f1, f2: 4
+179000000: system.cpu.decode: Log4GUI: decode: 179000000: 1: 10110: fadd_s f0, f0, f3
+179000000: system.cpu.fetch1: Log4GUI: fetch1: 179000000: 1: 10114: <assembly>
+180000000: system.cpu.execute: Log4GUI: execute: 180000000: 0: 10100: fmul_s f3, f1, f2: 4
+180000000: system.cpu.decode: Log4GUI: decode: 180000000: 1: 10110: fadd_s f0, f0, f3
+180000000: system.cpu.fetch1: Log4GUI: fetch1: 180000000: 1: 10114: <assembly>
+181000000: system.cpu.memory: Log4GUI: memory: 181000000: 0: 10100: fmul_s f3, f1, f2
+181000000: system.cpu.execute: Log4GUI: execute: 181000000: 0: 10110: fadd_s f0, f0, f3: 3
+181000000: system.cpu.decode: Log4GUI: decode: 181000000: 0: 10114: jal x0, -32
+181000000: system.cpu.fetch1: Log4GUI: fetch1: 181000000: 0: 10118: <assembly>
+182000000: system.cpu.writeback: Log4GUI: writeback: 182000000: 0: 10100: fmul_s f3, f1, f2
+182000000: system.cpu.writeback: REGISTERS
 182000000: global: x0=0x00000000
 182000000: global: x1=0x00000005
 182000000: global: x2=0x00011154
@@ -6654,6 +7532,15 @@
 182000000: global: f29=0x00000000
 182000000: global: f30=0x00000000
 182000000: global: f31=0x00000000
+182000000: system.cpu.execute: Log4GUI: execute: 182000000: 0: 10114: jal x0, -32: 0
+182000000: system.cpu.execute: Log4GUI: execute: 182000000: 0: 10110: fadd_s f0, f0, f3: 3
+182000000: system.cpu.fetch1: Log4GUI: fetch1: 182000000: 0: 100f4: <assembly>
+183000000: system.cpu.memory: Log4GUI: memory: 183000000: 0: 10114: jal x0, -32
+183000000: system.cpu.execute: Log4GUI: execute: 183000000: 0: 10110: fadd_s f0, f0, f3: 3
+183000000: system.cpu.decode: Log4GUI: decode: 183000000: 0: 100f4: blt x1, x0, 36
+183000000: system.cpu.fetch1: Log4GUI: fetch1: 183000000: 0: 100f8: <assembly>
+184000000: system.cpu.writeback: Log4GUI: writeback: 184000000: 0: 10114: jal x0, -32
+184000000: system.cpu.writeback: REGISTERS
 184000000: global: x0=0x00000000
 184000000: global: x1=0x00000005
 184000000: global: x2=0x00011154
@@ -6718,6 +7605,15 @@
 184000000: global: f29=0x00000000
 184000000: global: f30=0x00000000
 184000000: global: f31=0x00000000
+184000000: system.cpu.execute: Log4GUI: execute: 184000000: 0: 100f4: blt x1, x0, 36: 0
+184000000: system.cpu.execute: Log4GUI: execute: 184000000: 0: 10110: fadd_s f0, f0, f3: 3
+184000000: system.cpu.decode: Log4GUI: decode: 184000000: 0: 100f8: flw f1, 0(x2)
+184000000: system.cpu.fetch1: Log4GUI: fetch1: 184000000: 0: 100fc: <assembly>
+185000000: system.cpu.memory: Log4GUI: memory: 185000000: 0: 10110: fadd_s f0, f0, f3
+185000000: system.cpu.decode: Log4GUI: decode: 185000000: 1: 100f8: flw f1, 0(x2)
+185000000: system.cpu.fetch1: Log4GUI: fetch1: 185000000: 1: 100fc: <assembly>
+186000000: system.cpu.writeback: Log4GUI: writeback: 186000000: 0: 10110: fadd_s f0, f0, f3
+186000000: system.cpu.writeback: REGISTERS
 186000000: global: x0=0x00000000
 186000000: global: x1=0x00000005
 186000000: global: x2=0x00011154
@@ -6782,6 +7678,12 @@
 186000000: global: f29=0x00000000
 186000000: global: f30=0x00000000
 186000000: global: f31=0x00000000
+186000000: system.cpu.memory: Log4GUI: memory: 186000000: 0: 100f4: blt x1, x0, 36
+186000000: system.cpu.execute: Log4GUI: execute: 186000000: 0: 100f8: flw f1, 0(x2): 0
+186000000: system.cpu.decode: Log4GUI: decode: 186000000: 0: 100fc: flw f2, 0(x3)
+186000000: system.cpu.fetch1: Log4GUI: fetch1: 186000000: 0: 10100: <assembly>
+187000000: system.cpu.writeback: Log4GUI: writeback: 187000000: 0: 100f4: blt x1, x0, 36
+187000000: system.cpu.writeback: REGISTERS
 187000000: global: x0=0x00000000
 187000000: global: x1=0x00000005
 187000000: global: x2=0x00011154
@@ -6846,6 +7748,12 @@
 187000000: global: f29=0x00000000
 187000000: global: f30=0x00000000
 187000000: global: f31=0x00000000
+187000000: system.cpu.memory: Log4GUI: memory: 187000000: 0: 100f8: flw f1, 0(x2)
+187000000: system.cpu.execute: Log4GUI: execute: 187000000: 0: 100fc: flw f2, 0(x3): 0
+187000000: system.cpu.decode: Log4GUI: decode: 187000000: 0: 10100: fmul_s f3, f1, f2
+187000000: system.cpu.fetch1: Log4GUI: fetch1: 187000000: 0: 10104: <assembly>
+188000000: system.cpu.writeback: Log4GUI: writeback: 188000000: 0: 100f8: flw f1, 0(x2)
+188000000: system.cpu.writeback: REGISTERS
 188000000: global: x0=0x00000000
 188000000: global: x1=0x00000005
 188000000: global: x2=0x00011154
@@ -6910,6 +7818,11 @@
 188000000: global: f29=0x00000000
 188000000: global: f30=0x00000000
 188000000: global: f31=0x00000000
+188000000: system.cpu.memory: Log4GUI: memory: 188000000: 0: 100fc: flw f2, 0(x3)
+188000000: system.cpu.decode: Log4GUI: decode: 188000000: 1: 10100: fmul_s f3, f1, f2
+188000000: system.cpu.fetch1: Log4GUI: fetch1: 188000000: 1: 10104: <assembly>
+189000000: system.cpu.writeback: Log4GUI: writeback: 189000000: 0: 100fc: flw f2, 0(x3)
+189000000: system.cpu.writeback: REGISTERS
 189000000: global: x0=0x00000000
 189000000: global: x1=0x00000005
 189000000: global: x2=0x00011154
@@ -6974,6 +7887,20 @@
 189000000: global: f29=0x00000000
 189000000: global: f30=0x00000000
 189000000: global: f31=0x00000000
+189000000: system.cpu.execute: Log4GUI: execute: 189000000: 0: 10100: fmul_s f3, f1, f2: 4
+189000000: system.cpu.decode: Log4GUI: decode: 189000000: 0: 10104: addi x1, x1, -1
+189000000: system.cpu.fetch1: Log4GUI: fetch1: 189000000: 0: 10108: <assembly>
+190000000: system.cpu.execute: Log4GUI: execute: 190000000: 0: 10104: addi x1, x1, -1: 0
+190000000: system.cpu.execute: Log4GUI: execute: 190000000: 0: 10100: fmul_s f3, f1, f2: 4
+190000000: system.cpu.decode: Log4GUI: decode: 190000000: 0: 10108: addi x2, x2, -4
+190000000: system.cpu.fetch1: Log4GUI: fetch1: 190000000: 0: 1010c: <assembly>
+191000000: system.cpu.memory: Log4GUI: memory: 191000000: 0: 10104: addi x1, x1, -1
+191000000: system.cpu.execute: Log4GUI: execute: 191000000: 0: 10108: addi x2, x2, -4: 0
+191000000: system.cpu.execute: Log4GUI: execute: 191000000: 0: 10100: fmul_s f3, f1, f2: 4
+191000000: system.cpu.decode: Log4GUI: decode: 191000000: 0: 1010c: addi x3, x3, -4
+191000000: system.cpu.fetch1: Log4GUI: fetch1: 191000000: 0: 10110: <assembly>
+192000000: system.cpu.writeback: Log4GUI: writeback: 192000000: 0: 10104: addi x1, x1, -1
+192000000: system.cpu.writeback: REGISTERS
 192000000: global: x0=0x00000000
 192000000: global: x1=0x00000004
 192000000: global: x2=0x00011154
@@ -7038,6 +7965,13 @@
 192000000: global: f29=0x00000000
 192000000: global: f30=0x00000000
 192000000: global: f31=0x00000000
+192000000: system.cpu.memory: Log4GUI: memory: 192000000: 0: 10108: addi x2, x2, -4
+192000000: system.cpu.execute: Log4GUI: execute: 192000000: 0: 1010c: addi x3, x3, -4: 0
+192000000: system.cpu.execute: Log4GUI: execute: 192000000: 0: 10100: fmul_s f3, f1, f2: 4
+192000000: system.cpu.decode: Log4GUI: decode: 192000000: 0: 10110: fadd_s f0, f0, f3
+192000000: system.cpu.fetch1: Log4GUI: fetch1: 192000000: 0: 10114: <assembly>
+193000000: system.cpu.writeback: Log4GUI: writeback: 193000000: 0: 10108: addi x2, x2, -4
+193000000: system.cpu.writeback: REGISTERS
 193000000: global: x0=0x00000000
 193000000: global: x1=0x00000004
 193000000: global: x2=0x00011150
@@ -7102,6 +8036,12 @@
 193000000: global: f29=0x00000000
 193000000: global: f30=0x00000000
 193000000: global: f31=0x00000000
+193000000: system.cpu.memory: Log4GUI: memory: 193000000: 0: 1010c: addi x3, x3, -4
+193000000: system.cpu.execute: Log4GUI: execute: 193000000: 0: 10100: fmul_s f3, f1, f2: 4
+193000000: system.cpu.decode: Log4GUI: decode: 193000000: 1: 10110: fadd_s f0, f0, f3
+193000000: system.cpu.fetch1: Log4GUI: fetch1: 193000000: 1: 10114: <assembly>
+194000000: system.cpu.writeback: Log4GUI: writeback: 194000000: 0: 1010c: addi x3, x3, -4
+194000000: system.cpu.writeback: REGISTERS
 194000000: global: x0=0x00000000
 194000000: global: x1=0x00000004
 194000000: global: x2=0x00011150
@@ -7166,6 +8106,21 @@
 194000000: global: f29=0x00000000
 194000000: global: f30=0x00000000
 194000000: global: f31=0x00000000
+194000000: system.cpu.execute: Log4GUI: execute: 194000000: 0: 10100: fmul_s f3, f1, f2: 4
+194000000: system.cpu.decode: Log4GUI: decode: 194000000: 1: 10110: fadd_s f0, f0, f3
+194000000: system.cpu.fetch1: Log4GUI: fetch1: 194000000: 1: 10114: <assembly>
+195000000: system.cpu.execute: Log4GUI: execute: 195000000: 0: 10100: fmul_s f3, f1, f2: 4
+195000000: system.cpu.decode: Log4GUI: decode: 195000000: 1: 10110: fadd_s f0, f0, f3
+195000000: system.cpu.fetch1: Log4GUI: fetch1: 195000000: 1: 10114: <assembly>
+196000000: system.cpu.execute: Log4GUI: execute: 196000000: 0: 10100: fmul_s f3, f1, f2: 4
+196000000: system.cpu.decode: Log4GUI: decode: 196000000: 1: 10110: fadd_s f0, f0, f3
+196000000: system.cpu.fetch1: Log4GUI: fetch1: 196000000: 1: 10114: <assembly>
+197000000: system.cpu.memory: Log4GUI: memory: 197000000: 0: 10100: fmul_s f3, f1, f2
+197000000: system.cpu.execute: Log4GUI: execute: 197000000: 0: 10110: fadd_s f0, f0, f3: 3
+197000000: system.cpu.decode: Log4GUI: decode: 197000000: 0: 10114: jal x0, -32
+197000000: system.cpu.fetch1: Log4GUI: fetch1: 197000000: 0: 10118: <assembly>
+198000000: system.cpu.writeback: Log4GUI: writeback: 198000000: 0: 10100: fmul_s f3, f1, f2
+198000000: system.cpu.writeback: REGISTERS
 198000000: global: x0=0x00000000
 198000000: global: x1=0x00000004
 198000000: global: x2=0x00011150
@@ -7230,6 +8185,15 @@
 198000000: global: f29=0x00000000
 198000000: global: f30=0x00000000
 198000000: global: f31=0x00000000
+198000000: system.cpu.execute: Log4GUI: execute: 198000000: 0: 10114: jal x0, -32: 0
+198000000: system.cpu.execute: Log4GUI: execute: 198000000: 0: 10110: fadd_s f0, f0, f3: 3
+198000000: system.cpu.fetch1: Log4GUI: fetch1: 198000000: 0: 100f4: <assembly>
+199000000: system.cpu.memory: Log4GUI: memory: 199000000: 0: 10114: jal x0, -32
+199000000: system.cpu.execute: Log4GUI: execute: 199000000: 0: 10110: fadd_s f0, f0, f3: 3
+199000000: system.cpu.decode: Log4GUI: decode: 199000000: 0: 100f4: blt x1, x0, 36
+199000000: system.cpu.fetch1: Log4GUI: fetch1: 199000000: 0: 100f8: <assembly>
+200000000: system.cpu.writeback: Log4GUI: writeback: 200000000: 0: 10114: jal x0, -32
+200000000: system.cpu.writeback: REGISTERS
 200000000: global: x0=0x00000000
 200000000: global: x1=0x00000004
 200000000: global: x2=0x00011150
@@ -7294,6 +8258,15 @@
 200000000: global: f29=0x00000000
 200000000: global: f30=0x00000000
 200000000: global: f31=0x00000000
+200000000: system.cpu.execute: Log4GUI: execute: 200000000: 0: 100f4: blt x1, x0, 36: 0
+200000000: system.cpu.execute: Log4GUI: execute: 200000000: 0: 10110: fadd_s f0, f0, f3: 3
+200000000: system.cpu.decode: Log4GUI: decode: 200000000: 0: 100f8: flw f1, 0(x2)
+200000000: system.cpu.fetch1: Log4GUI: fetch1: 200000000: 0: 100fc: <assembly>
+201000000: system.cpu.memory: Log4GUI: memory: 201000000: 0: 10110: fadd_s f0, f0, f3
+201000000: system.cpu.decode: Log4GUI: decode: 201000000: 1: 100f8: flw f1, 0(x2)
+201000000: system.cpu.fetch1: Log4GUI: fetch1: 201000000: 1: 100fc: <assembly>
+202000000: system.cpu.writeback: Log4GUI: writeback: 202000000: 0: 10110: fadd_s f0, f0, f3
+202000000: system.cpu.writeback: REGISTERS
 202000000: global: x0=0x00000000
 202000000: global: x1=0x00000004
 202000000: global: x2=0x00011150
@@ -7358,6 +8331,12 @@
 202000000: global: f29=0x00000000
 202000000: global: f30=0x00000000
 202000000: global: f31=0x00000000
+202000000: system.cpu.memory: Log4GUI: memory: 202000000: 0: 100f4: blt x1, x0, 36
+202000000: system.cpu.execute: Log4GUI: execute: 202000000: 0: 100f8: flw f1, 0(x2): 0
+202000000: system.cpu.decode: Log4GUI: decode: 202000000: 0: 100fc: flw f2, 0(x3)
+202000000: system.cpu.fetch1: Log4GUI: fetch1: 202000000: 0: 10100: <assembly>
+203000000: system.cpu.writeback: Log4GUI: writeback: 203000000: 0: 100f4: blt x1, x0, 36
+203000000: system.cpu.writeback: REGISTERS
 203000000: global: x0=0x00000000
 203000000: global: x1=0x00000004
 203000000: global: x2=0x00011150
@@ -7422,6 +8401,12 @@
 203000000: global: f29=0x00000000
 203000000: global: f30=0x00000000
 203000000: global: f31=0x00000000
+203000000: system.cpu.memory: Log4GUI: memory: 203000000: 0: 100f8: flw f1, 0(x2)
+203000000: system.cpu.execute: Log4GUI: execute: 203000000: 0: 100fc: flw f2, 0(x3): 0
+203000000: system.cpu.decode: Log4GUI: decode: 203000000: 0: 10100: fmul_s f3, f1, f2
+203000000: system.cpu.fetch1: Log4GUI: fetch1: 203000000: 0: 10104: <assembly>
+204000000: system.cpu.writeback: Log4GUI: writeback: 204000000: 0: 100f8: flw f1, 0(x2)
+204000000: system.cpu.writeback: REGISTERS
 204000000: global: x0=0x00000000
 204000000: global: x1=0x00000004
 204000000: global: x2=0x00011150
@@ -7486,6 +8471,11 @@
 204000000: global: f29=0x00000000
 204000000: global: f30=0x00000000
 204000000: global: f31=0x00000000
+204000000: system.cpu.memory: Log4GUI: memory: 204000000: 0: 100fc: flw f2, 0(x3)
+204000000: system.cpu.decode: Log4GUI: decode: 204000000: 1: 10100: fmul_s f3, f1, f2
+204000000: system.cpu.fetch1: Log4GUI: fetch1: 204000000: 1: 10104: <assembly>
+205000000: system.cpu.writeback: Log4GUI: writeback: 205000000: 0: 100fc: flw f2, 0(x3)
+205000000: system.cpu.writeback: REGISTERS
 205000000: global: x0=0x00000000
 205000000: global: x1=0x00000004
 205000000: global: x2=0x00011150
@@ -7550,6 +8540,20 @@
 205000000: global: f29=0x00000000
 205000000: global: f30=0x00000000
 205000000: global: f31=0x00000000
+205000000: system.cpu.execute: Log4GUI: execute: 205000000: 0: 10100: fmul_s f3, f1, f2: 4
+205000000: system.cpu.decode: Log4GUI: decode: 205000000: 0: 10104: addi x1, x1, -1
+205000000: system.cpu.fetch1: Log4GUI: fetch1: 205000000: 0: 10108: <assembly>
+206000000: system.cpu.execute: Log4GUI: execute: 206000000: 0: 10104: addi x1, x1, -1: 0
+206000000: system.cpu.execute: Log4GUI: execute: 206000000: 0: 10100: fmul_s f3, f1, f2: 4
+206000000: system.cpu.decode: Log4GUI: decode: 206000000: 0: 10108: addi x2, x2, -4
+206000000: system.cpu.fetch1: Log4GUI: fetch1: 206000000: 0: 1010c: <assembly>
+207000000: system.cpu.memory: Log4GUI: memory: 207000000: 0: 10104: addi x1, x1, -1
+207000000: system.cpu.execute: Log4GUI: execute: 207000000: 0: 10108: addi x2, x2, -4: 0
+207000000: system.cpu.execute: Log4GUI: execute: 207000000: 0: 10100: fmul_s f3, f1, f2: 4
+207000000: system.cpu.decode: Log4GUI: decode: 207000000: 0: 1010c: addi x3, x3, -4
+207000000: system.cpu.fetch1: Log4GUI: fetch1: 207000000: 0: 10110: <assembly>
+208000000: system.cpu.writeback: Log4GUI: writeback: 208000000: 0: 10104: addi x1, x1, -1
+208000000: system.cpu.writeback: REGISTERS
 208000000: global: x0=0x00000000
 208000000: global: x1=0x00000003
 208000000: global: x2=0x00011150
@@ -7614,6 +8618,13 @@
 208000000: global: f29=0x00000000
 208000000: global: f30=0x00000000
 208000000: global: f31=0x00000000
+208000000: system.cpu.memory: Log4GUI: memory: 208000000: 0: 10108: addi x2, x2, -4
+208000000: system.cpu.execute: Log4GUI: execute: 208000000: 0: 1010c: addi x3, x3, -4: 0
+208000000: system.cpu.execute: Log4GUI: execute: 208000000: 0: 10100: fmul_s f3, f1, f2: 4
+208000000: system.cpu.decode: Log4GUI: decode: 208000000: 0: 10110: fadd_s f0, f0, f3
+208000000: system.cpu.fetch1: Log4GUI: fetch1: 208000000: 0: 10114: <assembly>
+209000000: system.cpu.writeback: Log4GUI: writeback: 209000000: 0: 10108: addi x2, x2, -4
+209000000: system.cpu.writeback: REGISTERS
 209000000: global: x0=0x00000000
 209000000: global: x1=0x00000003
 209000000: global: x2=0x0001114c
@@ -7678,6 +8689,12 @@
 209000000: global: f29=0x00000000
 209000000: global: f30=0x00000000
 209000000: global: f31=0x00000000
+209000000: system.cpu.memory: Log4GUI: memory: 209000000: 0: 1010c: addi x3, x3, -4
+209000000: system.cpu.execute: Log4GUI: execute: 209000000: 0: 10100: fmul_s f3, f1, f2: 4
+209000000: system.cpu.decode: Log4GUI: decode: 209000000: 1: 10110: fadd_s f0, f0, f3
+209000000: system.cpu.fetch1: Log4GUI: fetch1: 209000000: 1: 10114: <assembly>
+210000000: system.cpu.writeback: Log4GUI: writeback: 210000000: 0: 1010c: addi x3, x3, -4
+210000000: system.cpu.writeback: REGISTERS
 210000000: global: x0=0x00000000
 210000000: global: x1=0x00000003
 210000000: global: x2=0x0001114c
@@ -7742,6 +8759,21 @@
 210000000: global: f29=0x00000000
 210000000: global: f30=0x00000000
 210000000: global: f31=0x00000000
+210000000: system.cpu.execute: Log4GUI: execute: 210000000: 0: 10100: fmul_s f3, f1, f2: 4
+210000000: system.cpu.decode: Log4GUI: decode: 210000000: 1: 10110: fadd_s f0, f0, f3
+210000000: system.cpu.fetch1: Log4GUI: fetch1: 210000000: 1: 10114: <assembly>
+211000000: system.cpu.execute: Log4GUI: execute: 211000000: 0: 10100: fmul_s f3, f1, f2: 4
+211000000: system.cpu.decode: Log4GUI: decode: 211000000: 1: 10110: fadd_s f0, f0, f3
+211000000: system.cpu.fetch1: Log4GUI: fetch1: 211000000: 1: 10114: <assembly>
+212000000: system.cpu.execute: Log4GUI: execute: 212000000: 0: 10100: fmul_s f3, f1, f2: 4
+212000000: system.cpu.decode: Log4GUI: decode: 212000000: 1: 10110: fadd_s f0, f0, f3
+212000000: system.cpu.fetch1: Log4GUI: fetch1: 212000000: 1: 10114: <assembly>
+213000000: system.cpu.memory: Log4GUI: memory: 213000000: 0: 10100: fmul_s f3, f1, f2
+213000000: system.cpu.execute: Log4GUI: execute: 213000000: 0: 10110: fadd_s f0, f0, f3: 3
+213000000: system.cpu.decode: Log4GUI: decode: 213000000: 0: 10114: jal x0, -32
+213000000: system.cpu.fetch1: Log4GUI: fetch1: 213000000: 0: 10118: <assembly>
+214000000: system.cpu.writeback: Log4GUI: writeback: 214000000: 0: 10100: fmul_s f3, f1, f2
+214000000: system.cpu.writeback: REGISTERS
 214000000: global: x0=0x00000000
 214000000: global: x1=0x00000003
 214000000: global: x2=0x0001114c
@@ -7806,6 +8838,15 @@
 214000000: global: f29=0x00000000
 214000000: global: f30=0x00000000
 214000000: global: f31=0x00000000
+214000000: system.cpu.execute: Log4GUI: execute: 214000000: 0: 10114: jal x0, -32: 0
+214000000: system.cpu.execute: Log4GUI: execute: 214000000: 0: 10110: fadd_s f0, f0, f3: 3
+214000000: system.cpu.fetch1: Log4GUI: fetch1: 214000000: 0: 100f4: <assembly>
+215000000: system.cpu.memory: Log4GUI: memory: 215000000: 0: 10114: jal x0, -32
+215000000: system.cpu.execute: Log4GUI: execute: 215000000: 0: 10110: fadd_s f0, f0, f3: 3
+215000000: system.cpu.decode: Log4GUI: decode: 215000000: 0: 100f4: blt x1, x0, 36
+215000000: system.cpu.fetch1: Log4GUI: fetch1: 215000000: 0: 100f8: <assembly>
+216000000: system.cpu.writeback: Log4GUI: writeback: 216000000: 0: 10114: jal x0, -32
+216000000: system.cpu.writeback: REGISTERS
 216000000: global: x0=0x00000000
 216000000: global: x1=0x00000003
 216000000: global: x2=0x0001114c
@@ -7870,6 +8911,15 @@
 216000000: global: f29=0x00000000
 216000000: global: f30=0x00000000
 216000000: global: f31=0x00000000
+216000000: system.cpu.execute: Log4GUI: execute: 216000000: 0: 100f4: blt x1, x0, 36: 0
+216000000: system.cpu.execute: Log4GUI: execute: 216000000: 0: 10110: fadd_s f0, f0, f3: 3
+216000000: system.cpu.decode: Log4GUI: decode: 216000000: 0: 100f8: flw f1, 0(x2)
+216000000: system.cpu.fetch1: Log4GUI: fetch1: 216000000: 0: 100fc: <assembly>
+217000000: system.cpu.memory: Log4GUI: memory: 217000000: 0: 10110: fadd_s f0, f0, f3
+217000000: system.cpu.decode: Log4GUI: decode: 217000000: 1: 100f8: flw f1, 0(x2)
+217000000: system.cpu.fetch1: Log4GUI: fetch1: 217000000: 1: 100fc: <assembly>
+218000000: system.cpu.writeback: Log4GUI: writeback: 218000000: 0: 10110: fadd_s f0, f0, f3
+218000000: system.cpu.writeback: REGISTERS
 218000000: global: x0=0x00000000
 218000000: global: x1=0x00000003
 218000000: global: x2=0x0001114c
@@ -7934,6 +8984,12 @@
 218000000: global: f29=0x00000000
 218000000: global: f30=0x00000000
 218000000: global: f31=0x00000000
+218000000: system.cpu.memory: Log4GUI: memory: 218000000: 0: 100f4: blt x1, x0, 36
+218000000: system.cpu.execute: Log4GUI: execute: 218000000: 0: 100f8: flw f1, 0(x2): 0
+218000000: system.cpu.decode: Log4GUI: decode: 218000000: 0: 100fc: flw f2, 0(x3)
+218000000: system.cpu.fetch1: Log4GUI: fetch1: 218000000: 0: 10100: <assembly>
+219000000: system.cpu.writeback: Log4GUI: writeback: 219000000: 0: 100f4: blt x1, x0, 36
+219000000: system.cpu.writeback: REGISTERS
 219000000: global: x0=0x00000000
 219000000: global: x1=0x00000003
 219000000: global: x2=0x0001114c
@@ -7998,6 +9054,12 @@
 219000000: global: f29=0x00000000
 219000000: global: f30=0x00000000
 219000000: global: f31=0x00000000
+219000000: system.cpu.memory: Log4GUI: memory: 219000000: 0: 100f8: flw f1, 0(x2)
+219000000: system.cpu.execute: Log4GUI: execute: 219000000: 0: 100fc: flw f2, 0(x3): 0
+219000000: system.cpu.decode: Log4GUI: decode: 219000000: 0: 10100: fmul_s f3, f1, f2
+219000000: system.cpu.fetch1: Log4GUI: fetch1: 219000000: 0: 10104: <assembly>
+220000000: system.cpu.writeback: Log4GUI: writeback: 220000000: 0: 100f8: flw f1, 0(x2)
+220000000: system.cpu.writeback: REGISTERS
 220000000: global: x0=0x00000000
 220000000: global: x1=0x00000003
 220000000: global: x2=0x0001114c
@@ -8062,6 +9124,11 @@
 220000000: global: f29=0x00000000
 220000000: global: f30=0x00000000
 220000000: global: f31=0x00000000
+220000000: system.cpu.memory: Log4GUI: memory: 220000000: 0: 100fc: flw f2, 0(x3)
+220000000: system.cpu.decode: Log4GUI: decode: 220000000: 1: 10100: fmul_s f3, f1, f2
+220000000: system.cpu.fetch1: Log4GUI: fetch1: 220000000: 1: 10104: <assembly>
+221000000: system.cpu.writeback: Log4GUI: writeback: 221000000: 0: 100fc: flw f2, 0(x3)
+221000000: system.cpu.writeback: REGISTERS
 221000000: global: x0=0x00000000
 221000000: global: x1=0x00000003
 221000000: global: x2=0x0001114c
@@ -8126,6 +9193,20 @@
 221000000: global: f29=0x00000000
 221000000: global: f30=0x00000000
 221000000: global: f31=0x00000000
+221000000: system.cpu.execute: Log4GUI: execute: 221000000: 0: 10100: fmul_s f3, f1, f2: 4
+221000000: system.cpu.decode: Log4GUI: decode: 221000000: 0: 10104: addi x1, x1, -1
+221000000: system.cpu.fetch1: Log4GUI: fetch1: 221000000: 0: 10108: <assembly>
+222000000: system.cpu.execute: Log4GUI: execute: 222000000: 0: 10104: addi x1, x1, -1: 0
+222000000: system.cpu.execute: Log4GUI: execute: 222000000: 0: 10100: fmul_s f3, f1, f2: 4
+222000000: system.cpu.decode: Log4GUI: decode: 222000000: 0: 10108: addi x2, x2, -4
+222000000: system.cpu.fetch1: Log4GUI: fetch1: 222000000: 0: 1010c: <assembly>
+223000000: system.cpu.memory: Log4GUI: memory: 223000000: 0: 10104: addi x1, x1, -1
+223000000: system.cpu.execute: Log4GUI: execute: 223000000: 0: 10108: addi x2, x2, -4: 0
+223000000: system.cpu.execute: Log4GUI: execute: 223000000: 0: 10100: fmul_s f3, f1, f2: 4
+223000000: system.cpu.decode: Log4GUI: decode: 223000000: 0: 1010c: addi x3, x3, -4
+223000000: system.cpu.fetch1: Log4GUI: fetch1: 223000000: 0: 10110: <assembly>
+224000000: system.cpu.writeback: Log4GUI: writeback: 224000000: 0: 10104: addi x1, x1, -1
+224000000: system.cpu.writeback: REGISTERS
 224000000: global: x0=0x00000000
 224000000: global: x1=0x00000002
 224000000: global: x2=0x0001114c
@@ -8190,6 +9271,13 @@
 224000000: global: f29=0x00000000
 224000000: global: f30=0x00000000
 224000000: global: f31=0x00000000
+224000000: system.cpu.memory: Log4GUI: memory: 224000000: 0: 10108: addi x2, x2, -4
+224000000: system.cpu.execute: Log4GUI: execute: 224000000: 0: 1010c: addi x3, x3, -4: 0
+224000000: system.cpu.execute: Log4GUI: execute: 224000000: 0: 10100: fmul_s f3, f1, f2: 4
+224000000: system.cpu.decode: Log4GUI: decode: 224000000: 0: 10110: fadd_s f0, f0, f3
+224000000: system.cpu.fetch1: Log4GUI: fetch1: 224000000: 0: 10114: <assembly>
+225000000: system.cpu.writeback: Log4GUI: writeback: 225000000: 0: 10108: addi x2, x2, -4
+225000000: system.cpu.writeback: REGISTERS
 225000000: global: x0=0x00000000
 225000000: global: x1=0x00000002
 225000000: global: x2=0x00011148
@@ -8254,6 +9342,12 @@
 225000000: global: f29=0x00000000
 225000000: global: f30=0x00000000
 225000000: global: f31=0x00000000
+225000000: system.cpu.memory: Log4GUI: memory: 225000000: 0: 1010c: addi x3, x3, -4
+225000000: system.cpu.execute: Log4GUI: execute: 225000000: 0: 10100: fmul_s f3, f1, f2: 4
+225000000: system.cpu.decode: Log4GUI: decode: 225000000: 1: 10110: fadd_s f0, f0, f3
+225000000: system.cpu.fetch1: Log4GUI: fetch1: 225000000: 1: 10114: <assembly>
+226000000: system.cpu.writeback: Log4GUI: writeback: 226000000: 0: 1010c: addi x3, x3, -4
+226000000: system.cpu.writeback: REGISTERS
 226000000: global: x0=0x00000000
 226000000: global: x1=0x00000002
 226000000: global: x2=0x00011148
@@ -8318,6 +9412,21 @@
 226000000: global: f29=0x00000000
 226000000: global: f30=0x00000000
 226000000: global: f31=0x00000000
+226000000: system.cpu.execute: Log4GUI: execute: 226000000: 0: 10100: fmul_s f3, f1, f2: 4
+226000000: system.cpu.decode: Log4GUI: decode: 226000000: 1: 10110: fadd_s f0, f0, f3
+226000000: system.cpu.fetch1: Log4GUI: fetch1: 226000000: 1: 10114: <assembly>
+227000000: system.cpu.execute: Log4GUI: execute: 227000000: 0: 10100: fmul_s f3, f1, f2: 4
+227000000: system.cpu.decode: Log4GUI: decode: 227000000: 1: 10110: fadd_s f0, f0, f3
+227000000: system.cpu.fetch1: Log4GUI: fetch1: 227000000: 1: 10114: <assembly>
+228000000: system.cpu.execute: Log4GUI: execute: 228000000: 0: 10100: fmul_s f3, f1, f2: 4
+228000000: system.cpu.decode: Log4GUI: decode: 228000000: 1: 10110: fadd_s f0, f0, f3
+228000000: system.cpu.fetch1: Log4GUI: fetch1: 228000000: 1: 10114: <assembly>
+229000000: system.cpu.memory: Log4GUI: memory: 229000000: 0: 10100: fmul_s f3, f1, f2
+229000000: system.cpu.execute: Log4GUI: execute: 229000000: 0: 10110: fadd_s f0, f0, f3: 3
+229000000: system.cpu.decode: Log4GUI: decode: 229000000: 0: 10114: jal x0, -32
+229000000: system.cpu.fetch1: Log4GUI: fetch1: 229000000: 0: 10118: <assembly>
+230000000: system.cpu.writeback: Log4GUI: writeback: 230000000: 0: 10100: fmul_s f3, f1, f2
+230000000: system.cpu.writeback: REGISTERS
 230000000: global: x0=0x00000000
 230000000: global: x1=0x00000002
 230000000: global: x2=0x00011148
@@ -8382,6 +9491,15 @@
 230000000: global: f29=0x00000000
 230000000: global: f30=0x00000000
 230000000: global: f31=0x00000000
+230000000: system.cpu.execute: Log4GUI: execute: 230000000: 0: 10114: jal x0, -32: 0
+230000000: system.cpu.execute: Log4GUI: execute: 230000000: 0: 10110: fadd_s f0, f0, f3: 3
+230000000: system.cpu.fetch1: Log4GUI: fetch1: 230000000: 0: 100f4: <assembly>
+231000000: system.cpu.memory: Log4GUI: memory: 231000000: 0: 10114: jal x0, -32
+231000000: system.cpu.execute: Log4GUI: execute: 231000000: 0: 10110: fadd_s f0, f0, f3: 3
+231000000: system.cpu.decode: Log4GUI: decode: 231000000: 0: 100f4: blt x1, x0, 36
+231000000: system.cpu.fetch1: Log4GUI: fetch1: 231000000: 0: 100f8: <assembly>
+232000000: system.cpu.writeback: Log4GUI: writeback: 232000000: 0: 10114: jal x0, -32
+232000000: system.cpu.writeback: REGISTERS
 232000000: global: x0=0x00000000
 232000000: global: x1=0x00000002
 232000000: global: x2=0x00011148
@@ -8446,6 +9564,15 @@
 232000000: global: f29=0x00000000
 232000000: global: f30=0x00000000
 232000000: global: f31=0x00000000
+232000000: system.cpu.execute: Log4GUI: execute: 232000000: 0: 100f4: blt x1, x0, 36: 0
+232000000: system.cpu.execute: Log4GUI: execute: 232000000: 0: 10110: fadd_s f0, f0, f3: 3
+232000000: system.cpu.decode: Log4GUI: decode: 232000000: 0: 100f8: flw f1, 0(x2)
+232000000: system.cpu.fetch1: Log4GUI: fetch1: 232000000: 0: 100fc: <assembly>
+233000000: system.cpu.memory: Log4GUI: memory: 233000000: 0: 10110: fadd_s f0, f0, f3
+233000000: system.cpu.decode: Log4GUI: decode: 233000000: 1: 100f8: flw f1, 0(x2)
+233000000: system.cpu.fetch1: Log4GUI: fetch1: 233000000: 1: 100fc: <assembly>
+234000000: system.cpu.writeback: Log4GUI: writeback: 234000000: 0: 10110: fadd_s f0, f0, f3
+234000000: system.cpu.writeback: REGISTERS
 234000000: global: x0=0x00000000
 234000000: global: x1=0x00000002
 234000000: global: x2=0x00011148
@@ -8510,6 +9637,12 @@
 234000000: global: f29=0x00000000
 234000000: global: f30=0x00000000
 234000000: global: f31=0x00000000
+234000000: system.cpu.memory: Log4GUI: memory: 234000000: 0: 100f4: blt x1, x0, 36
+234000000: system.cpu.execute: Log4GUI: execute: 234000000: 0: 100f8: flw f1, 0(x2): 0
+234000000: system.cpu.decode: Log4GUI: decode: 234000000: 0: 100fc: flw f2, 0(x3)
+234000000: system.cpu.fetch1: Log4GUI: fetch1: 234000000: 0: 10100: <assembly>
+235000000: system.cpu.writeback: Log4GUI: writeback: 235000000: 0: 100f4: blt x1, x0, 36
+235000000: system.cpu.writeback: REGISTERS
 235000000: global: x0=0x00000000
 235000000: global: x1=0x00000002
 235000000: global: x2=0x00011148
@@ -8574,6 +9707,12 @@
 235000000: global: f29=0x00000000
 235000000: global: f30=0x00000000
 235000000: global: f31=0x00000000
+235000000: system.cpu.memory: Log4GUI: memory: 235000000: 0: 100f8: flw f1, 0(x2)
+235000000: system.cpu.execute: Log4GUI: execute: 235000000: 0: 100fc: flw f2, 0(x3): 0
+235000000: system.cpu.decode: Log4GUI: decode: 235000000: 0: 10100: fmul_s f3, f1, f2
+235000000: system.cpu.fetch1: Log4GUI: fetch1: 235000000: 0: 10104: <assembly>
+236000000: system.cpu.writeback: Log4GUI: writeback: 236000000: 0: 100f8: flw f1, 0(x2)
+236000000: system.cpu.writeback: REGISTERS
 236000000: global: x0=0x00000000
 236000000: global: x1=0x00000002
 236000000: global: x2=0x00011148
@@ -8638,6 +9777,11 @@
 236000000: global: f29=0x00000000
 236000000: global: f30=0x00000000
 236000000: global: f31=0x00000000
+236000000: system.cpu.memory: Log4GUI: memory: 236000000: 0: 100fc: flw f2, 0(x3)
+236000000: system.cpu.decode: Log4GUI: decode: 236000000: 1: 10100: fmul_s f3, f1, f2
+236000000: system.cpu.fetch1: Log4GUI: fetch1: 236000000: 1: 10104: <assembly>
+237000000: system.cpu.writeback: Log4GUI: writeback: 237000000: 0: 100fc: flw f2, 0(x3)
+237000000: system.cpu.writeback: REGISTERS
 237000000: global: x0=0x00000000
 237000000: global: x1=0x00000002
 237000000: global: x2=0x00011148
@@ -8702,6 +9846,20 @@
 237000000: global: f29=0x00000000
 237000000: global: f30=0x00000000
 237000000: global: f31=0x00000000
+237000000: system.cpu.execute: Log4GUI: execute: 237000000: 0: 10100: fmul_s f3, f1, f2: 4
+237000000: system.cpu.decode: Log4GUI: decode: 237000000: 0: 10104: addi x1, x1, -1
+237000000: system.cpu.fetch1: Log4GUI: fetch1: 237000000: 0: 10108: <assembly>
+238000000: system.cpu.execute: Log4GUI: execute: 238000000: 0: 10104: addi x1, x1, -1: 0
+238000000: system.cpu.execute: Log4GUI: execute: 238000000: 0: 10100: fmul_s f3, f1, f2: 4
+238000000: system.cpu.decode: Log4GUI: decode: 238000000: 0: 10108: addi x2, x2, -4
+238000000: system.cpu.fetch1: Log4GUI: fetch1: 238000000: 0: 1010c: <assembly>
+239000000: system.cpu.memory: Log4GUI: memory: 239000000: 0: 10104: addi x1, x1, -1
+239000000: system.cpu.execute: Log4GUI: execute: 239000000: 0: 10108: addi x2, x2, -4: 0
+239000000: system.cpu.execute: Log4GUI: execute: 239000000: 0: 10100: fmul_s f3, f1, f2: 4
+239000000: system.cpu.decode: Log4GUI: decode: 239000000: 0: 1010c: addi x3, x3, -4
+239000000: system.cpu.fetch1: Log4GUI: fetch1: 239000000: 0: 10110: <assembly>
+240000000: system.cpu.writeback: Log4GUI: writeback: 240000000: 0: 10104: addi x1, x1, -1
+240000000: system.cpu.writeback: REGISTERS
 240000000: global: x0=0x00000000
 240000000: global: x1=0x00000001
 240000000: global: x2=0x00011148
@@ -8766,6 +9924,13 @@
 240000000: global: f29=0x00000000
 240000000: global: f30=0x00000000
 240000000: global: f31=0x00000000
+240000000: system.cpu.memory: Log4GUI: memory: 240000000: 0: 10108: addi x2, x2, -4
+240000000: system.cpu.execute: Log4GUI: execute: 240000000: 0: 1010c: addi x3, x3, -4: 0
+240000000: system.cpu.execute: Log4GUI: execute: 240000000: 0: 10100: fmul_s f3, f1, f2: 4
+240000000: system.cpu.decode: Log4GUI: decode: 240000000: 0: 10110: fadd_s f0, f0, f3
+240000000: system.cpu.fetch1: Log4GUI: fetch1: 240000000: 0: 10114: <assembly>
+241000000: system.cpu.writeback: Log4GUI: writeback: 241000000: 0: 10108: addi x2, x2, -4
+241000000: system.cpu.writeback: REGISTERS
 241000000: global: x0=0x00000000
 241000000: global: x1=0x00000001
 241000000: global: x2=0x00011144
@@ -8830,6 +9995,12 @@
 241000000: global: f29=0x00000000
 241000000: global: f30=0x00000000
 241000000: global: f31=0x00000000
+241000000: system.cpu.memory: Log4GUI: memory: 241000000: 0: 1010c: addi x3, x3, -4
+241000000: system.cpu.execute: Log4GUI: execute: 241000000: 0: 10100: fmul_s f3, f1, f2: 4
+241000000: system.cpu.decode: Log4GUI: decode: 241000000: 1: 10110: fadd_s f0, f0, f3
+241000000: system.cpu.fetch1: Log4GUI: fetch1: 241000000: 1: 10114: <assembly>
+242000000: system.cpu.writeback: Log4GUI: writeback: 242000000: 0: 1010c: addi x3, x3, -4
+242000000: system.cpu.writeback: REGISTERS
 242000000: global: x0=0x00000000
 242000000: global: x1=0x00000001
 242000000: global: x2=0x00011144
@@ -8894,6 +10065,21 @@
 242000000: global: f29=0x00000000
 242000000: global: f30=0x00000000
 242000000: global: f31=0x00000000
+242000000: system.cpu.execute: Log4GUI: execute: 242000000: 0: 10100: fmul_s f3, f1, f2: 4
+242000000: system.cpu.decode: Log4GUI: decode: 242000000: 1: 10110: fadd_s f0, f0, f3
+242000000: system.cpu.fetch1: Log4GUI: fetch1: 242000000: 1: 10114: <assembly>
+243000000: system.cpu.execute: Log4GUI: execute: 243000000: 0: 10100: fmul_s f3, f1, f2: 4
+243000000: system.cpu.decode: Log4GUI: decode: 243000000: 1: 10110: fadd_s f0, f0, f3
+243000000: system.cpu.fetch1: Log4GUI: fetch1: 243000000: 1: 10114: <assembly>
+244000000: system.cpu.execute: Log4GUI: execute: 244000000: 0: 10100: fmul_s f3, f1, f2: 4
+244000000: system.cpu.decode: Log4GUI: decode: 244000000: 1: 10110: fadd_s f0, f0, f3
+244000000: system.cpu.fetch1: Log4GUI: fetch1: 244000000: 1: 10114: <assembly>
+245000000: system.cpu.memory: Log4GUI: memory: 245000000: 0: 10100: fmul_s f3, f1, f2
+245000000: system.cpu.execute: Log4GUI: execute: 245000000: 0: 10110: fadd_s f0, f0, f3: 3
+245000000: system.cpu.decode: Log4GUI: decode: 245000000: 0: 10114: jal x0, -32
+245000000: system.cpu.fetch1: Log4GUI: fetch1: 245000000: 0: 10118: <assembly>
+246000000: system.cpu.writeback: Log4GUI: writeback: 246000000: 0: 10100: fmul_s f3, f1, f2
+246000000: system.cpu.writeback: REGISTERS
 246000000: global: x0=0x00000000
 246000000: global: x1=0x00000001
 246000000: global: x2=0x00011144
@@ -8958,6 +10144,15 @@
 246000000: global: f29=0x00000000
 246000000: global: f30=0x00000000
 246000000: global: f31=0x00000000
+246000000: system.cpu.execute: Log4GUI: execute: 246000000: 0: 10114: jal x0, -32: 0
+246000000: system.cpu.execute: Log4GUI: execute: 246000000: 0: 10110: fadd_s f0, f0, f3: 3
+246000000: system.cpu.fetch1: Log4GUI: fetch1: 246000000: 0: 100f4: <assembly>
+247000000: system.cpu.memory: Log4GUI: memory: 247000000: 0: 10114: jal x0, -32
+247000000: system.cpu.execute: Log4GUI: execute: 247000000: 0: 10110: fadd_s f0, f0, f3: 3
+247000000: system.cpu.decode: Log4GUI: decode: 247000000: 0: 100f4: blt x1, x0, 36
+247000000: system.cpu.fetch1: Log4GUI: fetch1: 247000000: 0: 100f8: <assembly>
+248000000: system.cpu.writeback: Log4GUI: writeback: 248000000: 0: 10114: jal x0, -32
+248000000: system.cpu.writeback: REGISTERS
 248000000: global: x0=0x00000000
 248000000: global: x1=0x00000001
 248000000: global: x2=0x00011144
@@ -9022,6 +10217,15 @@
 248000000: global: f29=0x00000000
 248000000: global: f30=0x00000000
 248000000: global: f31=0x00000000
+248000000: system.cpu.execute: Log4GUI: execute: 248000000: 0: 100f4: blt x1, x0, 36: 0
+248000000: system.cpu.execute: Log4GUI: execute: 248000000: 0: 10110: fadd_s f0, f0, f3: 3
+248000000: system.cpu.decode: Log4GUI: decode: 248000000: 0: 100f8: flw f1, 0(x2)
+248000000: system.cpu.fetch1: Log4GUI: fetch1: 248000000: 0: 100fc: <assembly>
+249000000: system.cpu.memory: Log4GUI: memory: 249000000: 0: 10110: fadd_s f0, f0, f3
+249000000: system.cpu.decode: Log4GUI: decode: 249000000: 1: 100f8: flw f1, 0(x2)
+249000000: system.cpu.fetch1: Log4GUI: fetch1: 249000000: 1: 100fc: <assembly>
+250000000: system.cpu.writeback: Log4GUI: writeback: 250000000: 0: 10110: fadd_s f0, f0, f3
+250000000: system.cpu.writeback: REGISTERS
 250000000: global: x0=0x00000000
 250000000: global: x1=0x00000001
 250000000: global: x2=0x00011144
@@ -9086,6 +10290,12 @@
 250000000: global: f29=0x00000000
 250000000: global: f30=0x00000000
 250000000: global: f31=0x00000000
+250000000: system.cpu.memory: Log4GUI: memory: 250000000: 0: 100f4: blt x1, x0, 36
+250000000: system.cpu.execute: Log4GUI: execute: 250000000: 0: 100f8: flw f1, 0(x2): 0
+250000000: system.cpu.decode: Log4GUI: decode: 250000000: 0: 100fc: flw f2, 0(x3)
+250000000: system.cpu.fetch1: Log4GUI: fetch1: 250000000: 0: 10100: <assembly>
+251000000: system.cpu.writeback: Log4GUI: writeback: 251000000: 0: 100f4: blt x1, x0, 36
+251000000: system.cpu.writeback: REGISTERS
 251000000: global: x0=0x00000000
 251000000: global: x1=0x00000001
 251000000: global: x2=0x00011144
@@ -9150,6 +10360,12 @@
 251000000: global: f29=0x00000000
 251000000: global: f30=0x00000000
 251000000: global: f31=0x00000000
+251000000: system.cpu.memory: Log4GUI: memory: 251000000: 0: 100f8: flw f1, 0(x2)
+251000000: system.cpu.execute: Log4GUI: execute: 251000000: 0: 100fc: flw f2, 0(x3): 0
+251000000: system.cpu.decode: Log4GUI: decode: 251000000: 0: 10100: fmul_s f3, f1, f2
+251000000: system.cpu.fetch1: Log4GUI: fetch1: 251000000: 0: 10104: <assembly>
+252000000: system.cpu.writeback: Log4GUI: writeback: 252000000: 0: 100f8: flw f1, 0(x2)
+252000000: system.cpu.writeback: REGISTERS
 252000000: global: x0=0x00000000
 252000000: global: x1=0x00000001
 252000000: global: x2=0x00011144
@@ -9214,6 +10430,11 @@
 252000000: global: f29=0x00000000
 252000000: global: f30=0x00000000
 252000000: global: f31=0x00000000
+252000000: system.cpu.memory: Log4GUI: memory: 252000000: 0: 100fc: flw f2, 0(x3)
+252000000: system.cpu.decode: Log4GUI: decode: 252000000: 1: 10100: fmul_s f3, f1, f2
+252000000: system.cpu.fetch1: Log4GUI: fetch1: 252000000: 1: 10104: <assembly>
+253000000: system.cpu.writeback: Log4GUI: writeback: 253000000: 0: 100fc: flw f2, 0(x3)
+253000000: system.cpu.writeback: REGISTERS
 253000000: global: x0=0x00000000
 253000000: global: x1=0x00000001
 253000000: global: x2=0x00011144
@@ -9278,6 +10499,20 @@
 253000000: global: f29=0x00000000
 253000000: global: f30=0x00000000
 253000000: global: f31=0x00000000
+253000000: system.cpu.execute: Log4GUI: execute: 253000000: 0: 10100: fmul_s f3, f1, f2: 4
+253000000: system.cpu.decode: Log4GUI: decode: 253000000: 0: 10104: addi x1, x1, -1
+253000000: system.cpu.fetch1: Log4GUI: fetch1: 253000000: 0: 10108: <assembly>
+254000000: system.cpu.execute: Log4GUI: execute: 254000000: 0: 10104: addi x1, x1, -1: 0
+254000000: system.cpu.execute: Log4GUI: execute: 254000000: 0: 10100: fmul_s f3, f1, f2: 4
+254000000: system.cpu.decode: Log4GUI: decode: 254000000: 0: 10108: addi x2, x2, -4
+254000000: system.cpu.fetch1: Log4GUI: fetch1: 254000000: 0: 1010c: <assembly>
+255000000: system.cpu.memory: Log4GUI: memory: 255000000: 0: 10104: addi x1, x1, -1
+255000000: system.cpu.execute: Log4GUI: execute: 255000000: 0: 10108: addi x2, x2, -4: 0
+255000000: system.cpu.execute: Log4GUI: execute: 255000000: 0: 10100: fmul_s f3, f1, f2: 4
+255000000: system.cpu.decode: Log4GUI: decode: 255000000: 0: 1010c: addi x3, x3, -4
+255000000: system.cpu.fetch1: Log4GUI: fetch1: 255000000: 0: 10110: <assembly>
+256000000: system.cpu.writeback: Log4GUI: writeback: 256000000: 0: 10104: addi x1, x1, -1
+256000000: system.cpu.writeback: REGISTERS
 256000000: global: x0=0x00000000
 256000000: global: x1=0x00000000
 256000000: global: x2=0x00011144
@@ -9342,6 +10577,13 @@
 256000000: global: f29=0x00000000
 256000000: global: f30=0x00000000
 256000000: global: f31=0x00000000
+256000000: system.cpu.memory: Log4GUI: memory: 256000000: 0: 10108: addi x2, x2, -4
+256000000: system.cpu.execute: Log4GUI: execute: 256000000: 0: 1010c: addi x3, x3, -4: 0
+256000000: system.cpu.execute: Log4GUI: execute: 256000000: 0: 10100: fmul_s f3, f1, f2: 4
+256000000: system.cpu.decode: Log4GUI: decode: 256000000: 0: 10110: fadd_s f0, f0, f3
+256000000: system.cpu.fetch1: Log4GUI: fetch1: 256000000: 0: 10114: <assembly>
+257000000: system.cpu.writeback: Log4GUI: writeback: 257000000: 0: 10108: addi x2, x2, -4
+257000000: system.cpu.writeback: REGISTERS
 257000000: global: x0=0x00000000
 257000000: global: x1=0x00000000
 257000000: global: x2=0x00011140
@@ -9406,6 +10648,12 @@
 257000000: global: f29=0x00000000
 257000000: global: f30=0x00000000
 257000000: global: f31=0x00000000
+257000000: system.cpu.memory: Log4GUI: memory: 257000000: 0: 1010c: addi x3, x3, -4
+257000000: system.cpu.execute: Log4GUI: execute: 257000000: 0: 10100: fmul_s f3, f1, f2: 4
+257000000: system.cpu.decode: Log4GUI: decode: 257000000: 1: 10110: fadd_s f0, f0, f3
+257000000: system.cpu.fetch1: Log4GUI: fetch1: 257000000: 1: 10114: <assembly>
+258000000: system.cpu.writeback: Log4GUI: writeback: 258000000: 0: 1010c: addi x3, x3, -4
+258000000: system.cpu.writeback: REGISTERS
 258000000: global: x0=0x00000000
 258000000: global: x1=0x00000000
 258000000: global: x2=0x00011140
@@ -9470,6 +10718,21 @@
 258000000: global: f29=0x00000000
 258000000: global: f30=0x00000000
 258000000: global: f31=0x00000000
+258000000: system.cpu.execute: Log4GUI: execute: 258000000: 0: 10100: fmul_s f3, f1, f2: 4
+258000000: system.cpu.decode: Log4GUI: decode: 258000000: 1: 10110: fadd_s f0, f0, f3
+258000000: system.cpu.fetch1: Log4GUI: fetch1: 258000000: 1: 10114: <assembly>
+259000000: system.cpu.execute: Log4GUI: execute: 259000000: 0: 10100: fmul_s f3, f1, f2: 4
+259000000: system.cpu.decode: Log4GUI: decode: 259000000: 1: 10110: fadd_s f0, f0, f3
+259000000: system.cpu.fetch1: Log4GUI: fetch1: 259000000: 1: 10114: <assembly>
+260000000: system.cpu.execute: Log4GUI: execute: 260000000: 0: 10100: fmul_s f3, f1, f2: 4
+260000000: system.cpu.decode: Log4GUI: decode: 260000000: 1: 10110: fadd_s f0, f0, f3
+260000000: system.cpu.fetch1: Log4GUI: fetch1: 260000000: 1: 10114: <assembly>
+261000000: system.cpu.memory: Log4GUI: memory: 261000000: 0: 10100: fmul_s f3, f1, f2
+261000000: system.cpu.execute: Log4GUI: execute: 261000000: 0: 10110: fadd_s f0, f0, f3: 3
+261000000: system.cpu.decode: Log4GUI: decode: 261000000: 0: 10114: jal x0, -32
+261000000: system.cpu.fetch1: Log4GUI: fetch1: 261000000: 0: 10118: <assembly>
+262000000: system.cpu.writeback: Log4GUI: writeback: 262000000: 0: 10100: fmul_s f3, f1, f2
+262000000: system.cpu.writeback: REGISTERS
 262000000: global: x0=0x00000000
 262000000: global: x1=0x00000000
 262000000: global: x2=0x00011140
@@ -9534,6 +10797,15 @@
 262000000: global: f29=0x00000000
 262000000: global: f30=0x00000000
 262000000: global: f31=0x00000000
+262000000: system.cpu.execute: Log4GUI: execute: 262000000: 0: 10114: jal x0, -32: 0
+262000000: system.cpu.execute: Log4GUI: execute: 262000000: 0: 10110: fadd_s f0, f0, f3: 3
+262000000: system.cpu.fetch1: Log4GUI: fetch1: 262000000: 0: 100f4: <assembly>
+263000000: system.cpu.memory: Log4GUI: memory: 263000000: 0: 10114: jal x0, -32
+263000000: system.cpu.execute: Log4GUI: execute: 263000000: 0: 10110: fadd_s f0, f0, f3: 3
+263000000: system.cpu.decode: Log4GUI: decode: 263000000: 0: 100f4: blt x1, x0, 36
+263000000: system.cpu.fetch1: Log4GUI: fetch1: 263000000: 0: 100f8: <assembly>
+264000000: system.cpu.writeback: Log4GUI: writeback: 264000000: 0: 10114: jal x0, -32
+264000000: system.cpu.writeback: REGISTERS
 264000000: global: x0=0x00000000
 264000000: global: x1=0x00000000
 264000000: global: x2=0x00011140
@@ -9598,6 +10870,15 @@
 264000000: global: f29=0x00000000
 264000000: global: f30=0x00000000
 264000000: global: f31=0x00000000
+264000000: system.cpu.execute: Log4GUI: execute: 264000000: 0: 100f4: blt x1, x0, 36: 0
+264000000: system.cpu.execute: Log4GUI: execute: 264000000: 0: 10110: fadd_s f0, f0, f3: 3
+264000000: system.cpu.decode: Log4GUI: decode: 264000000: 0: 100f8: flw f1, 0(x2)
+264000000: system.cpu.fetch1: Log4GUI: fetch1: 264000000: 0: 100fc: <assembly>
+265000000: system.cpu.memory: Log4GUI: memory: 265000000: 0: 10110: fadd_s f0, f0, f3
+265000000: system.cpu.decode: Log4GUI: decode: 265000000: 1: 100f8: flw f1, 0(x2)
+265000000: system.cpu.fetch1: Log4GUI: fetch1: 265000000: 1: 100fc: <assembly>
+266000000: system.cpu.writeback: Log4GUI: writeback: 266000000: 0: 10110: fadd_s f0, f0, f3
+266000000: system.cpu.writeback: REGISTERS
 266000000: global: x0=0x00000000
 266000000: global: x1=0x00000000
 266000000: global: x2=0x00011140
@@ -9662,6 +10943,12 @@
 266000000: global: f29=0x00000000
 266000000: global: f30=0x00000000
 266000000: global: f31=0x00000000
+266000000: system.cpu.memory: Log4GUI: memory: 266000000: 0: 100f4: blt x1, x0, 36
+266000000: system.cpu.execute: Log4GUI: execute: 266000000: 0: 100f8: flw f1, 0(x2): 0
+266000000: system.cpu.decode: Log4GUI: decode: 266000000: 0: 100fc: flw f2, 0(x3)
+266000000: system.cpu.fetch1: Log4GUI: fetch1: 266000000: 0: 10100: <assembly>
+267000000: system.cpu.writeback: Log4GUI: writeback: 267000000: 0: 100f4: blt x1, x0, 36
+267000000: system.cpu.writeback: REGISTERS
 267000000: global: x0=0x00000000
 267000000: global: x1=0x00000000
 267000000: global: x2=0x00011140
@@ -9726,6 +11013,12 @@
 267000000: global: f29=0x00000000
 267000000: global: f30=0x00000000
 267000000: global: f31=0x00000000
+267000000: system.cpu.memory: Log4GUI: memory: 267000000: 0: 100f8: flw f1, 0(x2)
+267000000: system.cpu.execute: Log4GUI: execute: 267000000: 0: 100fc: flw f2, 0(x3): 0
+267000000: system.cpu.decode: Log4GUI: decode: 267000000: 0: 10100: fmul_s f3, f1, f2
+267000000: system.cpu.fetch1: Log4GUI: fetch1: 267000000: 0: 10104: <assembly>
+268000000: system.cpu.writeback: Log4GUI: writeback: 268000000: 0: 100f8: flw f1, 0(x2)
+268000000: system.cpu.writeback: REGISTERS
 268000000: global: x0=0x00000000
 268000000: global: x1=0x00000000
 268000000: global: x2=0x00011140
@@ -9790,6 +11083,11 @@
 268000000: global: f29=0x00000000
 268000000: global: f30=0x00000000
 268000000: global: f31=0x00000000
+268000000: system.cpu.memory: Log4GUI: memory: 268000000: 0: 100fc: flw f2, 0(x3)
+268000000: system.cpu.decode: Log4GUI: decode: 268000000: 1: 10100: fmul_s f3, f1, f2
+268000000: system.cpu.fetch1: Log4GUI: fetch1: 268000000: 1: 10104: <assembly>
+269000000: system.cpu.writeback: Log4GUI: writeback: 269000000: 0: 100fc: flw f2, 0(x3)
+269000000: system.cpu.writeback: REGISTERS
 269000000: global: x0=0x00000000
 269000000: global: x1=0x00000000
 269000000: global: x2=0x00011140
@@ -9854,6 +11152,20 @@
 269000000: global: f29=0x00000000
 269000000: global: f30=0x00000000
 269000000: global: f31=0x00000000
+269000000: system.cpu.execute: Log4GUI: execute: 269000000: 0: 10100: fmul_s f3, f1, f2: 4
+269000000: system.cpu.decode: Log4GUI: decode: 269000000: 0: 10104: addi x1, x1, -1
+269000000: system.cpu.fetch1: Log4GUI: fetch1: 269000000: 0: 10108: <assembly>
+270000000: system.cpu.execute: Log4GUI: execute: 270000000: 0: 10104: addi x1, x1, -1: 0
+270000000: system.cpu.execute: Log4GUI: execute: 270000000: 0: 10100: fmul_s f3, f1, f2: 4
+270000000: system.cpu.decode: Log4GUI: decode: 270000000: 0: 10108: addi x2, x2, -4
+270000000: system.cpu.fetch1: Log4GUI: fetch1: 270000000: 0: 1010c: <assembly>
+271000000: system.cpu.memory: Log4GUI: memory: 271000000: 0: 10104: addi x1, x1, -1
+271000000: system.cpu.execute: Log4GUI: execute: 271000000: 0: 10108: addi x2, x2, -4: 0
+271000000: system.cpu.execute: Log4GUI: execute: 271000000: 0: 10100: fmul_s f3, f1, f2: 4
+271000000: system.cpu.decode: Log4GUI: decode: 271000000: 0: 1010c: addi x3, x3, -4
+271000000: system.cpu.fetch1: Log4GUI: fetch1: 271000000: 0: 10110: <assembly>
+272000000: system.cpu.writeback: Log4GUI: writeback: 272000000: 0: 10104: addi x1, x1, -1
+272000000: system.cpu.writeback: REGISTERS
 272000000: global: x0=0x00000000
 272000000: global: x1=0xffffffff
 272000000: global: x2=0x00011140
@@ -9918,6 +11230,13 @@
 272000000: global: f29=0x00000000
 272000000: global: f30=0x00000000
 272000000: global: f31=0x00000000
+272000000: system.cpu.memory: Log4GUI: memory: 272000000: 0: 10108: addi x2, x2, -4
+272000000: system.cpu.execute: Log4GUI: execute: 272000000: 0: 1010c: addi x3, x3, -4: 0
+272000000: system.cpu.execute: Log4GUI: execute: 272000000: 0: 10100: fmul_s f3, f1, f2: 4
+272000000: system.cpu.decode: Log4GUI: decode: 272000000: 0: 10110: fadd_s f0, f0, f3
+272000000: system.cpu.fetch1: Log4GUI: fetch1: 272000000: 0: 10114: <assembly>
+273000000: system.cpu.writeback: Log4GUI: writeback: 273000000: 0: 10108: addi x2, x2, -4
+273000000: system.cpu.writeback: REGISTERS
 273000000: global: x0=0x00000000
 273000000: global: x1=0xffffffff
 273000000: global: x2=0x0001113c
@@ -9982,6 +11301,12 @@
 273000000: global: f29=0x00000000
 273000000: global: f30=0x00000000
 273000000: global: f31=0x00000000
+273000000: system.cpu.memory: Log4GUI: memory: 273000000: 0: 1010c: addi x3, x3, -4
+273000000: system.cpu.execute: Log4GUI: execute: 273000000: 0: 10100: fmul_s f3, f1, f2: 4
+273000000: system.cpu.decode: Log4GUI: decode: 273000000: 1: 10110: fadd_s f0, f0, f3
+273000000: system.cpu.fetch1: Log4GUI: fetch1: 273000000: 1: 10114: <assembly>
+274000000: system.cpu.writeback: Log4GUI: writeback: 274000000: 0: 1010c: addi x3, x3, -4
+274000000: system.cpu.writeback: REGISTERS
 274000000: global: x0=0x00000000
 274000000: global: x1=0xffffffff
 274000000: global: x2=0x0001113c
@@ -10046,6 +11371,21 @@
 274000000: global: f29=0x00000000
 274000000: global: f30=0x00000000
 274000000: global: f31=0x00000000
+274000000: system.cpu.execute: Log4GUI: execute: 274000000: 0: 10100: fmul_s f3, f1, f2: 4
+274000000: system.cpu.decode: Log4GUI: decode: 274000000: 1: 10110: fadd_s f0, f0, f3
+274000000: system.cpu.fetch1: Log4GUI: fetch1: 274000000: 1: 10114: <assembly>
+275000000: system.cpu.execute: Log4GUI: execute: 275000000: 0: 10100: fmul_s f3, f1, f2: 4
+275000000: system.cpu.decode: Log4GUI: decode: 275000000: 1: 10110: fadd_s f0, f0, f3
+275000000: system.cpu.fetch1: Log4GUI: fetch1: 275000000: 1: 10114: <assembly>
+276000000: system.cpu.execute: Log4GUI: execute: 276000000: 0: 10100: fmul_s f3, f1, f2: 4
+276000000: system.cpu.decode: Log4GUI: decode: 276000000: 1: 10110: fadd_s f0, f0, f3
+276000000: system.cpu.fetch1: Log4GUI: fetch1: 276000000: 1: 10114: <assembly>
+277000000: system.cpu.memory: Log4GUI: memory: 277000000: 0: 10100: fmul_s f3, f1, f2
+277000000: system.cpu.execute: Log4GUI: execute: 277000000: 0: 10110: fadd_s f0, f0, f3: 3
+277000000: system.cpu.decode: Log4GUI: decode: 277000000: 0: 10114: jal x0, -32
+277000000: system.cpu.fetch1: Log4GUI: fetch1: 277000000: 0: 10118: <assembly>
+278000000: system.cpu.writeback: Log4GUI: writeback: 278000000: 0: 10100: fmul_s f3, f1, f2
+278000000: system.cpu.writeback: REGISTERS
 278000000: global: x0=0x00000000
 278000000: global: x1=0xffffffff
 278000000: global: x2=0x0001113c
@@ -10110,6 +11450,15 @@
 278000000: global: f29=0x00000000
 278000000: global: f30=0x00000000
 278000000: global: f31=0x00000000
+278000000: system.cpu.execute: Log4GUI: execute: 278000000: 0: 10114: jal x0, -32: 0
+278000000: system.cpu.execute: Log4GUI: execute: 278000000: 0: 10110: fadd_s f0, f0, f3: 3
+278000000: system.cpu.fetch1: Log4GUI: fetch1: 278000000: 0: 100f4: <assembly>
+279000000: system.cpu.memory: Log4GUI: memory: 279000000: 0: 10114: jal x0, -32
+279000000: system.cpu.execute: Log4GUI: execute: 279000000: 0: 10110: fadd_s f0, f0, f3: 3
+279000000: system.cpu.decode: Log4GUI: decode: 279000000: 0: 100f4: blt x1, x0, 36
+279000000: system.cpu.fetch1: Log4GUI: fetch1: 279000000: 0: 100f8: <assembly>
+280000000: system.cpu.writeback: Log4GUI: writeback: 280000000: 0: 10114: jal x0, -32
+280000000: system.cpu.writeback: REGISTERS
 280000000: global: x0=0x00000000
 280000000: global: x1=0xffffffff
 280000000: global: x2=0x0001113c
@@ -10174,6 +11523,14 @@
 280000000: global: f29=0x00000000
 280000000: global: f30=0x00000000
 280000000: global: f31=0x00000000
+280000000: system.cpu.execute: Log4GUI: execute: 280000000: 0: 100f4: blt x1, x0, 36: 0
+280000000: system.cpu.execute: Log4GUI: execute: 280000000: 0: 10110: fadd_s f0, f0, f3: 3
+280000000: system.cpu.fetch1: Log4GUI: fetch1: 280000000: 0: 10118: <assembly>
+281000000: system.cpu.memory: Log4GUI: memory: 281000000: 0: 10110: fadd_s f0, f0, f3
+281000000: system.cpu.decode: Log4GUI: decode: 281000000: 0: 10118: flw f4, 0(x4)
+281000000: system.cpu.fetch1: Log4GUI: fetch1: 281000000: 0: 1011c: <assembly>
+282000000: system.cpu.writeback: Log4GUI: writeback: 282000000: 0: 10110: fadd_s f0, f0, f3
+282000000: system.cpu.writeback: REGISTERS
 282000000: global: x0=0x00000000
 282000000: global: x1=0xffffffff
 282000000: global: x2=0x0001113c
@@ -10238,6 +11595,12 @@
 282000000: global: f29=0x00000000
 282000000: global: f30=0x00000000
 282000000: global: f31=0x00000000
+282000000: system.cpu.memory: Log4GUI: memory: 282000000: 0: 100f4: blt x1, x0, 36
+282000000: system.cpu.execute: Log4GUI: execute: 282000000: 0: 10118: flw f4, 0(x4): 0
+282000000: system.cpu.decode: Log4GUI: decode: 282000000: 0: 1011c: fadd_s f0, f0, f4
+282000000: system.cpu.fetch1: Log4GUI: fetch1: 282000000: 0: 10120: <assembly>
+283000000: system.cpu.writeback: Log4GUI: writeback: 283000000: 0: 100f4: blt x1, x0, 36
+283000000: system.cpu.writeback: REGISTERS
 283000000: global: x0=0x00000000
 283000000: global: x1=0xffffffff
 283000000: global: x2=0x0001113c
@@ -10302,6 +11665,11 @@
 283000000: global: f29=0x00000000
 283000000: global: f30=0x00000000
 283000000: global: f31=0x00000000
+283000000: system.cpu.memory: Log4GUI: memory: 283000000: 0: 10118: flw f4, 0(x4)
+283000000: system.cpu.decode: Log4GUI: decode: 283000000: 1: 1011c: fadd_s f0, f0, f4
+283000000: system.cpu.fetch1: Log4GUI: fetch1: 283000000: 1: 10120: <assembly>
+284000000: system.cpu.writeback: Log4GUI: writeback: 284000000: 0: 10118: flw f4, 0(x4)
+284000000: system.cpu.writeback: REGISTERS
 284000000: global: x0=0x00000000
 284000000: global: x1=0xffffffff
 284000000: global: x2=0x0001113c
@@ -10366,6 +11734,24 @@
 284000000: global: f29=0x00000000
 284000000: global: f30=0x00000000
 284000000: global: f31=0x00000000
+284000000: system.cpu.execute: Log4GUI: execute: 284000000: 0: 1011c: fadd_s f0, f0, f4: 3
+284000000: system.cpu.decode: Log4GUI: decode: 284000000: 0: 10120: fmv_x_w x6, f0
+284000000: system.cpu.fetch1: Log4GUI: fetch1: 284000000: 0: 10124: <assembly>
+285000000: system.cpu.execute: Log4GUI: execute: 285000000: 0: 1011c: fadd_s f0, f0, f4: 3
+285000000: system.cpu.decode: Log4GUI: decode: 285000000: 1: 10120: fmv_x_w x6, f0
+285000000: system.cpu.fetch1: Log4GUI: fetch1: 285000000: 1: 10124: <assembly>
+286000000: system.cpu.execute: Log4GUI: execute: 286000000: 0: 1011c: fadd_s f0, f0, f4: 3
+286000000: system.cpu.decode: Log4GUI: decode: 286000000: 1: 10120: fmv_x_w x6, f0
+286000000: system.cpu.fetch1: Log4GUI: fetch1: 286000000: 1: 10124: <assembly>
+287000000: system.cpu.execute: Log4GUI: execute: 287000000: 0: 1011c: fadd_s f0, f0, f4: 3
+287000000: system.cpu.decode: Log4GUI: decode: 287000000: 1: 10120: fmv_x_w x6, f0
+287000000: system.cpu.fetch1: Log4GUI: fetch1: 287000000: 1: 10124: <assembly>
+288000000: system.cpu.memory: Log4GUI: memory: 288000000: 0: 1011c: fadd_s f0, f0, f4
+288000000: system.cpu.execute: Log4GUI: execute: 288000000: 0: 10120: fmv_x_w x6, f0: 3
+288000000: system.cpu.decode: Log4GUI: decode: 288000000: 0: 10124: srli x6, x6, 23
+288000000: system.cpu.fetch1: Log4GUI: fetch1: 288000000: 0: 10128: <assembly>
+289000000: system.cpu.writeback: Log4GUI: writeback: 289000000: 0: 1011c: fadd_s f0, f0, f4
+289000000: system.cpu.writeback: REGISTERS
 289000000: global: x0=0x00000000
 289000000: global: x1=0xffffffff
 289000000: global: x2=0x0001113c
@@ -10430,6 +11816,21 @@
 289000000: global: f29=0x00000000
 289000000: global: f30=0x00000000
 289000000: global: f31=0x00000000
+289000000: system.cpu.execute: Log4GUI: execute: 289000000: 0: 10120: fmv_x_w x6, f0: 3
+289000000: system.cpu.decode: Log4GUI: decode: 289000000: 1: 10124: srli x6, x6, 23
+289000000: system.cpu.fetch1: Log4GUI: fetch1: 289000000: 1: 10128: <assembly>
+290000000: system.cpu.execute: Log4GUI: execute: 290000000: 0: 10120: fmv_x_w x6, f0: 3
+290000000: system.cpu.decode: Log4GUI: decode: 290000000: 1: 10124: srli x6, x6, 23
+290000000: system.cpu.fetch1: Log4GUI: fetch1: 290000000: 1: 10128: <assembly>
+291000000: system.cpu.execute: Log4GUI: execute: 291000000: 0: 10120: fmv_x_w x6, f0: 3
+291000000: system.cpu.decode: Log4GUI: decode: 291000000: 1: 10124: srli x6, x6, 23
+291000000: system.cpu.fetch1: Log4GUI: fetch1: 291000000: 1: 10128: <assembly>
+292000000: system.cpu.memory: Log4GUI: memory: 292000000: 0: 10120: fmv_x_w x6, f0
+292000000: system.cpu.execute: Log4GUI: execute: 292000000: 0: 10124: srli x6, x6, 23: 0
+292000000: system.cpu.decode: Log4GUI: decode: 292000000: 0: 10128: beq x6, x7, 8
+292000000: system.cpu.fetch1: Log4GUI: fetch1: 292000000: 0: 1012c: <assembly>
+293000000: system.cpu.writeback: Log4GUI: writeback: 293000000: 0: 10120: fmv_x_w x6, f0
+293000000: system.cpu.writeback: REGISTERS
 293000000: global: x0=0x00000000
 293000000: global: x1=0xffffffff
 293000000: global: x2=0x0001113c
@@ -10494,6 +11895,11 @@
 293000000: global: f29=0x00000000
 293000000: global: f30=0x00000000
 293000000: global: f31=0x00000000
+293000000: system.cpu.memory: Log4GUI: memory: 293000000: 0: 10124: srli x6, x6, 23
+293000000: system.cpu.decode: Log4GUI: decode: 293000000: 1: 10128: beq x6, x7, 8
+293000000: system.cpu.fetch1: Log4GUI: fetch1: 293000000: 1: 1012c: <assembly>
+294000000: system.cpu.writeback: Log4GUI: writeback: 294000000: 0: 10124: srli x6, x6, 23
+294000000: system.cpu.writeback: REGISTERS
 294000000: global: x0=0x00000000
 294000000: global: x1=0xffffffff
 294000000: global: x2=0x0001113c
@@ -10558,6 +11964,14 @@
 294000000: global: f29=0x00000000
 294000000: global: f30=0x00000000
 294000000: global: f31=0x00000000
+294000000: system.cpu.execute: Log4GUI: execute: 294000000: 0: 10128: beq x6, x7, 8: 0
+294000000: system.cpu.decode: Log4GUI: decode: 294000000: 0: 1012c: jal x0, 8
+294000000: system.cpu.fetch1: Log4GUI: fetch1: 294000000: 0: 10130: <assembly>
+295000000: system.cpu.memory: Log4GUI: memory: 295000000: 0: 10128: beq x6, x7, 8
+295000000: system.cpu.execute: Log4GUI: execute: 295000000: 0: 1012c: jal x0, 8: 0
+295000000: system.cpu.fetch1: Log4GUI: fetch1: 295000000: 0: 10134: <assembly>
+296000000: system.cpu.writeback: Log4GUI: writeback: 296000000: 0: 10128: beq x6, x7, 8
+296000000: system.cpu.writeback: REGISTERS
 296000000: global: x0=0x00000000
 296000000: global: x1=0xffffffff
 296000000: global: x2=0x0001113c
@@ -10622,6 +12036,11 @@
 296000000: global: f29=0x00000000
 296000000: global: f30=0x00000000
 296000000: global: f31=0x00000000
+296000000: system.cpu.memory: Log4GUI: memory: 296000000: 0: 1012c: jal x0, 8
+296000000: system.cpu.decode: Log4GUI: decode: 296000000: 0: 10134: fsw f0, 0(x5)
+296000000: system.cpu.fetch1: Log4GUI: fetch1: 296000000: 0: 10138: <assembly>
+297000000: system.cpu.writeback: Log4GUI: writeback: 297000000: 0: 1012c: jal x0, 8
+297000000: system.cpu.writeback: REGISTERS
 297000000: global: x0=0x00000000
 297000000: global: x1=0xffffffff
 297000000: global: x2=0x0001113c
@@ -10686,6 +12105,15 @@
 297000000: global: f29=0x00000000
 297000000: global: f30=0x00000000
 297000000: global: f31=0x00000000
+297000000: system.cpu.execute: Log4GUI: execute: 297000000: 0: 10134: fsw f0, 0(x5): 0
+297000000: system.cpu.decode: Log4GUI: decode: 297000000: 0: 10138: addi x17, x0, 10
+297000000: system.cpu.fetch1: Log4GUI: fetch1: 297000000: 0: 1013c: <assembly>
+298000000: system.cpu.memory: Log4GUI: memory: 298000000: 0: 10134: fsw f0, 0(x5)
+298000000: system.cpu.execute: Log4GUI: execute: 298000000: 0: 10138: addi x17, x0, 10: 0
+298000000: system.cpu.decode: Log4GUI: decode: 298000000: 0: 1013c: ecall
+298000000: system.cpu.fetch1: Log4GUI: fetch1: 298000000: 0: 10140: <assembly>
+299000000: system.cpu.writeback: Log4GUI: writeback: 299000000: 0: 10134: fsw f0, 0(x5)
+299000000: system.cpu.writeback: REGISTERS
 299000000: global: x0=0x00000000
 299000000: global: x1=0xffffffff
 299000000: global: x2=0x0001113c
@@ -10750,3 +12178,5 @@
 299000000: global: f29=0x00000000
 299000000: global: f30=0x00000000
 299000000: global: f31=0x00000000
+299000000: system.cpu.memory: Log4GUI: memory: 299000000: 0: 10138: addi x17, x0, 10
+299000000: system.cpu.execute: Log4GUI: execute: 299000000: 0: 1013c: ecall: -1

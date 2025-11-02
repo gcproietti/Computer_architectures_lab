@@ -4,8 +4,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 22.1.0.0
 gem5 compiled Aug 27 2025 16:10:28
-gem5 started Nov  2 2025 18:29:25
-gem5 executing on vboxuser-VirtualBox, pid 25778
+gem5 started Nov  2 2025 23:24:45
+gem5 executing on vboxuser-VirtualBox, pid 34689
 command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI --outdir=/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04/ --verbose ./gem5/riscv_in_order_hen_patt.py --caches --cpu-type MinorCPU --l1d_size 8388608 --l1i_size 8388608 --cacheline_size 512 --cpu-clock 1MHz --sys-clock 10GHz -c ./programs/lab04/lab04.elf
 
 **** REAL SIMULATION ****

@@ -41,6 +41,7 @@ _start:
 ############################################################
 
 li x1, 15        # Loop index i = 15 (starting from last element)
+li x8, 9
 la x2, V1        # Pointer to V1 array
 la x3, V2        # Pointer to V2 array
 la x4, b         # Load b value
@@ -61,8 +62,8 @@ addi x3, x3, 60
 # MAIN LOOP: Process all elements in reverse order
 ############################################################
 
-for:
-    blt x1, x0, End        # If i < 0 → exit loop
+for1:
+    blt x1, x8, for2        # If i < 0 → exit loop
 
     flw f1, 0(x2)
     flw f2, 0(x3)
@@ -75,7 +76,24 @@ for:
 
     fadd.s f0, f0, f3		# the result of the moltiplication is added with f0 (that at the beggining is equal to 0.0)
     
-    j for
+    j for1
+
+for2:
+    blt x1, x0, End        # If i < 0 → exit loop
+
+    flw f1, 0(x2)
+    flw f2, 0(x3)
+
+    fmul.s f3, f1, f2		# V2 multiplied with V1
+
+    addi x1, x1, -1			# decreas one point at each iteration until it reach the 0
+    addi x2, x2, -4			# decrease the index for V1 (of 4 point at a time because a f number with s precision is 4 bytes long)
+    addi x3, x3, -4			# decrease the index of V2..........
+
+    fadd.s f0, f0, f3		# the result of the moltiplication is added with f0 (that at the beggining is equal to 0.0)
+
+    
+    j for2
 
 End:
     # Add the bias 'b' to the sum
