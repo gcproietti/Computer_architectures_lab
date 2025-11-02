@@ -760,7 +760,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 3,
+                            "opLat": 4,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
@@ -825,7 +825,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 5,
+                            "opLat": 8,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
@@ -873,7 +873,7 @@
                                 4
                             ],
                             "eventq_index": 0,
-                            "issueLat": 5,
+                            "issueLat": 20,
                             "opClasses": {
                                 "type": "MinorOpClassSet",
                                 "cxx_class": "gem5::MinorOpClassSet",
@@ -899,7 +899,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 5,
+                            "opLat": 20,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
