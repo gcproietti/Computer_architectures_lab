@@ -80,8 +80,8 @@ INTEGER_ALU_LATENCY = 1
 INTEGER_MUL_LATENCY = 1
 INTEGER_DIV_LATENCY = 1
 FLOAT_ALU_LATENCY = 4
-FLOAT_MUL_LATENCY = 6
-FLOAT_DIV_LATENCY = 12
+FLOAT_MUL_LATENCY = 8
+FLOAT_DIV_LATENCY = 20
 
 # The issue latency is the number of cycles until another instruction can be issued 
 # to the functional unit after an instruction has already been issued.

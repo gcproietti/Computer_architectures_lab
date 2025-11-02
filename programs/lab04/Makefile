@@ -2,7 +2,7 @@
 CC ?= gcc
 CXX ?= g++
 OBJDUMP ?= objdump
-CFLAGS :=  $$OPTIMIZATION_FLAGS -mcmodel=medlow -march=rv32imf -mabi=ilp32 -mno-relax -Wall -Wextra -nostartfiles
+CFLAGS :=  $$OPTIMIZATION_FLAGS -mcmodel=medlow -march=rv32imf -mabi=ilp32 -mno-relax  -Wall -Wextra -nostartfiles    
 CXXFLAGS := $$OPTIMIZATION_FLAGS -static -Wall -Wextra 
 COBJFLAGS := $(CFLAGS) -c
 
@@ -20,7 +20,7 @@ TARGET = $$program.elf
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
 
 
-ASM = ./insertion_sort.s
+ASM = ./program_01.s
 
 OBJ := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
 
