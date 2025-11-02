@@ -1,0 +1,73 @@
+
+lab03.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010094 <_start>:
+   10094:	01f00093          	li	ra,31
+   10098:	00001117          	auipc	sp,0x1
+   1009c:	0e410113          	addi	sp,sp,228 # 1117c <__DATA_BEGIN__>
+   100a0:	00001197          	auipc	gp,0x1
+   100a4:	15c18193          	addi	gp,gp,348 # 111fc <V2>
+   100a8:	00001217          	auipc	tp,0x1
+   100ac:	1d420213          	addi	tp,tp,468 # 1127c <V3>
+   100b0:	00001297          	auipc	t0,0x1
+   100b4:	24c28293          	addi	t0,t0,588 # 112fc <V4>
+   100b8:	00001317          	auipc	t1,0x1
+   100bc:	2c430313          	addi	t1,t1,708 # 1137c <V5>
+   100c0:	00001397          	auipc	t2,0x1
+   100c4:	33c38393          	addi	t2,t2,828 # 113fc <V6>
+   100c8:	00000493          	li	s1,0
+   100cc:	00100513          	li	a0,1
+   100d0:	00300f13          	li	t5,3
+   100d4:	07c10113          	addi	sp,sp,124
+   100d8:	07c18193          	addi	gp,gp,124 # 119f8 <__global_pointer$+0x7c>
+   100dc:	07c20213          	addi	tp,tp,124 # 7c <_start-0x10018>
+   100e0:	07c28293          	addi	t0,t0,124
+   100e4:	07c30313          	addi	t1,t1,124
+   100e8:	07c38393          	addi	t2,t2,124
+
+000100ec <for1>:
+   100ec:	0800c263          	bltz	ra,10170 <End>
+   100f0:	00012087          	flw	ft1,0(sp)
+   100f4:	03e0e4b3          	rem	s1,ra,t5
+   100f8:	00049a63          	bnez	s1,1010c <else>
+   100fc:	001515b3          	sll	a1,a0,ra
+   10100:	d00595d3          	fcvt.s.w	fa1,a1,rtz
+   10104:	18b0f453          	fdiv.s	fs0,ft1,fa1
+   10108:	0140006f          	j	1011c <oldprog>
+
+0001010c <else>:
+   1010c:	d0051a53          	fcvt.s.w	fs4,a0,rtz
+   10110:	d0009f53          	fcvt.s.w	ft10,ra,rtz
+   10114:	11ea7653          	fmul.s	fa2,fs4,ft10
+   10118:	10c0f453          	fmul.s	fs0,ft1,fa2
+
+0001011c <oldprog>:
+   1011c:	c0041553          	fcvt.w.s	a0,fs0,rtz
+   10120:	d0051453          	fcvt.s.w	fs0,a0,rtz
+   10124:	0001a107          	flw	ft2,0(gp) # 1197c <__global_pointer$>
+   10128:	00022187          	flw	ft3,0(tp) # 0 <_start-0x10094>
+   1012c:	10147753          	fmul.s	fa4,fs0,ft1
+   10130:	08277253          	fsub.s	ft4,fa4,ft2
+   10134:	0042a027          	fsw	ft4,0(t0)
+   10138:	183272d3          	fdiv.s	ft5,ft4,ft3
+   1013c:	0822f2d3          	fsub.s	ft5,ft5,ft2
+   10140:	00532027          	fsw	ft5,0(t1)
+   10144:	08127353          	fsub.s	ft6,ft4,ft1
+   10148:	10537353          	fmul.s	ft6,ft6,ft5
+   1014c:	0063a027          	fsw	ft6,0(t2)
+   10150:	fff08093          	addi	ra,ra,-1
+   10154:	ffc10113          	addi	sp,sp,-4
+   10158:	ffc18193          	addi	gp,gp,-4 # 11978 <__BSS_END__+0x4fc>
+   1015c:	ffc20213          	addi	tp,tp,-4 # fffffffc <__global_pointer$+0xfffee680>
+   10160:	ffc28293          	addi	t0,t0,-4
+   10164:	ffc30313          	addi	t1,t1,-4
+   10168:	ffc38393          	addi	t2,t2,-4
+   1016c:	f81ff06f          	j	100ec <for1>
+
+00010170 <End>:
+   10170:	00000513          	li	a0,0
+   10174:	05d00893          	li	a7,93
+   10178:	00000073          	ecall
