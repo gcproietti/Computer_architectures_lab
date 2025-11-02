@@ -6,7 +6,6 @@
 #         Authors         |    Student ID
 #   Gabriele Mincigrucci  |     s358987
 #   Giacomo Proietti      |     f642298
-#   Vincenzo Pio Altieri  |     s353170
 #
 # lab_03
 ############################################################
@@ -31,7 +30,7 @@ V3: .float  1.0,  2.0,  3.0,  4.0,  5.0,  6.0,  7.0,  8.0, 9.0, 10.0, 11.0, 12.0
 V4: .space 128
 V5: .space 128
 V6: .space 128
-
+myfloat: .float 3.14
 .section .text
 .globl _start
 _start:
@@ -51,7 +50,8 @@ la x7, V6        # Pointer to V6 output
 li x9, 0         # Temporary register
 li x10, 1        # Integer m = 1 (updated dynamically)
 li x30, 3        # Constant used for modulo operation (i % 3)
-
+la x15, myfloat
+flw f19, 0(x15)
 ############################################################
 # MOVE POINTERS TO END OF EACH ARRAY (reverse traversal)
 ############################################################
@@ -67,15 +67,14 @@ addi x7, x7, 124
 ############################################################
 for1:
     blt x1, x0, End        # If i < 0 → exit loop
-
-    flw f1, 0(x2)         # Load V1[i] into f1
-
     rem x9, x1, x30       # Compute i % 3
+    flw f1, 0(x2)         # Load V1[i] into f1
     bne x9, x0, else      # If (i % 3) != 0 → jump to else case
 
 ############################################################
 # CASE 1: Index i is a multiple of 3
 ############################################################
+    
     # Compute intermed = m << i  (integer left-shift)
     sll x11, x10, x1
     # Convert integer to float
@@ -88,15 +87,21 @@ for1:
 ############################################################
 # CASE 2: Index i is NOT a multiple of 3
 ############################################################
+
 else:
     # Convert m and i to float
     fcvt.s.w f20, x10, rtz
     fcvt.s.w f30, x1, rtz
     # intermed = (float)m * i
+
     fmul.s f12, f20, f30
 
     # a = V1[i] * intermed
     fmul.s f8, f1, f12
+
+
+
+
 
 ############################################################
 # COMMON CODE AFTER a COMPUTED
@@ -117,10 +122,10 @@ oldprog:
     fsw f4, 0(x5)
 
     ########################################################
-    # Compute V5[i] = V4[i] / V3[i] – V2[i]
+    # Compute V5[i] = V4[i] / V3[i] – b
     ########################################################
     fdiv.s f5, f4, f3
-    fsub.s f5, f5, f2
+    fsub.s f5, f5, f19
     fsw f5, 0(x6)
 
     ########################################################
