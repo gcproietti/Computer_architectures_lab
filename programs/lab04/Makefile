@@ -20,7 +20,7 @@ TARGET = $$program.elf
 SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
 
 
-ASM = ./program_01.s
+ASM = ./program_1.s
 
 OBJ := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
 

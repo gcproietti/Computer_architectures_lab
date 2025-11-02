@@ -1,151 +1,174 @@
-# Architetture dei Sistemi di Elaborazione@Politecnico di Torino: SIMULATING A RISC-V CPU WITH GEM5
+ 🧠 Computer Architecture Project – Politecnico di Torino
+ 
+ Repository for Computer Architecture assignments and experiments by three students of Politecnico di Torino.
+ The goal is to collect, organize, and test RISC-V Assembly exercises using gem5 and custom scripts for compilation and execution.
 
-This README provides an environment for simulating a program on a parametrizable RISC-V CPU and visualize the pipeline. You can see the flow in the Figure below.
+---
 
+# 👥 Authors
+ 
+ | Name | Student ID | Role |
+ |------|-------------|------|
+ | *Student 1* | *sXXXXXX* | Assembly developer |
+ | *Student 2* | *sXXXXXX* | gem5 and testing |
+ | *Student 3* | *sXXXXXX* | Documentation and review |
 
-![flow](.images/gem5_workflow.png "Simulation flow")
+---
 
-## Table of contest
-- [Architetture dei Sistemi di Elaborazione@Politecnico di Torino: SIMULATING A RISC-V CPU WITH GEM5](#architetture-dei-sistemi-di-elaborazionepolitecnico-di-torino-simulating-a-risc-v-cpu-with-gem5)
-  - [Table of contest](#table-of-contest)
-  - [Setup the environment](#setup-the-environment)
-    - [Prerequisites](#prerequisites)
-    - [Installing a Risc-V toolchain, the cross-compiler](#installing-a-risc-v-toolchain-the-cross-compiler)
-    - [Installing Gem5, the Architectural Simulator](#installing-gem5-the-architectural-simulator)
-    - [Installing Konata, the Pipeline Visualizer](#installing-konata-the-pipeline-visualizer)
-  - [HOWTO - Simulate a Program](#howto---simulate-a-program)
-  - [HOWTO - Visualize the Pipeline with Konata](#howto---visualize-the-pipeline-with-konata)
-  - [Contributors](#contributors)
+# 🧩 Project Overview
+ 
+ This repository contains:
+ - RISC-V Assembly programs (.s files)
+ - Helper scripts for compilation and simulation with gem5
+ - Logs and output files for test verification
+ 
+ Each assignment will typically include:
 
-## Setup the environment 
-First of all, you need to clone the repository with the following command, for SSH:
-```
-$ git clone git@github.com:cad-polito-it/ase_riscv_gem5_sim.git
-```
-For HTTPS:
-```
-$ git clone https://github.com/cad-polito-it/ase_riscv_gem5_sim.git
-```
+ program_test.s       → RISC-V assembly source file
+ riscv_compile        → script to compile the assembly program
+ gem5_run             → script to run the compiled binary in gem5
+ gem5_config.py       → configuration file for gem5 simulation
+ program_test.log     → execution log file (output)
 
-### Prerequisites
-In order to simulate a program, you need the following three tools:
-- A Risc-V cross compiler
-- An architectural simulator
-- A pipeline visualizer
+---
 
-Installation guidelines are provided for each of the aforementioned tools.
-In case you are using LABINF PCs, you can skip the installation part.
+# ⚙️ Repository Structure
 
-An important file for the simulation flow is the [```setup_default```](./setup_default).
-In this file you need to specify you installation paths for different tools.
-For example:
-```
-export CC="/usr/bin/riscv64-linux-gnu-gcc-10"
-export GEM5_INSTALLATION_PATH="/mnt/d/gem5_simulator/build/"
-export GEM5_SRC="/mnt/d/gem5_simulator/gem5/"
-```
-The ```CC``` is the cross compiler, and it is installed in ```/usr/bin```. Meanwhile the Architectural Simulator (Gem5) is installed in ```/mnt/d/gem5_simulator/build```, while its soruce are at ```/mnt/d/gem5_simulator/gem5```.
+ /project_root
+ ├── README.md
+ ├── riscv_compile
+ ├── gem5_run
+ ├── gem5_config.py
+ ├── program_test.s
+ └── program_test.log   (generated after running)
 
-In the repository, you have different ```setup_default``` files, each one for a specific configuration (LABINF, VM, or your native installation). You can choose the one that fits your needs. For example, if you want to use the LABINF configuration, you can copy the corresponding file ```setup_default_labinf``` to ```setup_default```:
-```bash 
-$ cp setup_default.labinf setup_default
-```
+ ⚠️ Important:
+ All files (scripts and .s sources) must be in the same folder when compiling and executing.
 
-### Installation 
+---
 
-In the repository, you can find a script named [```installation.sh```](./utils/installation.sh) (in the utils folder) that can help you to download the cross-compiler, the gem5 simulator and generate the ```setup_default``` file. You can run it with the following command:
+ 🧠 Using Git & GitHub
+ 
+ Here are the most important commands for collaboration and version control.
 
-```bash
-$ ./utils/installation.sh
-```
-It will install the cross-compiler, gem5 and the pipeline visualizer in a default folder  named ```./tools/```. 
+## 🔸 1. Clone the repository
+ 
+ git clone https://github.com/your-username/ca-project.git
+ cd ca-project
 
-**It automatically updates the ```setup_default``` file with the correct paths.**
+## 🔸 2. Create a new branch for your work
+ 
+ git checkout -b your-feature-name
 
-Check the following installation guidelines for each tool for the necessary dependencies and requirements before running the ```installation.sh``` script.
-#### Installing a Risc-V toolchain, the cross-compiler
+## 🔸 3. Add and commit your changes
+ 
+ git add program_test.s
+ git commit -m "Added new assembly test for flag computation"
 
-You can compile from scratch the toolchain and the necessary dependencies for Risc-V following [these instructions](https://github.com/riscv-collab/riscv-gnu-toolchain).
+## 🔸 4. Push your branch to GitHub
+ 
+ git push origin your-feature-name
 
+## 🔸 5. Merge changes via Pull Request (on GitHub)
+ 
+ Open a Pull Request from your branch into main and request review from your teammates.
 
-#### Installing Gem5, the Architectural Simulator
+## 🔸 6. Update your local repository
+ 
+ git pull origin main
 
-Start by cloning gem5 from this repository:
-```
-$ git clone https://github.com/cad-polito-it/gem5
-```
+---
 
-To install Gem5 and the necessary dependencies, you can follow the README of that repo as well as these [instructions](https://www.gem5.org/documentation/general_docs/building).
+# ⚙️ Compiling & Running Assembly Programs
+ 
+ Once your .s file and scripts are in the same directory, use the following commands.
 
-Just remember that you need the following Gem5 characteristics to install:
-- ISA = RISCV.
-- variant = opt.
+## 🔹 1. Compile the assembly file
+ 
+ riscv_compile program_test.s
 
-#### Installing the Gem5 Pipeline Visualizer
-$\color{Red}\Huge{\textsf{This section is for the In order Architecture}}$
+ This script compiles the RISC-V Assembly source into an executable binary compatible with gem5.
 
-To install the Gem5 Pipeline Visualizer, you can follow these [instructions](https://github.com/cad-polito-it/gem5_visualizer).
+## 🔹 2. Run the simulation with gem5
+ 
+ gem5_run gem5_config.py program_test program_test.log
 
-You need to install Qt 6.8.3 (**VERY IMPORTANT**) from [here](https://www.qt.io/download-qt-installer). 
-You can follow [these instructions](https://doc.qt.io/qt-6/gettingstarted.html) for the installation.
+ This command launches gem5 with the provided configuration file (gem5_config.py),
+ executes your compiled program (program_test),
+ and saves the output and statistics into the log file (program_test.log).
 
-Make sure to install the desktop version and the needed libraries, as well cmake as shown in the following:
+---
 
-![custom](.images/custom.png "Custom QT installation")
-![what](.images/qt_what.png "What to select in the QT installation")
+# 🧾 Tips
+ 
+ - Always commit frequently and write clear commit messages.
+ - Use branches for each new task or experiment.
+ - Check .log files to verify correctness and performance.
+ - When modifying scripts, document changes in this README or in separate notes.
 
-After installing Qt, you need to set the ```QT_INSTALLATION_DIR``` environment variable to point to the Qt installation directory. By default should be like the following:
-```bash
-export QT_INSTALLATION_DIR="/opt/Qt/6.8.3/gcc_64"
-```
+---
 
-Then, you can run the ```installation.sh``` script that will download and compile the Gem5 Pipeline Visualizer.
+# 🧩 Example Workflow
+ 
+ # Clone repo and move into it
+ git clone https://github.com/your-username/ca-project.git
+ cd ca-project
 
-#### Installing Konata, the Pipeline Visualizer
+ # Create your own branch
+ git checkout -b feature-flag-check
 
-$\color{Red}\Huge{\textsf{This section is for the Out of Order (OoO) Architecture}}$
+ # Edit your assembly file
+ nano program_test.s
 
-To download Konata, visit the Konata's [repository](https://github.com/shioyadan/Konata/releases)
+ # Compile and run your program
+ riscv_compile program_test.s
+ gem5_run gem5_config.py program_test program_test.log
 
-Download the appropriate Konata release for your operating system. Konata is available for various platforms, including Windows, macOS, and Linux.
+ # Commit and push results
+ git add .
+ git commit -m "Implemented strictly increasing/decreasing flag check"
+ git push origin feature-flag-check
 
-Unzip the release, inside you will find an executable named ```konata``` or ```konata.exe``` (**OS dependent!**).
+---
 
-**Be aware**: For windows/macOS users, you need to open the Konata application manually and load the trace
+# 🧱 Recommended Workflow for Teams
+ 
+ 1. Each student works on a separate branch for their task.
+ 2. Before starting new work, pull the latest version from main.
+ 3. Test your code locally with riscv_compile and gem5_run.
+ 4. Create a Pull Request when your code is ready.
+ 5. Use reviews and comments on GitHub for code discussions.
 
-## HOWTO - Simulate a Program
+---
 
-To simulate a program, run the `simulate.sh` script with the desired program as an argument, and the desired configuration file:  
-```bash
-./simulate.sh -i ./programs/sanity_test/ -nogui --setup ./setup_default
-```
+# 🧰 Common Git Commands Reference
+ 
+ | Command | Description |
+ |----------|-------------|
+ | git status | Shows modified and untracked files |
+ | git log --oneline | Displays commit history |
+ | git diff | Shows changes before committing |
+ | git branch | Lists branches |
+ | git merge branch_name | Merges another branch into the current one |
+ | git remote -v | Lists repository remotes |
+ | git reset --hard HEAD | Discards local changes (⚠️ use with care) |
 
-You can specify with `-gui `or `-nogui `the automatic opening of the Pipeline visualizer.
+---
 
-This will produce an ELF (Executable and Linkable Format) file in the `programs/sanity_test/` directory.
-Afterward, the ELF is passed to the Architectural Simulator, and program-related statistics (```stats.txt```) and trace (```trace.out```)are dumped in ```./results/sanity_test/```
+ 🧩 Useful Notes
+ 
+ - Scripts like riscv_compile and gem5_run may require executable permissions.
+   chmod +x riscv_compile gem5_run
 
-You can execute the script in interactive mode:
-```bash
-./simulate.sh -setup ./setup_default
-```
+ - Keep filenames simple and lowercase (no spaces or special characters).
+ - Always verify that the .s file compiles before submitting assignments.
+ - Include comments in your Assembly files explaining each register and instruction purpose.
 
-## HOWTO - Add a new program
-For adding a new program, you can follow the steps below:
-1. Copy an existing folder in the `programs/` directory, e.g., `programs/program_1/` and rename it to `programs/program_2/`.
-2. Modify the source code (assembly or c files) in the `program_2/` folder.
-3. Modify the `Makefile` in the `program_2/` folder if necessary (add new source files). In the following line (line 23):
-    ```makefile
-    ASM = ./program2.s # Removed ./program1.s
-    ```
+---
 
-## Contributors
-- Francesco Angione (francesco.angione@polito.it)
-- Nicola di Gruttola giardino (nicola.digruttola@polito.it)
-- Behnam Farnaghinejad (behnam.farnaghinejad@polito.it)
-- Gabriele Filipponi (gabriele.filipponi@polito.it)
-- Giorgio Insinga (giorgio.insinga@polito.it)
-- Annachiara Ruospo (annachiara.ruospo@polito.it)
-- Antonio Porsia (antonio.porsia@polito.it)
+# 🏁 License
+ 
+ This repository is for educational purposes only within the Computer Architecture course at Politecnico di Torino.
+ Use and modify freely for learning and experimentation.
 
-Feel free to contribute with issues and pull requests or contact us!
+---

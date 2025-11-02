@@ -1,64 +1,40 @@
-# Prerequisites
-*.d
+# Ignora le sotto-cartelle e tutto il suo contenuto
+programs/calculate_pi/
+programs/fibonacci_asm/
+programs/fibonacci_c/
+programs/insertion_sort/
+gem5/
+results/calculate_pi/
+utils/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.dump
-*.elf
+# Ignora tutti i file con estensione .elf in qualsiasi sotto cartella
+**/*.elf
+**/*.dump
+*.badlog
+*.reg_log
 
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-results/
-__pycache__/
-gem5/__pycache__/
-
-.badlog
-.reg_log
+# exclude specific files from being ignored
 g5v_pipeline.txt
-
-# Default location for installation
-tools/
+setup_dfault.*
+setup_default.labinf
+simulate.sh
+# File specifici
+#   lab01/esegui.sh
+#   lab01/gem5_config.py
+#   lab01/gem5_run
+#   lab01/riscv_compile
+   
+#   Cartelle intere
+    lab01/m5out/
+    lab01/common/
+    lab01/cartella_di_compilazione/
+   
+#   Pattern (tutti i file .log)
+   **/*.log
+   **/*.exe
+   **/*.saved
+   
+#   Tutti i file in una cartella con estensione specifica
+#   lab01/*.log
+#   lab02/*.log
+setup_default
