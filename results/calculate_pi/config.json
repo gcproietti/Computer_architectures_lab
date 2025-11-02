@@ -40,7 +40,7 @@
                 "app_path": "/proc",
                 "eventq_index": 0,
                 "host_paths": [
-                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04//fs/proc"
+                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/calculate_pi//fs/proc"
                 ]
             },
             {
@@ -51,7 +51,7 @@
                 "app_path": "/sys",
                 "eventq_index": 0,
                 "host_paths": [
-                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04//fs/sys"
+                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/calculate_pi//fs/sys"
                 ]
             },
             {
@@ -62,7 +62,7 @@
                 "app_path": "/tmp",
                 "eventq_index": 0,
                 "host_paths": [
-                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04//fs/tmp"
+                    "/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/calculate_pi//fs/tmp"
                 ]
             }
         ],
@@ -760,7 +760,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 4,
+                            "opLat": 3,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
@@ -825,7 +825,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 8,
+                            "opLat": 5,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
@@ -873,7 +873,7 @@
                                 4
                             ],
                             "eventq_index": 0,
-                            "issueLat": 20,
+                            "issueLat": 5,
                             "opClasses": {
                                 "type": "MinorOpClassSet",
                                 "cxx_class": "gem5::MinorOpClassSet",
@@ -899,7 +899,7 @@
                                     }
                                 ]
                             },
-                            "opLat": 20,
+                            "opLat": 5,
                             "timings": [
                                 {
                                     "type": "MinorFUTiming",
@@ -1215,7 +1215,7 @@
                         "name": "workload",
                         "path": "system.cpu.workload",
                         "cmd": [
-                            "./programs/lab04/lab04.elf"
+                            "./programs/calculate_pi/calculate_pi.elf"
                         ],
                         "cwd": "/home/vboxuser/Desktop/ase_riscv_gem5_sim",
                         "drivers": [],
@@ -1224,7 +1224,7 @@
                         "errout": "cerr",
                         "euid": 100,
                         "eventq_index": 0,
-                        "executable": "./programs/lab04/lab04.elf",
+                        "executable": "./programs/calculate_pi/calculate_pi.elf",
                         "gid": 1000,
                         "input": "cin",
                         "kvmInSE": false,
