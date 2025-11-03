@@ -6,59 +6,55 @@ Disassembly of section .text:
 
 00010094 <_start>:
    10094:	00f00093          	li	ra,15
-   10098:	00900413          	li	s0,9
+   10098:	00100413          	li	s0,1
    1009c:	00001117          	auipc	sp,0x1
-   100a0:	0a410113          	addi	sp,sp,164 # 11140 <__DATA_BEGIN__>
+   100a0:	09c10113          	addi	sp,sp,156 # 11138 <__DATA_BEGIN__>
    100a4:	00001197          	auipc	gp,0x1
-   100a8:	0dc18193          	addi	gp,gp,220 # 11180 <V2>
+   100a8:	0d418193          	addi	gp,gp,212 # 11178 <V2>
    100ac:	00001217          	auipc	tp,0x1
-   100b0:	11420213          	addi	tp,tp,276 # 111c0 <b>
+   100b0:	10c20213          	addi	tp,tp,268 # 111b8 <b>
    100b4:	00001297          	auipc	t0,0x1
-   100b8:	11028293          	addi	t0,t0,272 # 111c4 <y>
+   100b8:	10828293          	addi	t0,t0,264 # 111bc <y>
    100bc:	00000313          	li	t1,0
    100c0:	0ff00393          	li	t2,255
    100c4:	f0000053          	fmv.w.x	ft0,zero
    100c8:	03c10113          	addi	sp,sp,60
-   100cc:	03c18193          	addi	gp,gp,60 # 1197c <__global_pointer$+0x3c>
+   100cc:	03c18193          	addi	gp,gp,60 # 11974 <__global_pointer$+0x3c>
 
 000100d0 <for1>:
-   100d0:	0280c263          	blt	ra,s0,100f4 <for2>
-   100d4:	00012087          	flw	ft1,0(sp)
-   100d8:	0001a107          	flw	ft2,0(gp) # 11940 <__global_pointer$>
-   100dc:	1020f1d3          	fmul.s	ft3,ft1,ft2
-   100e0:	fff08093          	addi	ra,ra,-1
-   100e4:	ffc10113          	addi	sp,sp,-4
-   100e8:	ffc18193          	addi	gp,gp,-4 # 1193c <__BSS_END__+0x774>
-   100ec:	00307053          	fadd.s	ft0,ft0,ft3
-   100f0:	fe1ff06f          	j	100d0 <for1>
+   100d0:	00012087          	flw	ft1,0(sp)
+   100d4:	0001a107          	flw	ft2,0(gp) # 11938 <__global_pointer$>
+   100d8:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   100dc:	fff08093          	addi	ra,ra,-1
+   100e0:	ffc10113          	addi	sp,sp,-4
+   100e4:	ffc18193          	addi	gp,gp,-4 # 11934 <__BSS_END__+0x774>
+   100e8:	00307053          	fadd.s	ft0,ft0,ft3
+   100ec:	00012087          	flw	ft1,0(sp)
+   100f0:	0001a107          	flw	ft2,0(gp) # 11938 <__global_pointer$>
+   100f4:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   100f8:	fff08093          	addi	ra,ra,-1
+   100fc:	ffc10113          	addi	sp,sp,-4
+   10100:	ffc18193          	addi	gp,gp,-4 # 11934 <__BSS_END__+0x774>
+   10104:	00307053          	fadd.s	ft0,ft0,ft3
+   10108:	0080c463          	blt	ra,s0,10110 <End>
+   1010c:	fc5ff06f          	j	100d0 <for1>
 
-000100f4 <for2>:
-   100f4:	0200c263          	bltz	ra,10118 <End>
-   100f8:	00012087          	flw	ft1,0(sp)
-   100fc:	0001a107          	flw	ft2,0(gp) # 11940 <__global_pointer$>
-   10100:	1020f1d3          	fmul.s	ft3,ft1,ft2
-   10104:	fff08093          	addi	ra,ra,-1
-   10108:	ffc10113          	addi	sp,sp,-4
-   1010c:	ffc18193          	addi	gp,gp,-4 # 1193c <__BSS_END__+0x774>
-   10110:	00307053          	fadd.s	ft0,ft0,ft3
-   10114:	fe1ff06f          	j	100f4 <for2>
+00010110 <End>:
+   10110:	00022207          	flw	ft4,0(tp) # 0 <_start-0x10094>
+   10114:	00407053          	fadd.s	ft0,ft0,ft4
 
-00010118 <End>:
-   10118:	00022207          	flw	ft4,0(tp) # 0 <_start-0x10094>
-   1011c:	00407053          	fadd.s	ft0,ft0,ft4
+00010118 <check>:
+   10118:	e0000353          	fmv.x.w	t1,ft0
+   1011c:	01735313          	srli	t1,t1,0x17
+   10120:	00730463          	beq	t1,t2,10128 <is_nan>
+   10124:	0080006f          	j	1012c <store_result>
 
-00010120 <check>:
-   10120:	e0000353          	fmv.x.w	t1,ft0
-   10124:	01735313          	srli	t1,t1,0x17
-   10128:	00730463          	beq	t1,t2,10130 <is_nan>
-   1012c:	0080006f          	j	10134 <store_result>
+00010128 <is_nan>:
+   10128:	f0000053          	fmv.w.x	ft0,zero
 
-00010130 <is_nan>:
-   10130:	f0000053          	fmv.w.x	ft0,zero
+0001012c <store_result>:
+   1012c:	0002a027          	fsw	ft0,0(t0)
 
-00010134 <store_result>:
-   10134:	0002a027          	fsw	ft0,0(t0)
-
-00010138 <exit>:
-   10138:	00a00893          	li	a7,10
-   1013c:	00000073          	ecall
+00010130 <exit>:
+   10130:	00a00893          	li	a7,10
+   10134:	00000073          	ecall

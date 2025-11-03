@@ -1,0 +1,154 @@
+
+lab04_1_b1.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010094 <_start>:
+   10094:	00f00093          	li	ra,15
+   10098:	00100413          	li	s0,1
+   1009c:	00001117          	auipc	sp,0x1
+   100a0:	21c10113          	addi	sp,sp,540 # 112b8 <__DATA_BEGIN__>
+   100a4:	00001197          	auipc	gp,0x1
+   100a8:	25418193          	addi	gp,gp,596 # 112f8 <V2>
+   100ac:	00001217          	auipc	tp,0x1
+   100b0:	28c20213          	addi	tp,tp,652 # 11338 <b>
+   100b4:	00001297          	auipc	t0,0x1
+   100b8:	28828293          	addi	t0,t0,648 # 1133c <y>
+   100bc:	00000313          	li	t1,0
+   100c0:	0ff00393          	li	t2,255
+   100c4:	f0000053          	fmv.w.x	ft0,zero
+   100c8:	03c10113          	addi	sp,sp,60
+   100cc:	03c18193          	addi	gp,gp,60 # 11af4 <__global_pointer$+0x3c>
+   100d0:	00012087          	flw	ft1,0(sp)
+   100d4:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   100d8:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   100dc:	fff08093          	addi	ra,ra,-1
+   100e0:	ffc10113          	addi	sp,sp,-4
+   100e4:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   100e8:	00307053          	fadd.s	ft0,ft0,ft3
+   100ec:	00012087          	flw	ft1,0(sp)
+   100f0:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   100f4:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   100f8:	fff08093          	addi	ra,ra,-1
+   100fc:	ffc10113          	addi	sp,sp,-4
+   10100:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10104:	00307053          	fadd.s	ft0,ft0,ft3
+   10108:	00012087          	flw	ft1,0(sp)
+   1010c:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10110:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10114:	fff08093          	addi	ra,ra,-1
+   10118:	ffc10113          	addi	sp,sp,-4
+   1011c:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10120:	00307053          	fadd.s	ft0,ft0,ft3
+   10124:	00012087          	flw	ft1,0(sp)
+   10128:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   1012c:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10130:	fff08093          	addi	ra,ra,-1
+   10134:	ffc10113          	addi	sp,sp,-4
+   10138:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   1013c:	00307053          	fadd.s	ft0,ft0,ft3
+   10140:	00012087          	flw	ft1,0(sp)
+   10144:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10148:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   1014c:	fff08093          	addi	ra,ra,-1
+   10150:	ffc10113          	addi	sp,sp,-4
+   10154:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10158:	00307053          	fadd.s	ft0,ft0,ft3
+   1015c:	00012087          	flw	ft1,0(sp)
+   10160:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10164:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10168:	fff08093          	addi	ra,ra,-1
+   1016c:	ffc10113          	addi	sp,sp,-4
+   10170:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10174:	00307053          	fadd.s	ft0,ft0,ft3
+   10178:	00012087          	flw	ft1,0(sp)
+   1017c:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10180:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10184:	fff08093          	addi	ra,ra,-1
+   10188:	ffc10113          	addi	sp,sp,-4
+   1018c:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10190:	00307053          	fadd.s	ft0,ft0,ft3
+   10194:	00012087          	flw	ft1,0(sp)
+   10198:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   1019c:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   101a0:	fff08093          	addi	ra,ra,-1
+   101a4:	ffc10113          	addi	sp,sp,-4
+   101a8:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   101ac:	00307053          	fadd.s	ft0,ft0,ft3
+   101b0:	00012087          	flw	ft1,0(sp)
+   101b4:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   101b8:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   101bc:	fff08093          	addi	ra,ra,-1
+   101c0:	ffc10113          	addi	sp,sp,-4
+   101c4:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   101c8:	00307053          	fadd.s	ft0,ft0,ft3
+   101cc:	00012087          	flw	ft1,0(sp)
+   101d0:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   101d4:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   101d8:	fff08093          	addi	ra,ra,-1
+   101dc:	ffc10113          	addi	sp,sp,-4
+   101e0:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   101e4:	00307053          	fadd.s	ft0,ft0,ft3
+   101e8:	00012087          	flw	ft1,0(sp)
+   101ec:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   101f0:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   101f4:	fff08093          	addi	ra,ra,-1
+   101f8:	ffc10113          	addi	sp,sp,-4
+   101fc:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10200:	00307053          	fadd.s	ft0,ft0,ft3
+   10204:	00012087          	flw	ft1,0(sp)
+   10208:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   1020c:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10210:	fff08093          	addi	ra,ra,-1
+   10214:	ffc10113          	addi	sp,sp,-4
+   10218:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   1021c:	00307053          	fadd.s	ft0,ft0,ft3
+   10220:	00012087          	flw	ft1,0(sp)
+   10224:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10228:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   1022c:	fff08093          	addi	ra,ra,-1
+   10230:	ffc10113          	addi	sp,sp,-4
+   10234:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10238:	00307053          	fadd.s	ft0,ft0,ft3
+   1023c:	00012087          	flw	ft1,0(sp)
+   10240:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10244:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10248:	fff08093          	addi	ra,ra,-1
+   1024c:	ffc10113          	addi	sp,sp,-4
+   10250:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10254:	00307053          	fadd.s	ft0,ft0,ft3
+   10258:	00012087          	flw	ft1,0(sp)
+   1025c:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   10260:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10264:	fff08093          	addi	ra,ra,-1
+   10268:	ffc10113          	addi	sp,sp,-4
+   1026c:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   10270:	00307053          	fadd.s	ft0,ft0,ft3
+   10274:	00012087          	flw	ft1,0(sp)
+   10278:	0001a107          	flw	ft2,0(gp) # 11ab8 <__global_pointer$>
+   1027c:	1020f1d3          	fmul.s	ft3,ft1,ft2
+   10280:	fff08093          	addi	ra,ra,-1
+   10284:	ffc10113          	addi	sp,sp,-4
+   10288:	ffc18193          	addi	gp,gp,-4 # 11ab4 <__BSS_END__+0x774>
+   1028c:	00307053          	fadd.s	ft0,ft0,ft3
+
+00010290 <End>:
+   10290:	00022207          	flw	ft4,0(tp) # 0 <_start-0x10094>
+   10294:	00407053          	fadd.s	ft0,ft0,ft4
+
+00010298 <check>:
+   10298:	e0000353          	fmv.x.w	t1,ft0
+   1029c:	01735313          	srli	t1,t1,0x17
+   102a0:	00730463          	beq	t1,t2,102a8 <is_nan>
+   102a4:	0080006f          	j	102ac <store_result>
+
+000102a8 <is_nan>:
+   102a8:	f0000053          	fmv.w.x	ft0,zero
+
+000102ac <store_result>:
+   102ac:	0002a027          	fsw	ft0,0(t0)
+
+000102b0 <exit>:
+   102b0:	00a00893          	li	a7,10
+   102b4:	00000073          	ecall
