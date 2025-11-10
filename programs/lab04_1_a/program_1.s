@@ -79,7 +79,9 @@ for:
 
 End:
     # Add the bias 'b' to the sum
-    flw f4, 0(x4)          # Load the float value of b into f4
+    li x8, 0
+    lw x8, 0(x4)
+    fcvt.s.w f4, x8          # Load the float value of b into f4
     fadd.s f0, f0, f4      # f0 = f0 + b. Now f0 holds the final value of x
 
 
@@ -98,7 +100,8 @@ is_nan:
     fmv.s.x f0, x0         # f0 = 0.0
 
 store_result:
-    fsw f0, 0(x5)          # Store the final value of y (from f0) into memory
+    fmv.x.w x8, f0 
+    sw x8, 0(x5)          # Store the final value of y (from f0) into memory
 
 ############################################################
 # PROGRAM TERMINATION

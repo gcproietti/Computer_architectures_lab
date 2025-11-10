@@ -4,8 +4,8 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 22.1.0.0
 gem5 compiled Aug 27 2025 16:10:28
-gem5 started Nov  2 2025 23:24:45
-gem5 executing on vboxuser-VirtualBox, pid 34689
+gem5 started Nov  9 2025 22:55:26
+gem5 executing on vboxuser-VirtualBox, pid 5884
 command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI --outdir=/home/vboxuser/Desktop/ase_riscv_gem5_sim/results/lab04/ --verbose ./gem5/riscv_in_order_hen_patt.py --caches --cpu-type MinorCPU --l1d_size 8388608 --l1i_size 8388608 --cacheline_size 512 --cpu-clock 1MHz --sys-clock 10GHz -c ./programs/lab04/lab04.elf
 
 **** REAL SIMULATION ****
@@ -20,7 +20,7 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 6000000: system.cpu.fetch1: Log4GUI: fetch1: 6000000: 0: 1009c: <assembly>
 7000000: system.cpu.memory: Log4GUI: memory: 7000000: 0: 10094: addi x1, x0, 15
 7000000: system.cpu.execute: Log4GUI: execute: 7000000: 0: 10098: auipc x2, 1: 0
-7000000: system.cpu.decode: Log4GUI: decode: 7000000: 0: 1009c: addi x2, x2, 128
+7000000: system.cpu.decode: Log4GUI: decode: 7000000: 0: 1009c: addi x2, x2, 140
 7000000: system.cpu.fetch1: Log4GUI: fetch1: 7000000: 0: 100a0: <assembly>
 8000000: system.cpu.writeback: Log4GUI: writeback: 8000000: 0: 10094: addi x1, x0, 15
 8000000: system.cpu.writeback: REGISTERS
@@ -89,7 +89,7 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 8000000: global: f30=0x00000000
 8000000: global: f31=0x00000000
 8000000: system.cpu.memory: Log4GUI: memory: 8000000: 0: 10098: auipc x2, 1
-8000000: system.cpu.execute: Log4GUI: execute: 8000000: 0: 1009c: addi x2, x2, 128: 0
+8000000: system.cpu.execute: Log4GUI: execute: 8000000: 0: 1009c: addi x2, x2, 140: 0
 8000000: system.cpu.decode: Log4GUI: decode: 8000000: 0: 100a0: auipc x3, 1
 8000000: system.cpu.fetch1: Log4GUI: fetch1: 8000000: 0: 100a4: <assembly>
 9000000: system.cpu.writeback: Log4GUI: writeback: 9000000: 0: 10098: auipc x2, 1
@@ -158,15 +158,15 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 9000000: global: f29=0x00000000
 9000000: global: f30=0x00000000
 9000000: global: f31=0x00000000
-9000000: system.cpu.memory: Log4GUI: memory: 9000000: 0: 1009c: addi x2, x2, 128
+9000000: system.cpu.memory: Log4GUI: memory: 9000000: 0: 1009c: addi x2, x2, 140
 9000000: system.cpu.execute: Log4GUI: execute: 9000000: 0: 100a0: auipc x3, 1: 0
-9000000: system.cpu.decode: Log4GUI: decode: 9000000: 0: 100a4: addi x3, x3, 184
+9000000: system.cpu.decode: Log4GUI: decode: 9000000: 0: 100a4: addi x3, x3, 196
 9000000: system.cpu.fetch1: Log4GUI: fetch1: 9000000: 0: 100a8: <assembly>
-10000000: system.cpu.writeback: Log4GUI: writeback: 10000000: 0: 1009c: addi x2, x2, 128
+10000000: system.cpu.writeback: Log4GUI: writeback: 10000000: 0: 1009c: addi x2, x2, 140
 10000000: system.cpu.writeback: REGISTERS
 10000000: global: x0=0x00000000
 10000000: global: x1=0x0000000f
-10000000: global: x2=0x00011118
+10000000: global: x2=0x00011124
 10000000: global: x3=0x00000000
 10000000: global: x4=0x00000000
 10000000: global: x5=0x00000000
@@ -229,14 +229,14 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 10000000: global: f30=0x00000000
 10000000: global: f31=0x00000000
 10000000: system.cpu.memory: Log4GUI: memory: 10000000: 0: 100a0: auipc x3, 1
-10000000: system.cpu.execute: Log4GUI: execute: 10000000: 0: 100a4: addi x3, x3, 184: 0
+10000000: system.cpu.execute: Log4GUI: execute: 10000000: 0: 100a4: addi x3, x3, 196: 0
 10000000: system.cpu.decode: Log4GUI: decode: 10000000: 0: 100a8: auipc x4, 1
 10000000: system.cpu.fetch1: Log4GUI: fetch1: 10000000: 0: 100ac: <assembly>
 11000000: system.cpu.writeback: Log4GUI: writeback: 11000000: 0: 100a0: auipc x3, 1
 11000000: system.cpu.writeback: REGISTERS
 11000000: global: x0=0x00000000
 11000000: global: x1=0x0000000f
-11000000: global: x2=0x00011118
+11000000: global: x2=0x00011124
 11000000: global: x3=0x000110a0
 11000000: global: x4=0x00000000
 11000000: global: x5=0x00000000
@@ -298,16 +298,16 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 11000000: global: f29=0x00000000
 11000000: global: f30=0x00000000
 11000000: global: f31=0x00000000
-11000000: system.cpu.memory: Log4GUI: memory: 11000000: 0: 100a4: addi x3, x3, 184
+11000000: system.cpu.memory: Log4GUI: memory: 11000000: 0: 100a4: addi x3, x3, 196
 11000000: system.cpu.execute: Log4GUI: execute: 11000000: 0: 100a8: auipc x4, 1: 0
-11000000: system.cpu.decode: Log4GUI: decode: 11000000: 0: 100ac: addi x4, x4, 240
+11000000: system.cpu.decode: Log4GUI: decode: 11000000: 0: 100ac: addi x4, x4, 252
 11000000: system.cpu.fetch1: Log4GUI: fetch1: 11000000: 0: 100b0: <assembly>
-12000000: system.cpu.writeback: Log4GUI: writeback: 12000000: 0: 100a4: addi x3, x3, 184
+12000000: system.cpu.writeback: Log4GUI: writeback: 12000000: 0: 100a4: addi x3, x3, 196
 12000000: system.cpu.writeback: REGISTERS
 12000000: global: x0=0x00000000
 12000000: global: x1=0x0000000f
-12000000: global: x2=0x00011118
-12000000: global: x3=0x00011158
+12000000: global: x2=0x00011124
+12000000: global: x3=0x00011164
 12000000: global: x4=0x00000000
 12000000: global: x5=0x00000000
 12000000: global: x6=0x00000000
@@ -369,15 +369,15 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 12000000: global: f30=0x00000000
 12000000: global: f31=0x00000000
 12000000: system.cpu.memory: Log4GUI: memory: 12000000: 0: 100a8: auipc x4, 1
-12000000: system.cpu.execute: Log4GUI: execute: 12000000: 0: 100ac: addi x4, x4, 240: 0
+12000000: system.cpu.execute: Log4GUI: execute: 12000000: 0: 100ac: addi x4, x4, 252: 0
 12000000: system.cpu.decode: Log4GUI: decode: 12000000: 0: 100b0: auipc x5, 1
 12000000: system.cpu.fetch1: Log4GUI: fetch1: 12000000: 0: 100b4: <assembly>
 13000000: system.cpu.writeback: Log4GUI: writeback: 13000000: 0: 100a8: auipc x4, 1
 13000000: system.cpu.writeback: REGISTERS
 13000000: global: x0=0x00000000
 13000000: global: x1=0x0000000f
-13000000: global: x2=0x00011118
-13000000: global: x3=0x00011158
+13000000: global: x2=0x00011124
+13000000: global: x3=0x00011164
 13000000: global: x4=0x000110a8
 13000000: global: x5=0x00000000
 13000000: global: x6=0x00000000
@@ -438,17 +438,17 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 13000000: global: f29=0x00000000
 13000000: global: f30=0x00000000
 13000000: global: f31=0x00000000
-13000000: system.cpu.memory: Log4GUI: memory: 13000000: 0: 100ac: addi x4, x4, 240
+13000000: system.cpu.memory: Log4GUI: memory: 13000000: 0: 100ac: addi x4, x4, 252
 13000000: system.cpu.execute: Log4GUI: execute: 13000000: 0: 100b0: auipc x5, 1: 0
-13000000: system.cpu.decode: Log4GUI: decode: 13000000: 0: 100b4: addi x5, x5, 236
+13000000: system.cpu.decode: Log4GUI: decode: 13000000: 0: 100b4: addi x5, x5, 248
 13000000: system.cpu.fetch1: Log4GUI: fetch1: 13000000: 0: 100b8: <assembly>
-14000000: system.cpu.writeback: Log4GUI: writeback: 14000000: 0: 100ac: addi x4, x4, 240
+14000000: system.cpu.writeback: Log4GUI: writeback: 14000000: 0: 100ac: addi x4, x4, 252
 14000000: system.cpu.writeback: REGISTERS
 14000000: global: x0=0x00000000
 14000000: global: x1=0x0000000f
-14000000: global: x2=0x00011118
-14000000: global: x3=0x00011158
-14000000: global: x4=0x00011198
+14000000: global: x2=0x00011124
+14000000: global: x3=0x00011164
+14000000: global: x4=0x000111a4
 14000000: global: x5=0x00000000
 14000000: global: x6=0x00000000
 14000000: global: x7=0x00000000
@@ -509,16 +509,16 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 14000000: global: f30=0x00000000
 14000000: global: f31=0x00000000
 14000000: system.cpu.memory: Log4GUI: memory: 14000000: 0: 100b0: auipc x5, 1
-14000000: system.cpu.execute: Log4GUI: execute: 14000000: 0: 100b4: addi x5, x5, 236: 0
+14000000: system.cpu.execute: Log4GUI: execute: 14000000: 0: 100b4: addi x5, x5, 248: 0
 14000000: system.cpu.decode: Log4GUI: decode: 14000000: 0: 100b8: addi x6, x0, 0
 14000000: system.cpu.fetch1: Log4GUI: fetch1: 14000000: 0: 100bc: <assembly>
 15000000: system.cpu.writeback: Log4GUI: writeback: 15000000: 0: 100b0: auipc x5, 1
 15000000: system.cpu.writeback: REGISTERS
 15000000: global: x0=0x00000000
 15000000: global: x1=0x0000000f
-15000000: global: x2=0x00011118
-15000000: global: x3=0x00011158
-15000000: global: x4=0x00011198
+15000000: global: x2=0x00011124
+15000000: global: x3=0x00011164
+15000000: global: x4=0x000111a4
 15000000: global: x5=0x000110b0
 15000000: global: x6=0x00000000
 15000000: global: x7=0x00000000
@@ -578,18 +578,18 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 15000000: global: f29=0x00000000
 15000000: global: f30=0x00000000
 15000000: global: f31=0x00000000
-15000000: system.cpu.memory: Log4GUI: memory: 15000000: 0: 100b4: addi x5, x5, 236
+15000000: system.cpu.memory: Log4GUI: memory: 15000000: 0: 100b4: addi x5, x5, 248
 15000000: system.cpu.execute: Log4GUI: execute: 15000000: 0: 100b8: addi x6, x0, 0: 0
 15000000: system.cpu.decode: Log4GUI: decode: 15000000: 0: 100bc: addi x7, x0, 255
 15000000: system.cpu.fetch1: Log4GUI: fetch1: 15000000: 0: 100c0: <assembly>
-16000000: system.cpu.writeback: Log4GUI: writeback: 16000000: 0: 100b4: addi x5, x5, 236
+16000000: system.cpu.writeback: Log4GUI: writeback: 16000000: 0: 100b4: addi x5, x5, 248
 16000000: system.cpu.writeback: REGISTERS
 16000000: global: x0=0x00000000
 16000000: global: x1=0x0000000f
-16000000: global: x2=0x00011118
-16000000: global: x3=0x00011158
-16000000: global: x4=0x00011198
-16000000: global: x5=0x0001119c
+16000000: global: x2=0x00011124
+16000000: global: x3=0x00011164
+16000000: global: x4=0x000111a4
+16000000: global: x5=0x000111a8
 16000000: global: x6=0x00000000
 16000000: global: x7=0x00000000
 16000000: global: x8=0x00000000
@@ -656,10 +656,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 17000000: system.cpu.writeback: REGISTERS
 17000000: global: x0=0x00000000
 17000000: global: x1=0x0000000f
-17000000: global: x2=0x00011118
-17000000: global: x3=0x00011158
-17000000: global: x4=0x00011198
-17000000: global: x5=0x0001119c
+17000000: global: x2=0x00011124
+17000000: global: x3=0x00011164
+17000000: global: x4=0x000111a4
+17000000: global: x5=0x000111a8
 17000000: global: x6=0x00000000
 17000000: global: x7=0x00000000
 17000000: global: x8=0x00000000
@@ -726,10 +726,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 18000000: system.cpu.writeback: REGISTERS
 18000000: global: x0=0x00000000
 18000000: global: x1=0x0000000f
-18000000: global: x2=0x00011118
-18000000: global: x3=0x00011158
-18000000: global: x4=0x00011198
-18000000: global: x5=0x0001119c
+18000000: global: x2=0x00011124
+18000000: global: x3=0x00011164
+18000000: global: x4=0x000111a4
+18000000: global: x5=0x000111a8
 18000000: global: x6=0x00000000
 18000000: global: x7=0x000000ff
 18000000: global: x8=0x00000000
@@ -801,10 +801,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 20000000: system.cpu.writeback: REGISTERS
 20000000: global: x0=0x00000000
 20000000: global: x1=0x0000000f
-20000000: global: x2=0x00011154
-20000000: global: x3=0x00011158
-20000000: global: x4=0x00011198
-20000000: global: x5=0x0001119c
+20000000: global: x2=0x00011160
+20000000: global: x3=0x00011164
+20000000: global: x4=0x000111a4
+20000000: global: x5=0x000111a8
 20000000: global: x6=0x00000000
 20000000: global: x7=0x000000ff
 20000000: global: x8=0x00000000
@@ -872,10 +872,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 21000000: system.cpu.writeback: REGISTERS
 21000000: global: x0=0x00000000
 21000000: global: x1=0x0000000f
-21000000: global: x2=0x00011154
-21000000: global: x3=0x00011194
-21000000: global: x4=0x00011198
-21000000: global: x5=0x0001119c
+21000000: global: x2=0x00011160
+21000000: global: x3=0x000111a0
+21000000: global: x4=0x000111a4
+21000000: global: x5=0x000111a8
 21000000: global: x6=0x00000000
 21000000: global: x7=0x000000ff
 21000000: global: x8=0x00000000
@@ -941,10 +941,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 22000000: system.cpu.writeback: REGISTERS
 22000000: global: x0=0x00000000
 22000000: global: x1=0x0000000f
-22000000: global: x2=0x00011154
-22000000: global: x3=0x00011194
-22000000: global: x4=0x00011198
-22000000: global: x5=0x0001119c
+22000000: global: x2=0x00011160
+22000000: global: x3=0x000111a0
+22000000: global: x4=0x000111a4
+22000000: global: x5=0x000111a8
 22000000: global: x6=0x00000000
 22000000: global: x7=0x000000ff
 22000000: global: x8=0x00000000
@@ -1011,10 +1011,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 23000000: system.cpu.writeback: REGISTERS
 23000000: global: x0=0x00000000
 23000000: global: x1=0x0000000f
-23000000: global: x2=0x00011154
-23000000: global: x3=0x00011194
-23000000: global: x4=0x00011198
-23000000: global: x5=0x0001119c
+23000000: global: x2=0x00011160
+23000000: global: x3=0x000111a0
+23000000: global: x4=0x000111a4
+23000000: global: x5=0x000111a8
 23000000: global: x6=0x00000000
 23000000: global: x7=0x000000ff
 23000000: global: x8=0x00000000
@@ -1087,10 +1087,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 26000000: system.cpu.writeback: REGISTERS
 26000000: global: x0=0x00000000
 26000000: global: x1=0x0000000f
-26000000: global: x2=0x00011154
-26000000: global: x3=0x00011194
-26000000: global: x4=0x00011198
-26000000: global: x5=0x0001119c
+26000000: global: x2=0x00011160
+26000000: global: x3=0x000111a0
+26000000: global: x4=0x000111a4
+26000000: global: x5=0x000111a8
 26000000: global: x6=0x00000000
 26000000: global: x7=0x000000ff
 26000000: global: x8=0x00000000
@@ -1157,10 +1157,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 27000000: system.cpu.writeback: REGISTERS
 27000000: global: x0=0x00000000
 27000000: global: x1=0x0000000f
-27000000: global: x2=0x00011154
-27000000: global: x3=0x00011194
-27000000: global: x4=0x00011198
-27000000: global: x5=0x0001119c
+27000000: global: x2=0x00011160
+27000000: global: x3=0x000111a0
+27000000: global: x4=0x000111a4
+27000000: global: x5=0x000111a8
 27000000: global: x6=0x00000000
 27000000: global: x7=0x000000ff
 27000000: global: x8=0x00000000
@@ -1227,10 +1227,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 28000000: system.cpu.writeback: REGISTERS
 28000000: global: x0=0x00000000
 28000000: global: x1=0x0000000e
-28000000: global: x2=0x00011154
-28000000: global: x3=0x00011194
-28000000: global: x4=0x00011198
-28000000: global: x5=0x0001119c
+28000000: global: x2=0x00011160
+28000000: global: x3=0x000111a0
+28000000: global: x4=0x000111a4
+28000000: global: x5=0x000111a8
 28000000: global: x6=0x00000000
 28000000: global: x7=0x000000ff
 28000000: global: x8=0x00000000
@@ -1297,10 +1297,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 29000000: system.cpu.writeback: REGISTERS
 29000000: global: x0=0x00000000
 29000000: global: x1=0x0000000e
-29000000: global: x2=0x00011150
-29000000: global: x3=0x00011194
-29000000: global: x4=0x00011198
-29000000: global: x5=0x0001119c
+29000000: global: x2=0x0001115c
+29000000: global: x3=0x000111a0
+29000000: global: x4=0x000111a4
+29000000: global: x5=0x000111a8
 29000000: global: x6=0x00000000
 29000000: global: x7=0x000000ff
 29000000: global: x8=0x00000000
@@ -1367,10 +1367,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 30000000: system.cpu.writeback: REGISTERS
 30000000: global: x0=0x00000000
 30000000: global: x1=0x0000000e
-30000000: global: x2=0x00011150
-30000000: global: x3=0x00011190
-30000000: global: x4=0x00011198
-30000000: global: x5=0x0001119c
+30000000: global: x2=0x0001115c
+30000000: global: x3=0x0001119c
+30000000: global: x4=0x000111a4
+30000000: global: x5=0x000111a8
 30000000: global: x6=0x00000000
 30000000: global: x7=0x000000ff
 30000000: global: x8=0x00000000
@@ -1458,10 +1458,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 38000000: system.cpu.writeback: REGISTERS
 38000000: global: x0=0x00000000
 38000000: global: x1=0x0000000e
-38000000: global: x2=0x00011150
-38000000: global: x3=0x00011190
-38000000: global: x4=0x00011198
-38000000: global: x5=0x0001119c
+38000000: global: x2=0x0001115c
+38000000: global: x3=0x0001119c
+38000000: global: x4=0x000111a4
+38000000: global: x5=0x000111a8
 38000000: global: x6=0x00000000
 38000000: global: x7=0x000000ff
 38000000: global: x8=0x00000000
@@ -1531,10 +1531,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 40000000: system.cpu.writeback: REGISTERS
 40000000: global: x0=0x00000000
 40000000: global: x1=0x0000000e
-40000000: global: x2=0x00011150
-40000000: global: x3=0x00011190
-40000000: global: x4=0x00011198
-40000000: global: x5=0x0001119c
+40000000: global: x2=0x0001115c
+40000000: global: x3=0x0001119c
+40000000: global: x4=0x000111a4
+40000000: global: x5=0x000111a8
 40000000: global: x6=0x00000000
 40000000: global: x7=0x000000ff
 40000000: global: x8=0x00000000
@@ -1604,10 +1604,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 42000000: system.cpu.writeback: REGISTERS
 42000000: global: x0=0x00000000
 42000000: global: x1=0x0000000e
-42000000: global: x2=0x00011150
-42000000: global: x3=0x00011190
-42000000: global: x4=0x00011198
-42000000: global: x5=0x0001119c
+42000000: global: x2=0x0001115c
+42000000: global: x3=0x0001119c
+42000000: global: x4=0x000111a4
+42000000: global: x5=0x000111a8
 42000000: global: x6=0x00000000
 42000000: global: x7=0x000000ff
 42000000: global: x8=0x00000000
@@ -1674,10 +1674,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 43000000: system.cpu.writeback: REGISTERS
 43000000: global: x0=0x00000000
 43000000: global: x1=0x0000000e
-43000000: global: x2=0x00011150
-43000000: global: x3=0x00011190
-43000000: global: x4=0x00011198
-43000000: global: x5=0x0001119c
+43000000: global: x2=0x0001115c
+43000000: global: x3=0x0001119c
+43000000: global: x4=0x000111a4
+43000000: global: x5=0x000111a8
 43000000: global: x6=0x00000000
 43000000: global: x7=0x000000ff
 43000000: global: x8=0x00000000
@@ -1744,10 +1744,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 44000000: system.cpu.writeback: REGISTERS
 44000000: global: x0=0x00000000
 44000000: global: x1=0x0000000e
-44000000: global: x2=0x00011150
-44000000: global: x3=0x00011190
-44000000: global: x4=0x00011198
-44000000: global: x5=0x0001119c
+44000000: global: x2=0x0001115c
+44000000: global: x3=0x0001119c
+44000000: global: x4=0x000111a4
+44000000: global: x5=0x000111a8
 44000000: global: x6=0x00000000
 44000000: global: x7=0x000000ff
 44000000: global: x8=0x00000000
@@ -1814,10 +1814,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 45000000: system.cpu.writeback: REGISTERS
 45000000: global: x0=0x00000000
 45000000: global: x1=0x0000000e
-45000000: global: x2=0x00011150
-45000000: global: x3=0x00011190
-45000000: global: x4=0x00011198
-45000000: global: x5=0x0001119c
+45000000: global: x2=0x0001115c
+45000000: global: x3=0x0001119c
+45000000: global: x4=0x000111a4
+45000000: global: x5=0x000111a8
 45000000: global: x6=0x00000000
 45000000: global: x7=0x000000ff
 45000000: global: x8=0x00000000
@@ -1884,10 +1884,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 46000000: system.cpu.writeback: REGISTERS
 46000000: global: x0=0x00000000
 46000000: global: x1=0x0000000d
-46000000: global: x2=0x00011150
-46000000: global: x3=0x00011190
-46000000: global: x4=0x00011198
-46000000: global: x5=0x0001119c
+46000000: global: x2=0x0001115c
+46000000: global: x3=0x0001119c
+46000000: global: x4=0x000111a4
+46000000: global: x5=0x000111a8
 46000000: global: x6=0x00000000
 46000000: global: x7=0x000000ff
 46000000: global: x8=0x00000000
@@ -1954,10 +1954,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 47000000: system.cpu.writeback: REGISTERS
 47000000: global: x0=0x00000000
 47000000: global: x1=0x0000000d
-47000000: global: x2=0x0001114c
-47000000: global: x3=0x00011190
-47000000: global: x4=0x00011198
-47000000: global: x5=0x0001119c
+47000000: global: x2=0x00011158
+47000000: global: x3=0x0001119c
+47000000: global: x4=0x000111a4
+47000000: global: x5=0x000111a8
 47000000: global: x6=0x00000000
 47000000: global: x7=0x000000ff
 47000000: global: x8=0x00000000
@@ -2024,10 +2024,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 48000000: system.cpu.writeback: REGISTERS
 48000000: global: x0=0x00000000
 48000000: global: x1=0x0000000d
-48000000: global: x2=0x0001114c
-48000000: global: x3=0x0001118c
-48000000: global: x4=0x00011198
-48000000: global: x5=0x0001119c
+48000000: global: x2=0x00011158
+48000000: global: x3=0x00011198
+48000000: global: x4=0x000111a4
+48000000: global: x5=0x000111a8
 48000000: global: x6=0x00000000
 48000000: global: x7=0x000000ff
 48000000: global: x8=0x00000000
@@ -2115,10 +2115,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 56000000: system.cpu.writeback: REGISTERS
 56000000: global: x0=0x00000000
 56000000: global: x1=0x0000000d
-56000000: global: x2=0x0001114c
-56000000: global: x3=0x0001118c
-56000000: global: x4=0x00011198
-56000000: global: x5=0x0001119c
+56000000: global: x2=0x00011158
+56000000: global: x3=0x00011198
+56000000: global: x4=0x000111a4
+56000000: global: x5=0x000111a8
 56000000: global: x6=0x00000000
 56000000: global: x7=0x000000ff
 56000000: global: x8=0x00000000
@@ -2188,10 +2188,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 58000000: system.cpu.writeback: REGISTERS
 58000000: global: x0=0x00000000
 58000000: global: x1=0x0000000d
-58000000: global: x2=0x0001114c
-58000000: global: x3=0x0001118c
-58000000: global: x4=0x00011198
-58000000: global: x5=0x0001119c
+58000000: global: x2=0x00011158
+58000000: global: x3=0x00011198
+58000000: global: x4=0x000111a4
+58000000: global: x5=0x000111a8
 58000000: global: x6=0x00000000
 58000000: global: x7=0x000000ff
 58000000: global: x8=0x00000000
@@ -2261,10 +2261,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 60000000: system.cpu.writeback: REGISTERS
 60000000: global: x0=0x00000000
 60000000: global: x1=0x0000000d
-60000000: global: x2=0x0001114c
-60000000: global: x3=0x0001118c
-60000000: global: x4=0x00011198
-60000000: global: x5=0x0001119c
+60000000: global: x2=0x00011158
+60000000: global: x3=0x00011198
+60000000: global: x4=0x000111a4
+60000000: global: x5=0x000111a8
 60000000: global: x6=0x00000000
 60000000: global: x7=0x000000ff
 60000000: global: x8=0x00000000
@@ -2331,10 +2331,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 61000000: system.cpu.writeback: REGISTERS
 61000000: global: x0=0x00000000
 61000000: global: x1=0x0000000d
-61000000: global: x2=0x0001114c
-61000000: global: x3=0x0001118c
-61000000: global: x4=0x00011198
-61000000: global: x5=0x0001119c
+61000000: global: x2=0x00011158
+61000000: global: x3=0x00011198
+61000000: global: x4=0x000111a4
+61000000: global: x5=0x000111a8
 61000000: global: x6=0x00000000
 61000000: global: x7=0x000000ff
 61000000: global: x8=0x00000000
@@ -2401,10 +2401,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 62000000: system.cpu.writeback: REGISTERS
 62000000: global: x0=0x00000000
 62000000: global: x1=0x0000000d
-62000000: global: x2=0x0001114c
-62000000: global: x3=0x0001118c
-62000000: global: x4=0x00011198
-62000000: global: x5=0x0001119c
+62000000: global: x2=0x00011158
+62000000: global: x3=0x00011198
+62000000: global: x4=0x000111a4
+62000000: global: x5=0x000111a8
 62000000: global: x6=0x00000000
 62000000: global: x7=0x000000ff
 62000000: global: x8=0x00000000
@@ -2471,10 +2471,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 63000000: system.cpu.writeback: REGISTERS
 63000000: global: x0=0x00000000
 63000000: global: x1=0x0000000d
-63000000: global: x2=0x0001114c
-63000000: global: x3=0x0001118c
-63000000: global: x4=0x00011198
-63000000: global: x5=0x0001119c
+63000000: global: x2=0x00011158
+63000000: global: x3=0x00011198
+63000000: global: x4=0x000111a4
+63000000: global: x5=0x000111a8
 63000000: global: x6=0x00000000
 63000000: global: x7=0x000000ff
 63000000: global: x8=0x00000000
@@ -2541,10 +2541,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 64000000: system.cpu.writeback: REGISTERS
 64000000: global: x0=0x00000000
 64000000: global: x1=0x0000000c
-64000000: global: x2=0x0001114c
-64000000: global: x3=0x0001118c
-64000000: global: x4=0x00011198
-64000000: global: x5=0x0001119c
+64000000: global: x2=0x00011158
+64000000: global: x3=0x00011198
+64000000: global: x4=0x000111a4
+64000000: global: x5=0x000111a8
 64000000: global: x6=0x00000000
 64000000: global: x7=0x000000ff
 64000000: global: x8=0x00000000
@@ -2611,10 +2611,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 65000000: system.cpu.writeback: REGISTERS
 65000000: global: x0=0x00000000
 65000000: global: x1=0x0000000c
-65000000: global: x2=0x00011148
-65000000: global: x3=0x0001118c
-65000000: global: x4=0x00011198
-65000000: global: x5=0x0001119c
+65000000: global: x2=0x00011154
+65000000: global: x3=0x00011198
+65000000: global: x4=0x000111a4
+65000000: global: x5=0x000111a8
 65000000: global: x6=0x00000000
 65000000: global: x7=0x000000ff
 65000000: global: x8=0x00000000
@@ -2681,10 +2681,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 66000000: system.cpu.writeback: REGISTERS
 66000000: global: x0=0x00000000
 66000000: global: x1=0x0000000c
-66000000: global: x2=0x00011148
-66000000: global: x3=0x00011188
-66000000: global: x4=0x00011198
-66000000: global: x5=0x0001119c
+66000000: global: x2=0x00011154
+66000000: global: x3=0x00011194
+66000000: global: x4=0x000111a4
+66000000: global: x5=0x000111a8
 66000000: global: x6=0x00000000
 66000000: global: x7=0x000000ff
 66000000: global: x8=0x00000000
@@ -2772,10 +2772,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 74000000: system.cpu.writeback: REGISTERS
 74000000: global: x0=0x00000000
 74000000: global: x1=0x0000000c
-74000000: global: x2=0x00011148
-74000000: global: x3=0x00011188
-74000000: global: x4=0x00011198
-74000000: global: x5=0x0001119c
+74000000: global: x2=0x00011154
+74000000: global: x3=0x00011194
+74000000: global: x4=0x000111a4
+74000000: global: x5=0x000111a8
 74000000: global: x6=0x00000000
 74000000: global: x7=0x000000ff
 74000000: global: x8=0x00000000
@@ -2845,10 +2845,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 76000000: system.cpu.writeback: REGISTERS
 76000000: global: x0=0x00000000
 76000000: global: x1=0x0000000c
-76000000: global: x2=0x00011148
-76000000: global: x3=0x00011188
-76000000: global: x4=0x00011198
-76000000: global: x5=0x0001119c
+76000000: global: x2=0x00011154
+76000000: global: x3=0x00011194
+76000000: global: x4=0x000111a4
+76000000: global: x5=0x000111a8
 76000000: global: x6=0x00000000
 76000000: global: x7=0x000000ff
 76000000: global: x8=0x00000000
@@ -2918,10 +2918,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 78000000: system.cpu.writeback: REGISTERS
 78000000: global: x0=0x00000000
 78000000: global: x1=0x0000000c
-78000000: global: x2=0x00011148
-78000000: global: x3=0x00011188
-78000000: global: x4=0x00011198
-78000000: global: x5=0x0001119c
+78000000: global: x2=0x00011154
+78000000: global: x3=0x00011194
+78000000: global: x4=0x000111a4
+78000000: global: x5=0x000111a8
 78000000: global: x6=0x00000000
 78000000: global: x7=0x000000ff
 78000000: global: x8=0x00000000
@@ -2988,10 +2988,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 79000000: system.cpu.writeback: REGISTERS
 79000000: global: x0=0x00000000
 79000000: global: x1=0x0000000c
-79000000: global: x2=0x00011148
-79000000: global: x3=0x00011188
-79000000: global: x4=0x00011198
-79000000: global: x5=0x0001119c
+79000000: global: x2=0x00011154
+79000000: global: x3=0x00011194
+79000000: global: x4=0x000111a4
+79000000: global: x5=0x000111a8
 79000000: global: x6=0x00000000
 79000000: global: x7=0x000000ff
 79000000: global: x8=0x00000000
@@ -3058,10 +3058,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 80000000: system.cpu.writeback: REGISTERS
 80000000: global: x0=0x00000000
 80000000: global: x1=0x0000000c
-80000000: global: x2=0x00011148
-80000000: global: x3=0x00011188
-80000000: global: x4=0x00011198
-80000000: global: x5=0x0001119c
+80000000: global: x2=0x00011154
+80000000: global: x3=0x00011194
+80000000: global: x4=0x000111a4
+80000000: global: x5=0x000111a8
 80000000: global: x6=0x00000000
 80000000: global: x7=0x000000ff
 80000000: global: x8=0x00000000
@@ -3128,10 +3128,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 81000000: system.cpu.writeback: REGISTERS
 81000000: global: x0=0x00000000
 81000000: global: x1=0x0000000c
-81000000: global: x2=0x00011148
-81000000: global: x3=0x00011188
-81000000: global: x4=0x00011198
-81000000: global: x5=0x0001119c
+81000000: global: x2=0x00011154
+81000000: global: x3=0x00011194
+81000000: global: x4=0x000111a4
+81000000: global: x5=0x000111a8
 81000000: global: x6=0x00000000
 81000000: global: x7=0x000000ff
 81000000: global: x8=0x00000000
@@ -3198,10 +3198,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 82000000: system.cpu.writeback: REGISTERS
 82000000: global: x0=0x00000000
 82000000: global: x1=0x0000000b
-82000000: global: x2=0x00011148
-82000000: global: x3=0x00011188
-82000000: global: x4=0x00011198
-82000000: global: x5=0x0001119c
+82000000: global: x2=0x00011154
+82000000: global: x3=0x00011194
+82000000: global: x4=0x000111a4
+82000000: global: x5=0x000111a8
 82000000: global: x6=0x00000000
 82000000: global: x7=0x000000ff
 82000000: global: x8=0x00000000
@@ -3268,10 +3268,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 83000000: system.cpu.writeback: REGISTERS
 83000000: global: x0=0x00000000
 83000000: global: x1=0x0000000b
-83000000: global: x2=0x00011144
-83000000: global: x3=0x00011188
-83000000: global: x4=0x00011198
-83000000: global: x5=0x0001119c
+83000000: global: x2=0x00011150
+83000000: global: x3=0x00011194
+83000000: global: x4=0x000111a4
+83000000: global: x5=0x000111a8
 83000000: global: x6=0x00000000
 83000000: global: x7=0x000000ff
 83000000: global: x8=0x00000000
@@ -3338,10 +3338,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 84000000: system.cpu.writeback: REGISTERS
 84000000: global: x0=0x00000000
 84000000: global: x1=0x0000000b
-84000000: global: x2=0x00011144
-84000000: global: x3=0x00011184
-84000000: global: x4=0x00011198
-84000000: global: x5=0x0001119c
+84000000: global: x2=0x00011150
+84000000: global: x3=0x00011190
+84000000: global: x4=0x000111a4
+84000000: global: x5=0x000111a8
 84000000: global: x6=0x00000000
 84000000: global: x7=0x000000ff
 84000000: global: x8=0x00000000
@@ -3429,10 +3429,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 92000000: system.cpu.writeback: REGISTERS
 92000000: global: x0=0x00000000
 92000000: global: x1=0x0000000b
-92000000: global: x2=0x00011144
-92000000: global: x3=0x00011184
-92000000: global: x4=0x00011198
-92000000: global: x5=0x0001119c
+92000000: global: x2=0x00011150
+92000000: global: x3=0x00011190
+92000000: global: x4=0x000111a4
+92000000: global: x5=0x000111a8
 92000000: global: x6=0x00000000
 92000000: global: x7=0x000000ff
 92000000: global: x8=0x00000000
@@ -3502,10 +3502,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 94000000: system.cpu.writeback: REGISTERS
 94000000: global: x0=0x00000000
 94000000: global: x1=0x0000000b
-94000000: global: x2=0x00011144
-94000000: global: x3=0x00011184
-94000000: global: x4=0x00011198
-94000000: global: x5=0x0001119c
+94000000: global: x2=0x00011150
+94000000: global: x3=0x00011190
+94000000: global: x4=0x000111a4
+94000000: global: x5=0x000111a8
 94000000: global: x6=0x00000000
 94000000: global: x7=0x000000ff
 94000000: global: x8=0x00000000
@@ -3575,10 +3575,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 96000000: system.cpu.writeback: REGISTERS
 96000000: global: x0=0x00000000
 96000000: global: x1=0x0000000b
-96000000: global: x2=0x00011144
-96000000: global: x3=0x00011184
-96000000: global: x4=0x00011198
-96000000: global: x5=0x0001119c
+96000000: global: x2=0x00011150
+96000000: global: x3=0x00011190
+96000000: global: x4=0x000111a4
+96000000: global: x5=0x000111a8
 96000000: global: x6=0x00000000
 96000000: global: x7=0x000000ff
 96000000: global: x8=0x00000000
@@ -3645,10 +3645,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 97000000: system.cpu.writeback: REGISTERS
 97000000: global: x0=0x00000000
 97000000: global: x1=0x0000000b
-97000000: global: x2=0x00011144
-97000000: global: x3=0x00011184
-97000000: global: x4=0x00011198
-97000000: global: x5=0x0001119c
+97000000: global: x2=0x00011150
+97000000: global: x3=0x00011190
+97000000: global: x4=0x000111a4
+97000000: global: x5=0x000111a8
 97000000: global: x6=0x00000000
 97000000: global: x7=0x000000ff
 97000000: global: x8=0x00000000
@@ -3715,10 +3715,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 98000000: system.cpu.writeback: REGISTERS
 98000000: global: x0=0x00000000
 98000000: global: x1=0x0000000b
-98000000: global: x2=0x00011144
-98000000: global: x3=0x00011184
-98000000: global: x4=0x00011198
-98000000: global: x5=0x0001119c
+98000000: global: x2=0x00011150
+98000000: global: x3=0x00011190
+98000000: global: x4=0x000111a4
+98000000: global: x5=0x000111a8
 98000000: global: x6=0x00000000
 98000000: global: x7=0x000000ff
 98000000: global: x8=0x00000000
@@ -3785,10 +3785,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 99000000: system.cpu.writeback: REGISTERS
 99000000: global: x0=0x00000000
 99000000: global: x1=0x0000000b
-99000000: global: x2=0x00011144
-99000000: global: x3=0x00011184
-99000000: global: x4=0x00011198
-99000000: global: x5=0x0001119c
+99000000: global: x2=0x00011150
+99000000: global: x3=0x00011190
+99000000: global: x4=0x000111a4
+99000000: global: x5=0x000111a8
 99000000: global: x6=0x00000000
 99000000: global: x7=0x000000ff
 99000000: global: x8=0x00000000
@@ -3855,10 +3855,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 100000000: system.cpu.writeback: REGISTERS
 100000000: global: x0=0x00000000
 100000000: global: x1=0x0000000a
-100000000: global: x2=0x00011144
-100000000: global: x3=0x00011184
-100000000: global: x4=0x00011198
-100000000: global: x5=0x0001119c
+100000000: global: x2=0x00011150
+100000000: global: x3=0x00011190
+100000000: global: x4=0x000111a4
+100000000: global: x5=0x000111a8
 100000000: global: x6=0x00000000
 100000000: global: x7=0x000000ff
 100000000: global: x8=0x00000000
@@ -3925,10 +3925,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 101000000: system.cpu.writeback: REGISTERS
 101000000: global: x0=0x00000000
 101000000: global: x1=0x0000000a
-101000000: global: x2=0x00011140
-101000000: global: x3=0x00011184
-101000000: global: x4=0x00011198
-101000000: global: x5=0x0001119c
+101000000: global: x2=0x0001114c
+101000000: global: x3=0x00011190
+101000000: global: x4=0x000111a4
+101000000: global: x5=0x000111a8
 101000000: global: x6=0x00000000
 101000000: global: x7=0x000000ff
 101000000: global: x8=0x00000000
@@ -3995,10 +3995,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 102000000: system.cpu.writeback: REGISTERS
 102000000: global: x0=0x00000000
 102000000: global: x1=0x0000000a
-102000000: global: x2=0x00011140
-102000000: global: x3=0x00011180
-102000000: global: x4=0x00011198
-102000000: global: x5=0x0001119c
+102000000: global: x2=0x0001114c
+102000000: global: x3=0x0001118c
+102000000: global: x4=0x000111a4
+102000000: global: x5=0x000111a8
 102000000: global: x6=0x00000000
 102000000: global: x7=0x000000ff
 102000000: global: x8=0x00000000
@@ -4086,10 +4086,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 110000000: system.cpu.writeback: REGISTERS
 110000000: global: x0=0x00000000
 110000000: global: x1=0x0000000a
-110000000: global: x2=0x00011140
-110000000: global: x3=0x00011180
-110000000: global: x4=0x00011198
-110000000: global: x5=0x0001119c
+110000000: global: x2=0x0001114c
+110000000: global: x3=0x0001118c
+110000000: global: x4=0x000111a4
+110000000: global: x5=0x000111a8
 110000000: global: x6=0x00000000
 110000000: global: x7=0x000000ff
 110000000: global: x8=0x00000000
@@ -4159,10 +4159,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 112000000: system.cpu.writeback: REGISTERS
 112000000: global: x0=0x00000000
 112000000: global: x1=0x0000000a
-112000000: global: x2=0x00011140
-112000000: global: x3=0x00011180
-112000000: global: x4=0x00011198
-112000000: global: x5=0x0001119c
+112000000: global: x2=0x0001114c
+112000000: global: x3=0x0001118c
+112000000: global: x4=0x000111a4
+112000000: global: x5=0x000111a8
 112000000: global: x6=0x00000000
 112000000: global: x7=0x000000ff
 112000000: global: x8=0x00000000
@@ -4232,10 +4232,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 114000000: system.cpu.writeback: REGISTERS
 114000000: global: x0=0x00000000
 114000000: global: x1=0x0000000a
-114000000: global: x2=0x00011140
-114000000: global: x3=0x00011180
-114000000: global: x4=0x00011198
-114000000: global: x5=0x0001119c
+114000000: global: x2=0x0001114c
+114000000: global: x3=0x0001118c
+114000000: global: x4=0x000111a4
+114000000: global: x5=0x000111a8
 114000000: global: x6=0x00000000
 114000000: global: x7=0x000000ff
 114000000: global: x8=0x00000000
@@ -4302,10 +4302,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 115000000: system.cpu.writeback: REGISTERS
 115000000: global: x0=0x00000000
 115000000: global: x1=0x0000000a
-115000000: global: x2=0x00011140
-115000000: global: x3=0x00011180
-115000000: global: x4=0x00011198
-115000000: global: x5=0x0001119c
+115000000: global: x2=0x0001114c
+115000000: global: x3=0x0001118c
+115000000: global: x4=0x000111a4
+115000000: global: x5=0x000111a8
 115000000: global: x6=0x00000000
 115000000: global: x7=0x000000ff
 115000000: global: x8=0x00000000
@@ -4372,10 +4372,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 116000000: system.cpu.writeback: REGISTERS
 116000000: global: x0=0x00000000
 116000000: global: x1=0x0000000a
-116000000: global: x2=0x00011140
-116000000: global: x3=0x00011180
-116000000: global: x4=0x00011198
-116000000: global: x5=0x0001119c
+116000000: global: x2=0x0001114c
+116000000: global: x3=0x0001118c
+116000000: global: x4=0x000111a4
+116000000: global: x5=0x000111a8
 116000000: global: x6=0x00000000
 116000000: global: x7=0x000000ff
 116000000: global: x8=0x00000000
@@ -4442,10 +4442,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 117000000: system.cpu.writeback: REGISTERS
 117000000: global: x0=0x00000000
 117000000: global: x1=0x0000000a
-117000000: global: x2=0x00011140
-117000000: global: x3=0x00011180
-117000000: global: x4=0x00011198
-117000000: global: x5=0x0001119c
+117000000: global: x2=0x0001114c
+117000000: global: x3=0x0001118c
+117000000: global: x4=0x000111a4
+117000000: global: x5=0x000111a8
 117000000: global: x6=0x00000000
 117000000: global: x7=0x000000ff
 117000000: global: x8=0x00000000
@@ -4512,10 +4512,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 118000000: system.cpu.writeback: REGISTERS
 118000000: global: x0=0x00000000
 118000000: global: x1=0x00000009
-118000000: global: x2=0x00011140
-118000000: global: x3=0x00011180
-118000000: global: x4=0x00011198
-118000000: global: x5=0x0001119c
+118000000: global: x2=0x0001114c
+118000000: global: x3=0x0001118c
+118000000: global: x4=0x000111a4
+118000000: global: x5=0x000111a8
 118000000: global: x6=0x00000000
 118000000: global: x7=0x000000ff
 118000000: global: x8=0x00000000
@@ -4582,10 +4582,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 119000000: system.cpu.writeback: REGISTERS
 119000000: global: x0=0x00000000
 119000000: global: x1=0x00000009
-119000000: global: x2=0x0001113c
-119000000: global: x3=0x00011180
-119000000: global: x4=0x00011198
-119000000: global: x5=0x0001119c
+119000000: global: x2=0x00011148
+119000000: global: x3=0x0001118c
+119000000: global: x4=0x000111a4
+119000000: global: x5=0x000111a8
 119000000: global: x6=0x00000000
 119000000: global: x7=0x000000ff
 119000000: global: x8=0x00000000
@@ -4652,10 +4652,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 120000000: system.cpu.writeback: REGISTERS
 120000000: global: x0=0x00000000
 120000000: global: x1=0x00000009
-120000000: global: x2=0x0001113c
-120000000: global: x3=0x0001117c
-120000000: global: x4=0x00011198
-120000000: global: x5=0x0001119c
+120000000: global: x2=0x00011148
+120000000: global: x3=0x00011188
+120000000: global: x4=0x000111a4
+120000000: global: x5=0x000111a8
 120000000: global: x6=0x00000000
 120000000: global: x7=0x000000ff
 120000000: global: x8=0x00000000
@@ -4743,10 +4743,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 128000000: system.cpu.writeback: REGISTERS
 128000000: global: x0=0x00000000
 128000000: global: x1=0x00000009
-128000000: global: x2=0x0001113c
-128000000: global: x3=0x0001117c
-128000000: global: x4=0x00011198
-128000000: global: x5=0x0001119c
+128000000: global: x2=0x00011148
+128000000: global: x3=0x00011188
+128000000: global: x4=0x000111a4
+128000000: global: x5=0x000111a8
 128000000: global: x6=0x00000000
 128000000: global: x7=0x000000ff
 128000000: global: x8=0x00000000
@@ -4816,10 +4816,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 130000000: system.cpu.writeback: REGISTERS
 130000000: global: x0=0x00000000
 130000000: global: x1=0x00000009
-130000000: global: x2=0x0001113c
-130000000: global: x3=0x0001117c
-130000000: global: x4=0x00011198
-130000000: global: x5=0x0001119c
+130000000: global: x2=0x00011148
+130000000: global: x3=0x00011188
+130000000: global: x4=0x000111a4
+130000000: global: x5=0x000111a8
 130000000: global: x6=0x00000000
 130000000: global: x7=0x000000ff
 130000000: global: x8=0x00000000
@@ -4889,10 +4889,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 132000000: system.cpu.writeback: REGISTERS
 132000000: global: x0=0x00000000
 132000000: global: x1=0x00000009
-132000000: global: x2=0x0001113c
-132000000: global: x3=0x0001117c
-132000000: global: x4=0x00011198
-132000000: global: x5=0x0001119c
+132000000: global: x2=0x00011148
+132000000: global: x3=0x00011188
+132000000: global: x4=0x000111a4
+132000000: global: x5=0x000111a8
 132000000: global: x6=0x00000000
 132000000: global: x7=0x000000ff
 132000000: global: x8=0x00000000
@@ -4959,10 +4959,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 133000000: system.cpu.writeback: REGISTERS
 133000000: global: x0=0x00000000
 133000000: global: x1=0x00000009
-133000000: global: x2=0x0001113c
-133000000: global: x3=0x0001117c
-133000000: global: x4=0x00011198
-133000000: global: x5=0x0001119c
+133000000: global: x2=0x00011148
+133000000: global: x3=0x00011188
+133000000: global: x4=0x000111a4
+133000000: global: x5=0x000111a8
 133000000: global: x6=0x00000000
 133000000: global: x7=0x000000ff
 133000000: global: x8=0x00000000
@@ -5029,10 +5029,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 134000000: system.cpu.writeback: REGISTERS
 134000000: global: x0=0x00000000
 134000000: global: x1=0x00000009
-134000000: global: x2=0x0001113c
-134000000: global: x3=0x0001117c
-134000000: global: x4=0x00011198
-134000000: global: x5=0x0001119c
+134000000: global: x2=0x00011148
+134000000: global: x3=0x00011188
+134000000: global: x4=0x000111a4
+134000000: global: x5=0x000111a8
 134000000: global: x6=0x00000000
 134000000: global: x7=0x000000ff
 134000000: global: x8=0x00000000
@@ -5099,10 +5099,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 135000000: system.cpu.writeback: REGISTERS
 135000000: global: x0=0x00000000
 135000000: global: x1=0x00000009
-135000000: global: x2=0x0001113c
-135000000: global: x3=0x0001117c
-135000000: global: x4=0x00011198
-135000000: global: x5=0x0001119c
+135000000: global: x2=0x00011148
+135000000: global: x3=0x00011188
+135000000: global: x4=0x000111a4
+135000000: global: x5=0x000111a8
 135000000: global: x6=0x00000000
 135000000: global: x7=0x000000ff
 135000000: global: x8=0x00000000
@@ -5169,10 +5169,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 136000000: system.cpu.writeback: REGISTERS
 136000000: global: x0=0x00000000
 136000000: global: x1=0x00000008
-136000000: global: x2=0x0001113c
-136000000: global: x3=0x0001117c
-136000000: global: x4=0x00011198
-136000000: global: x5=0x0001119c
+136000000: global: x2=0x00011148
+136000000: global: x3=0x00011188
+136000000: global: x4=0x000111a4
+136000000: global: x5=0x000111a8
 136000000: global: x6=0x00000000
 136000000: global: x7=0x000000ff
 136000000: global: x8=0x00000000
@@ -5239,10 +5239,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 137000000: system.cpu.writeback: REGISTERS
 137000000: global: x0=0x00000000
 137000000: global: x1=0x00000008
-137000000: global: x2=0x00011138
-137000000: global: x3=0x0001117c
-137000000: global: x4=0x00011198
-137000000: global: x5=0x0001119c
+137000000: global: x2=0x00011144
+137000000: global: x3=0x00011188
+137000000: global: x4=0x000111a4
+137000000: global: x5=0x000111a8
 137000000: global: x6=0x00000000
 137000000: global: x7=0x000000ff
 137000000: global: x8=0x00000000
@@ -5309,10 +5309,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 138000000: system.cpu.writeback: REGISTERS
 138000000: global: x0=0x00000000
 138000000: global: x1=0x00000008
-138000000: global: x2=0x00011138
-138000000: global: x3=0x00011178
-138000000: global: x4=0x00011198
-138000000: global: x5=0x0001119c
+138000000: global: x2=0x00011144
+138000000: global: x3=0x00011184
+138000000: global: x4=0x000111a4
+138000000: global: x5=0x000111a8
 138000000: global: x6=0x00000000
 138000000: global: x7=0x000000ff
 138000000: global: x8=0x00000000
@@ -5400,10 +5400,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 146000000: system.cpu.writeback: REGISTERS
 146000000: global: x0=0x00000000
 146000000: global: x1=0x00000008
-146000000: global: x2=0x00011138
-146000000: global: x3=0x00011178
-146000000: global: x4=0x00011198
-146000000: global: x5=0x0001119c
+146000000: global: x2=0x00011144
+146000000: global: x3=0x00011184
+146000000: global: x4=0x000111a4
+146000000: global: x5=0x000111a8
 146000000: global: x6=0x00000000
 146000000: global: x7=0x000000ff
 146000000: global: x8=0x00000000
@@ -5473,10 +5473,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 148000000: system.cpu.writeback: REGISTERS
 148000000: global: x0=0x00000000
 148000000: global: x1=0x00000008
-148000000: global: x2=0x00011138
-148000000: global: x3=0x00011178
-148000000: global: x4=0x00011198
-148000000: global: x5=0x0001119c
+148000000: global: x2=0x00011144
+148000000: global: x3=0x00011184
+148000000: global: x4=0x000111a4
+148000000: global: x5=0x000111a8
 148000000: global: x6=0x00000000
 148000000: global: x7=0x000000ff
 148000000: global: x8=0x00000000
@@ -5546,10 +5546,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 150000000: system.cpu.writeback: REGISTERS
 150000000: global: x0=0x00000000
 150000000: global: x1=0x00000008
-150000000: global: x2=0x00011138
-150000000: global: x3=0x00011178
-150000000: global: x4=0x00011198
-150000000: global: x5=0x0001119c
+150000000: global: x2=0x00011144
+150000000: global: x3=0x00011184
+150000000: global: x4=0x000111a4
+150000000: global: x5=0x000111a8
 150000000: global: x6=0x00000000
 150000000: global: x7=0x000000ff
 150000000: global: x8=0x00000000
@@ -5616,10 +5616,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 151000000: system.cpu.writeback: REGISTERS
 151000000: global: x0=0x00000000
 151000000: global: x1=0x00000008
-151000000: global: x2=0x00011138
-151000000: global: x3=0x00011178
-151000000: global: x4=0x00011198
-151000000: global: x5=0x0001119c
+151000000: global: x2=0x00011144
+151000000: global: x3=0x00011184
+151000000: global: x4=0x000111a4
+151000000: global: x5=0x000111a8
 151000000: global: x6=0x00000000
 151000000: global: x7=0x000000ff
 151000000: global: x8=0x00000000
@@ -5686,10 +5686,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 152000000: system.cpu.writeback: REGISTERS
 152000000: global: x0=0x00000000
 152000000: global: x1=0x00000008
-152000000: global: x2=0x00011138
-152000000: global: x3=0x00011178
-152000000: global: x4=0x00011198
-152000000: global: x5=0x0001119c
+152000000: global: x2=0x00011144
+152000000: global: x3=0x00011184
+152000000: global: x4=0x000111a4
+152000000: global: x5=0x000111a8
 152000000: global: x6=0x00000000
 152000000: global: x7=0x000000ff
 152000000: global: x8=0x00000000
@@ -5756,10 +5756,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 153000000: system.cpu.writeback: REGISTERS
 153000000: global: x0=0x00000000
 153000000: global: x1=0x00000008
-153000000: global: x2=0x00011138
-153000000: global: x3=0x00011178
-153000000: global: x4=0x00011198
-153000000: global: x5=0x0001119c
+153000000: global: x2=0x00011144
+153000000: global: x3=0x00011184
+153000000: global: x4=0x000111a4
+153000000: global: x5=0x000111a8
 153000000: global: x6=0x00000000
 153000000: global: x7=0x000000ff
 153000000: global: x8=0x00000000
@@ -5826,10 +5826,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 154000000: system.cpu.writeback: REGISTERS
 154000000: global: x0=0x00000000
 154000000: global: x1=0x00000007
-154000000: global: x2=0x00011138
-154000000: global: x3=0x00011178
-154000000: global: x4=0x00011198
-154000000: global: x5=0x0001119c
+154000000: global: x2=0x00011144
+154000000: global: x3=0x00011184
+154000000: global: x4=0x000111a4
+154000000: global: x5=0x000111a8
 154000000: global: x6=0x00000000
 154000000: global: x7=0x000000ff
 154000000: global: x8=0x00000000
@@ -5896,10 +5896,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 155000000: system.cpu.writeback: REGISTERS
 155000000: global: x0=0x00000000
 155000000: global: x1=0x00000007
-155000000: global: x2=0x00011134
-155000000: global: x3=0x00011178
-155000000: global: x4=0x00011198
-155000000: global: x5=0x0001119c
+155000000: global: x2=0x00011140
+155000000: global: x3=0x00011184
+155000000: global: x4=0x000111a4
+155000000: global: x5=0x000111a8
 155000000: global: x6=0x00000000
 155000000: global: x7=0x000000ff
 155000000: global: x8=0x00000000
@@ -5966,10 +5966,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 156000000: system.cpu.writeback: REGISTERS
 156000000: global: x0=0x00000000
 156000000: global: x1=0x00000007
-156000000: global: x2=0x00011134
-156000000: global: x3=0x00011174
-156000000: global: x4=0x00011198
-156000000: global: x5=0x0001119c
+156000000: global: x2=0x00011140
+156000000: global: x3=0x00011180
+156000000: global: x4=0x000111a4
+156000000: global: x5=0x000111a8
 156000000: global: x6=0x00000000
 156000000: global: x7=0x000000ff
 156000000: global: x8=0x00000000
@@ -6057,10 +6057,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 164000000: system.cpu.writeback: REGISTERS
 164000000: global: x0=0x00000000
 164000000: global: x1=0x00000007
-164000000: global: x2=0x00011134
-164000000: global: x3=0x00011174
-164000000: global: x4=0x00011198
-164000000: global: x5=0x0001119c
+164000000: global: x2=0x00011140
+164000000: global: x3=0x00011180
+164000000: global: x4=0x000111a4
+164000000: global: x5=0x000111a8
 164000000: global: x6=0x00000000
 164000000: global: x7=0x000000ff
 164000000: global: x8=0x00000000
@@ -6130,10 +6130,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 166000000: system.cpu.writeback: REGISTERS
 166000000: global: x0=0x00000000
 166000000: global: x1=0x00000007
-166000000: global: x2=0x00011134
-166000000: global: x3=0x00011174
-166000000: global: x4=0x00011198
-166000000: global: x5=0x0001119c
+166000000: global: x2=0x00011140
+166000000: global: x3=0x00011180
+166000000: global: x4=0x000111a4
+166000000: global: x5=0x000111a8
 166000000: global: x6=0x00000000
 166000000: global: x7=0x000000ff
 166000000: global: x8=0x00000000
@@ -6203,10 +6203,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 168000000: system.cpu.writeback: REGISTERS
 168000000: global: x0=0x00000000
 168000000: global: x1=0x00000007
-168000000: global: x2=0x00011134
-168000000: global: x3=0x00011174
-168000000: global: x4=0x00011198
-168000000: global: x5=0x0001119c
+168000000: global: x2=0x00011140
+168000000: global: x3=0x00011180
+168000000: global: x4=0x000111a4
+168000000: global: x5=0x000111a8
 168000000: global: x6=0x00000000
 168000000: global: x7=0x000000ff
 168000000: global: x8=0x00000000
@@ -6273,10 +6273,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 169000000: system.cpu.writeback: REGISTERS
 169000000: global: x0=0x00000000
 169000000: global: x1=0x00000007
-169000000: global: x2=0x00011134
-169000000: global: x3=0x00011174
-169000000: global: x4=0x00011198
-169000000: global: x5=0x0001119c
+169000000: global: x2=0x00011140
+169000000: global: x3=0x00011180
+169000000: global: x4=0x000111a4
+169000000: global: x5=0x000111a8
 169000000: global: x6=0x00000000
 169000000: global: x7=0x000000ff
 169000000: global: x8=0x00000000
@@ -6343,10 +6343,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 170000000: system.cpu.writeback: REGISTERS
 170000000: global: x0=0x00000000
 170000000: global: x1=0x00000007
-170000000: global: x2=0x00011134
-170000000: global: x3=0x00011174
-170000000: global: x4=0x00011198
-170000000: global: x5=0x0001119c
+170000000: global: x2=0x00011140
+170000000: global: x3=0x00011180
+170000000: global: x4=0x000111a4
+170000000: global: x5=0x000111a8
 170000000: global: x6=0x00000000
 170000000: global: x7=0x000000ff
 170000000: global: x8=0x00000000
@@ -6413,10 +6413,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 171000000: system.cpu.writeback: REGISTERS
 171000000: global: x0=0x00000000
 171000000: global: x1=0x00000007
-171000000: global: x2=0x00011134
-171000000: global: x3=0x00011174
-171000000: global: x4=0x00011198
-171000000: global: x5=0x0001119c
+171000000: global: x2=0x00011140
+171000000: global: x3=0x00011180
+171000000: global: x4=0x000111a4
+171000000: global: x5=0x000111a8
 171000000: global: x6=0x00000000
 171000000: global: x7=0x000000ff
 171000000: global: x8=0x00000000
@@ -6483,10 +6483,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 172000000: system.cpu.writeback: REGISTERS
 172000000: global: x0=0x00000000
 172000000: global: x1=0x00000006
-172000000: global: x2=0x00011134
-172000000: global: x3=0x00011174
-172000000: global: x4=0x00011198
-172000000: global: x5=0x0001119c
+172000000: global: x2=0x00011140
+172000000: global: x3=0x00011180
+172000000: global: x4=0x000111a4
+172000000: global: x5=0x000111a8
 172000000: global: x6=0x00000000
 172000000: global: x7=0x000000ff
 172000000: global: x8=0x00000000
@@ -6553,10 +6553,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 173000000: system.cpu.writeback: REGISTERS
 173000000: global: x0=0x00000000
 173000000: global: x1=0x00000006
-173000000: global: x2=0x00011130
-173000000: global: x3=0x00011174
-173000000: global: x4=0x00011198
-173000000: global: x5=0x0001119c
+173000000: global: x2=0x0001113c
+173000000: global: x3=0x00011180
+173000000: global: x4=0x000111a4
+173000000: global: x5=0x000111a8
 173000000: global: x6=0x00000000
 173000000: global: x7=0x000000ff
 173000000: global: x8=0x00000000
@@ -6623,10 +6623,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 174000000: system.cpu.writeback: REGISTERS
 174000000: global: x0=0x00000000
 174000000: global: x1=0x00000006
-174000000: global: x2=0x00011130
-174000000: global: x3=0x00011170
-174000000: global: x4=0x00011198
-174000000: global: x5=0x0001119c
+174000000: global: x2=0x0001113c
+174000000: global: x3=0x0001117c
+174000000: global: x4=0x000111a4
+174000000: global: x5=0x000111a8
 174000000: global: x6=0x00000000
 174000000: global: x7=0x000000ff
 174000000: global: x8=0x00000000
@@ -6714,10 +6714,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 182000000: system.cpu.writeback: REGISTERS
 182000000: global: x0=0x00000000
 182000000: global: x1=0x00000006
-182000000: global: x2=0x00011130
-182000000: global: x3=0x00011170
-182000000: global: x4=0x00011198
-182000000: global: x5=0x0001119c
+182000000: global: x2=0x0001113c
+182000000: global: x3=0x0001117c
+182000000: global: x4=0x000111a4
+182000000: global: x5=0x000111a8
 182000000: global: x6=0x00000000
 182000000: global: x7=0x000000ff
 182000000: global: x8=0x00000000
@@ -6787,10 +6787,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 184000000: system.cpu.writeback: REGISTERS
 184000000: global: x0=0x00000000
 184000000: global: x1=0x00000006
-184000000: global: x2=0x00011130
-184000000: global: x3=0x00011170
-184000000: global: x4=0x00011198
-184000000: global: x5=0x0001119c
+184000000: global: x2=0x0001113c
+184000000: global: x3=0x0001117c
+184000000: global: x4=0x000111a4
+184000000: global: x5=0x000111a8
 184000000: global: x6=0x00000000
 184000000: global: x7=0x000000ff
 184000000: global: x8=0x00000000
@@ -6860,10 +6860,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 186000000: system.cpu.writeback: REGISTERS
 186000000: global: x0=0x00000000
 186000000: global: x1=0x00000006
-186000000: global: x2=0x00011130
-186000000: global: x3=0x00011170
-186000000: global: x4=0x00011198
-186000000: global: x5=0x0001119c
+186000000: global: x2=0x0001113c
+186000000: global: x3=0x0001117c
+186000000: global: x4=0x000111a4
+186000000: global: x5=0x000111a8
 186000000: global: x6=0x00000000
 186000000: global: x7=0x000000ff
 186000000: global: x8=0x00000000
@@ -6930,10 +6930,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 187000000: system.cpu.writeback: REGISTERS
 187000000: global: x0=0x00000000
 187000000: global: x1=0x00000006
-187000000: global: x2=0x00011130
-187000000: global: x3=0x00011170
-187000000: global: x4=0x00011198
-187000000: global: x5=0x0001119c
+187000000: global: x2=0x0001113c
+187000000: global: x3=0x0001117c
+187000000: global: x4=0x000111a4
+187000000: global: x5=0x000111a8
 187000000: global: x6=0x00000000
 187000000: global: x7=0x000000ff
 187000000: global: x8=0x00000000
@@ -7000,10 +7000,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 188000000: system.cpu.writeback: REGISTERS
 188000000: global: x0=0x00000000
 188000000: global: x1=0x00000006
-188000000: global: x2=0x00011130
-188000000: global: x3=0x00011170
-188000000: global: x4=0x00011198
-188000000: global: x5=0x0001119c
+188000000: global: x2=0x0001113c
+188000000: global: x3=0x0001117c
+188000000: global: x4=0x000111a4
+188000000: global: x5=0x000111a8
 188000000: global: x6=0x00000000
 188000000: global: x7=0x000000ff
 188000000: global: x8=0x00000000
@@ -7070,10 +7070,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 189000000: system.cpu.writeback: REGISTERS
 189000000: global: x0=0x00000000
 189000000: global: x1=0x00000006
-189000000: global: x2=0x00011130
-189000000: global: x3=0x00011170
-189000000: global: x4=0x00011198
-189000000: global: x5=0x0001119c
+189000000: global: x2=0x0001113c
+189000000: global: x3=0x0001117c
+189000000: global: x4=0x000111a4
+189000000: global: x5=0x000111a8
 189000000: global: x6=0x00000000
 189000000: global: x7=0x000000ff
 189000000: global: x8=0x00000000
@@ -7140,10 +7140,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 190000000: system.cpu.writeback: REGISTERS
 190000000: global: x0=0x00000000
 190000000: global: x1=0x00000005
-190000000: global: x2=0x00011130
-190000000: global: x3=0x00011170
-190000000: global: x4=0x00011198
-190000000: global: x5=0x0001119c
+190000000: global: x2=0x0001113c
+190000000: global: x3=0x0001117c
+190000000: global: x4=0x000111a4
+190000000: global: x5=0x000111a8
 190000000: global: x6=0x00000000
 190000000: global: x7=0x000000ff
 190000000: global: x8=0x00000000
@@ -7210,10 +7210,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 191000000: system.cpu.writeback: REGISTERS
 191000000: global: x0=0x00000000
 191000000: global: x1=0x00000005
-191000000: global: x2=0x0001112c
-191000000: global: x3=0x00011170
-191000000: global: x4=0x00011198
-191000000: global: x5=0x0001119c
+191000000: global: x2=0x00011138
+191000000: global: x3=0x0001117c
+191000000: global: x4=0x000111a4
+191000000: global: x5=0x000111a8
 191000000: global: x6=0x00000000
 191000000: global: x7=0x000000ff
 191000000: global: x8=0x00000000
@@ -7280,10 +7280,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 192000000: system.cpu.writeback: REGISTERS
 192000000: global: x0=0x00000000
 192000000: global: x1=0x00000005
-192000000: global: x2=0x0001112c
-192000000: global: x3=0x0001116c
-192000000: global: x4=0x00011198
-192000000: global: x5=0x0001119c
+192000000: global: x2=0x00011138
+192000000: global: x3=0x00011178
+192000000: global: x4=0x000111a4
+192000000: global: x5=0x000111a8
 192000000: global: x6=0x00000000
 192000000: global: x7=0x000000ff
 192000000: global: x8=0x00000000
@@ -7371,10 +7371,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 200000000: system.cpu.writeback: REGISTERS
 200000000: global: x0=0x00000000
 200000000: global: x1=0x00000005
-200000000: global: x2=0x0001112c
-200000000: global: x3=0x0001116c
-200000000: global: x4=0x00011198
-200000000: global: x5=0x0001119c
+200000000: global: x2=0x00011138
+200000000: global: x3=0x00011178
+200000000: global: x4=0x000111a4
+200000000: global: x5=0x000111a8
 200000000: global: x6=0x00000000
 200000000: global: x7=0x000000ff
 200000000: global: x8=0x00000000
@@ -7444,10 +7444,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 202000000: system.cpu.writeback: REGISTERS
 202000000: global: x0=0x00000000
 202000000: global: x1=0x00000005
-202000000: global: x2=0x0001112c
-202000000: global: x3=0x0001116c
-202000000: global: x4=0x00011198
-202000000: global: x5=0x0001119c
+202000000: global: x2=0x00011138
+202000000: global: x3=0x00011178
+202000000: global: x4=0x000111a4
+202000000: global: x5=0x000111a8
 202000000: global: x6=0x00000000
 202000000: global: x7=0x000000ff
 202000000: global: x8=0x00000000
@@ -7517,10 +7517,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 204000000: system.cpu.writeback: REGISTERS
 204000000: global: x0=0x00000000
 204000000: global: x1=0x00000005
-204000000: global: x2=0x0001112c
-204000000: global: x3=0x0001116c
-204000000: global: x4=0x00011198
-204000000: global: x5=0x0001119c
+204000000: global: x2=0x00011138
+204000000: global: x3=0x00011178
+204000000: global: x4=0x000111a4
+204000000: global: x5=0x000111a8
 204000000: global: x6=0x00000000
 204000000: global: x7=0x000000ff
 204000000: global: x8=0x00000000
@@ -7587,10 +7587,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 205000000: system.cpu.writeback: REGISTERS
 205000000: global: x0=0x00000000
 205000000: global: x1=0x00000005
-205000000: global: x2=0x0001112c
-205000000: global: x3=0x0001116c
-205000000: global: x4=0x00011198
-205000000: global: x5=0x0001119c
+205000000: global: x2=0x00011138
+205000000: global: x3=0x00011178
+205000000: global: x4=0x000111a4
+205000000: global: x5=0x000111a8
 205000000: global: x6=0x00000000
 205000000: global: x7=0x000000ff
 205000000: global: x8=0x00000000
@@ -7657,10 +7657,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 206000000: system.cpu.writeback: REGISTERS
 206000000: global: x0=0x00000000
 206000000: global: x1=0x00000005
-206000000: global: x2=0x0001112c
-206000000: global: x3=0x0001116c
-206000000: global: x4=0x00011198
-206000000: global: x5=0x0001119c
+206000000: global: x2=0x00011138
+206000000: global: x3=0x00011178
+206000000: global: x4=0x000111a4
+206000000: global: x5=0x000111a8
 206000000: global: x6=0x00000000
 206000000: global: x7=0x000000ff
 206000000: global: x8=0x00000000
@@ -7727,10 +7727,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 207000000: system.cpu.writeback: REGISTERS
 207000000: global: x0=0x00000000
 207000000: global: x1=0x00000005
-207000000: global: x2=0x0001112c
-207000000: global: x3=0x0001116c
-207000000: global: x4=0x00011198
-207000000: global: x5=0x0001119c
+207000000: global: x2=0x00011138
+207000000: global: x3=0x00011178
+207000000: global: x4=0x000111a4
+207000000: global: x5=0x000111a8
 207000000: global: x6=0x00000000
 207000000: global: x7=0x000000ff
 207000000: global: x8=0x00000000
@@ -7797,10 +7797,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 208000000: system.cpu.writeback: REGISTERS
 208000000: global: x0=0x00000000
 208000000: global: x1=0x00000004
-208000000: global: x2=0x0001112c
-208000000: global: x3=0x0001116c
-208000000: global: x4=0x00011198
-208000000: global: x5=0x0001119c
+208000000: global: x2=0x00011138
+208000000: global: x3=0x00011178
+208000000: global: x4=0x000111a4
+208000000: global: x5=0x000111a8
 208000000: global: x6=0x00000000
 208000000: global: x7=0x000000ff
 208000000: global: x8=0x00000000
@@ -7867,10 +7867,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 209000000: system.cpu.writeback: REGISTERS
 209000000: global: x0=0x00000000
 209000000: global: x1=0x00000004
-209000000: global: x2=0x00011128
-209000000: global: x3=0x0001116c
-209000000: global: x4=0x00011198
-209000000: global: x5=0x0001119c
+209000000: global: x2=0x00011134
+209000000: global: x3=0x00011178
+209000000: global: x4=0x000111a4
+209000000: global: x5=0x000111a8
 209000000: global: x6=0x00000000
 209000000: global: x7=0x000000ff
 209000000: global: x8=0x00000000
@@ -7937,10 +7937,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 210000000: system.cpu.writeback: REGISTERS
 210000000: global: x0=0x00000000
 210000000: global: x1=0x00000004
-210000000: global: x2=0x00011128
-210000000: global: x3=0x00011168
-210000000: global: x4=0x00011198
-210000000: global: x5=0x0001119c
+210000000: global: x2=0x00011134
+210000000: global: x3=0x00011174
+210000000: global: x4=0x000111a4
+210000000: global: x5=0x000111a8
 210000000: global: x6=0x00000000
 210000000: global: x7=0x000000ff
 210000000: global: x8=0x00000000
@@ -8028,10 +8028,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 218000000: system.cpu.writeback: REGISTERS
 218000000: global: x0=0x00000000
 218000000: global: x1=0x00000004
-218000000: global: x2=0x00011128
-218000000: global: x3=0x00011168
-218000000: global: x4=0x00011198
-218000000: global: x5=0x0001119c
+218000000: global: x2=0x00011134
+218000000: global: x3=0x00011174
+218000000: global: x4=0x000111a4
+218000000: global: x5=0x000111a8
 218000000: global: x6=0x00000000
 218000000: global: x7=0x000000ff
 218000000: global: x8=0x00000000
@@ -8101,10 +8101,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 220000000: system.cpu.writeback: REGISTERS
 220000000: global: x0=0x00000000
 220000000: global: x1=0x00000004
-220000000: global: x2=0x00011128
-220000000: global: x3=0x00011168
-220000000: global: x4=0x00011198
-220000000: global: x5=0x0001119c
+220000000: global: x2=0x00011134
+220000000: global: x3=0x00011174
+220000000: global: x4=0x000111a4
+220000000: global: x5=0x000111a8
 220000000: global: x6=0x00000000
 220000000: global: x7=0x000000ff
 220000000: global: x8=0x00000000
@@ -8174,10 +8174,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 222000000: system.cpu.writeback: REGISTERS
 222000000: global: x0=0x00000000
 222000000: global: x1=0x00000004
-222000000: global: x2=0x00011128
-222000000: global: x3=0x00011168
-222000000: global: x4=0x00011198
-222000000: global: x5=0x0001119c
+222000000: global: x2=0x00011134
+222000000: global: x3=0x00011174
+222000000: global: x4=0x000111a4
+222000000: global: x5=0x000111a8
 222000000: global: x6=0x00000000
 222000000: global: x7=0x000000ff
 222000000: global: x8=0x00000000
@@ -8244,10 +8244,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 223000000: system.cpu.writeback: REGISTERS
 223000000: global: x0=0x00000000
 223000000: global: x1=0x00000004
-223000000: global: x2=0x00011128
-223000000: global: x3=0x00011168
-223000000: global: x4=0x00011198
-223000000: global: x5=0x0001119c
+223000000: global: x2=0x00011134
+223000000: global: x3=0x00011174
+223000000: global: x4=0x000111a4
+223000000: global: x5=0x000111a8
 223000000: global: x6=0x00000000
 223000000: global: x7=0x000000ff
 223000000: global: x8=0x00000000
@@ -8314,10 +8314,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 224000000: system.cpu.writeback: REGISTERS
 224000000: global: x0=0x00000000
 224000000: global: x1=0x00000004
-224000000: global: x2=0x00011128
-224000000: global: x3=0x00011168
-224000000: global: x4=0x00011198
-224000000: global: x5=0x0001119c
+224000000: global: x2=0x00011134
+224000000: global: x3=0x00011174
+224000000: global: x4=0x000111a4
+224000000: global: x5=0x000111a8
 224000000: global: x6=0x00000000
 224000000: global: x7=0x000000ff
 224000000: global: x8=0x00000000
@@ -8384,10 +8384,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 225000000: system.cpu.writeback: REGISTERS
 225000000: global: x0=0x00000000
 225000000: global: x1=0x00000004
-225000000: global: x2=0x00011128
-225000000: global: x3=0x00011168
-225000000: global: x4=0x00011198
-225000000: global: x5=0x0001119c
+225000000: global: x2=0x00011134
+225000000: global: x3=0x00011174
+225000000: global: x4=0x000111a4
+225000000: global: x5=0x000111a8
 225000000: global: x6=0x00000000
 225000000: global: x7=0x000000ff
 225000000: global: x8=0x00000000
@@ -8454,10 +8454,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 226000000: system.cpu.writeback: REGISTERS
 226000000: global: x0=0x00000000
 226000000: global: x1=0x00000003
-226000000: global: x2=0x00011128
-226000000: global: x3=0x00011168
-226000000: global: x4=0x00011198
-226000000: global: x5=0x0001119c
+226000000: global: x2=0x00011134
+226000000: global: x3=0x00011174
+226000000: global: x4=0x000111a4
+226000000: global: x5=0x000111a8
 226000000: global: x6=0x00000000
 226000000: global: x7=0x000000ff
 226000000: global: x8=0x00000000
@@ -8524,10 +8524,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 227000000: system.cpu.writeback: REGISTERS
 227000000: global: x0=0x00000000
 227000000: global: x1=0x00000003
-227000000: global: x2=0x00011124
-227000000: global: x3=0x00011168
-227000000: global: x4=0x00011198
-227000000: global: x5=0x0001119c
+227000000: global: x2=0x00011130
+227000000: global: x3=0x00011174
+227000000: global: x4=0x000111a4
+227000000: global: x5=0x000111a8
 227000000: global: x6=0x00000000
 227000000: global: x7=0x000000ff
 227000000: global: x8=0x00000000
@@ -8594,10 +8594,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 228000000: system.cpu.writeback: REGISTERS
 228000000: global: x0=0x00000000
 228000000: global: x1=0x00000003
-228000000: global: x2=0x00011124
-228000000: global: x3=0x00011164
-228000000: global: x4=0x00011198
-228000000: global: x5=0x0001119c
+228000000: global: x2=0x00011130
+228000000: global: x3=0x00011170
+228000000: global: x4=0x000111a4
+228000000: global: x5=0x000111a8
 228000000: global: x6=0x00000000
 228000000: global: x7=0x000000ff
 228000000: global: x8=0x00000000
@@ -8685,10 +8685,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 236000000: system.cpu.writeback: REGISTERS
 236000000: global: x0=0x00000000
 236000000: global: x1=0x00000003
-236000000: global: x2=0x00011124
-236000000: global: x3=0x00011164
-236000000: global: x4=0x00011198
-236000000: global: x5=0x0001119c
+236000000: global: x2=0x00011130
+236000000: global: x3=0x00011170
+236000000: global: x4=0x000111a4
+236000000: global: x5=0x000111a8
 236000000: global: x6=0x00000000
 236000000: global: x7=0x000000ff
 236000000: global: x8=0x00000000
@@ -8758,10 +8758,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 238000000: system.cpu.writeback: REGISTERS
 238000000: global: x0=0x00000000
 238000000: global: x1=0x00000003
-238000000: global: x2=0x00011124
-238000000: global: x3=0x00011164
-238000000: global: x4=0x00011198
-238000000: global: x5=0x0001119c
+238000000: global: x2=0x00011130
+238000000: global: x3=0x00011170
+238000000: global: x4=0x000111a4
+238000000: global: x5=0x000111a8
 238000000: global: x6=0x00000000
 238000000: global: x7=0x000000ff
 238000000: global: x8=0x00000000
@@ -8831,10 +8831,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 240000000: system.cpu.writeback: REGISTERS
 240000000: global: x0=0x00000000
 240000000: global: x1=0x00000003
-240000000: global: x2=0x00011124
-240000000: global: x3=0x00011164
-240000000: global: x4=0x00011198
-240000000: global: x5=0x0001119c
+240000000: global: x2=0x00011130
+240000000: global: x3=0x00011170
+240000000: global: x4=0x000111a4
+240000000: global: x5=0x000111a8
 240000000: global: x6=0x00000000
 240000000: global: x7=0x000000ff
 240000000: global: x8=0x00000000
@@ -8901,10 +8901,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 241000000: system.cpu.writeback: REGISTERS
 241000000: global: x0=0x00000000
 241000000: global: x1=0x00000003
-241000000: global: x2=0x00011124
-241000000: global: x3=0x00011164
-241000000: global: x4=0x00011198
-241000000: global: x5=0x0001119c
+241000000: global: x2=0x00011130
+241000000: global: x3=0x00011170
+241000000: global: x4=0x000111a4
+241000000: global: x5=0x000111a8
 241000000: global: x6=0x00000000
 241000000: global: x7=0x000000ff
 241000000: global: x8=0x00000000
@@ -8971,10 +8971,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 242000000: system.cpu.writeback: REGISTERS
 242000000: global: x0=0x00000000
 242000000: global: x1=0x00000003
-242000000: global: x2=0x00011124
-242000000: global: x3=0x00011164
-242000000: global: x4=0x00011198
-242000000: global: x5=0x0001119c
+242000000: global: x2=0x00011130
+242000000: global: x3=0x00011170
+242000000: global: x4=0x000111a4
+242000000: global: x5=0x000111a8
 242000000: global: x6=0x00000000
 242000000: global: x7=0x000000ff
 242000000: global: x8=0x00000000
@@ -9041,10 +9041,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 243000000: system.cpu.writeback: REGISTERS
 243000000: global: x0=0x00000000
 243000000: global: x1=0x00000003
-243000000: global: x2=0x00011124
-243000000: global: x3=0x00011164
-243000000: global: x4=0x00011198
-243000000: global: x5=0x0001119c
+243000000: global: x2=0x00011130
+243000000: global: x3=0x00011170
+243000000: global: x4=0x000111a4
+243000000: global: x5=0x000111a8
 243000000: global: x6=0x00000000
 243000000: global: x7=0x000000ff
 243000000: global: x8=0x00000000
@@ -9111,10 +9111,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 244000000: system.cpu.writeback: REGISTERS
 244000000: global: x0=0x00000000
 244000000: global: x1=0x00000002
-244000000: global: x2=0x00011124
-244000000: global: x3=0x00011164
-244000000: global: x4=0x00011198
-244000000: global: x5=0x0001119c
+244000000: global: x2=0x00011130
+244000000: global: x3=0x00011170
+244000000: global: x4=0x000111a4
+244000000: global: x5=0x000111a8
 244000000: global: x6=0x00000000
 244000000: global: x7=0x000000ff
 244000000: global: x8=0x00000000
@@ -9181,10 +9181,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 245000000: system.cpu.writeback: REGISTERS
 245000000: global: x0=0x00000000
 245000000: global: x1=0x00000002
-245000000: global: x2=0x00011120
-245000000: global: x3=0x00011164
-245000000: global: x4=0x00011198
-245000000: global: x5=0x0001119c
+245000000: global: x2=0x0001112c
+245000000: global: x3=0x00011170
+245000000: global: x4=0x000111a4
+245000000: global: x5=0x000111a8
 245000000: global: x6=0x00000000
 245000000: global: x7=0x000000ff
 245000000: global: x8=0x00000000
@@ -9251,10 +9251,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 246000000: system.cpu.writeback: REGISTERS
 246000000: global: x0=0x00000000
 246000000: global: x1=0x00000002
-246000000: global: x2=0x00011120
-246000000: global: x3=0x00011160
-246000000: global: x4=0x00011198
-246000000: global: x5=0x0001119c
+246000000: global: x2=0x0001112c
+246000000: global: x3=0x0001116c
+246000000: global: x4=0x000111a4
+246000000: global: x5=0x000111a8
 246000000: global: x6=0x00000000
 246000000: global: x7=0x000000ff
 246000000: global: x8=0x00000000
@@ -9342,10 +9342,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 254000000: system.cpu.writeback: REGISTERS
 254000000: global: x0=0x00000000
 254000000: global: x1=0x00000002
-254000000: global: x2=0x00011120
-254000000: global: x3=0x00011160
-254000000: global: x4=0x00011198
-254000000: global: x5=0x0001119c
+254000000: global: x2=0x0001112c
+254000000: global: x3=0x0001116c
+254000000: global: x4=0x000111a4
+254000000: global: x5=0x000111a8
 254000000: global: x6=0x00000000
 254000000: global: x7=0x000000ff
 254000000: global: x8=0x00000000
@@ -9415,10 +9415,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 256000000: system.cpu.writeback: REGISTERS
 256000000: global: x0=0x00000000
 256000000: global: x1=0x00000002
-256000000: global: x2=0x00011120
-256000000: global: x3=0x00011160
-256000000: global: x4=0x00011198
-256000000: global: x5=0x0001119c
+256000000: global: x2=0x0001112c
+256000000: global: x3=0x0001116c
+256000000: global: x4=0x000111a4
+256000000: global: x5=0x000111a8
 256000000: global: x6=0x00000000
 256000000: global: x7=0x000000ff
 256000000: global: x8=0x00000000
@@ -9488,10 +9488,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 258000000: system.cpu.writeback: REGISTERS
 258000000: global: x0=0x00000000
 258000000: global: x1=0x00000002
-258000000: global: x2=0x00011120
-258000000: global: x3=0x00011160
-258000000: global: x4=0x00011198
-258000000: global: x5=0x0001119c
+258000000: global: x2=0x0001112c
+258000000: global: x3=0x0001116c
+258000000: global: x4=0x000111a4
+258000000: global: x5=0x000111a8
 258000000: global: x6=0x00000000
 258000000: global: x7=0x000000ff
 258000000: global: x8=0x00000000
@@ -9558,10 +9558,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 259000000: system.cpu.writeback: REGISTERS
 259000000: global: x0=0x00000000
 259000000: global: x1=0x00000002
-259000000: global: x2=0x00011120
-259000000: global: x3=0x00011160
-259000000: global: x4=0x00011198
-259000000: global: x5=0x0001119c
+259000000: global: x2=0x0001112c
+259000000: global: x3=0x0001116c
+259000000: global: x4=0x000111a4
+259000000: global: x5=0x000111a8
 259000000: global: x6=0x00000000
 259000000: global: x7=0x000000ff
 259000000: global: x8=0x00000000
@@ -9628,10 +9628,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 260000000: system.cpu.writeback: REGISTERS
 260000000: global: x0=0x00000000
 260000000: global: x1=0x00000002
-260000000: global: x2=0x00011120
-260000000: global: x3=0x00011160
-260000000: global: x4=0x00011198
-260000000: global: x5=0x0001119c
+260000000: global: x2=0x0001112c
+260000000: global: x3=0x0001116c
+260000000: global: x4=0x000111a4
+260000000: global: x5=0x000111a8
 260000000: global: x6=0x00000000
 260000000: global: x7=0x000000ff
 260000000: global: x8=0x00000000
@@ -9698,10 +9698,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 261000000: system.cpu.writeback: REGISTERS
 261000000: global: x0=0x00000000
 261000000: global: x1=0x00000002
-261000000: global: x2=0x00011120
-261000000: global: x3=0x00011160
-261000000: global: x4=0x00011198
-261000000: global: x5=0x0001119c
+261000000: global: x2=0x0001112c
+261000000: global: x3=0x0001116c
+261000000: global: x4=0x000111a4
+261000000: global: x5=0x000111a8
 261000000: global: x6=0x00000000
 261000000: global: x7=0x000000ff
 261000000: global: x8=0x00000000
@@ -9768,10 +9768,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 262000000: system.cpu.writeback: REGISTERS
 262000000: global: x0=0x00000000
 262000000: global: x1=0x00000001
-262000000: global: x2=0x00011120
-262000000: global: x3=0x00011160
-262000000: global: x4=0x00011198
-262000000: global: x5=0x0001119c
+262000000: global: x2=0x0001112c
+262000000: global: x3=0x0001116c
+262000000: global: x4=0x000111a4
+262000000: global: x5=0x000111a8
 262000000: global: x6=0x00000000
 262000000: global: x7=0x000000ff
 262000000: global: x8=0x00000000
@@ -9838,10 +9838,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 263000000: system.cpu.writeback: REGISTERS
 263000000: global: x0=0x00000000
 263000000: global: x1=0x00000001
-263000000: global: x2=0x0001111c
-263000000: global: x3=0x00011160
-263000000: global: x4=0x00011198
-263000000: global: x5=0x0001119c
+263000000: global: x2=0x00011128
+263000000: global: x3=0x0001116c
+263000000: global: x4=0x000111a4
+263000000: global: x5=0x000111a8
 263000000: global: x6=0x00000000
 263000000: global: x7=0x000000ff
 263000000: global: x8=0x00000000
@@ -9908,10 +9908,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 264000000: system.cpu.writeback: REGISTERS
 264000000: global: x0=0x00000000
 264000000: global: x1=0x00000001
-264000000: global: x2=0x0001111c
-264000000: global: x3=0x0001115c
-264000000: global: x4=0x00011198
-264000000: global: x5=0x0001119c
+264000000: global: x2=0x00011128
+264000000: global: x3=0x00011168
+264000000: global: x4=0x000111a4
+264000000: global: x5=0x000111a8
 264000000: global: x6=0x00000000
 264000000: global: x7=0x000000ff
 264000000: global: x8=0x00000000
@@ -9999,10 +9999,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 272000000: system.cpu.writeback: REGISTERS
 272000000: global: x0=0x00000000
 272000000: global: x1=0x00000001
-272000000: global: x2=0x0001111c
-272000000: global: x3=0x0001115c
-272000000: global: x4=0x00011198
-272000000: global: x5=0x0001119c
+272000000: global: x2=0x00011128
+272000000: global: x3=0x00011168
+272000000: global: x4=0x000111a4
+272000000: global: x5=0x000111a8
 272000000: global: x6=0x00000000
 272000000: global: x7=0x000000ff
 272000000: global: x8=0x00000000
@@ -10072,10 +10072,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 274000000: system.cpu.writeback: REGISTERS
 274000000: global: x0=0x00000000
 274000000: global: x1=0x00000001
-274000000: global: x2=0x0001111c
-274000000: global: x3=0x0001115c
-274000000: global: x4=0x00011198
-274000000: global: x5=0x0001119c
+274000000: global: x2=0x00011128
+274000000: global: x3=0x00011168
+274000000: global: x4=0x000111a4
+274000000: global: x5=0x000111a8
 274000000: global: x6=0x00000000
 274000000: global: x7=0x000000ff
 274000000: global: x8=0x00000000
@@ -10145,10 +10145,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 276000000: system.cpu.writeback: REGISTERS
 276000000: global: x0=0x00000000
 276000000: global: x1=0x00000001
-276000000: global: x2=0x0001111c
-276000000: global: x3=0x0001115c
-276000000: global: x4=0x00011198
-276000000: global: x5=0x0001119c
+276000000: global: x2=0x00011128
+276000000: global: x3=0x00011168
+276000000: global: x4=0x000111a4
+276000000: global: x5=0x000111a8
 276000000: global: x6=0x00000000
 276000000: global: x7=0x000000ff
 276000000: global: x8=0x00000000
@@ -10215,10 +10215,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 277000000: system.cpu.writeback: REGISTERS
 277000000: global: x0=0x00000000
 277000000: global: x1=0x00000001
-277000000: global: x2=0x0001111c
-277000000: global: x3=0x0001115c
-277000000: global: x4=0x00011198
-277000000: global: x5=0x0001119c
+277000000: global: x2=0x00011128
+277000000: global: x3=0x00011168
+277000000: global: x4=0x000111a4
+277000000: global: x5=0x000111a8
 277000000: global: x6=0x00000000
 277000000: global: x7=0x000000ff
 277000000: global: x8=0x00000000
@@ -10285,10 +10285,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 278000000: system.cpu.writeback: REGISTERS
 278000000: global: x0=0x00000000
 278000000: global: x1=0x00000001
-278000000: global: x2=0x0001111c
-278000000: global: x3=0x0001115c
-278000000: global: x4=0x00011198
-278000000: global: x5=0x0001119c
+278000000: global: x2=0x00011128
+278000000: global: x3=0x00011168
+278000000: global: x4=0x000111a4
+278000000: global: x5=0x000111a8
 278000000: global: x6=0x00000000
 278000000: global: x7=0x000000ff
 278000000: global: x8=0x00000000
@@ -10355,10 +10355,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 279000000: system.cpu.writeback: REGISTERS
 279000000: global: x0=0x00000000
 279000000: global: x1=0x00000001
-279000000: global: x2=0x0001111c
-279000000: global: x3=0x0001115c
-279000000: global: x4=0x00011198
-279000000: global: x5=0x0001119c
+279000000: global: x2=0x00011128
+279000000: global: x3=0x00011168
+279000000: global: x4=0x000111a4
+279000000: global: x5=0x000111a8
 279000000: global: x6=0x00000000
 279000000: global: x7=0x000000ff
 279000000: global: x8=0x00000000
@@ -10425,10 +10425,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 280000000: system.cpu.writeback: REGISTERS
 280000000: global: x0=0x00000000
 280000000: global: x1=0x00000000
-280000000: global: x2=0x0001111c
-280000000: global: x3=0x0001115c
-280000000: global: x4=0x00011198
-280000000: global: x5=0x0001119c
+280000000: global: x2=0x00011128
+280000000: global: x3=0x00011168
+280000000: global: x4=0x000111a4
+280000000: global: x5=0x000111a8
 280000000: global: x6=0x00000000
 280000000: global: x7=0x000000ff
 280000000: global: x8=0x00000000
@@ -10495,10 +10495,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 281000000: system.cpu.writeback: REGISTERS
 281000000: global: x0=0x00000000
 281000000: global: x1=0x00000000
-281000000: global: x2=0x00011118
-281000000: global: x3=0x0001115c
-281000000: global: x4=0x00011198
-281000000: global: x5=0x0001119c
+281000000: global: x2=0x00011124
+281000000: global: x3=0x00011168
+281000000: global: x4=0x000111a4
+281000000: global: x5=0x000111a8
 281000000: global: x6=0x00000000
 281000000: global: x7=0x000000ff
 281000000: global: x8=0x00000000
@@ -10565,10 +10565,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 282000000: system.cpu.writeback: REGISTERS
 282000000: global: x0=0x00000000
 282000000: global: x1=0x00000000
-282000000: global: x2=0x00011118
-282000000: global: x3=0x00011158
-282000000: global: x4=0x00011198
-282000000: global: x5=0x0001119c
+282000000: global: x2=0x00011124
+282000000: global: x3=0x00011164
+282000000: global: x4=0x000111a4
+282000000: global: x5=0x000111a8
 282000000: global: x6=0x00000000
 282000000: global: x7=0x000000ff
 282000000: global: x8=0x00000000
@@ -10656,10 +10656,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 290000000: system.cpu.writeback: REGISTERS
 290000000: global: x0=0x00000000
 290000000: global: x1=0x00000000
-290000000: global: x2=0x00011118
-290000000: global: x3=0x00011158
-290000000: global: x4=0x00011198
-290000000: global: x5=0x0001119c
+290000000: global: x2=0x00011124
+290000000: global: x3=0x00011164
+290000000: global: x4=0x000111a4
+290000000: global: x5=0x000111a8
 290000000: global: x6=0x00000000
 290000000: global: x7=0x000000ff
 290000000: global: x8=0x00000000
@@ -10729,10 +10729,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 292000000: system.cpu.writeback: REGISTERS
 292000000: global: x0=0x00000000
 292000000: global: x1=0x00000000
-292000000: global: x2=0x00011118
-292000000: global: x3=0x00011158
-292000000: global: x4=0x00011198
-292000000: global: x5=0x0001119c
+292000000: global: x2=0x00011124
+292000000: global: x3=0x00011164
+292000000: global: x4=0x000111a4
+292000000: global: x5=0x000111a8
 292000000: global: x6=0x00000000
 292000000: global: x7=0x000000ff
 292000000: global: x8=0x00000000
@@ -10802,10 +10802,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 294000000: system.cpu.writeback: REGISTERS
 294000000: global: x0=0x00000000
 294000000: global: x1=0x00000000
-294000000: global: x2=0x00011118
-294000000: global: x3=0x00011158
-294000000: global: x4=0x00011198
-294000000: global: x5=0x0001119c
+294000000: global: x2=0x00011124
+294000000: global: x3=0x00011164
+294000000: global: x4=0x000111a4
+294000000: global: x5=0x000111a8
 294000000: global: x6=0x00000000
 294000000: global: x7=0x000000ff
 294000000: global: x8=0x00000000
@@ -10872,10 +10872,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 295000000: system.cpu.writeback: REGISTERS
 295000000: global: x0=0x00000000
 295000000: global: x1=0x00000000
-295000000: global: x2=0x00011118
-295000000: global: x3=0x00011158
-295000000: global: x4=0x00011198
-295000000: global: x5=0x0001119c
+295000000: global: x2=0x00011124
+295000000: global: x3=0x00011164
+295000000: global: x4=0x000111a4
+295000000: global: x5=0x000111a8
 295000000: global: x6=0x00000000
 295000000: global: x7=0x000000ff
 295000000: global: x8=0x00000000
@@ -10942,10 +10942,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 296000000: system.cpu.writeback: REGISTERS
 296000000: global: x0=0x00000000
 296000000: global: x1=0x00000000
-296000000: global: x2=0x00011118
-296000000: global: x3=0x00011158
-296000000: global: x4=0x00011198
-296000000: global: x5=0x0001119c
+296000000: global: x2=0x00011124
+296000000: global: x3=0x00011164
+296000000: global: x4=0x000111a4
+296000000: global: x5=0x000111a8
 296000000: global: x6=0x00000000
 296000000: global: x7=0x000000ff
 296000000: global: x8=0x00000000
@@ -11012,10 +11012,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 297000000: system.cpu.writeback: REGISTERS
 297000000: global: x0=0x00000000
 297000000: global: x1=0x00000000
-297000000: global: x2=0x00011118
-297000000: global: x3=0x00011158
-297000000: global: x4=0x00011198
-297000000: global: x5=0x0001119c
+297000000: global: x2=0x00011124
+297000000: global: x3=0x00011164
+297000000: global: x4=0x000111a4
+297000000: global: x5=0x000111a8
 297000000: global: x6=0x00000000
 297000000: global: x7=0x000000ff
 297000000: global: x8=0x00000000
@@ -11082,10 +11082,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 298000000: system.cpu.writeback: REGISTERS
 298000000: global: x0=0x00000000
 298000000: global: x1=0xffffffff
-298000000: global: x2=0x00011118
-298000000: global: x3=0x00011158
-298000000: global: x4=0x00011198
-298000000: global: x5=0x0001119c
+298000000: global: x2=0x00011124
+298000000: global: x3=0x00011164
+298000000: global: x4=0x000111a4
+298000000: global: x5=0x000111a8
 298000000: global: x6=0x00000000
 298000000: global: x7=0x000000ff
 298000000: global: x8=0x00000000
@@ -11152,10 +11152,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 299000000: system.cpu.writeback: REGISTERS
 299000000: global: x0=0x00000000
 299000000: global: x1=0xffffffff
-299000000: global: x2=0x00011114
-299000000: global: x3=0x00011158
-299000000: global: x4=0x00011198
-299000000: global: x5=0x0001119c
+299000000: global: x2=0x00011120
+299000000: global: x3=0x00011164
+299000000: global: x4=0x000111a4
+299000000: global: x5=0x000111a8
 299000000: global: x6=0x00000000
 299000000: global: x7=0x000000ff
 299000000: global: x8=0x00000000
@@ -11222,10 +11222,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 300000000: system.cpu.writeback: REGISTERS
 300000000: global: x0=0x00000000
 300000000: global: x1=0xffffffff
-300000000: global: x2=0x00011114
-300000000: global: x3=0x00011154
-300000000: global: x4=0x00011198
-300000000: global: x5=0x0001119c
+300000000: global: x2=0x00011120
+300000000: global: x3=0x00011160
+300000000: global: x4=0x000111a4
+300000000: global: x5=0x000111a8
 300000000: global: x6=0x00000000
 300000000: global: x7=0x000000ff
 300000000: global: x8=0x00000000
@@ -11313,10 +11313,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 308000000: system.cpu.writeback: REGISTERS
 308000000: global: x0=0x00000000
 308000000: global: x1=0xffffffff
-308000000: global: x2=0x00011114
-308000000: global: x3=0x00011154
-308000000: global: x4=0x00011198
-308000000: global: x5=0x0001119c
+308000000: global: x2=0x00011120
+308000000: global: x3=0x00011160
+308000000: global: x4=0x000111a4
+308000000: global: x5=0x000111a8
 308000000: global: x6=0x00000000
 308000000: global: x7=0x000000ff
 308000000: global: x8=0x00000000
@@ -11386,10 +11386,10 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 310000000: system.cpu.writeback: REGISTERS
 310000000: global: x0=0x00000000
 310000000: global: x1=0xffffffff
-310000000: global: x2=0x00011114
-310000000: global: x3=0x00011154
-310000000: global: x4=0x00011198
-310000000: global: x5=0x0001119c
+310000000: global: x2=0x00011120
+310000000: global: x3=0x00011160
+310000000: global: x4=0x000111a4
+310000000: global: x5=0x000111a8
 310000000: global: x6=0x00000000
 310000000: global: x7=0x000000ff
 310000000: global: x8=0x00000000
@@ -11452,16 +11452,16 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 310000000: system.cpu.execute: Log4GUI: execute: 310000000: 0: 100e8: fadd_s f0, f0, f3: 3
 310000000: system.cpu.fetch1: Log4GUI: fetch1: 310000000: 0: 100f0: <assembly>
 311000000: system.cpu.memory: Log4GUI: memory: 311000000: 0: 100e8: fadd_s f0, f0, f3
-311000000: system.cpu.decode: Log4GUI: decode: 311000000: 0: 100f0: flw f4, 0(x4)
+311000000: system.cpu.decode: Log4GUI: decode: 311000000: 0: 100f0: addi x8, x0, 0
 311000000: system.cpu.fetch1: Log4GUI: fetch1: 311000000: 0: 100f4: <assembly>
 312000000: system.cpu.writeback: Log4GUI: writeback: 312000000: 0: 100e8: fadd_s f0, f0, f3
 312000000: system.cpu.writeback: REGISTERS
 312000000: global: x0=0x00000000
 312000000: global: x1=0xffffffff
-312000000: global: x2=0x00011114
-312000000: global: x3=0x00011154
-312000000: global: x4=0x00011198
-312000000: global: x5=0x0001119c
+312000000: global: x2=0x00011120
+312000000: global: x3=0x00011160
+312000000: global: x4=0x000111a4
+312000000: global: x5=0x000111a8
 312000000: global: x6=0x00000000
 312000000: global: x7=0x000000ff
 312000000: global: x8=0x00000000
@@ -11521,17 +11521,17 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 312000000: global: f30=0x00000000
 312000000: global: f31=0x00000000
 312000000: system.cpu.memory: Log4GUI: memory: 312000000: 0: 100cc: blt x1, x0, 36
-312000000: system.cpu.execute: Log4GUI: execute: 312000000: 0: 100f0: flw f4, 0(x4): 0
-312000000: system.cpu.decode: Log4GUI: decode: 312000000: 0: 100f4: fadd_s f0, f0, f4
+312000000: system.cpu.execute: Log4GUI: execute: 312000000: 0: 100f0: addi x8, x0, 0: 0
+312000000: system.cpu.decode: Log4GUI: decode: 312000000: 0: 100f4: lw x8, 0(x4)
 312000000: system.cpu.fetch1: Log4GUI: fetch1: 312000000: 0: 100f8: <assembly>
 313000000: system.cpu.writeback: Log4GUI: writeback: 313000000: 0: 100cc: blt x1, x0, 36
 313000000: system.cpu.writeback: REGISTERS
 313000000: global: x0=0x00000000
 313000000: global: x1=0xffffffff
-313000000: global: x2=0x00011114
-313000000: global: x3=0x00011154
-313000000: global: x4=0x00011198
-313000000: global: x5=0x0001119c
+313000000: global: x2=0x00011120
+313000000: global: x3=0x00011160
+313000000: global: x4=0x000111a4
+313000000: global: x5=0x000111a8
 313000000: global: x6=0x00000000
 313000000: global: x7=0x000000ff
 313000000: global: x8=0x00000000
@@ -11590,17 +11590,18 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 313000000: global: f29=0x00000000
 313000000: global: f30=0x00000000
 313000000: global: f31=0x00000000
-313000000: system.cpu.memory: Log4GUI: memory: 313000000: 0: 100f0: flw f4, 0(x4)
-313000000: system.cpu.decode: Log4GUI: decode: 313000000: 1: 100f4: fadd_s f0, f0, f4
-313000000: system.cpu.fetch1: Log4GUI: fetch1: 313000000: 1: 100f8: <assembly>
-314000000: system.cpu.writeback: Log4GUI: writeback: 314000000: 0: 100f0: flw f4, 0(x4)
+313000000: system.cpu.memory: Log4GUI: memory: 313000000: 0: 100f0: addi x8, x0, 0
+313000000: system.cpu.execute: Log4GUI: execute: 313000000: 0: 100f4: lw x8, 0(x4): 0
+313000000: system.cpu.decode: Log4GUI: decode: 313000000: 0: 100f8: fcvt_s_w f4, x8
+313000000: system.cpu.fetch1: Log4GUI: fetch1: 313000000: 0: 100fc: <assembly>
+314000000: system.cpu.writeback: Log4GUI: writeback: 314000000: 0: 100f0: addi x8, x0, 0
 314000000: system.cpu.writeback: REGISTERS
 314000000: global: x0=0x00000000
 314000000: global: x1=0xffffffff
-314000000: global: x2=0x00011114
-314000000: global: x3=0x00011154
-314000000: global: x4=0x00011198
-314000000: global: x5=0x0001119c
+314000000: global: x2=0x00011120
+314000000: global: x3=0x00011160
+314000000: global: x4=0x000111a4
+314000000: global: x5=0x000111a8
 314000000: global: x6=0x00000000
 314000000: global: x7=0x000000ff
 314000000: global: x8=0x00000000
@@ -11631,7 +11632,7 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 314000000: global: f1=0x3f800000
 314000000: global: f2=0x3f800000
 314000000: global: f3=0x3f800000
-314000000: global: f4=0x000000ab
+314000000: global: f4=0x00000000
 314000000: global: f5=0x00000000
 314000000: global: f6=0x00000000
 314000000: global: f7=0x00000000
@@ -11659,181 +11660,181 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 314000000: global: f29=0x00000000
 314000000: global: f30=0x00000000
 314000000: global: f31=0x00000000
-314000000: system.cpu.execute: Log4GUI: execute: 314000000: 0: 100f4: fadd_s f0, f0, f4: 3
-314000000: system.cpu.decode: Log4GUI: decode: 314000000: 0: 100f8: fmv_x_w x6, f0
-314000000: system.cpu.fetch1: Log4GUI: fetch1: 314000000: 0: 100fc: <assembly>
-315000000: system.cpu.execute: Log4GUI: execute: 315000000: 0: 100f4: fadd_s f0, f0, f4: 3
-315000000: system.cpu.decode: Log4GUI: decode: 315000000: 1: 100f8: fmv_x_w x6, f0
-315000000: system.cpu.fetch1: Log4GUI: fetch1: 315000000: 1: 100fc: <assembly>
-316000000: system.cpu.execute: Log4GUI: execute: 316000000: 0: 100f4: fadd_s f0, f0, f4: 3
-316000000: system.cpu.decode: Log4GUI: decode: 316000000: 1: 100f8: fmv_x_w x6, f0
-316000000: system.cpu.fetch1: Log4GUI: fetch1: 316000000: 1: 100fc: <assembly>
-317000000: system.cpu.execute: Log4GUI: execute: 317000000: 0: 100f4: fadd_s f0, f0, f4: 3
-317000000: system.cpu.decode: Log4GUI: decode: 317000000: 1: 100f8: fmv_x_w x6, f0
-317000000: system.cpu.fetch1: Log4GUI: fetch1: 317000000: 1: 100fc: <assembly>
-318000000: system.cpu.memory: Log4GUI: memory: 318000000: 0: 100f4: fadd_s f0, f0, f4
-318000000: system.cpu.execute: Log4GUI: execute: 318000000: 0: 100f8: fmv_x_w x6, f0: 3
-318000000: system.cpu.decode: Log4GUI: decode: 318000000: 0: 100fc: srli x6, x6, 23
-318000000: system.cpu.fetch1: Log4GUI: fetch1: 318000000: 0: 10100: <assembly>
-319000000: system.cpu.writeback: Log4GUI: writeback: 319000000: 0: 100f4: fadd_s f0, f0, f4
-319000000: system.cpu.writeback: REGISTERS
-319000000: global: x0=0x00000000
-319000000: global: x1=0xffffffff
-319000000: global: x2=0x00011114
-319000000: global: x3=0x00011154
-319000000: global: x4=0x00011198
-319000000: global: x5=0x0001119c
-319000000: global: x6=0x00000000
-319000000: global: x7=0x000000ff
-319000000: global: x8=0x00000000
-319000000: global: x9=0x00000000
-319000000: global: x10=0x00000000
-319000000: global: x11=0x00000000
-319000000: global: x12=0x00000000
-319000000: global: x13=0x00000000
-319000000: global: x14=0x00000000
-319000000: global: x15=0x00000000
-319000000: global: x16=0x00000000
-319000000: global: x17=0x00000000
-319000000: global: x18=0x00000000
-319000000: global: x19=0x00000000
-319000000: global: x20=0x00000000
-319000000: global: x21=0x00000000
-319000000: global: x22=0x00000000
-319000000: global: x23=0x00000000
-319000000: global: x24=0x00000000
-319000000: global: x25=0x00000000
-319000000: global: x26=0x00000000
-319000000: global: x27=0x00000000
-319000000: global: x28=0x00000000
-319000000: global: x29=0x00000000
-319000000: global: x30=0x00000000
-319000000: global: x31=0x00000000
-319000000: global: f0=0x44bb0000
-319000000: global: f1=0x3f800000
-319000000: global: f2=0x3f800000
-319000000: global: f3=0x3f800000
-319000000: global: f4=0x000000ab
-319000000: global: f5=0x00000000
-319000000: global: f6=0x00000000
-319000000: global: f7=0x00000000
-319000000: global: f8=0x00000000
-319000000: global: f9=0x00000000
-319000000: global: f10=0x00000000
-319000000: global: f11=0x00000000
-319000000: global: f12=0x00000000
-319000000: global: f13=0x00000000
-319000000: global: f14=0x00000000
-319000000: global: f15=0x00000000
-319000000: global: f16=0x00000000
-319000000: global: f17=0x00000000
-319000000: global: f18=0x00000000
-319000000: global: f19=0x00000000
-319000000: global: f20=0x00000000
-319000000: global: f21=0x00000000
-319000000: global: f22=0x00000000
-319000000: global: f23=0x00000000
-319000000: global: f24=0x00000000
-319000000: global: f25=0x00000000
-319000000: global: f26=0x00000000
-319000000: global: f27=0x00000000
-319000000: global: f28=0x00000000
-319000000: global: f29=0x00000000
-319000000: global: f30=0x00000000
-319000000: global: f31=0x00000000
-319000000: system.cpu.execute: Log4GUI: execute: 319000000: 0: 100f8: fmv_x_w x6, f0: 3
-319000000: system.cpu.decode: Log4GUI: decode: 319000000: 1: 100fc: srli x6, x6, 23
-319000000: system.cpu.fetch1: Log4GUI: fetch1: 319000000: 1: 10100: <assembly>
-320000000: system.cpu.execute: Log4GUI: execute: 320000000: 0: 100f8: fmv_x_w x6, f0: 3
-320000000: system.cpu.decode: Log4GUI: decode: 320000000: 1: 100fc: srli x6, x6, 23
-320000000: system.cpu.fetch1: Log4GUI: fetch1: 320000000: 1: 10100: <assembly>
-321000000: system.cpu.execute: Log4GUI: execute: 321000000: 0: 100f8: fmv_x_w x6, f0: 3
-321000000: system.cpu.decode: Log4GUI: decode: 321000000: 1: 100fc: srli x6, x6, 23
-321000000: system.cpu.fetch1: Log4GUI: fetch1: 321000000: 1: 10100: <assembly>
-322000000: system.cpu.memory: Log4GUI: memory: 322000000: 0: 100f8: fmv_x_w x6, f0
-322000000: system.cpu.execute: Log4GUI: execute: 322000000: 0: 100fc: srli x6, x6, 23: 0
-322000000: system.cpu.decode: Log4GUI: decode: 322000000: 0: 10100: beq x6, x7, 8
-322000000: system.cpu.fetch1: Log4GUI: fetch1: 322000000: 0: 10104: <assembly>
-323000000: system.cpu.writeback: Log4GUI: writeback: 323000000: 0: 100f8: fmv_x_w x6, f0
-323000000: system.cpu.writeback: REGISTERS
-323000000: global: x0=0x00000000
-323000000: global: x1=0xffffffff
-323000000: global: x2=0x00011114
-323000000: global: x3=0x00011154
-323000000: global: x4=0x00011198
-323000000: global: x5=0x0001119c
-323000000: global: x6=0x44bb0000
-323000000: global: x7=0x000000ff
-323000000: global: x8=0x00000000
-323000000: global: x9=0x00000000
-323000000: global: x10=0x00000000
-323000000: global: x11=0x00000000
-323000000: global: x12=0x00000000
-323000000: global: x13=0x00000000
-323000000: global: x14=0x00000000
-323000000: global: x15=0x00000000
-323000000: global: x16=0x00000000
-323000000: global: x17=0x00000000
-323000000: global: x18=0x00000000
-323000000: global: x19=0x00000000
-323000000: global: x20=0x00000000
-323000000: global: x21=0x00000000
-323000000: global: x22=0x00000000
-323000000: global: x23=0x00000000
-323000000: global: x24=0x00000000
-323000000: global: x25=0x00000000
-323000000: global: x26=0x00000000
-323000000: global: x27=0x00000000
-323000000: global: x28=0x00000000
-323000000: global: x29=0x00000000
-323000000: global: x30=0x00000000
-323000000: global: x31=0x00000000
-323000000: global: f0=0x44bb0000
-323000000: global: f1=0x3f800000
-323000000: global: f2=0x3f800000
-323000000: global: f3=0x3f800000
-323000000: global: f4=0x000000ab
-323000000: global: f5=0x00000000
-323000000: global: f6=0x00000000
-323000000: global: f7=0x00000000
-323000000: global: f8=0x00000000
-323000000: global: f9=0x00000000
-323000000: global: f10=0x00000000
-323000000: global: f11=0x00000000
-323000000: global: f12=0x00000000
-323000000: global: f13=0x00000000
-323000000: global: f14=0x00000000
-323000000: global: f15=0x00000000
-323000000: global: f16=0x00000000
-323000000: global: f17=0x00000000
-323000000: global: f18=0x00000000
-323000000: global: f19=0x00000000
-323000000: global: f20=0x00000000
-323000000: global: f21=0x00000000
-323000000: global: f22=0x00000000
-323000000: global: f23=0x00000000
-323000000: global: f24=0x00000000
-323000000: global: f25=0x00000000
-323000000: global: f26=0x00000000
-323000000: global: f27=0x00000000
-323000000: global: f28=0x00000000
-323000000: global: f29=0x00000000
-323000000: global: f30=0x00000000
-323000000: global: f31=0x00000000
-323000000: system.cpu.memory: Log4GUI: memory: 323000000: 0: 100fc: srli x6, x6, 23
-323000000: system.cpu.decode: Log4GUI: decode: 323000000: 1: 10100: beq x6, x7, 8
-323000000: system.cpu.fetch1: Log4GUI: fetch1: 323000000: 1: 10104: <assembly>
-324000000: system.cpu.writeback: Log4GUI: writeback: 324000000: 0: 100fc: srli x6, x6, 23
+314000000: system.cpu.memory: Log4GUI: memory: 314000000: 0: 100f4: lw x8, 0(x4)
+314000000: system.cpu.decode: Log4GUI: decode: 314000000: 1: 100f8: fcvt_s_w f4, x8
+314000000: system.cpu.fetch1: Log4GUI: fetch1: 314000000: 1: 100fc: <assembly>
+315000000: system.cpu.writeback: Log4GUI: writeback: 315000000: 0: 100f4: lw x8, 0(x4)
+315000000: system.cpu.writeback: REGISTERS
+315000000: global: x0=0x00000000
+315000000: global: x1=0xffffffff
+315000000: global: x2=0x00011120
+315000000: global: x3=0x00011160
+315000000: global: x4=0x000111a4
+315000000: global: x5=0x000111a8
+315000000: global: x6=0x00000000
+315000000: global: x7=0x000000ff
+315000000: global: x8=0x000000ab
+315000000: global: x9=0x00000000
+315000000: global: x10=0x00000000
+315000000: global: x11=0x00000000
+315000000: global: x12=0x00000000
+315000000: global: x13=0x00000000
+315000000: global: x14=0x00000000
+315000000: global: x15=0x00000000
+315000000: global: x16=0x00000000
+315000000: global: x17=0x00000000
+315000000: global: x18=0x00000000
+315000000: global: x19=0x00000000
+315000000: global: x20=0x00000000
+315000000: global: x21=0x00000000
+315000000: global: x22=0x00000000
+315000000: global: x23=0x00000000
+315000000: global: x24=0x00000000
+315000000: global: x25=0x00000000
+315000000: global: x26=0x00000000
+315000000: global: x27=0x00000000
+315000000: global: x28=0x00000000
+315000000: global: x29=0x00000000
+315000000: global: x30=0x00000000
+315000000: global: x31=0x00000000
+315000000: global: f0=0x44bb0000
+315000000: global: f1=0x3f800000
+315000000: global: f2=0x3f800000
+315000000: global: f3=0x3f800000
+315000000: global: f4=0x00000000
+315000000: global: f5=0x00000000
+315000000: global: f6=0x00000000
+315000000: global: f7=0x00000000
+315000000: global: f8=0x00000000
+315000000: global: f9=0x00000000
+315000000: global: f10=0x00000000
+315000000: global: f11=0x00000000
+315000000: global: f12=0x00000000
+315000000: global: f13=0x00000000
+315000000: global: f14=0x00000000
+315000000: global: f15=0x00000000
+315000000: global: f16=0x00000000
+315000000: global: f17=0x00000000
+315000000: global: f18=0x00000000
+315000000: global: f19=0x00000000
+315000000: global: f20=0x00000000
+315000000: global: f21=0x00000000
+315000000: global: f22=0x00000000
+315000000: global: f23=0x00000000
+315000000: global: f24=0x00000000
+315000000: global: f25=0x00000000
+315000000: global: f26=0x00000000
+315000000: global: f27=0x00000000
+315000000: global: f28=0x00000000
+315000000: global: f29=0x00000000
+315000000: global: f30=0x00000000
+315000000: global: f31=0x00000000
+315000000: system.cpu.execute: Log4GUI: execute: 315000000: 0: 100f8: fcvt_s_w f4, x8: 3
+315000000: system.cpu.decode: Log4GUI: decode: 315000000: 0: 100fc: fadd_s f0, f0, f4
+315000000: system.cpu.fetch1: Log4GUI: fetch1: 315000000: 0: 10100: <assembly>
+316000000: system.cpu.execute: Log4GUI: execute: 316000000: 0: 100f8: fcvt_s_w f4, x8: 3
+316000000: system.cpu.decode: Log4GUI: decode: 316000000: 1: 100fc: fadd_s f0, f0, f4
+316000000: system.cpu.fetch1: Log4GUI: fetch1: 316000000: 1: 10100: <assembly>
+317000000: system.cpu.execute: Log4GUI: execute: 317000000: 0: 100f8: fcvt_s_w f4, x8: 3
+317000000: system.cpu.decode: Log4GUI: decode: 317000000: 1: 100fc: fadd_s f0, f0, f4
+317000000: system.cpu.fetch1: Log4GUI: fetch1: 317000000: 1: 10100: <assembly>
+318000000: system.cpu.execute: Log4GUI: execute: 318000000: 0: 100f8: fcvt_s_w f4, x8: 3
+318000000: system.cpu.decode: Log4GUI: decode: 318000000: 1: 100fc: fadd_s f0, f0, f4
+318000000: system.cpu.fetch1: Log4GUI: fetch1: 318000000: 1: 10100: <assembly>
+319000000: system.cpu.memory: Log4GUI: memory: 319000000: 0: 100f8: fcvt_s_w f4, x8
+319000000: system.cpu.execute: Log4GUI: execute: 319000000: 0: 100fc: fadd_s f0, f0, f4: 3
+319000000: system.cpu.decode: Log4GUI: decode: 319000000: 0: 10100: fmv_x_w x6, f0
+319000000: system.cpu.fetch1: Log4GUI: fetch1: 319000000: 0: 10104: <assembly>
+320000000: system.cpu.writeback: Log4GUI: writeback: 320000000: 0: 100f8: fcvt_s_w f4, x8
+320000000: system.cpu.writeback: REGISTERS
+320000000: global: x0=0x00000000
+320000000: global: x1=0xffffffff
+320000000: global: x2=0x00011120
+320000000: global: x3=0x00011160
+320000000: global: x4=0x000111a4
+320000000: global: x5=0x000111a8
+320000000: global: x6=0x00000000
+320000000: global: x7=0x000000ff
+320000000: global: x8=0x000000ab
+320000000: global: x9=0x00000000
+320000000: global: x10=0x00000000
+320000000: global: x11=0x00000000
+320000000: global: x12=0x00000000
+320000000: global: x13=0x00000000
+320000000: global: x14=0x00000000
+320000000: global: x15=0x00000000
+320000000: global: x16=0x00000000
+320000000: global: x17=0x00000000
+320000000: global: x18=0x00000000
+320000000: global: x19=0x00000000
+320000000: global: x20=0x00000000
+320000000: global: x21=0x00000000
+320000000: global: x22=0x00000000
+320000000: global: x23=0x00000000
+320000000: global: x24=0x00000000
+320000000: global: x25=0x00000000
+320000000: global: x26=0x00000000
+320000000: global: x27=0x00000000
+320000000: global: x28=0x00000000
+320000000: global: x29=0x00000000
+320000000: global: x30=0x00000000
+320000000: global: x31=0x00000000
+320000000: global: f0=0x44bb0000
+320000000: global: f1=0x3f800000
+320000000: global: f2=0x3f800000
+320000000: global: f3=0x3f800000
+320000000: global: f4=0x432b0000
+320000000: global: f5=0x00000000
+320000000: global: f6=0x00000000
+320000000: global: f7=0x00000000
+320000000: global: f8=0x00000000
+320000000: global: f9=0x00000000
+320000000: global: f10=0x00000000
+320000000: global: f11=0x00000000
+320000000: global: f12=0x00000000
+320000000: global: f13=0x00000000
+320000000: global: f14=0x00000000
+320000000: global: f15=0x00000000
+320000000: global: f16=0x00000000
+320000000: global: f17=0x00000000
+320000000: global: f18=0x00000000
+320000000: global: f19=0x00000000
+320000000: global: f20=0x00000000
+320000000: global: f21=0x00000000
+320000000: global: f22=0x00000000
+320000000: global: f23=0x00000000
+320000000: global: f24=0x00000000
+320000000: global: f25=0x00000000
+320000000: global: f26=0x00000000
+320000000: global: f27=0x00000000
+320000000: global: f28=0x00000000
+320000000: global: f29=0x00000000
+320000000: global: f30=0x00000000
+320000000: global: f31=0x00000000
+320000000: system.cpu.execute: Log4GUI: execute: 320000000: 0: 100fc: fadd_s f0, f0, f4: 3
+320000000: system.cpu.decode: Log4GUI: decode: 320000000: 1: 10100: fmv_x_w x6, f0
+320000000: system.cpu.fetch1: Log4GUI: fetch1: 320000000: 1: 10104: <assembly>
+321000000: system.cpu.execute: Log4GUI: execute: 321000000: 0: 100fc: fadd_s f0, f0, f4: 3
+321000000: system.cpu.decode: Log4GUI: decode: 321000000: 1: 10100: fmv_x_w x6, f0
+321000000: system.cpu.fetch1: Log4GUI: fetch1: 321000000: 1: 10104: <assembly>
+322000000: system.cpu.execute: Log4GUI: execute: 322000000: 0: 100fc: fadd_s f0, f0, f4: 3
+322000000: system.cpu.decode: Log4GUI: decode: 322000000: 1: 10100: fmv_x_w x6, f0
+322000000: system.cpu.fetch1: Log4GUI: fetch1: 322000000: 1: 10104: <assembly>
+323000000: system.cpu.memory: Log4GUI: memory: 323000000: 0: 100fc: fadd_s f0, f0, f4
+323000000: system.cpu.execute: Log4GUI: execute: 323000000: 0: 10100: fmv_x_w x6, f0: 3
+323000000: system.cpu.decode: Log4GUI: decode: 323000000: 0: 10104: srli x6, x6, 23
+323000000: system.cpu.fetch1: Log4GUI: fetch1: 323000000: 0: 10108: <assembly>
+324000000: system.cpu.writeback: Log4GUI: writeback: 324000000: 0: 100fc: fadd_s f0, f0, f4
 324000000: system.cpu.writeback: REGISTERS
 324000000: global: x0=0x00000000
 324000000: global: x1=0xffffffff
-324000000: global: x2=0x00011114
-324000000: global: x3=0x00011154
-324000000: global: x4=0x00011198
-324000000: global: x5=0x0001119c
-324000000: global: x6=0x00000089
+324000000: global: x2=0x00011120
+324000000: global: x3=0x00011160
+324000000: global: x4=0x000111a4
+324000000: global: x5=0x000111a8
+324000000: global: x6=0x00000000
 324000000: global: x7=0x000000ff
-324000000: global: x8=0x00000000
+324000000: global: x8=0x000000ab
 324000000: global: x9=0x00000000
 324000000: global: x10=0x00000000
 324000000: global: x11=0x00000000
@@ -11857,11 +11858,11 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 324000000: global: x29=0x00000000
 324000000: global: x30=0x00000000
 324000000: global: x31=0x00000000
-324000000: global: f0=0x44bb0000
+324000000: global: f0=0x44d06000
 324000000: global: f1=0x3f800000
 324000000: global: f2=0x3f800000
 324000000: global: f3=0x3f800000
-324000000: global: f4=0x000000ab
+324000000: global: f4=0x432b0000
 324000000: global: f5=0x00000000
 324000000: global: f6=0x00000000
 324000000: global: f7=0x00000000
@@ -11889,165 +11890,99 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 324000000: global: f29=0x00000000
 324000000: global: f30=0x00000000
 324000000: global: f31=0x00000000
-324000000: system.cpu.execute: Log4GUI: execute: 324000000: 0: 10100: beq x6, x7, 8: 0
-324000000: system.cpu.decode: Log4GUI: decode: 324000000: 0: 10104: jal x0, 8
-324000000: system.cpu.fetch1: Log4GUI: fetch1: 324000000: 0: 10108: <assembly>
-325000000: system.cpu.memory: Log4GUI: memory: 325000000: 0: 10100: beq x6, x7, 8
-325000000: system.cpu.execute: Log4GUI: execute: 325000000: 0: 10104: jal x0, 8: 0
-325000000: system.cpu.fetch1: Log4GUI: fetch1: 325000000: 0: 1010c: <assembly>
-326000000: system.cpu.writeback: Log4GUI: writeback: 326000000: 0: 10100: beq x6, x7, 8
-326000000: system.cpu.writeback: REGISTERS
-326000000: global: x0=0x00000000
-326000000: global: x1=0xffffffff
-326000000: global: x2=0x00011114
-326000000: global: x3=0x00011154
-326000000: global: x4=0x00011198
-326000000: global: x5=0x0001119c
-326000000: global: x6=0x00000089
-326000000: global: x7=0x000000ff
-326000000: global: x8=0x00000000
-326000000: global: x9=0x00000000
-326000000: global: x10=0x00000000
-326000000: global: x11=0x00000000
-326000000: global: x12=0x00000000
-326000000: global: x13=0x00000000
-326000000: global: x14=0x00000000
-326000000: global: x15=0x00000000
-326000000: global: x16=0x00000000
-326000000: global: x17=0x00000000
-326000000: global: x18=0x00000000
-326000000: global: x19=0x00000000
-326000000: global: x20=0x00000000
-326000000: global: x21=0x00000000
-326000000: global: x22=0x00000000
-326000000: global: x23=0x00000000
-326000000: global: x24=0x00000000
-326000000: global: x25=0x00000000
-326000000: global: x26=0x00000000
-326000000: global: x27=0x00000000
-326000000: global: x28=0x00000000
-326000000: global: x29=0x00000000
-326000000: global: x30=0x00000000
-326000000: global: x31=0x00000000
-326000000: global: f0=0x44bb0000
-326000000: global: f1=0x3f800000
-326000000: global: f2=0x3f800000
-326000000: global: f3=0x3f800000
-326000000: global: f4=0x000000ab
-326000000: global: f5=0x00000000
-326000000: global: f6=0x00000000
-326000000: global: f7=0x00000000
-326000000: global: f8=0x00000000
-326000000: global: f9=0x00000000
-326000000: global: f10=0x00000000
-326000000: global: f11=0x00000000
-326000000: global: f12=0x00000000
-326000000: global: f13=0x00000000
-326000000: global: f14=0x00000000
-326000000: global: f15=0x00000000
-326000000: global: f16=0x00000000
-326000000: global: f17=0x00000000
-326000000: global: f18=0x00000000
-326000000: global: f19=0x00000000
-326000000: global: f20=0x00000000
-326000000: global: f21=0x00000000
-326000000: global: f22=0x00000000
-326000000: global: f23=0x00000000
-326000000: global: f24=0x00000000
-326000000: global: f25=0x00000000
-326000000: global: f26=0x00000000
-326000000: global: f27=0x00000000
-326000000: global: f28=0x00000000
-326000000: global: f29=0x00000000
-326000000: global: f30=0x00000000
-326000000: global: f31=0x00000000
-326000000: system.cpu.memory: Log4GUI: memory: 326000000: 0: 10104: jal x0, 8
-326000000: system.cpu.decode: Log4GUI: decode: 326000000: 0: 1010c: fsw f0, 0(x5)
-326000000: system.cpu.fetch1: Log4GUI: fetch1: 326000000: 0: 10110: <assembly>
-327000000: system.cpu.writeback: Log4GUI: writeback: 327000000: 0: 10104: jal x0, 8
-327000000: system.cpu.writeback: REGISTERS
-327000000: global: x0=0x00000000
-327000000: global: x1=0xffffffff
-327000000: global: x2=0x00011114
-327000000: global: x3=0x00011154
-327000000: global: x4=0x00011198
-327000000: global: x5=0x0001119c
-327000000: global: x6=0x00000089
-327000000: global: x7=0x000000ff
-327000000: global: x8=0x00000000
-327000000: global: x9=0x00000000
-327000000: global: x10=0x00000000
-327000000: global: x11=0x00000000
-327000000: global: x12=0x00000000
-327000000: global: x13=0x00000000
-327000000: global: x14=0x00000000
-327000000: global: x15=0x00000000
-327000000: global: x16=0x00000000
-327000000: global: x17=0x00000000
-327000000: global: x18=0x00000000
-327000000: global: x19=0x00000000
-327000000: global: x20=0x00000000
-327000000: global: x21=0x00000000
-327000000: global: x22=0x00000000
-327000000: global: x23=0x00000000
-327000000: global: x24=0x00000000
-327000000: global: x25=0x00000000
-327000000: global: x26=0x00000000
-327000000: global: x27=0x00000000
-327000000: global: x28=0x00000000
-327000000: global: x29=0x00000000
-327000000: global: x30=0x00000000
-327000000: global: x31=0x00000000
-327000000: global: f0=0x44bb0000
-327000000: global: f1=0x3f800000
-327000000: global: f2=0x3f800000
-327000000: global: f3=0x3f800000
-327000000: global: f4=0x000000ab
-327000000: global: f5=0x00000000
-327000000: global: f6=0x00000000
-327000000: global: f7=0x00000000
-327000000: global: f8=0x00000000
-327000000: global: f9=0x00000000
-327000000: global: f10=0x00000000
-327000000: global: f11=0x00000000
-327000000: global: f12=0x00000000
-327000000: global: f13=0x00000000
-327000000: global: f14=0x00000000
-327000000: global: f15=0x00000000
-327000000: global: f16=0x00000000
-327000000: global: f17=0x00000000
-327000000: global: f18=0x00000000
-327000000: global: f19=0x00000000
-327000000: global: f20=0x00000000
-327000000: global: f21=0x00000000
-327000000: global: f22=0x00000000
-327000000: global: f23=0x00000000
-327000000: global: f24=0x00000000
-327000000: global: f25=0x00000000
-327000000: global: f26=0x00000000
-327000000: global: f27=0x00000000
-327000000: global: f28=0x00000000
-327000000: global: f29=0x00000000
-327000000: global: f30=0x00000000
-327000000: global: f31=0x00000000
-327000000: system.cpu.execute: Log4GUI: execute: 327000000: 0: 1010c: fsw f0, 0(x5): 0
-327000000: system.cpu.decode: Log4GUI: decode: 327000000: 0: 10110: addi x17, x0, 10
-327000000: system.cpu.fetch1: Log4GUI: fetch1: 327000000: 0: 10114: <assembly>
-328000000: system.cpu.memory: Log4GUI: memory: 328000000: 0: 1010c: fsw f0, 0(x5)
-328000000: system.cpu.execute: Log4GUI: execute: 328000000: 0: 10110: addi x17, x0, 10: 0
-328000000: system.cpu.decode: Log4GUI: decode: 328000000: 0: 10114: ecall
-328000000: system.cpu.fetch1: Log4GUI: fetch1: 328000000: 0: 10118: <assembly>
-329000000: system.cpu.writeback: Log4GUI: writeback: 329000000: 0: 1010c: fsw f0, 0(x5)
+324000000: system.cpu.execute: Log4GUI: execute: 324000000: 0: 10100: fmv_x_w x6, f0: 3
+324000000: system.cpu.decode: Log4GUI: decode: 324000000: 1: 10104: srli x6, x6, 23
+324000000: system.cpu.fetch1: Log4GUI: fetch1: 324000000: 1: 10108: <assembly>
+325000000: system.cpu.execute: Log4GUI: execute: 325000000: 0: 10100: fmv_x_w x6, f0: 3
+325000000: system.cpu.decode: Log4GUI: decode: 325000000: 1: 10104: srli x6, x6, 23
+325000000: system.cpu.fetch1: Log4GUI: fetch1: 325000000: 1: 10108: <assembly>
+326000000: system.cpu.execute: Log4GUI: execute: 326000000: 0: 10100: fmv_x_w x6, f0: 3
+326000000: system.cpu.decode: Log4GUI: decode: 326000000: 1: 10104: srli x6, x6, 23
+326000000: system.cpu.fetch1: Log4GUI: fetch1: 326000000: 1: 10108: <assembly>
+327000000: system.cpu.memory: Log4GUI: memory: 327000000: 0: 10100: fmv_x_w x6, f0
+327000000: system.cpu.execute: Log4GUI: execute: 327000000: 0: 10104: srli x6, x6, 23: 0
+327000000: system.cpu.decode: Log4GUI: decode: 327000000: 0: 10108: beq x6, x7, 8
+327000000: system.cpu.fetch1: Log4GUI: fetch1: 327000000: 0: 1010c: <assembly>
+328000000: system.cpu.writeback: Log4GUI: writeback: 328000000: 0: 10100: fmv_x_w x6, f0
+328000000: system.cpu.writeback: REGISTERS
+328000000: global: x0=0x00000000
+328000000: global: x1=0xffffffff
+328000000: global: x2=0x00011120
+328000000: global: x3=0x00011160
+328000000: global: x4=0x000111a4
+328000000: global: x5=0x000111a8
+328000000: global: x6=0x44d06000
+328000000: global: x7=0x000000ff
+328000000: global: x8=0x000000ab
+328000000: global: x9=0x00000000
+328000000: global: x10=0x00000000
+328000000: global: x11=0x00000000
+328000000: global: x12=0x00000000
+328000000: global: x13=0x00000000
+328000000: global: x14=0x00000000
+328000000: global: x15=0x00000000
+328000000: global: x16=0x00000000
+328000000: global: x17=0x00000000
+328000000: global: x18=0x00000000
+328000000: global: x19=0x00000000
+328000000: global: x20=0x00000000
+328000000: global: x21=0x00000000
+328000000: global: x22=0x00000000
+328000000: global: x23=0x00000000
+328000000: global: x24=0x00000000
+328000000: global: x25=0x00000000
+328000000: global: x26=0x00000000
+328000000: global: x27=0x00000000
+328000000: global: x28=0x00000000
+328000000: global: x29=0x00000000
+328000000: global: x30=0x00000000
+328000000: global: x31=0x00000000
+328000000: global: f0=0x44d06000
+328000000: global: f1=0x3f800000
+328000000: global: f2=0x3f800000
+328000000: global: f3=0x3f800000
+328000000: global: f4=0x432b0000
+328000000: global: f5=0x00000000
+328000000: global: f6=0x00000000
+328000000: global: f7=0x00000000
+328000000: global: f8=0x00000000
+328000000: global: f9=0x00000000
+328000000: global: f10=0x00000000
+328000000: global: f11=0x00000000
+328000000: global: f12=0x00000000
+328000000: global: f13=0x00000000
+328000000: global: f14=0x00000000
+328000000: global: f15=0x00000000
+328000000: global: f16=0x00000000
+328000000: global: f17=0x00000000
+328000000: global: f18=0x00000000
+328000000: global: f19=0x00000000
+328000000: global: f20=0x00000000
+328000000: global: f21=0x00000000
+328000000: global: f22=0x00000000
+328000000: global: f23=0x00000000
+328000000: global: f24=0x00000000
+328000000: global: f25=0x00000000
+328000000: global: f26=0x00000000
+328000000: global: f27=0x00000000
+328000000: global: f28=0x00000000
+328000000: global: f29=0x00000000
+328000000: global: f30=0x00000000
+328000000: global: f31=0x00000000
+328000000: system.cpu.memory: Log4GUI: memory: 328000000: 0: 10104: srli x6, x6, 23
+328000000: system.cpu.decode: Log4GUI: decode: 328000000: 1: 10108: beq x6, x7, 8
+328000000: system.cpu.fetch1: Log4GUI: fetch1: 328000000: 1: 1010c: <assembly>
+329000000: system.cpu.writeback: Log4GUI: writeback: 329000000: 0: 10104: srli x6, x6, 23
 329000000: system.cpu.writeback: REGISTERS
 329000000: global: x0=0x00000000
 329000000: global: x1=0xffffffff
-329000000: global: x2=0x00011114
-329000000: global: x3=0x00011154
-329000000: global: x4=0x00011198
-329000000: global: x5=0x0001119c
+329000000: global: x2=0x00011120
+329000000: global: x3=0x00011160
+329000000: global: x4=0x000111a4
+329000000: global: x5=0x000111a8
 329000000: global: x6=0x00000089
 329000000: global: x7=0x000000ff
-329000000: global: x8=0x00000000
+329000000: global: x8=0x000000ab
 329000000: global: x9=0x00000000
 329000000: global: x10=0x00000000
 329000000: global: x11=0x00000000
@@ -12071,11 +12006,11 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 329000000: global: x29=0x00000000
 329000000: global: x30=0x00000000
 329000000: global: x31=0x00000000
-329000000: global: f0=0x44bb0000
+329000000: global: f0=0x44d06000
 329000000: global: f1=0x3f800000
 329000000: global: f2=0x3f800000
 329000000: global: f3=0x3f800000
-329000000: global: f4=0x000000ab
+329000000: global: f4=0x432b0000
 329000000: global: f5=0x00000000
 329000000: global: f6=0x00000000
 329000000: global: f7=0x00000000
@@ -12103,5 +12038,300 @@ command line: /home/vboxuser/gem5/build//RISCV/gem5.opt --debug-flags=MinorGUI -
 329000000: global: f29=0x00000000
 329000000: global: f30=0x00000000
 329000000: global: f31=0x00000000
-329000000: system.cpu.memory: Log4GUI: memory: 329000000: 0: 10110: addi x17, x0, 10
-329000000: system.cpu.execute: Log4GUI: execute: 329000000: 0: 10114: ecall: -1
+329000000: system.cpu.execute: Log4GUI: execute: 329000000: 0: 10108: beq x6, x7, 8: 0
+329000000: system.cpu.decode: Log4GUI: decode: 329000000: 0: 1010c: jal x0, 8
+329000000: system.cpu.fetch1: Log4GUI: fetch1: 329000000: 0: 10110: <assembly>
+330000000: system.cpu.memory: Log4GUI: memory: 330000000: 0: 10108: beq x6, x7, 8
+330000000: system.cpu.execute: Log4GUI: execute: 330000000: 0: 1010c: jal x0, 8: 0
+330000000: system.cpu.fetch1: Log4GUI: fetch1: 330000000: 0: 10114: <assembly>
+331000000: system.cpu.writeback: Log4GUI: writeback: 331000000: 0: 10108: beq x6, x7, 8
+331000000: system.cpu.writeback: REGISTERS
+331000000: global: x0=0x00000000
+331000000: global: x1=0xffffffff
+331000000: global: x2=0x00011120
+331000000: global: x3=0x00011160
+331000000: global: x4=0x000111a4
+331000000: global: x5=0x000111a8
+331000000: global: x6=0x00000089
+331000000: global: x7=0x000000ff
+331000000: global: x8=0x000000ab
+331000000: global: x9=0x00000000
+331000000: global: x10=0x00000000
+331000000: global: x11=0x00000000
+331000000: global: x12=0x00000000
+331000000: global: x13=0x00000000
+331000000: global: x14=0x00000000
+331000000: global: x15=0x00000000
+331000000: global: x16=0x00000000
+331000000: global: x17=0x00000000
+331000000: global: x18=0x00000000
+331000000: global: x19=0x00000000
+331000000: global: x20=0x00000000
+331000000: global: x21=0x00000000
+331000000: global: x22=0x00000000
+331000000: global: x23=0x00000000
+331000000: global: x24=0x00000000
+331000000: global: x25=0x00000000
+331000000: global: x26=0x00000000
+331000000: global: x27=0x00000000
+331000000: global: x28=0x00000000
+331000000: global: x29=0x00000000
+331000000: global: x30=0x00000000
+331000000: global: x31=0x00000000
+331000000: global: f0=0x44d06000
+331000000: global: f1=0x3f800000
+331000000: global: f2=0x3f800000
+331000000: global: f3=0x3f800000
+331000000: global: f4=0x432b0000
+331000000: global: f5=0x00000000
+331000000: global: f6=0x00000000
+331000000: global: f7=0x00000000
+331000000: global: f8=0x00000000
+331000000: global: f9=0x00000000
+331000000: global: f10=0x00000000
+331000000: global: f11=0x00000000
+331000000: global: f12=0x00000000
+331000000: global: f13=0x00000000
+331000000: global: f14=0x00000000
+331000000: global: f15=0x00000000
+331000000: global: f16=0x00000000
+331000000: global: f17=0x00000000
+331000000: global: f18=0x00000000
+331000000: global: f19=0x00000000
+331000000: global: f20=0x00000000
+331000000: global: f21=0x00000000
+331000000: global: f22=0x00000000
+331000000: global: f23=0x00000000
+331000000: global: f24=0x00000000
+331000000: global: f25=0x00000000
+331000000: global: f26=0x00000000
+331000000: global: f27=0x00000000
+331000000: global: f28=0x00000000
+331000000: global: f29=0x00000000
+331000000: global: f30=0x00000000
+331000000: global: f31=0x00000000
+331000000: system.cpu.memory: Log4GUI: memory: 331000000: 0: 1010c: jal x0, 8
+331000000: system.cpu.decode: Log4GUI: decode: 331000000: 0: 10114: fmv_x_w x8, f0
+331000000: system.cpu.fetch1: Log4GUI: fetch1: 331000000: 0: 10118: <assembly>
+332000000: system.cpu.writeback: Log4GUI: writeback: 332000000: 0: 1010c: jal x0, 8
+332000000: system.cpu.writeback: REGISTERS
+332000000: global: x0=0x00000000
+332000000: global: x1=0xffffffff
+332000000: global: x2=0x00011120
+332000000: global: x3=0x00011160
+332000000: global: x4=0x000111a4
+332000000: global: x5=0x000111a8
+332000000: global: x6=0x00000089
+332000000: global: x7=0x000000ff
+332000000: global: x8=0x000000ab
+332000000: global: x9=0x00000000
+332000000: global: x10=0x00000000
+332000000: global: x11=0x00000000
+332000000: global: x12=0x00000000
+332000000: global: x13=0x00000000
+332000000: global: x14=0x00000000
+332000000: global: x15=0x00000000
+332000000: global: x16=0x00000000
+332000000: global: x17=0x00000000
+332000000: global: x18=0x00000000
+332000000: global: x19=0x00000000
+332000000: global: x20=0x00000000
+332000000: global: x21=0x00000000
+332000000: global: x22=0x00000000
+332000000: global: x23=0x00000000
+332000000: global: x24=0x00000000
+332000000: global: x25=0x00000000
+332000000: global: x26=0x00000000
+332000000: global: x27=0x00000000
+332000000: global: x28=0x00000000
+332000000: global: x29=0x00000000
+332000000: global: x30=0x00000000
+332000000: global: x31=0x00000000
+332000000: global: f0=0x44d06000
+332000000: global: f1=0x3f800000
+332000000: global: f2=0x3f800000
+332000000: global: f3=0x3f800000
+332000000: global: f4=0x432b0000
+332000000: global: f5=0x00000000
+332000000: global: f6=0x00000000
+332000000: global: f7=0x00000000
+332000000: global: f8=0x00000000
+332000000: global: f9=0x00000000
+332000000: global: f10=0x00000000
+332000000: global: f11=0x00000000
+332000000: global: f12=0x00000000
+332000000: global: f13=0x00000000
+332000000: global: f14=0x00000000
+332000000: global: f15=0x00000000
+332000000: global: f16=0x00000000
+332000000: global: f17=0x00000000
+332000000: global: f18=0x00000000
+332000000: global: f19=0x00000000
+332000000: global: f20=0x00000000
+332000000: global: f21=0x00000000
+332000000: global: f22=0x00000000
+332000000: global: f23=0x00000000
+332000000: global: f24=0x00000000
+332000000: global: f25=0x00000000
+332000000: global: f26=0x00000000
+332000000: global: f27=0x00000000
+332000000: global: f28=0x00000000
+332000000: global: f29=0x00000000
+332000000: global: f30=0x00000000
+332000000: global: f31=0x00000000
+332000000: system.cpu.execute: Log4GUI: execute: 332000000: 0: 10114: fmv_x_w x8, f0: 3
+332000000: system.cpu.decode: Log4GUI: decode: 332000000: 0: 10118: sw x8, 0(x5)
+332000000: system.cpu.fetch1: Log4GUI: fetch1: 332000000: 0: 1011c: <assembly>
+333000000: system.cpu.execute: Log4GUI: execute: 333000000: 0: 10118: sw x8, 0(x5): 0
+333000000: system.cpu.execute: Log4GUI: execute: 333000000: 0: 10114: fmv_x_w x8, f0: 3
+333000000: system.cpu.decode: Log4GUI: decode: 333000000: 0: 1011c: addi x17, x0, 10
+333000000: system.cpu.fetch1: Log4GUI: fetch1: 333000000: 0: 10120: <assembly>
+334000000: system.cpu.execute: Log4GUI: execute: 334000000: 1: 10118: sw x8, 0(x5): 0
+334000000: system.cpu.execute: Log4GUI: execute: 334000000: 0: 10114: fmv_x_w x8, f0: 3
+334000000: system.cpu.decode: Log4GUI: decode: 334000000: 1: 1011c: addi x17, x0, 10
+334000000: system.cpu.fetch1: Log4GUI: fetch1: 334000000: 1: 10120: <assembly>
+335000000: system.cpu.execute: Log4GUI: execute: 335000000: 0: 10114: fmv_x_w x8, f0: 3
+335000000: system.cpu.execute: Log4GUI: execute: 335000000: 1: 10118: sw x8, 0(x5): 0
+335000000: system.cpu.decode: Log4GUI: decode: 335000000: 1: 1011c: addi x17, x0, 10
+335000000: system.cpu.fetch1: Log4GUI: fetch1: 335000000: 1: 10120: <assembly>
+336000000: system.cpu.memory: Log4GUI: memory: 336000000: 0: 10114: fmv_x_w x8, f0
+336000000: system.cpu.decode: Log4GUI: decode: 336000000: 1: 1011c: addi x17, x0, 10
+336000000: system.cpu.fetch1: Log4GUI: fetch1: 336000000: 1: 10120: <assembly>
+337000000: system.cpu.writeback: Log4GUI: writeback: 337000000: 0: 10114: fmv_x_w x8, f0
+337000000: system.cpu.writeback: REGISTERS
+337000000: global: x0=0x00000000
+337000000: global: x1=0xffffffff
+337000000: global: x2=0x00011120
+337000000: global: x3=0x00011160
+337000000: global: x4=0x000111a4
+337000000: global: x5=0x000111a8
+337000000: global: x6=0x00000089
+337000000: global: x7=0x000000ff
+337000000: global: x8=0x44d06000
+337000000: global: x9=0x00000000
+337000000: global: x10=0x00000000
+337000000: global: x11=0x00000000
+337000000: global: x12=0x00000000
+337000000: global: x13=0x00000000
+337000000: global: x14=0x00000000
+337000000: global: x15=0x00000000
+337000000: global: x16=0x00000000
+337000000: global: x17=0x00000000
+337000000: global: x18=0x00000000
+337000000: global: x19=0x00000000
+337000000: global: x20=0x00000000
+337000000: global: x21=0x00000000
+337000000: global: x22=0x00000000
+337000000: global: x23=0x00000000
+337000000: global: x24=0x00000000
+337000000: global: x25=0x00000000
+337000000: global: x26=0x00000000
+337000000: global: x27=0x00000000
+337000000: global: x28=0x00000000
+337000000: global: x29=0x00000000
+337000000: global: x30=0x00000000
+337000000: global: x31=0x00000000
+337000000: global: f0=0x44d06000
+337000000: global: f1=0x3f800000
+337000000: global: f2=0x3f800000
+337000000: global: f3=0x3f800000
+337000000: global: f4=0x432b0000
+337000000: global: f5=0x00000000
+337000000: global: f6=0x00000000
+337000000: global: f7=0x00000000
+337000000: global: f8=0x00000000
+337000000: global: f9=0x00000000
+337000000: global: f10=0x00000000
+337000000: global: f11=0x00000000
+337000000: global: f12=0x00000000
+337000000: global: f13=0x00000000
+337000000: global: f14=0x00000000
+337000000: global: f15=0x00000000
+337000000: global: f16=0x00000000
+337000000: global: f17=0x00000000
+337000000: global: f18=0x00000000
+337000000: global: f19=0x00000000
+337000000: global: f20=0x00000000
+337000000: global: f21=0x00000000
+337000000: global: f22=0x00000000
+337000000: global: f23=0x00000000
+337000000: global: f24=0x00000000
+337000000: global: f25=0x00000000
+337000000: global: f26=0x00000000
+337000000: global: f27=0x00000000
+337000000: global: f28=0x00000000
+337000000: global: f29=0x00000000
+337000000: global: f30=0x00000000
+337000000: global: f31=0x00000000
+337000000: system.cpu.memory: Log4GUI: memory: 337000000: 0: 10118: sw x8, 0(x5)
+337000000: system.cpu.execute: Log4GUI: execute: 337000000: 0: 1011c: addi x17, x0, 10: 0
+337000000: system.cpu.decode: Log4GUI: decode: 337000000: 0: 10120: ecall
+337000000: system.cpu.fetch1: Log4GUI: fetch1: 337000000: 0: 10124: <assembly>
+338000000: system.cpu.writeback: Log4GUI: writeback: 338000000: 0: 10118: sw x8, 0(x5)
+338000000: system.cpu.writeback: REGISTERS
+338000000: global: x0=0x00000000
+338000000: global: x1=0xffffffff
+338000000: global: x2=0x00011120
+338000000: global: x3=0x00011160
+338000000: global: x4=0x000111a4
+338000000: global: x5=0x000111a8
+338000000: global: x6=0x00000089
+338000000: global: x7=0x000000ff
+338000000: global: x8=0x44d06000
+338000000: global: x9=0x00000000
+338000000: global: x10=0x00000000
+338000000: global: x11=0x00000000
+338000000: global: x12=0x00000000
+338000000: global: x13=0x00000000
+338000000: global: x14=0x00000000
+338000000: global: x15=0x00000000
+338000000: global: x16=0x00000000
+338000000: global: x17=0x00000000
+338000000: global: x18=0x00000000
+338000000: global: x19=0x00000000
+338000000: global: x20=0x00000000
+338000000: global: x21=0x00000000
+338000000: global: x22=0x00000000
+338000000: global: x23=0x00000000
+338000000: global: x24=0x00000000
+338000000: global: x25=0x00000000
+338000000: global: x26=0x00000000
+338000000: global: x27=0x00000000
+338000000: global: x28=0x00000000
+338000000: global: x29=0x00000000
+338000000: global: x30=0x00000000
+338000000: global: x31=0x00000000
+338000000: global: f0=0x44d06000
+338000000: global: f1=0x3f800000
+338000000: global: f2=0x3f800000
+338000000: global: f3=0x3f800000
+338000000: global: f4=0x432b0000
+338000000: global: f5=0x00000000
+338000000: global: f6=0x00000000
+338000000: global: f7=0x00000000
+338000000: global: f8=0x00000000
+338000000: global: f9=0x00000000
+338000000: global: f10=0x00000000
+338000000: global: f11=0x00000000
+338000000: global: f12=0x00000000
+338000000: global: f13=0x00000000
+338000000: global: f14=0x00000000
+338000000: global: f15=0x00000000
+338000000: global: f16=0x00000000
+338000000: global: f17=0x00000000
+338000000: global: f18=0x00000000
+338000000: global: f19=0x00000000
+338000000: global: f20=0x00000000
+338000000: global: f21=0x00000000
+338000000: global: f22=0x00000000
+338000000: global: f23=0x00000000
+338000000: global: f24=0x00000000
+338000000: global: f25=0x00000000
+338000000: global: f26=0x00000000
+338000000: global: f27=0x00000000
+338000000: global: f28=0x00000000
+338000000: global: f29=0x00000000
+338000000: global: f30=0x00000000
+338000000: global: f31=0x00000000
+338000000: system.cpu.memory: Log4GUI: memory: 338000000: 0: 1011c: addi x17, x0, 10
+338000000: system.cpu.execute: Log4GUI: execute: 338000000: 0: 10120: ecall: -1
